@@ -7,13 +7,13 @@ permalink: /index
   <h1>Posts Recentes</h1>
 
   {% for post in site.posts %}
-    <article>
-      <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2>{{ post.title }}</h2>
-        <h5>{{ post.date | date: "%b %-d, %Y" }}</h5></a>
+  <article>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h2>{{ post.title }}</h2>
+      <h5>{{ post.date | date: "%b %-d, %Y" }}</h5></a>
       <p>
-        {{ post.excerpt }}
+      {{ post.excerpt | truncatewords: 25 }}
       </p>
     </article>
-  {% endfor %}
-</section>
+    {% endfor %}
+  </section>
