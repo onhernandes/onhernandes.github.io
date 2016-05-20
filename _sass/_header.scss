@@ -1,0 +1,44 @@
+#header-default {
+	width: 100%;
+	text-align: center;
+	height: auto;
+	background-color: $blue;
+	> a:hover {background: none;}
+	> a > img {
+		width: 170px;
+		margin: 20px auto;
+	} 
+
+	ul {
+		background-color: rgba(0,0,0,0.3);
+
+		li {
+			display: inline-block;
+			box-sizing: border-box;
+			text-transform: uppercase;
+			vertical-align: middle;
+			padding: 11px 8px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $blue; //rgba(255,255,255,0.1)
+			}
+			a {
+				font-weight: bold;
+				color: white;
+				font-size: 17px;
+				
+				&:before {
+					content:"<";
+				}
+
+				&:after {
+					content:">";
+				}
+
+			}
+
+			a:hover {background: none;}
+		}
+	}
+}

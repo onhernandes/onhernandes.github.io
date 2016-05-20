@@ -1,0 +1,20 @@
+---
+---
+
+@charset "utf-8";
+
+a:hover {
+	background: rgba(0,0,0,0.5);
+//	border-bottom: 1px dashed white;
+}
+
+$blue: #2d4059;
+$red: #E84545;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "reset";
+@import "header";
+@import "home";
+@import "page";
+@import "layout";
+@import "footer";
