@@ -2,11 +2,31 @@
 	width: 100%;
 	height: auto;
 	background: darken($blue, 14%);
-	padding: 15px 0px;
 	text-align: center;
 	color: #fff;
+	bottom: 0;
 
-	a {
+	div a {
 		color: #fff;
+	}
+
+	div:first-child {
+		background: rgba(255,255,255,0.05);
+		width: 100%;
+		height: auto;
+			
+		ul li {
+			display: inline-block;
+			padding: 15px 7px;
+
+			a {
+				font-size: 20px;
+				&:hover {background: none;}
+			}
+		}
+	}
+
+	div:last-child {
+		padding: 20px;
 	}
 }

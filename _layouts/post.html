@@ -1,4 +1,34 @@
 ---
 layout: default
 ---
-
+{% if page.categories == 'html' or page.categories == 'css' page.categories == 'front-end' %}
+<section id="post" class="front-end">
+	<article>
+		{{ content }}
+	</article>
+</section>
+{% elsif page.categories == 'php' or page.categories == 'sql' or page.categories == 'back-end' %}
+<section id="post" class="back-end">
+	<article>
+		{{ content }}
+	</article>
+</section>
+{% elsif page.categories == 'project' %}
+<section id="post" class="project">
+	<article>
+		{{ content }}
+	</article>
+</section>
+{% elsif page.categories == 'help' %}
+<section id="post" class="help">
+	<article>
+		{{ content }}
+	</article>
+</section>
+{% else %}
+<section id="post" class="generic">
+	<article>
+		{{ content }}
+	</article>
+</section>
+{% endif %} 

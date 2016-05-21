@@ -1,0 +1,53 @@
+#post {
+	width: 100%;
+	height: auto;
+	
+	article {
+		color: #fff;
+		width: 70%;
+		height: auto;
+		margin: 0 auto;
+		padding: 3% 0%;
+		text-align: center;
+
+		h1, h2, h3 {
+			padding: 3% 0%;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+			box-sizing: border-box;
+			padding: 2% 0%;
+		}
+
+		p, span {
+			font-size: 14px;
+		}
+
+		a {
+			color: #fff;
+			border-bottom: 1px solid white;
+		}
+	}
+}
+
+.front-end {
+	background: url(/img/headphones.jpg) fixed !important;
+}
+
+.back-end {
+	background: url(/img/horizon.jpg) fixed !important;
+}
+
+.project {
+	background: url(/img/titled.jpg) fixed !important;
+}
+
+.help {
+	background: url(/img/coffee.jpg) fixed !important;
+}
+
+.generic {
+	background: url(/img/backa.jpg) fixed !important;
+}
