@@ -1,14 +1,11 @@
 #series {
 	width: 100%;
 	height: auto;
-	background: url(../img/backa.jpg) no-repeat;
-	background-size: cover;
 	text-align: center;
 	padding-bottom: 3%;
 
 	h1 {
-		padding: 3% 0% 1%;
-		color: #fff;
+		padding: 1% 0%;
 	}
 
 	section {
@@ -24,14 +21,12 @@
 			margin: 1.5%;
 			display: block;
 			box-sizing: border-box;
-			background: rgba(255,255,255,0.1);
-			-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-			-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-			box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-			color: #fff;
+			background: rgba(0,0,0,0.08);
+			color: $blue;
 
 			h2 {
-				color: #fff;
+				color: $red;
+				font-weight: bold;
 				padding: 20px 0px 10px;
 			}
 
@@ -48,11 +43,12 @@
 
 					a {
 						display: inline;
-						color: #fff;
+						color: $blue;
 						h5 {
 							display: inline;
 							&:before {
 								content: " - ";
+								color: $blue !important;
 							}
 						}
 					}

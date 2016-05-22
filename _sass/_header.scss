@@ -2,15 +2,16 @@
 	width: 100%;
 	text-align: center;
 	height: auto;
-	background-color: $blue;
-	> a:hover {background: none;}
+	background-color: rgba(0,0,0,0.02);
+	margin-bottom: 20px;
+
+	a:hover {background: none;}
 	> a > img {
 		width: 170px;
 		margin: 20px auto;
 	} 
 
 	ul {
-		background-color: rgba(0,0,0,0.3);
 
 		li {
 			display: inline-block;
@@ -21,11 +22,12 @@
 			cursor: pointer;
 
 			&:hover {
-				background-color: $blue; //rgba(255,255,255,0.1)
+				border-bottom: 2px solid $blue;
 			}
+
 			a {
 				font-weight: bold;
-				color: white;
+				color: $blue;
 				font-size: 17px;
 				
 				&:before {
@@ -37,8 +39,6 @@
 				}
 
 			}
-
-			a:hover {background: none;}
 		}
 	}
 }

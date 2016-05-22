@@ -1,65 +1,50 @@
 #projects {
 	width: 100%;
 	height: auto;
-	background: url(../img/backa.jpg) no-repeat;
-	background-size: cover;
 	text-align: center;
 
 	h1 {
-		padding: 3% 0% 1%;
-		color: #fff;
+		padding: 1% 0%;
+		color: $red;
 	}
-	
-	/*section {
-		display: flex;
-		width: 90%;
-		margin-right: auto;
-		margin-left: auto;
-		text-align: center;
-
-		article {
-			background: rgba(255,255,255,0.1);
-			box-sizing: border-box;
-			-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-			-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-			box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-			color: #fff;
-			display: block;
-			flex: 1 1 auto;
-			margin: 1.5% 0 0%;
-			padding-bottom: 2.7% 2.7% 2%;
-			text-align: center;
-
-			h2 {
-				color: #fff;
-				padding: 20px 0px 10px;
-			}
-			
-			> a:hover {background: none;}
-			
-			&:first-child {margin-right: 15px;}
-			&:last-child {margin-left: 15px;}
-		}
-	}*/
 
 	article {
-		background: rgba(255,255,255,0.1);
-		box-sizing: border-box;
-		-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-		-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-		box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-		color: #fff;
+		width: 70%;
+		height: auto;
+		margin: 1.5% auto;
 		display: block;
-		width: 60%;
-		margin: 5% auto;
-		padding-bottom: 2.7% 2.7% 2%;
-		text-align: center;
+		padding-bottom: 30px;
+		box-sizing: border-box;
+		background: rgba(0,0,0,0.08);
+		color: #fff;
 
 		h2 {
-			color: #fff;
-			padding: 20px 0px 10px;
+			color: $blue;
+			padding-top: 20px;
 		}
-		
-		> a:hover {background: none;}
+
+		h5 {color: $blue;}
+
+		p {
+			padding: 0 7% 2%;
+			font-size: 15px;
+			color: $blue;
+		}
+
+		a button {
+			width: 30%;
+			display: block;
+			height: auto;
+			padding: 8px 7px;
+			box-sizing: border-box;
+			border: none;
+			background: $red;
+			margin-right: auto;
+			margin-left: auto;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: white;
+		}
 	}
 }

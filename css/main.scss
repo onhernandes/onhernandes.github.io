@@ -3,13 +3,16 @@
 
 @charset "utf-8";
 
-a:hover {
-	background: rgba(0,0,0,0.5);
-//	border-bottom: 1px dashed white;
-}
-
 $blue: #2d4059;
 $red: #E84545;
+
+.light:hover {
+	border-bottom: 1.5px solid #fff;
+	
+	&.blue:hover {border-bottom: 1.5px solid darken($blue, 5%);}
+	&.red:hover {border-bottom: 1.5px solid darken($red, 5%);}
+	&.black:hover {border-bottom: 1.5px solid darken(#323232, 5%);}
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "reset";

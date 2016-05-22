@@ -16,7 +16,7 @@ permalink: /series
 				{% if post.title != null %}
 				{% if group == null or group == post.group %}
 				<li>
-					<a href="{{ site.url }}{{ post.url }}">
+					<a href="{{ post.url }}">
 						{{ post.title }} <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
 					</a>
 				</li>

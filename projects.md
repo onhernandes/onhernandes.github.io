@@ -16,6 +16,7 @@ permalink: /projetos
 						<p>
 							{{ post.excerpt }}
 						</p>
+						<a href="{{ post.url }}"><button>continue lendo</button></a>
 					</article>
 				{% endif %}
 			{% endfor %}
