@@ -24,3 +24,37 @@ $red: #E84545;
 @import "posts";
 @import "layout";
 @import "footer";
+
+@media screen and (min-width: 1366px) {
+	body {
+		width: 1366px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#home-posts article,
+	#page article {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	#series > section {
+		display: block;
+
+		> article {
+			flex: none !important;
+			width: 100% !important; 
+		}
+	}
+
+	#page > #series > section {
+		display: block;
+
+		> article {
+			flex: none !important;
+			width: 100% !important; 
+		}
+	}
+}
