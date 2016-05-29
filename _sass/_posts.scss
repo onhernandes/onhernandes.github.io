@@ -1,13 +1,14 @@
 #post {
 	width: 100%;
 	height: auto;
+	padding: 0% 0% 3%;
 	
 	article {
 		color: darken($blue, 10%);
 		width: 70%;
 		height: auto;
 		margin: 0 auto;
-		padding: 3% 0%;
+		padding: 1% 0%;
 		text-align: center;
 
 		h1, h2, h3 {
@@ -32,5 +33,12 @@
 			font-weight: bold;
 			border-bottom: 1px solid white;
 		}
+	}
+
+	#disqus_thread {
+		width: 70%;
+		height: auto;
+		margin-right: auto;
+		margin-left: auto;
 	}
 }
