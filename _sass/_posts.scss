@@ -41,4 +41,15 @@
 		margin-right: auto;
 		margin-left: auto;
 	}
+
+	#person {
+		width: 70%;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+
+		article {
+			flex: 1 1 auto;
+		}
+	}
 }
