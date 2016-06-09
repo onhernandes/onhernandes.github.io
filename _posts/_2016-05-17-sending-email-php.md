@@ -8,10 +8,13 @@ categories: php
 Eu sei que isso, talvez seja algo totalmente simples pros maix velhos, só que, para nós(eternos novatos, e realmente novatos), talvez seja um verdadeiro Monstro do Lago Ness.
 Lá estava eu, me matando lindamente pra criar [URLs Amigáveis com o .htaccess]() - minha primeira vez, estava testando em um servidor gratuito, porque não conseguia localmente -, quando finalmente consegui a tal proeza, me deparei com outra quest:
 *Enviar emails.*
+
 Pronto. Já era. Quando eu acreditei que não precisava mais de um servidor remoto, me lembrei dessa parada aí.
+
 Fiquei me perguntando se era possível fazer isso localmente e caso sim, se eu não precisaria reinventar a roda só pra poder rodar uns emailzinhos né.
 Falo isso porque eu li em algumas respostas no Yahoo! e nego disse que dava muito trabalho e tudo mais, que era mais fácil usar um remoto e etc.
 Dei uma rápida pesquisada no Google, com a ideia de que: *se ferrar tudo, é só apagar o apache2 e instalar novamente, se isso não funcionar eu taco fogo no PC e viro contador*.
+
 
 Ria de mim o quanto quiser, meu caro amigo. Eu no seu lugar não apenas iria rir como também comentar algum pensamento catastrófico lá em baixo. Hahahahaha.
 
@@ -23,7 +26,7 @@ Bom, eu vou dizer o que eu fiz - que funcionou, derr - aqui no meu PC(XUbuntu 14
 Usei o *cd /etc/apache2/mods-enabled* pra chegar até a pasta dos mods do Apache2, depois dei uma olhada se já tinha o SSL ativado, usando *ls*.
 Isso foi o que me retornou:
 
-{% highlight html %}
+{% highlight unix %}
 	access_compat.load  authz_user.load  filter.load       php7.0.load
 	alias.conf          autoindex.conf   mime.conf         rewrite.load
 	alias.load          autoindex.load   mime.load         setenvif.conf
@@ -37,7 +40,7 @@ Isso foi o que me retornou:
 Como vocês podem ver, eu não tenho o **socache_shmcb.load**, **ssl.conf** e o **ssl.load** ativados. 
 Então, eu apenas dei um *sudo a2enmod ssl* e com isso ativei o SSL no Apache2. Pra conferir, foi só dar outro *ls* e ver:
 
-{% highlight html %}
+{% highlight text %}
 	access_compat.load  authn_file.load  autoindex.load  env.load          mpm_prefork.load  rewrite.load        ssl.load
 	alias.conf          authz_core.load  deflate.conf    filter.load       negotiation.conf  setenvif.conf       status.conf
 	alias.load          authz_host.load  deflate.load    mime.conf         negotiation.load  setenvif.load       status.load
