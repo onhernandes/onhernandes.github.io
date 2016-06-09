@@ -2,7 +2,10 @@
 layout: post
 title:  "Enviando e-mails pelo PHP - com PHPMailer"
 date:   2016-05-17 16:12:55 -0300
+image: backa.jpg
+date-to-read: 2 min
 categories: php
+intro: 'Matando aquele mistério sobre envio de emails pelo localhost'
 ---
 # Ok, acabei tudo, só falta...o envio dos emails ¬¬
 Eu sei que isso, talvez seja algo totalmente simples pros maix velhos, só que, para nós(eternos novatos, e realmente novatos), talvez seja um verdadeiro Monstro do Lago Ness.
@@ -70,47 +73,52 @@ No meu caso, eu sempre uso a váriavel $mail pra instanciar, porque realmente fi
 Após instanciar, você só vai precisar dessas linhas:
 
 {% highlight php %}
-	$mail = new PHPMailer;
-	// Configura para envio de e-mails usando SMTP
-	$mail->isSMTP(); 
-	// Servidor SMTP
-	$mail->Host = 'smtp.gmail.com';
-	// Usar autenticação SMTP 
-	$mail->SMTPAuth = true; 
-	// Usuário da conta
-	$mail->Username = 'midia.matheus@gmail.com';
-	// Senha da conta 
-	$mail->Password = 'sua_senha';
-	// Tipo de encriptação que será usado na conexão SMTP 
-	$mail->SMTPSecure = 'ssl';
-	// Porta do servidor SMTP 
-	$mail->Port = 465; 
-	// Informa se vamos enviar mensagens usando HTML
-	$mail->IsHTML(true); 
-	// Email do Remetente
-	$mail->From = 'midia.matheus@gmail.com';
-	// Nome do Remetente 
-	$mail->FromName = 'Matheus'; 
-	// Endereço do e-mail do destinatário
-	$mail->addAddress('midia.matheus@gmail.com');
-	// Assunto do e-mail 
-	$mail->Subject = 'E-mail PHPMailer'; 
-	// Mensagem que vai no corpo do e-mail
-	$mail->Body = 'Mensagem enviada via PHPMailer';
-	if ($mail->Send()) {
-		echo "Email enviado com sucesso!";
-	} else {
-		echo "Email não enviado!";
-	} 
+	<?php
+		// Instancia o PHPMailer
+		$mail = new PHPMailer;
+		// Configura para envio de e-mails usando SMTP
+		$mail->isSMTP(); 
+		// Servidor SMTP
+		$mail->Host = 'smtp.gmail.com';
+		// Usar autenticação SMTP 
+		$mail->SMTPAuth = true; 
+		// Usuário da conta
+		$mail->Username = 'midia.matheus@gmail.com';
+		// Senha da conta 
+		$mail->Password = 'sua_senha';
+		// Tipo de encriptação que será usado na conexão SMTP 
+		$mail->SMTPSecure = 'ssl';
+		// Porta do servidor SMTP 
+		$mail->Port = 465; 
+		// Informa se vamos enviar mensagens usando HTML
+		$mail->IsHTML(true); 
+		// Email do Remetente
+		$mail->From = 'midia.matheus@gmail.com';
+		// Nome do Remetente 
+		$mail->FromName = 'Matheus'; 
+		// Endereço do e-mail do destinatário
+		$mail->addAddress('midia.matheus@gmail.com');
+		// Assunto do e-mail 
+		$mail->Subject = 'E-mail PHPMailer'; 
+		// Mensagem que vai no corpo do e-mail
+		$mail->Body = 'Mensagem enviada via PHPMailer';
+		// Faz o teste de envio com $mail->Send();
+		if ($mail->Send()) {
+			echo "Email enviado com sucesso!";
+		} else {
+			echo "Email não enviado!";
+		}
+	?> 
 {% endhighlight %}
 
-### Extra extra!
+## Extra extra!
 Como podem ver, eu utilizei meu GMail para enviar, só que, se você tentar agora, muito provavelmente não vai conseguir **porque o GMail bloqueia outros serviços**, a menos que você permita.
-Se quiser liberar as permissões, é só [entrar aqui]() e selecionar a opção de "Desativar", por fim confirmar.
+Se quiser liberar as permissões do Gmail, é só [entrar aqui](http://www.google.com.br/settings/security/lesssecureapps) e selecionar a opção de "Desativar", por fim confirmar.
 
-**Estou ressaltando aqui que, isso pode deixar sua conta mais vulnerável, e eu/o blog nos isentamos de qualquer problema que ocorra com você, relacionado à isto. Tome muito cuidado. Considere-se avisado.**
+_Estou ressaltando aqui que, isso pode deixar sua conta mais vulnerável, e eu/o blog nos isentamos de qualquer problema que ocorra com você, relacionado à isto. Tome muito cuidado. Considere-se avisado._
 
 Eu fiz o teste e consegui normalmente. Caso você esteja utilizando o Windows, infelizmente não poderei responder muitas perguntas, porque eu uso Ubuntu.
 
 Gostou? Não gostou? Tá neutrô? Comenta aí!
+
 Sugestões, críticas, e etc são sempre bem-vindas!

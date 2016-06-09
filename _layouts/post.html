@@ -1,7 +1,16 @@
 ---
 layout: default
 ---
+{% include minutes-to-read.html %}
+
 <section id="post">
+	<header id="header-post" style="background-image: url(/img/{{ page.image }});">
+		<span>
+			<h1>{{ page.title }}</h1>
+			<h5>{{ minutesText }}</h5>
+		</span>
+	</header>
+
 	<article>
 		{{ content }}
 	</article>

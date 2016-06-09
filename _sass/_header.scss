@@ -2,8 +2,7 @@
 	width: 100%;
 	text-align: center;
 	height: auto;
-	background-color: rgba(0,0,0,0.02);
-	margin-bottom: 20px;
+	background-color: $blue;//rgba(0,0,0,0.02);
 
 	a:hover {background: none;}
 	> a > img {
@@ -21,13 +20,10 @@
 			padding: 11px 8px;
 			cursor: pointer;
 
-			&:hover {
-				border-bottom: 2px solid $blue;
-			}
 
 			a {
 				font-weight: bold;
-				color: $blue;
+				color: #fff;
 				font-size: 17px;
 				
 				&:before {
@@ -38,6 +34,9 @@
 					content:">";
 				}
 
+				&:hover:before {
+					content:"</";					
+				}
 			}
 		}
 	}

@@ -3,6 +3,21 @@
 	height: auto;
 	padding: 0% 0% 3%;
 	
+	#header-post {
+		padding: 12% 5%;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		span {
+			h1, h5 {
+				color: #fff;
+				text-align: center;
+			}
+
+			h5 {}
+		}
+	}
+
 	article {
 		color: darken($blue, 10%);
 		width: 70%;
@@ -12,7 +27,7 @@
 		text-align: left;
 
 		h1, h2, h3 {
-			padding: 3% 0%;
+			padding: 3.5% 0 1%;
 			color: $red;
 			font-weight: bold;
 		}
@@ -25,7 +40,8 @@
 		}
 
 		p, span {
-			font-size: 14px;
+			font-size: 17px;
+			padding: 7px 0;
 		}
 
 		a {
