@@ -10,7 +10,6 @@ Lá estava eu, me matando lindamente pra criar [URLs Amigáveis com o .htaccess]
 *Enviar emails.*
 Pronto. Já era. Quando eu acreditei que não precisava mais de um servidor remoto, me lembrei dessa parada aí.
 Fiquei me perguntando se era possível fazer isso localmente e caso sim, se eu não precisaria reinventar a roda só pra poder rodar uns emailzinhos né.
-
 Falo isso porque eu li em algumas respostas no Yahoo! e nego disse que dava muito trabalho e tudo mais, que era mais fácil usar um remoto e etc.
 Dei uma rápida pesquisada no Google, com a ideia de que: *se ferrar tudo, é só apagar o apache2 e instalar novamente, se isso não funcionar eu taco fogo no PC e viro contador*.
 
@@ -67,7 +66,7 @@ No meu caso, eu sempre uso a váriavel $mail pra instanciar, porque realmente fi
 
 Após instanciar, você só vai precisar dessas linhas:
 
-{% hightlight php %}
+{% highlight php %}
 	$mail = new PHPMailer;
 	// Configura para envio de e-mails usando SMTP
 	$mail->isSMTP(); 
@@ -100,7 +99,7 @@ Após instanciar, você só vai precisar dessas linhas:
 	} else {
 		echo "Email não enviado!";
 	} 
-{% endhightlight %}
+{% endhighlight %}
 
 ### Extra extra!
 Como podem ver, eu utilizei meu GMail para enviar, só que, se você tentar agora, muito provavelmente não vai conseguir **porque o GMail bloqueia outros serviços**, a menos que você permita.
