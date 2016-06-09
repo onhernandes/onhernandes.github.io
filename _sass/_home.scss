@@ -20,13 +20,26 @@
 		color: #fff;
 
 		a {
-			h2 {
-				padding: 20px 20px 0px;
-			}
-
+			h2 {padding: 20px 20px 0px;}
 			h5 {padding: 1% 20px;}
+			
+			button {
+				width: 30%;
+				display: block;
+				height: auto;
+				padding: 8px 7px;
+				box-sizing: border-box;
+				border: none;
+				background: $red;
+				margin-right: auto;
+				margin-left: auto;
+				cursor: pointer;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: white;
+			}
 		}
-		
+
 		h1, h2, h3, h4, h5 {color: $red;}
 
 		p {
@@ -35,21 +48,6 @@
 			color: $blue;
 		}
 
-		a button {
-			width: 30%;
-			display: block;
-			height: auto;
-			padding: 8px 7px;
-			box-sizing: border-box;
-			border: none;
-			background: $red;
-			margin-right: auto;
-			margin-left: auto;
-			cursor: pointer;
-			text-transform: uppercase;
-			font-weight: bold;
-			color: white;
-		}
 		
 		> a:hover {background: none;}
 	}
