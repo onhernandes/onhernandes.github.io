@@ -4,7 +4,7 @@ permalink: /index
 ---
 {% include minutes-to-read.html %}
 <section id="home-posts">
-  {% for post in site.posts %}
+  {% for post in site.posts reversed %}
   <article>
     <a href="{{ post.url | prepend: site.baseurl }}">
       <h2>{{ post.title }}</h2>
@@ -35,7 +35,3 @@ permalink: /index
     </article>
     {% endfor %}
   </section>
-
-{% comment %}
-{{ post.date | date_to_string }}
-{% endcomment %}

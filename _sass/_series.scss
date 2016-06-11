@@ -46,11 +46,20 @@
 						color: $blue;
 						h5 {
 							display: inline;
+							font-weight: 400;
+							color: $blue;
 							&:before {
 								content: " - ";
-								color: $blue !important;
 							}
 						}
+
+						&:hover,
+						&:hover h5 {
+							border-bottom: 1px dashed $red;
+							color: $red;
+						}
+
+						&:hover h5 {border-bottom: none;}
 					}
 				}
 			}

@@ -4,7 +4,7 @@ title:  "Enviando e-mails pelo PHP - com PHPMailer"
 date:   2016-05-17 16:12:55 -0300
 image: sending-emails-with-php.jpg
 categories: php
-intro: 'Matando aquele mistério sobre envio de emails pelo localhost, com uma classe muito bacana em PHP e pequenas configurações no Apache2'
+intro: 'Matando aquele mistério sobre envio de emails pelo localhost, com uma classe muito bacana em PHP e pequenas configurações no Apache2.'
 ---
 # Ok, acabei tudo, só falta...o envio dos emails ¬¬
 Eu sei que isso, talvez seja algo totalmente simples pros maix velhos, só que, para nós(eternos novatos, e realmente novatos), talvez seja um verdadeiro Monstro do Lago Ness.

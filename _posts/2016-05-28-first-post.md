@@ -3,10 +3,15 @@ layout: post
 title:  "Bem-vindos!"
 date:   2016-05-28 09:04:00 -0300
 categories: generic
-tags: bem-vindos welcome 
+image: person.jpg 
+intro: "Pra quem não me conhece, me chamo Matheus Hernandes e me considero um dev full-stack web. Clica aí em baixo para saber um pouco mais sobre mim!"
 ---
 # Bem Vindos! Hahaha
-Só por questões de educação, este que vos fala se chama Matheus Hernandes. Estou começando esse blog, algo que eu já queria a muito tempo - inclusive, já tive um blog sobre design, que infelizmente foi apagado por minhas burrices. Um adendo aqui: <span class="bold">nunca exportem nenhum projeto para nenhum lugar, sem antes fazer um backup e salvá-lo em pelo menos dois lugares, além é claro do seu computador</span>.
+Só por questões de educação, este que vos fala se chama Matheus Hernandes. Estou começando esse blog, algo que eu já queria a muito tempo - inclusive, já tive um blog sobre design, que infelizmente foi apagado por minhas burrices. 
+Um adendo aqui:
+
+> **nunca exportem nenhum projeto para nenhum lugar, sem antes fazer um backup e salvá-lo em pelo menos dois lugares, além é claro do seu computador**.
+
 Bom, eu sinceramente e honestamente não vejo como tipificar(essa palavra existe?) esse blog, porque por mais que eu fale sobre desenvolvimento, muita coisa vai estar relacionada com a minha vida(acontecimentos, epílogos e coisas legais - senão, alguma cagada que eu fiz e que você poderá evitar), e claro, um bom humor! Hahaha
 
 Bom, se você quiser me acompanhar nas redes  sociais, só dar um pulinho no fim da página, lá estarão os links do meu GitHub, Twitter, Facebook, Instagram e Gmail(não me pergunte como eu uso tudo isso).

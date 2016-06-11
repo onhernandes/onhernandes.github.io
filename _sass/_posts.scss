@@ -39,6 +39,10 @@
 			padding: 2% 0%;
 		}
 
+		strong {
+			font-weight: 500;
+		}
+
 		p, span {
 			font-size: 17px;
 			padding: 7px 0;
@@ -46,7 +50,7 @@
 
 		a {
 			color: $red;
-			font-weight: bold;
+			font-weight: 500;
 			border-bottom: 1px solid white;
 		}
 	}
