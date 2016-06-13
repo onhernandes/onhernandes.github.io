@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.intro %}{{ page.intro | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
@@ -24,7 +24,9 @@
   {% else %}
   <meta itemprop="image" content="{{ "/assets/img/blog-image.jpg" | prepend: site.baseurl | prepend: site.url }}">
   {% endif %}
-
+  
+  <!-- ANDROID THEME COLOR -->
+  <meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}{{ '#1056ad' }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/syntax-monokai.css" | prepend: site.baseurl }}">
