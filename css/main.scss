@@ -65,5 +65,12 @@ $red: #E84545;
 		width: 95% !important;
 	}
 
-	#projects > h1 {padding: 20px 0 10px;}
+	#projects {
+		> h1 {padding: 20px 0 10px;}
+
+		> section > article {
+			flex: 0 0 95%;
+			margin: 2.5%;
+		}
+	}
 }

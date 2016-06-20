@@ -7,7 +7,6 @@ permalink: /projetos
 	<h1>{{ page.title }}</h1>
 	<section>
 		{% for post in site.posts %}
-			{% assign post.categories = cat  %}
 			{% if post.categories contains 'project' %}
 				<article>
 					<h2>
