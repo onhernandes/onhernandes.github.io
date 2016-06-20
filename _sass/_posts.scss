@@ -5,8 +5,8 @@
 	
 	#header-post {
 		padding: 120px 5%;
+		background: center no-repeat;
 		background-size: cover;
-		background-repeat: no-repeat;
 
 		span {
 			h1, h5 {
@@ -60,31 +60,5 @@
 		height: auto;
 		margin-right: auto;
 		margin-left: auto;
-	}
-
-	#person {
-		width: 70%;
-		margin-right: auto;
-		margin-left: auto;
-		display: block;
-
-		article {
-			width: 100%;
-			display: block;
-			
-			h3, p {
-				padding: 10px;
-				text-align: center;
-				font-size: 14px;
-			}
-
-			img {
-				border-radius: 100px;
-				width: 200px;
-				height: 200px;
-				margin-right: auto;
-				margin-left: auto;
-			}
-		}
 	}
 }

@@ -3,27 +3,17 @@
 
 @charset "utf-8";
 
+$yellow: #f0b01b;
 $blue: #2d4059;
 $red: #E84545;
 
-.light:hover {
-	border-bottom: 1.5px solid #fff;
-	
-	&.blue:hover {border-bottom: 1.5px solid darken($blue, 5%);}
-	&.red:hover {border-bottom: 1.5px solid darken($red, 5%);}
-	&.black:hover {border-bottom: 1.5px solid darken(#323232, 5%);}
+#wrapper {
+	min-height: calc(100vh - 113px);
 }
-/*
-.highlight .lineno {
-	color: #ccc;
-	display:inline-block;
-	padding: 5px;
-	border-right:1px solid #ccc;
-}
-*/
+
 .highlight pre code { 
 	padding: 25px 0;
-  width: 100%;
+	width: 100%;
 	color: #fff;
 	font-size: 14px;
 	background: #323232;
@@ -42,8 +32,6 @@ $red: #E84545;
 @import "reset";
 @import "header";
 @import "home";
-@import "page";
-@import "series";
 @import "projects";
 @import "posts";
 @import "footer";
@@ -58,45 +46,24 @@ $red: #E84545;
 
 @media screen and (max-width: 1000px) {
 	#home-posts article,
-	#page article,
-  #post article {
-    width: 95%;
+	#post article {
+		width: 95%;
 		margin-top: 15px;
 		margin-bottom: 15px;
 
-    a button {
-      width: 80%;
-    }
-	}
+		a button {
+			width: 80%;
+		}
 
-  #disqus_thread {
-    width: 95% !important;
-  }
-
-	#series {
-    > h1 {padding: 20px 0 10px;}
-    > section {
-      display: block;
-
-      > article {
-        flex: none !important;
-        margin-left: auto;
-        margin-right: 0;
-        width: 95% !important; 
-      }
-    }
-  }
-
-  #projects > h1 {padding: 20px 0 10px;}
-
-	#page > #series > section {
-		display: block;
-
-		> article {
-			flex: none !important;
-			margin-left: auto;
-			margin-right: auto;
-			width: 95% !important; 
+		> p,
+		> ul > li {
+			font-weight: 400;
 		}
 	}
+
+	#disqus_thread {
+		width: 95% !important;
+	}
+
+	#projects > h1 {padding: 20px 0 10px;}
 }

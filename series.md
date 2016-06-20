@@ -4,7 +4,7 @@ title: Séries
 permalink: /series
 ---
 
-<section id="series">
+<section id="projects">
 	<h1>{{ page.title }}</h1>
 	<section>
 		{% for tag in site.categories %}

@@ -4,7 +4,7 @@ layout: default
 {% include minutes-to-read.html %}
 
 <section id="post">
-	<header id="header-post" style="background-image: url(/img/posts/{{ page.image-header }});">
+	<header id="header-post" style="{% if page.image-header %} background: url(/img/posts/{{ page.image-header }}); {% else %} background: #E84545; {% endif %}">
 		<span>
 			<h1>{{ page.title }}</h1>
 			<h5>{{ minutesText }}</h5>
