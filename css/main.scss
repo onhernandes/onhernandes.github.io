@@ -106,3 +106,61 @@ header {
 		}
 	}
 }
+
+#who {
+	text-align: center;
+	padding: 3% 0% 0%;
+	color: #fff;
+	background: url(../img/back.png) no-repeat center;
+
+	> span {
+		font-size: 30px;
+		padding: 15% 15px 0%;
+	}
+
+	> ul {
+		text-align: center;
+		padding: 0% 0% 3%;
+
+		> li {
+			display: inline-block;
+			
+			> a {
+				color: #fff;
+				padding: 5px 12px;
+				border-bottom: 2px solid #fff;
+			}
+		}
+	}
+
+	> #skills {
+		background-color: rgba(0,0,0,0.8);
+		/*-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);*/
+		
+		> p {
+			padding: 3%;
+			width: 40%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		> ul {
+			display: flex;
+			flex-flow: wrap row;
+			justify-content: flex-start;
+			align-items: flex-start;
+			align-content: flex-start;
+
+			> li {
+				flex-basis: calc(100% / 8);
+				display: inline-block;
+				padding: 60px 0;
+				background-color: $blue;
+			}
+		}
+	}
+}
