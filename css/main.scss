@@ -45,7 +45,9 @@ header {
 				> a {
 					color: #fff;
 					padding: 0px 7px;
+					border-bottom: none;
 					text-transform: uppercase;
+					transition: all 0.1s linear 0.05s;
 				
 					&[class^="flaticon-"]:before, 
 					&[class*=" flaticon-"]:before,
@@ -64,7 +66,7 @@ header {
 				> li > a:hover {
 					padding-bottom: 4px;
 					border-bottom: 2.5px solid #fff;
-					transition: all 0.18s linear 0.1s;
+					transition: all 0.1s linear 0.05s;
 				}
 			}
 		}
@@ -83,7 +85,7 @@ header {
 		transition: all 0.5s ease-out 0.2s;
 
 		&:hover {
-			transition: all 0.7s ease-in 0.1s;
+			transition: all 0.5s linear 0.1s;
 			font-size: 60px;
 		}
 	}
@@ -99,7 +101,7 @@ header {
 		background-size: cover;
 		background-position: center;
 		position: absolute;
-		z-index: 1;
+		z-index: -1;
 	}
 }
 
@@ -129,7 +131,10 @@ header {
 					justify-content: center;
 					align-items: center;
 					align-content: center;
-					content: "";
+					font-family: "Flaticon";
+					font-size: 50px;
+					font-style: normal;
+					content: "\f10c";
 					cursor: pointer;
 					width: 100%;
 					text-align: center;
@@ -141,7 +146,6 @@ header {
 
 		&:last-child {
 			flex-basis: 35%;
-			overflow-x: hidden;
 
 			> ul > li {
 				width: 100%;
@@ -156,7 +160,11 @@ header {
 					justify-content: center;
 					align-items: center;
 					align-content: center;
-					content: "";
+					font-family: "Flaticon";
+					font-size: 50px;
+					font-style: normal;
+					content: "\f10c";
+					color: #fff;
 					cursor: pointer;
 					width: 100%;
 					text-align: center;
@@ -170,7 +178,6 @@ header {
 
 #who {
 	text-align: center;
-	padding: 3% 0% 0%;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -180,7 +187,6 @@ header {
 	color: #fff;
 	background: url(../img/myself.jpg) no-repeat center;
 	background-size: cover;
-	background-attachment: fixed;
 
 	> span {
 		font-size: 40px;
@@ -213,29 +219,11 @@ header {
 
 #skills {
 	z-index: 2;
-
-	> div {
-		height: 100vh;
-		background: url(../img/myself.jpg) no-repeat center;
-		background-size: cover;
-		background-attachment: fixed;
-		-webkit-filter: blur(3px);
-		-moz-filter: blur(3px);
-		-o-filter: blur(3px);
-		-ms-filter: blur(3px);
-		filter: blur(3px);
-		width: 100%;
-		position: absolute;
-		z-index: -1;
-	}
-
-	
-	&:before {
-		height: 100vh;
-		background-color: rgba(0,0,0,0.8);
-		width: 100%;
-		z-index: 4;
-	}
+	height: 100vh;
+	background: url(../img/myself.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	z-index: -1;
 
 	> p {
 		padding: 3%;
@@ -259,4 +247,14 @@ header {
 			background-color: $blue;
 		}
 	}
+}
+
+#lightbox {
+	width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $blue;
+	z-index: 5;
 }
