@@ -249,10 +249,24 @@ $pink: #f07178;
 		align-items: center;
 		align-content: center;
 
-		> article {
+		> a {
 			flex: 0 0 calc(90% / 4);
-			background-color: #1056ad;
+			background-image: url(../img/coffee.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
 			height: 250px;
+			-o-filter: grayscale(77%);
+			-moz-filter: grayscale(77%);
+			-webkit-filter: grayscale(77%);
+			filter: grayscale(77%);
+
+			&:hover {
+				-o-filter: grayscale(0%);
+				-moz-filter: grayscale(0%);
+				-webkit-filter: grayscale(0%);
+				filter: grayscale(0%);
+			}
 		}
 	}
 }
