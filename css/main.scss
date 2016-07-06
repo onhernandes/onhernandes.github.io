@@ -1,6 +1,8 @@
 $blue: #1056ad;
 $red: #1056ad;
 $yellow: #1056ad;
+$cyan: #89DDFF;
+$pink: #f07178;
 
 @import 'reset.scss';
 @import 'flaticon.scss';
@@ -223,68 +225,34 @@ $yellow: #1056ad;
 }
 
 #skills {
-	//z-index: 2;
 	height: 100vh;
 	width: 100%;
 	background: url(../img/myself.jpg) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
-	
-	article {
-		min-height: calc(100vh - 140px);
-		width: 100%;
-		padding: 3%;
+	padding: 3%;
+	text-align: center;
 
-		> h2 {
-
-		}
-
-		> p {
-		}
-
-		> ul {			
-			> li {
-				display: inline-block;
-				font-size: 20px;
-				text-transform: lowercase;
-				color: #fff;
-				font-weight: 400;
-				padding: 7px 12px;
-			}
-		}
+	> h2 {
+		color: #fff;
+		font-weight: 400;
+		text-transform: lowercase;
+		padding-bottom: 3%;
 	}
 
-	> ul {
+	> #projects {
 		display: flex;
-		flex-flow: wrap row;
-		justify-content: flex-start;
-		align-items: flex-start;
-		align-content: flex-start;
 		width: 100%;
+		height: auto;
+		flex-flow: wrap row;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
 
-		> a {
-			color: #fff;
-			text-align: center;
-			display: inline-block;
-			flex-basis: calc(100% / 8);
-			padding: 70px 0;
-			background: url(../img/close.jpg);
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			-moz-filter: grayscale(77%);
-			-o-filter: grayscale(77%);
-			-webkit-filter: grayscale(77%);
-		    filter: grayscale(77%);
-			transition: all 0.1s linear 0.1s;
-
-		    &:hover {
-			    -moz-filter: grayscale(0%);
-			    -o-filter: grayscale(0%);
-			    -webkit-filter: grayscale(0%);
-			    filter: grayscale(0%);
-				transition: all 0.1s linear 0.1s;
-		    }
+		> article {
+			flex: 0 0 calc(90% / 4);
+			background-color: #1056ad;
+			height: 250px;
 		}
 	}
 }
@@ -323,7 +291,6 @@ $yellow: #1056ad;
 
 
 	> article {
-		background-color: #1056ad;
 		flex: 0 0 auto;
 		height: 100vh;
 
@@ -337,10 +304,10 @@ $yellow: #1056ad;
 			flex-basis: 30%;
 			background-color: #212121;
 			padding: 17px;
-			color: #89DDFF;
+			color: $cyan;
 
 			h4 {
-				color: #f07178;
+				color: $pink;
 				font-weight: 300;
 				padding: 10px 0px 3px;
 				text-transform: lowercase;
@@ -391,8 +358,8 @@ $yellow: #1056ad;
 					padding: 7px;
 					margin-right: 7px;
 					font-size: 12px;
-					color: #89DDFF;
-					border: 1px solid #89DDFF;
+					color: $cyan;
+					border: 1px solid $cyan;
 					border-radius: 3px;
 				}
 			}
