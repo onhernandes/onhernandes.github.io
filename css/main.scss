@@ -3,10 +3,11 @@ $red: #1056ad;
 $yellow: #1056ad;
 
 @import 'reset.scss';
+@import 'flaticon.scss';
 
 // HEADER
 
-header {
+#header {
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -129,9 +130,12 @@ header {
 					justify-content: center;
 					align-items: center;
 					align-content: center;
-					content: "";
+					font-family: "Flaticon";
+					content: "\f10c";
 					cursor: pointer;
 					width: 100%;
+					color: #fff;
+					font-size: 30px;
 					text-align: center;
 					height: 100vh;
 					background-color: rgba(0,0,0,0.5); 
@@ -142,6 +146,8 @@ header {
 		&:last-child {
 			flex-basis: 35%;
 			overflow-x: hidden;
+		    //overflow-y: scroll;
+			
 
 			> ul > li {
 				width: 100%;
@@ -156,7 +162,10 @@ header {
 					justify-content: center;
 					align-items: center;
 					align-content: center;
-					content: "";
+					font-family: "Flaticon";
+					content: "\f10c";
+					color: #fff;
+					font-size: 30px;
 					cursor: pointer;
 					width: 100%;
 					text-align: center;
@@ -197,8 +206,9 @@ header {
 			
 			> a {
 				color: #fff;
-				padding: 5px 12px;
-				border-bottom: 2px solid #fff;
+				padding: 8px 12px;
+
+				&:before {font-size: 35px;}
 			}
 		}
 	}
@@ -237,11 +247,28 @@ header {
 		z-index: 4;
 	}
 
-	> p {
+	article {
+		min-height: calc(100vh - 140px);
+		width: 100%;
 		padding: 3%;
-		width: 40%;
-		margin-right: auto;
-		margin-left: auto;
+
+		> h2 {
+
+		}
+
+		> p {
+		}
+
+		> ul {			
+			> li {
+				display: inline-block;
+				font-size: 20px;
+				text-transform: lowercase;
+				color: #fff;
+				font-weight: 400;
+				padding: 7px 12px;
+			}
+		}
 	}
 
 	> ul {
@@ -252,11 +279,158 @@ header {
 		align-content: flex-start;
 		width: 100%;
 
-		> li {
-			flex-basis: calc(100% / 8);
+		> a {
+			color: #fff;
+			text-align: center;
 			display: inline-block;
-			padding: 60px 0;
-			background-color: $blue;
+			flex-basis: calc(100% / 8);
+			padding: 70px 0;
+			background: url(../img/close.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			-moz-filter: grayscale(77%);
+			-o-filter: grayscale(77%);
+			-webkit-filter: grayscale(77%);
+		    filter: grayscale(77%);
+			transition: all 0.1s linear 0.1s;
+
+		    &:hover {
+			    -moz-filter: grayscale(0%);
+			    -o-filter: grayscale(0%);
+			    -webkit-filter: grayscale(0%);
+			    filter: grayscale(0%);
+				transition: all 0.1s linear 0.1s;
+		    }
+		}
+	}
+}
+
+#link {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	margin: 15px;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 100%;
+	font-size: 45px;
+	font-family: "Flaticon";
+	-webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.55);
+
+	&:before {content: "\f103";}
+}
+
+#lightbox {
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	background-color: rgba(255,255,255,0.8);
+	position: fixed;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-flow: wrap row;
+	color: $blue;
+	z-index: 5;
+
+
+	> article {
+		background-color: #1056ad;
+		flex: 0 0 auto;
+		height: 100vh;
+
+		&.first-lightbox {
+			background: url(../img/close.jpg) no-repeat center;
+			background-size: cover;
+			flex-basis: 70%;
+		}
+
+		&.last-lightbox {
+			flex-basis: 30%;
+			background-color: #212121;
+			padding: 17px;
+			color: #89DDFF;
+
+			h4 {
+				color: #f07178;
+				font-weight: 300;
+				padding: 10px 0px 3px;
+				text-transform: lowercase;
+				
+				&:first-child {padding-top: 0;}
+				& > a {
+					color: inherit;
+					font-weight: inherit;
+					text-transform: inherit;
+
+					&:before {
+						font-family: "Flaticon";
+						content: "\f10c";
+						padding-right: 5px;
+					}
+
+					&:hover {color: #fff;}
+				}
+
+			}
+
+			p {
+				width: 100%;
+				font-size: 14px;
+			}
+
+			.cups {
+				font-family: "Flaticon";
+				list-style-type: none;
+
+				> li {
+					display: inline-block;
+					padding: 0px 3px;
+					
+					&:before {
+						font-family: "Flaticon";
+						content: "\f104";
+					}
+
+					&:first-child {padding-left: 0;}
+				}
+			}
+
+			.tags {
+				padding-top: 4px;
+				li {
+					display: inline-block;
+					padding: 7px;
+					margin-right: 7px;
+					font-size: 12px;
+					color: #89DDFF;
+					border: 1px solid #89DDFF;
+					border-radius: 3px;
+				}
+			}
+
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#lightbox {
+		display: block;
+		
+		> .link {left: auto;right: 0;}
+		> article {
+			width: 100%;
+			height: 100vh;
+
+			&.last-lightbox {
+				padding: 3%;
+				height: auto;
+			}
 		}
 	}
 }

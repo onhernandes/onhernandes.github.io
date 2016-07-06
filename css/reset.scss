@@ -10,6 +10,24 @@
 	margin: 0;
 	padding: 0;
 	z-index: 0;
+
+	::-webkit-scrollbar {
+		width: 7px;/* for vertical scrollbars */
+		height: 7px; /* for horizontal scrollbars */
+	}
+
+	::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.4);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 7px;
+	}
+}
+
+body {
+	overflow: visible;
 }
 
 .special {
@@ -121,4 +139,19 @@ button {
 ::-moz-placeholder {}
 
 :-ms-input-placeholder {}
+/*
+::-webkit-scrollbar { 
+    display: none; 
+}
 
+:-moz-scrollbar {
+	display: none;
+}
+
+::-moz-scrollbar {
+	display: none;
+}
+
+:-ms-input-scrollbar {
+	display: none;
+}*/
