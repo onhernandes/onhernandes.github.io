@@ -133,11 +133,8 @@ $yellow: #1056ad;
 					align-items: center;
 					align-content: center;
 					font-family: "Flaticon";
-<<<<<<< HEAD
-=======
 					font-size: 50px;
 					font-style: normal;
->>>>>>> 46f5fb6c7bd93cf2b004870df613ea1e1f267ebb
 					content: "\f10c";
 					cursor: pointer;
 					width: 100%;
@@ -152,12 +149,6 @@ $yellow: #1056ad;
 
 		&:last-child {
 			flex-basis: 35%;
-<<<<<<< HEAD
-			overflow-x: hidden;
-		    //overflow-y: scroll;
-			
-=======
->>>>>>> 46f5fb6c7bd93cf2b004870df613ea1e1f267ebb
 
 			> ul > li {
 				width: 100%;
@@ -173,16 +164,10 @@ $yellow: #1056ad;
 					align-items: center;
 					align-content: center;
 					font-family: "Flaticon";
-<<<<<<< HEAD
-					content: "\f10c";
-					color: #fff;
-					font-size: 30px;
-=======
 					font-size: 50px;
 					font-style: normal;
 					content: "\f10c";
 					color: #fff;
->>>>>>> 46f5fb6c7bd93cf2b004870df613ea1e1f267ebb
 					cursor: pointer;
 					width: 100%;
 					text-align: center;
@@ -241,19 +226,10 @@ $yellow: #1056ad;
 	//z-index: 2;
 	height: 100vh;
 	width: 100%;
-
-	&:before {
-		height: 100vh;
-		width: 100%;
-		background: url(../img/myself.jpg) no-repeat center;
-		background-size: cover;
-		background-attachment: fixed;
-		z-index: -1;
-		content: "";
-		-webkit-filter: blur(2px);
-
-	}
-
+	background: url(../img/myself.jpg) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	
 	article {
 		min-height: calc(100vh - 140px);
 		width: 100%;
@@ -441,13 +417,3 @@ $yellow: #1056ad;
 		}
 	}
 }
-
-/*#lightbox {
-	width: 100%;
-	min-height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: $blue;
-	z-index: 5;
-}*/
