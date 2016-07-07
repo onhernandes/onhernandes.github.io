@@ -23,7 +23,7 @@ $pink: #f07178;
 		height: auto;
 		display: flex;
 		flex-flow: wrap row;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		z-index: 2;
 		font-size: 19px;
@@ -85,12 +85,6 @@ $pink: #f07178;
 		border: 5px solid white;
 		padding: 10px 13px;
 		z-index: 2;
-		transition: all 0.5s ease-out 0.2s;
-
-		&:hover {
-			transition: all 0.5s linear 0.1s;
-			font-size: 60px;
-		}
 	}
 
 	> div {
@@ -124,6 +118,7 @@ $pink: #f07178;
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+			transition: all 0.5s linear 0.1s;
 			flex-basis: 65%;
 			color: #fff;
 
@@ -145,6 +140,7 @@ $pink: #f07178;
 					text-align: center;
 					height: 100vh;
 					background-color: rgba(0,0,0,0.5); 
+					transition: all 0.5s linear 0.1s;
 				}
 			}
 		}
@@ -159,6 +155,7 @@ $pink: #f07178;
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
+				transition: all 0.5s linear 0.1s;
 
 				&:hover:before {
 					display: flex;
@@ -174,7 +171,8 @@ $pink: #f07178;
 					width: 100%;
 					text-align: center;
 					height: 100%;
-					background-color: rgba(0,0,0,0.5); 
+					background-color: rgba(0,0,0,0.5);
+					transition: all 0.5s linear 0.1s;
 				}
 			}
 		}
@@ -225,12 +223,12 @@ $pink: #f07178;
 }
 
 #skills {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	background: url(../img/myself.jpg) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
-	padding: 3%;
+	padding: 5% 3% 3%;
 	text-align: center;
 
 	> h2 {
@@ -254,18 +252,21 @@ $pink: #f07178;
 			background-image: url(../img/coffee.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: center;
+			background-position: left bottom;
 			height: 250px;
 			-o-filter: grayscale(77%);
 			-moz-filter: grayscale(77%);
 			-webkit-filter: grayscale(77%);
 			filter: grayscale(77%);
+			transition: all 0.5s linear 0.1s;
+			margin-top: 3%;
 
 			&:hover {
 				-o-filter: grayscale(0%);
 				-moz-filter: grayscale(0%);
 				-webkit-filter: grayscale(0%);
 				filter: grayscale(0%);
+				transition: all 0.5s linear 0.1s;
 			}
 		}
 	}
