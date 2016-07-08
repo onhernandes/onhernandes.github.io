@@ -20,6 +20,7 @@ $pink: #f07178;
 	> nav {
 		width: 100%;
 		height: auto;
+		background-color: rgba(0,0,0,0.3);
 		display: flex;
 		flex-flow: wrap row;
 		position: fixed;
@@ -29,6 +30,7 @@ $pink: #f07178;
 		padding: 14px;
 		left: 0;
 		justify-content: space-around;
+		align-items: center;
 
 		> a {color: #fff;}
 
@@ -63,17 +65,14 @@ $pink: #f07178;
 			&.first {
 				padding: 0px 10px;
 				flex-basis: 80%;
-				//padding-top: 3px;
 
 				> li > a:hover {
-					padding-bottom: 4px;
-					border-bottom: 2.5px solid #fff;
+					padding: 10px 7px;
+					border-left: 1px solid #fff;
+					border-right: 1px solid #fff;
 					transition: all 0.1s linear 0.05s;
 				}
 			}
-		}
-
-		> a:last-child {
 		}
 	}
 
@@ -187,7 +186,7 @@ $pink: #f07178;
 	flex-flow: wrap column;
 	align-content: center;
 	color: #fff;
-	background: url(../img/myself.jpg) no-repeat center;
+	background: url(../img/myself-standard.jpg) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 
@@ -195,22 +194,6 @@ $pink: #f07178;
 		font-size: 40px;
     	font-family: 'Gloria Hallelujah', sans-serif;
 		padding: 0 15px 0%;
-	}
-
-	> ul {
-		text-align: center;
-		padding: 0% 0% 3%;
-
-		> li {
-			display: inline-block;
-			
-			> a {
-				color: #fff;
-				padding: 8px 12px;
-
-				&:before {font-size: 35px;}
-			}
-		}
 	}
 	
 	p {
@@ -224,11 +207,16 @@ $pink: #f07178;
 #skills {
 	min-height: 100vh;
 	width: 100%;
-	background: url(../img/myself.jpg) no-repeat center;
+	background: url(../img/myself-standard.jpg) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 5% 3% 3%;
 	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-flow: wrap row;
 
 	> h2 {
 		color: #fff;
@@ -237,36 +225,56 @@ $pink: #f07178;
 		padding-bottom: 3%;
 	}
 
-	> #projects {
-		display: flex;
-		width: 100%;
-		height: auto;
-		flex-flow: wrap row;
-		justify-content: space-between;
-		align-items: center;
-		align-content: center;
+	> ul {
+		display: block;
+		flex: 0 0 calc(90% / 4);
+		min-height: 250px;
+		position: relative;
+		overflow: hidden;
 
-		> a {
-			flex: 0 0 calc(90% / 4);
-			background-image: url(../img/coffee.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: left bottom;
-			height: 250px;
-			-o-filter: grayscale(77%);
-			-moz-filter: grayscale(77%);
-			-webkit-filter: grayscale(77%);
-			filter: grayscale(77%);
-			transition: all 0.5s linear 0.1s;
-			margin-top: 3%;
+		> li {
+			width: inherit;
+			height: inherit;
+			z-index: 2;
+			background-color: #fff;
+			transition: all 0.06s linear 0.1s;
 
-			&:hover {
-				-o-filter: grayscale(0%);
-				-moz-filter: grayscale(0%);
-				-webkit-filter: grayscale(0%);
-				filter: grayscale(0%);
-				transition: all 0.5s linear 0.1s;
+			&:first-child {
+				color: $pink;
+				height: 80px;
+				padding: 15px;
+				text-align: left;
+
+				> h3 {color: $pink;}
+
+				> p {
+					font-size: 14px;
+					padding-top: 3px;
+					color: $blue;
+				}
 			}
+
+			&:last-child {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 4;
+				background-color: $red;
+			}
+		}
+
+		&:hover > li:last-child {
+			margin-top: 80px;
+			transition: all 0.14s linear 0.1s;
+		}
+
+		&:nth-child(5),
+		&:nth-child(6),
+		&:nth-child(7),
+		&:nth-child(8) {
+			margin-top: 3%;
 		}
 	}
 }
