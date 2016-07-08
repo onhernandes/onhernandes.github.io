@@ -1,7 +1,6 @@
-/*---------------GLOBAL---------------*/
+// GLOBAL
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
-//@import 'https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ubuntu+Condensed';
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -12,8 +11,8 @@
 	z-index: 0;
 
 	::-webkit-scrollbar {
-		width: 7px;/* for vertical scrollbars */
-		height: 7px; /* for horizontal scrollbars */
+		width: 7px;
+		height: 7px;
 	}
 
 	::-webkit-scrollbar-track {
@@ -94,42 +93,6 @@ button {
 }
 
 .cleared {clear: both;}
-
-.button {
-	display: block;
-	width: auto;
-	height: auto;
-	padding: 7px 25px;
-	text-transform: uppercase;
-	color: #fff;
-	font-weight: 600;
-	background: $red;
-	margin-top: 15px;
-	margin-right: 20px;
-	margin-bottom: 5%;	 
-	margin-left: auto;
-	border: none;
-	border-bottom:  4px solid rgba(0,0,0,0.3);
-	cursor: pointer;
-}
-
-.beta {
-	width: auto;
-	cursor: pointer;
-	height: auto;
-	padding: 5px 7px;
-	text-transform: uppercase;
-	background: $yellow;
-	border: none;
-	color: #323232;
-	font-weight: 600;
-}
-
-.error {
-	box-sizing: border-box;
-	// margin: 10px;
-	color: #fff;
-}
 
 
 ::-webkit-input-placeholder {}
