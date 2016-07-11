@@ -4,9 +4,79 @@ $yellow: #1056ad;
 $cyan: #89DDFF;
 $pink: #f07178;
 
+
+$html: #E44D26;
+$css: #0270BB;
+$csslight: #2BA8E0;
+$php: darken(#6C7EB7, 7%);
+$phplight: #9AA0C6;
+$js: darken(#E5A226, 7%);
+$jslight: #F1BF26;
+$git: lighten(#F34F29, 5%);
+$mysql: darken(#DD8E3A, 7%); // #316072;
+$sql: #DD8E3A;
+$node: #7FBD42;
+
 @import 'reset.scss';
 
-// HEADER
+#nav {
+	width: 100%;
+	height: auto;
+	background-color: rgba(0,0,0,0.3);
+	display: flex;
+	flex-flow: wrap row;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	font-size: 19px;
+	padding: 14px;
+	left: 0;
+	justify-content: space-around;
+	align-items: center;
+
+	> a {color: #fff;}
+
+	> a:first-child {
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	ul {
+		flex: 0 0 auto;
+		text-align: center;
+		
+		> li {
+			display: inline-block;
+
+			> a {
+				color: #fff;
+				padding: 0px 7px;
+				border-bottom: none;
+				text-transform: uppercase;
+				transition: all 0.1s linear 0.05s;
+			
+				&[class^="flaticon-"]:before, 
+				&[class*=" flaticon-"]:before,
+				&[class^="flaticon-"]:after, 
+				&[class*=" flaticon-"]:after {
+					font-size: 25px;
+				}
+			}
+		}
+
+		&.first {
+			padding: 0px 10px;
+			flex-basis: 80%;
+
+			> li > a:hover {
+				padding: 10px 7px;
+				border-left: 1px solid #fff;
+				border-right: 1px solid #fff;
+				transition: all 0.1s linear 0.05s;
+			}
+		}
+	}
+}
 
 #header {
 	width: 100%;
@@ -15,66 +85,13 @@ $pink: #f07178;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	flex-flow: wrap column;
 	background-color: transparent;
-
-	> nav {
-		width: 100%;
-		height: auto;
-		background-color: rgba(0,0,0,0.3);
-		display: flex;
-		flex-flow: wrap row;
-		position: fixed;
-		top: 0;
-		z-index: 2;
-		font-size: 19px;
-		padding: 14px;
-		left: 0;
-		justify-content: space-around;
-		align-items: center;
-
-		> a {color: #fff;}
-
-		> a:first-child {
-			text-transform: uppercase;
-			font-weight: 600;
-		}
-
-		ul {
-			flex: 0 0 auto;
-			text-align: center;
-			
-			> li {
-				display: inline-block;
-
-				> a {
-					color: #fff;
-					padding: 0px 7px;
-					border-bottom: none;
-					text-transform: uppercase;
-					transition: all 0.1s linear 0.05s;
-				
-					&[class^="flaticon-"]:before, 
-					&[class*=" flaticon-"]:before,
-					&[class^="flaticon-"]:after, 
-					&[class*=" flaticon-"]:after {
-						font-size: 25px;
-					}
-				}
-			}
-
-			&.first {
-				padding: 0px 10px;
-				flex-basis: 80%;
-
-				> li > a:hover {
-					padding: 10px 7px;
-					border-left: 1px solid #fff;
-					border-right: 1px solid #fff;
-					transition: all 0.1s linear 0.05s;
-				}
-			}
-		}
-	}
+	background-image: url(../img/sea.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 
 	span {
 		font-size: 50px;
@@ -83,20 +100,17 @@ $pink: #f07178;
 		border: 5px solid white;
 		padding: 10px 13px;
 		z-index: 2;
+		margin-bottom: 10px;
+		flex: 0 0 auto;
 	}
 
-	> div {
-		width: 100%;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		background-image: url(../img/sea.jpg);
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		background-position: center;
-		position: absolute;
-		z-index: -1;
+	p {
+		width: 50%;
+		font-size: 17px;
+		color: #fff;
+		text-align: center;
+		font-weight: 400;
+		flex: 0 0 auto;
 	}
 }
 
@@ -177,39 +191,188 @@ $pink: #f07178;
 	}
 }
 
-#who {
+#skills {
 	text-align: center;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: wrap column;
-	align-content: center;
-	color: #fff;
-	background: url(../img/myself-standard.jpg) no-repeat center;
-	background-size: cover;
-	background-attachment: fixed;
+	padding-top: 3.5%;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-flow: wrap row;
+	align-content: flex-start;
+	color: $blue;
+	background: #fff;
 
-	> span {
+	> h1 {
 		font-size: 40px;
     	font-family: 'Gloria Hallelujah', sans-serif;
 		padding: 0 15px 0%;
+		flex: 0 0 100%;
 	}
 	
-	p {
-		width: 30%;
-		text-align: center;
-		margin-right: auto;
-		margin-left: auto;
+	article {
+		flex: 0 0 calc(80% / 3);
+		background-color: #323232;
+		padding: 15px;
+
+		> h3 {
+			font-weight: 300;
+			color: #fff;
+			border-bottom: 1px solid #fff;
+			padding-bottom: 4px;
+		}
+
+		> ul {
+			width: 100%;
+			height: auto;
+			padding-top: 10px;
+
+			> li {
+				width: 100%;
+				height: auto;
+				display: block;
+				text-align: left;
+
+				> span {
+					font-family: 'Gloria Hallelujah', sans-serif;
+
+					&.learn::after {
+						content: "learning";
+						font-family: "Roboto";
+						color: #414141;
+						font-size: 11px;
+						font-weight: bold;
+						display: inline;
+						padding: 7px 10px;
+						vertical-align: middle;
+						border-radius: 8%;
+						margin-left: 7px;
+						text-transform: uppercase;
+						background-color: $js;
+					}
+				}
+
+				> div {
+					width: 100%;
+					height: auto;
+					padding: 5px 0;
+					background-color: $red;
+				}
+
+				&.html {
+					> span {color: $html;}
+					> div {
+						width: 70%;
+						background-color: $html;
+					}
+				}
+
+				&.css {
+					> span {color: $css;}
+					> div {
+						width: 78%;
+						background-color: $css;
+					}
+				}
+
+				&.sass {
+					> span {color: $csslight;}
+					> div {
+						width: 63%;
+						background-color: $csslight;
+					}
+				}
+
+				&.responsive {
+					> span {color: $csslight;}
+					> div {
+						width: 66%;
+						background-color: $csslight;
+					}
+				}
+
+				&.php {
+					> span {color: $php;}
+					> div {
+						width: 77%;
+						background-color: $php;
+					}
+				}
+
+				&.oop {
+					> span {color: $phplight;}
+					> div {
+						width: 24%;
+						background-color: $phplight;
+					}
+				}
+
+				&.composer {
+					> span {color: $phplight;}
+					> div {
+						width: 9%;
+						background-color: $phplight;
+					}
+				}
+
+				&.js {
+					> span {color: $js;}
+					> div {
+						width: 18%;
+						background-color: $js;
+					}
+				}
+
+				&.jquery {
+					> span {color: $jslight;}
+					> div {
+						width: 38%;
+						background-color: $jslight;
+					}
+				}
+
+				&.git {
+					> span {color: $git;}
+					> div {
+						width: 53%;
+						background-color: $git;
+					}
+				}
+
+				&.mysql {
+					> span {color: $mysql;}
+					> div {
+						width: 59%;
+						background-color: $mysql;
+					}
+				}
+
+				&.sql {
+					> span {color: $sql;}
+					> div {
+						width: 11%;
+						background-color: $sql;
+					}
+				}
+
+				&.node {
+					> span {color: $node;}
+						
+					> div {
+						width: 2%;
+						background-color: $node;
+					}
+
+				}
+			}
+		}
 	}
 }
 
-#skills {
+#cool-things {
 	min-height: 100vh;
 	width: 100%;
-	background: url(../img/myself-standard.jpg) no-repeat center;
-	background-size: cover;
-	background-attachment: fixed;
+	background-color: #fff;
 	padding: 5% 3% 3%;
 	text-align: center;
 	display: flex;
