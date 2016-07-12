@@ -50,5 +50,21 @@ $(document).ready(function() {
  			$("#lightbox").remove();
  			$("#link").remove();
  		});
- 	});			
+ 	});
+
+ 	$(".flaticon-bars").click(function() {
+ 		$("#nav ul").slideToggle();
+ 	});
+
+ 	$("#nav ul").click(function() {
+ 		$("#nav ul").hide();
+ 	});
+
+ 	$("header").click(function() {
+ 		$("#nav ul").hide();
+ 	});
+
+ 	$("section").click(function() {
+ 		$("#nav ul").hide();
+ 	});
 }); 

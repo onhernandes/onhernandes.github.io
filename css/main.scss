@@ -27,7 +27,7 @@ $node: #7FBD42;
 	flex-flow: wrap row;
 	position: fixed;
 	top: 0;
-	z-index: 2;
+	z-index: 999;
 	font-size: 19px;
 	padding: 14px;
 	left: 0;
@@ -36,7 +36,9 @@ $node: #7FBD42;
 
 	> a {color: #fff;}
 
-	> a:first-child {
+	> .flaticon-bars {display: none;}
+
+	> #name {
 		text-transform: uppercase;
 		font-weight: 600;
 	}
@@ -583,6 +585,73 @@ $node: #7FBD42;
 	}
 }
 
+@media screen and (max-width: 790px) {
+	#nav {
+		flex-flow: nowrap column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+		.flaticon-bars {
+			display: block;
+			padding: 10px 15px 10px;
+
+			&:before {
+				font-size: 35px;
+			}
+		}
+
+		#name {display: none;}
+
+		.first {
+			flex-basis: 100%;
+			margin: 15px;
+
+			> li > a:hover {border-left: none; border-right: none;}
+		}
+
+		ul {display: none;}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#skills > article {
+		flex-basis: 100%;
+		margin-top: 30px;
+
+		&:first-child {margin-top: 0;}
+	}
+
+	#cool-things > ul {
+		flex-basis: 98%;
+		width: 98%;
+		position: relative;
+		overflow: hidden;
+		margin-top: 30px !important;
+		border-top: 2px solid rgba(0,0,0,0.5);
+
+		> li {
+			width: 100%;
+
+			&:first-child {
+				height: 80px;
+				background-color: rgba(0,0,0,0.1);
+			}
+
+			&:last-child {
+				position: static;
+				height: 250px;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&:hover > li:last-child {
+			margin-top: 80px;
+			transition: all 0.14s linear 0.1s;
+		}
+	}
+}
 
 /*
 FUTURE USE
