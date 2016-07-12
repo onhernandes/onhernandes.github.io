@@ -66,7 +66,7 @@ $node: #7FBD42;
 
 		&.first {
 			padding: 0px 10px;
-			flex-basis: 80%;
+			flex-basis: 70%;
 
 			> li > a:hover {
 				padding: 10px 7px;
@@ -193,7 +193,7 @@ $node: #7FBD42;
 
 #skills {
 	text-align: center;
-	height: 100vh;
+	height: auto;
 	display: flex;
 	padding-top: 3.5%;
 	justify-content: space-around;
@@ -212,11 +212,9 @@ $node: #7FBD42;
 	
 	article {
 		flex: 0 0 calc(80% / 3);
-		//background-color: #323232;
 		padding: 15px;
 
 		> h3 {
-			//background-color: #323232;
 			font-weight: 300;
 			color: #323232;
 			border-bottom: 1px solid #323232;
@@ -249,7 +247,7 @@ $node: #7FBD42;
 						border-radius: 8%;
 						margin-left: 7px;
 						text-transform: uppercase;
-						background-color: $js;
+						background-color: lighten($js, 15%);
 					}
 				}
 
@@ -377,7 +375,7 @@ $node: #7FBD42;
 	padding: 5% 3% 3%;
 	text-align: center;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between ;
 	align-items: flex-start;
 	align-content: flex-start;
 	flex-flow: wrap row;
@@ -404,17 +402,21 @@ $node: #7FBD42;
 			transition: all 0.06s linear 0.1s;
 
 			&:first-child {
-				color: $pink;
+				color: $php;
 				height: 80px;
 				padding: 15px;
 				text-align: left;
 
-				> h3 {color: $pink;}
+				> a > h4 {
+					font-weight: 400;
+					color: $php;
+					text-transform: none;
+				}
 
-				> p {
+				> a > p {
 					font-size: 14px;
 					padding-top: 3px;
-					color: $blue;
+					color: $php;
 				}
 			}
 
@@ -426,6 +428,9 @@ $node: #7FBD42;
 				left: 0;
 				z-index: 4;
 				background-color: $red;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 		}
 
@@ -440,6 +445,13 @@ $node: #7FBD42;
 		&:nth-child(8) {
 			margin-top: 3%;
 		}
+
+		&:nth-child(1) > li:last-child {background-image: url(../img/organizer.jpg);}
+		&:nth-child(2) > li:last-child {background-image: url(../img/pineb.jpg);}
+		&:nth-child(3) > li:last-child {background-image: url(../img/filetreater.jpg);}
+		&:nth-child(4) > li:last-child {background-image: url(../img/storage.jpg);}
+		&:nth-child(5) > li:last-child {background-image: url(../img/fav-a.jpg); background-position: left bottom;}
+		&:nth-child(6) > li:last-child {background-image: url(../img/asb.jpg); background-position: left bottom;}
 	}
 }
 
@@ -570,3 +582,20 @@ $node: #7FBD42;
 		}
 	}
 }
+
+
+/*
+FUTURE USE
+
+<section id="works">
+	<article id="empresa" style="background-image: url(img/working.jpg);"></article>
+	
+	<article>
+		<ul>
+			<li style="background-image: url(img/aerial.jpg);"></li>
+			<li style="background-image: url(img/close.jpg);"></li>
+			<li style="background-image: url(img/coffee.jpg);"></li>
+		</ul>
+	</article>
+</section>
+*/

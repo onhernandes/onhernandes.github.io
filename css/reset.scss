@@ -119,6 +119,7 @@ button {
 :-ms-input-scrollbar {
 	display: none;
 }*/
+
 @font-face {
   font-family: "Flaticon";
   src: url("../font/Flaticon.eot");
@@ -139,21 +140,22 @@ button {
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: "Flaticon";
-	font-size: 20px;
-	font-style: normal;
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
 }
 
 .flaticon-alarm-clock:before { content: "\f100"; }
 .flaticon-back:before { content: "\f101"; }
 .flaticon-bars:before { content: "\f102"; }
 .flaticon-cancel:before { content: "\f103"; }
-.flaticon-coffe-cup:before { content: "\f104"; }
-.flaticon-coffee-cup-cloud:before { content: "\f105"; }
-.flaticon-error:before { content: "\f106"; }
-.flaticon-facebook:before { content: "\f107"; }
-.flaticon-github:before { content: "\f108"; }
-.flaticon-instagram:before { content: "\f109"; }
-.flaticon-next:before { content: "\f10a"; }
-.flaticon-reload:before { content: "\f10b"; }
-.flaticon-web-link:before { content: "\f10c"; }
+.flaticon-close-envelope:before { content: "\f104"; }
+.flaticon-coffe-cup:before { content: "\f105"; }
+.flaticon-coffee-cup-cloud:before { content: "\f106"; }
+.flaticon-error:before { content: "\f107"; }
+.flaticon-facebook:before { content: "\f108"; }
+.flaticon-github:before { content: "\f109"; }
+.flaticon-instagram:before { content: "\f10a"; }
+.flaticon-next:before { content: "\f10b"; }
+.flaticon-reload:before { content: "\f10c"; }
+.flaticon-web-link:before { content: "\f10d"; }
