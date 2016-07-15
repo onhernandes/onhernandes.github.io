@@ -1,0 +1,66 @@
+#know-me {
+	width: 100%;
+	min-height: 100vh;
+	background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
+	padding: 5% 0 0 5%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-flow: wrap row;
+
+	> img {
+		flex: 0 0 40%;
+		width: 40%;
+		align-self: flex-end;
+	}
+
+	> div {
+		flex: 0 0 60%;
+		width: 60%;
+
+		> h1 {font-family: 'Gloria Hallelujah', cursive;}
+	}
+}
+
+#skills {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex-flow: wrap row;
+	padding: 3%;
+
+	> h1 {
+		align-self: flex-end;
+		text-transform: uppercase;
+		font-family: 'Gloria Hallelujah', cursive;
+		padding: 20px 0;
+		flex: 0 0 100%;
+	}
+
+	> article {
+		flex: 0 0 45%;
+		padding: 20px 0 0 0;
+
+		> ul > li {
+			width: 100%;
+			height: auto;
+			display: block;
+			padding: 10px 0;
+			font-size: 19px;
+			text-transform: uppercase;
+
+			> span {
+				display: block;
+				width: 100%;
+				background-color: rgba(0,0,0,0.5);
+				text-align: right;
+				padding: 5px;
+				font-size: 15px;
+				color: #fff;
+			}
+		}
+	}
+}
