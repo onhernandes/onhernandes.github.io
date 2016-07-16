@@ -2,25 +2,17 @@ $(document).ready(function() {
 	$("#nav ul li a").click(function() {
 		var tab = $(this).attr("data-tab");
 		if (tab === "know-me") {
-			$(".section").css({
-				"height": "200vh",
-				"transform": "translateX(0%)"
-			});
+			$("#wrapper .section").css("height", "200vh");
+			$(".section").removeClass('projects').removeClass('blog').removeClass('talk').addClass('km');
 		} else if (tab === "projects") {
-			$(".section").css({
-				"height": "150vh",
-				"transform": "translateX(-100%)"
-			});
+			$("#wrapper .section").css("height", "100vh");
+			$(".section").removeClass('blog').removeClass('km').removeClass('talk').addClass('projects');
 		} else if (tab === "talk") {
-			$(".section").css({
-				"height": "100vh",
-				"transform": "translateX(-200%)"
-			});
+			$("#wrapper .section").css("height", "100vh");
+			$(".section").removeClass('projects').removeClass('blog').removeClass('km').addClass('talk');
 		} else {
-			$(".section").css({
-				"height": "100vh",
-				"transform": "translateX(-300%)"
-			});
+			$("#wrapper .section").css("height", "100vh");
+			$(".section").removeClass('projects').removeClass('km').removeClass('talk').addClass('blog');
 		}
 	});
 });
