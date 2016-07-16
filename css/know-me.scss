@@ -1,6 +1,6 @@
 #know-me {
 	width: 100%;
-	min-height: 100vh;
+	height: auto;
 	background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
 	padding: 5% 0 0 5%;
 	display: flex;
@@ -30,7 +30,7 @@
 	align-items: center;
 	align-content: center;
 	flex-flow: wrap row;
-	padding: 3%;
+	padding: 0 3% 3%;
 
 	> h1 {
 		align-self: flex-end;

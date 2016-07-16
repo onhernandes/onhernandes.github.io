@@ -1,4 +1,27 @@
 @import 'reset.scss';
+
+#wrapper {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: center;
+	flex-flow: nowrap row;
+
+	.section {
+		width: 100%;
+		//overflow: hidden;
+		height: auto;
+		background-color: #fff;
+		transform: translateX(0%);
+		flex: 0 0 100%;
+		transition: transform 0.1s linear 0.1s;
+	}
+}
+
 @import 'header.scss';
 @import 'know-me.scss';
+@import 'projects.scss';
 @import 'talk.scss';
