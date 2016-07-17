@@ -27,8 +27,8 @@
 	height: auto;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	align-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
 	flex-flow: wrap row;
 	padding: 0 3% 3%;
 
@@ -60,6 +60,19 @@
 				padding: 5px;
 				font-size: 15px;
 				color: #fff;
+
+				&.html {background-color: $html;}
+				&.css {background-color: $css;}
+				&.scss {background-color: $scss;}
+				&.responsive {background-color: $responsive;}
+				&.php {background-color: $php;}
+				&.oop {background-color: $oop;}
+				&.js {background-color: $js;}
+				&.jquery {background-color: $jquery;}
+				&.git {background-color: $git;}
+				&.mysql {background-color: $mysql;}
+				&.node {background-color: $node;}
+				&.linux {background-color: $linux;}
 			}
 		}
 	}
