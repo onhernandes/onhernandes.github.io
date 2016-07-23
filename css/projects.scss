@@ -57,3 +57,34 @@
 		}
 	}
 }
+
+.projects {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: wrap row;
+
+	> ul {
+		width: 80%;
+		flex: 0 0 80%;
+		text-align: center;
+		padding-top: 3%;
+
+		> li {
+			display: block;
+			width: 100%;
+			padding: 3% 0%;
+
+			> a {
+				color: rgba(0,0,0,0.5);
+				font-size: 30px;
+				font-weight: 300;
+
+				&:hover {
+					border-bottom: 1.5px solid rgba(0,0,0,0.3);
+				}
+			}
+		}
+	}
+}

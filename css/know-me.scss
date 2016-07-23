@@ -1,4 +1,4 @@
-#know-me {
+.know-me {
 	width: 100%;
 	height: auto;
 	background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
@@ -14,7 +14,7 @@
 		align-self: flex-end;
 	}
 
-	> div {
+	> article {
 		flex: 0 0 60%;
 		width: 60%;
 
@@ -22,7 +22,7 @@
 	}
 }
 
-#skills {
+.skills {
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -30,25 +30,24 @@
 	align-items: flex-start;
 	align-content: flex-start;
 	flex-flow: wrap row;
-	padding: 0 3% 3%;
+	padding: 0 3%;
 
 	> h1 {
 		align-self: flex-end;
 		text-transform: uppercase;
 		font-family: 'Gloria Hallelujah', cursive;
-		padding: 20px 0;
+		padding: 20px 0 15px;
 		flex: 0 0 100%;
 	}
 
 	> article {
 		flex: 0 0 45%;
-		padding: 20px 0 0 0;
 
 		> ul > li {
 			width: 100%;
 			height: auto;
 			display: block;
-			padding: 10px 0;
+			padding: 0 0 10px;
 			font-size: 19px;
 			text-transform: uppercase;
 
