@@ -9,4 +9,26 @@ $(document).ready(function() {
 			$(".section").removeClass('pj').removeClass('km').addClass('sk');
 		}
 	});
+
+	$(".flaticon-menu").click(function(){
+		$("nav ul").animate({
+			padding: "15px 0",
+			height: "200px"
+		}, 500);
+
+		$("nav").animate({
+			width: "100%"
+		}, 500);
+		
+		$("nav ul").click(function(){
+			$("nav ul").animate({
+				padding: "0",
+				height: "0px"
+			}, 500);
+
+			$("nav").animate({
+				width: "100px"
+			}, 500);
+		});
+	});
 });
