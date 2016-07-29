@@ -28,6 +28,7 @@ $node: #7FBD42;
 @media screen and (max-width: 1120px) {
 	nav {
 		justify-content: flex-end;
+		display: none;
 		width: 100px;
 		right: 0;
 		left: auto;
@@ -141,7 +142,7 @@ $node: #7FBD42;
 		> a > ul > li:first-child {display: none;}
 		> a {
 			flex-basis: 100% !important;
-
+			&:hover > ul > li {transform: translateY(0px);}
 			> ul > li:last-child {
 				position: static;
 
@@ -194,5 +195,12 @@ $node: #7FBD42;
 				}
 			}
 		}
+	}
+
+	.km,
+	.pj,
+	.sk {
+		-webkit-transform: translateX(0%);
+		transition: none;
 	}
 }

@@ -1,9 +1,10 @@
-.projects-blog {
+.articles {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	align-content: center;
 	flex-flow: wrap row;
+
 	> .column {
 		flex: 0 0 calc(90vw / 5);
 		width: calc(90vw / 5);
@@ -13,13 +14,15 @@
 			width: 100%; 
 			margin-bottom: calc(10vw / 4);
 
-			> span {
+			> a > span {
 				display: block;
 				width: 100%;
 				padding: 15px;
 				color: #fff;
 				z-index: 7;
 				transition: all 0.1s linear 0.1s;
+
+				> p {font-size: 15px;}
 			}
 
 			> div {
