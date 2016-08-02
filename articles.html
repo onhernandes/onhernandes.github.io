@@ -3,39 +3,100 @@ layout: articles
 ---
 
 <section class="articles" id="blog" data-tab="blog">
-	{% for post in site.posts %}
-		<article>
-			<a href="{% post.permalink %}">
-				<span>
-					<h3>{% post.title %}</h3>
-					<p>
-						{% post.content | truncatewords: 20 %}
-					</p>
-				</span>
-			</a>
-
-			<div style="background-image: url(/img/{% post.image %});"></div>
-		</article>
-	{% endfor %}
 
 	<section class="column">
-		
+		{% for post in site.posts %}
+			{% if post.column == 1 %}
+				<article class="{% if post.kind == 'full' %} full {% elsif post.kind == 'one-third' %} one-third {% else %} two-thirds {% endif %}">
+					<a href="{{ post.permalink }}">
+						<span>
+							<h3>{{ post.title }}</h3>
+							<p>
+								{{ post.content | truncatewords: 5 }}
+							</p>
+						</span>
+					</a>
+
+					<div></div>
+				</article>
+			{% endif %}
+		{% endfor %}		
 	</section>
 
 	<section class="column">
-		
+		{% for post in site.posts %}
+			{% if post.column == 2 %}
+				<article class="{% if post.kind == 'one-third' %} one-third {% elsif post.kind == 'full' %} full {% else %} two-thirds {% endif %}">
+					<a href="{{ post.permalink }}">
+						<span>
+							<h3>{{ post.title }}</h3>
+							<p>
+								{{ post.content | truncatewords: 5 }}
+							</p>
+						</span>
+					</a>
+
+					<div></div>
+				</article>
+			{% endif %}
+		{% endfor %}
 	</section>
 
 	<section class="column">
-		
+		{% for post in site.posts %}
+			{% if post.column == 3 %}
+				<article class="{% if post.kind == 'full' %} full {% elsif post.kind == 'one-third' %} one-third {% else %} two-thirds {% endif %}">
+					<a href="{{ post.permalink }}">
+						<span>
+							<h3>{{ post.title }}</h3>
+							<p>
+								{{ post.content | truncatewords: 5 }}
+							</p>
+						</span>
+					</a>
+
+					<div></div>
+				</article>
+			{% endif %}
+		{% endfor %}
 	</section>
 
 	<section class="column">
-		
+		{% for post in site.posts %}
+			{% if post.column == 4 %}
+				<article class="{% if post.kind == 'two-thirds' %} two-thirds {% elsif post.kind == 'full' %} full {% else %} one-third {% endif %}">
+					<a href="{{ post.permalink }}">
+						<span>
+							<h3>{{ post.title }}</h3>
+							<p>
+								{{ post.content | truncatewords: 5 }}
+							</p>
+						</span>
+					</a>
+
+					<div></div>
+				</article>
+			{% endif %}
+		{% endfor %}
 	</section>
 
 	<section class="column">
-		
+		{% for post in site.posts %}
+			{% if post.column == 5 %}
+				<article class="{% if post.kind == 'full' %} full {% elsif post.kind == 'one-third' %} one-third {% else %} two-thirds {% endif %}">
+					<a href="{{ post.permalink }}">
+						<span>
+							<h3>{{ post.title }}</h3>
+							<p>
+								{{ post.content | truncatewords: 5 }}
+							</p>
+						</span>
+					</a>
+
+					<div></div>
+				</article>
+			{% endif %}
+		{% endfor %}
 	</section>
 </section>
 

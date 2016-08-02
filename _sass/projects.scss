@@ -12,6 +12,8 @@
 
 		article	{
 			width: 100%; 
+			position: relative;
+			overflow: hidden;
 			margin-bottom: calc(10vw / 4);
 
 			> a > span {
@@ -48,11 +50,10 @@
 		.full {
 			height: 500px;
 			background-color: #1056ad;
-			position: relative;
-			overflow: hidden;
 		}
 
 		.one-third {
+			position: relative;
 			height: 160px;
 			background-color: #990000;
 		}
