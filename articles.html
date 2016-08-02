@@ -1,7 +1,45 @@
 ---
-layout: default
+layout: articles
 ---
 
+<section class="articles" id="blog" data-tab="blog">
+	{% for post in site.posts %}
+		<article>
+			<a href="{% post.permalink %}">
+				<span>
+					<h3>{% post.title %}</h3>
+					<p>
+						{% post.content | truncatewords: 20 %}
+					</p>
+				</span>
+			</a>
+
+			<div style="background-image: url(/img/{% post.image %});"></div>
+		</article>
+	{% endfor %}
+
+	<section class="column">
+		
+	</section>
+
+	<section class="column">
+		
+	</section>
+
+	<section class="column">
+		
+	</section>
+
+	<section class="column">
+		
+	</section>
+
+	<section class="column">
+		
+	</section>
+</section>
+
+{% comment %}
 <section class="articles" id="blog" data-tab="blog">
 	<section class="column">
 		<article class="full">
@@ -37,3 +75,4 @@ layout: default
 		<article class="two-thirds"></article>
 	</section>
 </section>
+{% endcomment %}
