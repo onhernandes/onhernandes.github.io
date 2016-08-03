@@ -1,0 +1,24 @@
+.me {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-flow: wrap row;
+	font-size: 18px;
+
+	> article {
+		width: 70%;
+		margin-bottom: 1%;
+		flex: 0 0 70%;
+	}
+	
+	.about {
+		margin: 5% 0;
+	}
+
+	.post > a {
+		color: #515151;
+	}
+}
