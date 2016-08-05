@@ -15,12 +15,27 @@ layout: default
 	<article class="project"></article>
 	<article class="project"></article>
 	<article class="project"></article>
+	<article class="project"></article>
 </section>
 
 <section class="articles">
 	<h1>articles</h1>
 	
-	<article class="article">
+	{% for post in site.posts %}
+		<article class="article">
+			<a href="{{ post.permalink }}">
+				<h1>{{ post.title }}</h1>
+			</a>
+			
+			<p>
+				{{ post.content | truncatewords: 35 }}
+			</p>
+		</article>
+	{% endfor %}
+</section>
+
+{% comment %}
+<article class="article">
 		<a href="#">
 			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
 		</a>
@@ -43,8 +58,7 @@ layout: default
 		
 		<p>asperiores quidem. Doloribus molestiae harum deserunt obcaecati voluptas omnis laudantium laborum. Nisi repellat porro nemo iusto. Harum veritatis, quisquam..</p>
 	</article>
-</section>
-
+{% endcomment %}
 
 {% comment %}
 <div id="wrapper">
