@@ -64,13 +64,28 @@
 		padding: 25px 0;
 		flex: 0 0 70%;
 
-		> a {color: #313131;}
+		> a {
+			color: #313131;
+			transition: color .4s ease .001s;
+		}
 
 		&:last-child {
 			border-bottom: 0;
 		}
 	}
 }
+
+.html > a:hover {color: $html;}
+.css > a:hover {color: $css;}
+.scss > a:hover {color: $scss;}
+.responsive > a:hover {color: $responsive;}
+.javascript > a:hover {color: $javascript;}
+.jquery > a:hover {color: $jquery;}
+.git > a:hover {color: $git;}
+.php > a:hover {color: $php;}
+.mysql > a:hover {color: $mysql;}
+.git > a:hover {color: $git;}
+.linux > a:hover {color: $linux;}
 
 .footer {
 	width: 100%;
@@ -80,6 +95,7 @@
 	align-items: center;
 	align-content: center;
 	flex-flow: wrap column;
+	background-color: $scss;
 	
 	> ul, 
 	> p {

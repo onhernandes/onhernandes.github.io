@@ -2,13 +2,14 @@
     <a href="javascript:void(0);" class="flaticon-menu">Menu</a>
 
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Hey</a></li>
         <li><a href="articles.html">Articles</a></li>
-        <li><a href="articles.html">Projects</a></li>
-        <li><a href="articles.html">Know me</a></li>
+        <li><a href="projects.html">Projects</a></li>
     </ul>
 </nav>
 
-<header>
+<header{% if page.image %}
+	style="background-image: url(/img/{{ page.image }});" 
+{% endif %}>
     <h1>created to create</h1>
 </header>

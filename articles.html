@@ -2,32 +2,18 @@
 layout: default
 ---
 
-
-
 <section class="articles">
 	<h1>articles</h1>
 	
-	<article class="article">
-		<a href="#">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-		</a>
-		
-		<p>sunt! Inventore illo nam ratione ducimus veritatis dolore sunt voluptatum reiciendis cumque qui, ut ipsa culpa maxime sit quod, nobis fugiat asperiores!.</p>
-	</article>
-	
-	<article class="article">
-		<a href="#">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-		</a>
-		
-		<p>similique temporibus optio sit reiciendis ipsum, id, nisi, sapiente inventore ad! Cupiditate assumenda, adipisci sapiente minus cumque voluptatum a debitis, quas officia..</p>
-	</article>
-	
-	<article class="article">
-		<a href="#">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-		</a>
-		
-		<p>asperiores quidem. Doloribus molestiae harum deserunt obcaecati voluptas omnis laudantium laborum. Nisi repellat porro nemo iusto. Harum veritatis, quisquam..</p>
-	</article>
+	{% for post in site.posts %}
+		<article class="article {{ post.language }}">
+			<a href="{{ post.permalink }}">
+				<h1>{{ post.title }}</h1>
+			</a>
+			
+			<p>
+				{{ post.content | truncatewords: 35 }}
+			</p>
+		</article>
+	{% endfor %}
 </section>

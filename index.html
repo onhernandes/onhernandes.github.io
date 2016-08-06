@@ -22,7 +22,7 @@ layout: default
 	<h1>articles</h1>
 	
 	{% for post in site.posts %}
-		<article class="article">
+		<article class="article {{ post.language }}">
 			<a href="{{ post.permalink }}">
 				<h1>{{ post.title }}</h1>
 			</a>
