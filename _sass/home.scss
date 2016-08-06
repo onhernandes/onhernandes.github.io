@@ -27,10 +27,10 @@
 	overflow: hidden;
 
 	> .project {
-		flex: 0 0 calc(100% / 3);
+		flex: 0 0 100%;
 		height: 100%;
 		background: #1056ad;
-		transition: all 1s ease 0.1s;
+		transition: all .8s ease 0.5s;
 
 		&:nth-child(2),
 		&:nth-child(4) {

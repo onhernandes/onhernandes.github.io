@@ -4,30 +4,19 @@ $(document).ready(function() {
 			slide = $(son),
 			total = slide.length,
 			translate = 0,
-			time = 1000,
-			flow = "left",
+			time = 2000,
 			counter = 0;
 
 		function move() {
 			translate += 100;
 			counter++;
 
-			if (flow === "left") {
-				if (counter < total) {
-					var final = "translateX(-" + translate + "%)";
-				} else {
-					var final = "translateX(0%)";
-					counter = 0;
-					translate = 0;
-				}
+			if (counter < total) {
+				var final = "translateX(-" + translate + "%)";
 			} else {
-				if (counter < total) {
-					var final = "translateX(" + translate + "%)";
-				} else {
-					var final = "translateX(0%)";
-					counter = 0;
-					translate = 0;
-				}
+				var final = "translateX(0%)";
+				counter = 0;
+				translate = 0;
 			}
 
 			slide.css("transform", final);
@@ -36,5 +25,5 @@ $(document).ready(function() {
 		var interval = setInterval(move, time);
 	}
 
-	slide4(".projects", ".project");
+	slide4(".projects", ".project", "algo");
 });
