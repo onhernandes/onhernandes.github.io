@@ -1,9 +1,40 @@
 $(document).ready(function() {
-	var project = $(".projects article");
-	var translate = project.css("translateX");
-	setTimeout(function() {
-		translate += 100;
-		var final = translate + "px";
-		project.css("translateX", final);
-	}, 100);
+	var slide4 = function(wrapper, son) {
+		var wrapper = $(wrapper),
+			slide = $(son),
+			total = slide.length,
+			translate = 0,
+			time = 1000,
+			flow = "left",
+			counter = 0;
+
+		function move() {
+			translate += 100;
+			counter++;
+
+			if (flow === "left") {
+				if (counter < total) {
+					var final = "translateX(-" + translate + "%)";
+				} else {
+					var final = "translateX(0%)";
+					counter = 0;
+					translate = 0;
+				}
+			} else {
+				if (counter < total) {
+					var final = "translateX(" + translate + "%)";
+				} else {
+					var final = "translateX(0%)";
+					counter = 0;
+					translate = 0;
+				}
+			}
+
+			slide.css("transform", final);
+		}
+		
+		var interval = setInterval(move, time);
+	}
+
+	slide4(".projects", ".project");
 });
