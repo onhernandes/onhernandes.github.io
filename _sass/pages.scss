@@ -1,0 +1,47 @@
+.articles-home,
+.projects {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: wrap row;
+	border-bottom: 1px solid #919191;
+	padding: 20px 0;
+
+	> h1 {
+		flex: 0 0 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	> .article,
+	> .project {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		padding: 25px 0;
+		flex: 0 0 70%;
+
+		> a {
+			color: #313131;
+			transition: color .4s ease .001s;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+.html > a:hover {color: $html;}
+.css > a:hover {color: $css;}
+.scss > a:hover {color: $scss;}
+.responsive > a:hover {color: $responsive;}
+.javascript > a:hover {color: $javascript;}
+.jquery > a:hover {color: $jquery;}
+.git > a:hover {color: $git;}
+.php > a:hover {color: $php;}
+.mysql > a:hover {color: $mysql;}
+.git > a:hover {color: $git;}
+.linux > a:hover {color: $linux;}

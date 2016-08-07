@@ -1,0 +1,35 @@
+.footer {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: wrap column;
+	background-color: $scss;
+	
+	> ul, 
+	> p {
+		flex: 0 0 100%;
+		padding: 25px;
+		color: #fff;
+	}
+
+	> ul {
+		width: 100%;
+		text-align: center;
+		background-color: rgba(0,0,0,0.5);
+		> li {
+			display: inline-block;
+			padding: 0px 13px;
+
+			> a {color: #fff}
+		}
+	}
+
+	> p {
+		background-color: rgba(0,0,0,0.8);
+		width: 100%;
+		text-align: center;
+	}
+}

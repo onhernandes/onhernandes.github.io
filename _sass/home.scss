@@ -15,7 +15,7 @@
 	}
 }
 
-.projects {
+.slide {
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -26,7 +26,7 @@
 	flex-flow: nowrap row;
 	overflow: hidden;
 
-	> .project {
+	> .banner {
 		flex: 0 0 100%;
 		height: 100%;
 		background: #1056ad;
@@ -39,153 +39,4 @@
 	}
 }
 
-.project {transform: translateX(0%);}
-
-.articles {
-	width: 100%;
-	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-flow: wrap row;
-	border-bottom: 1px solid #919191;
-	padding: 20px 0;
-
-	> h1 {
-		flex: 0 0 100%;
-		text-align: center;
-		text-transform: uppercase;
-		font-weight: 300;
-	}
-
-	> .article {
-		border-bottom: 1px solid rgba(0,0,0,0.1);
-		padding: 25px 0;
-		flex: 0 0 70%;
-
-		> a {
-			color: #313131;
-			transition: color .4s ease .001s;
-		}
-
-		&:last-child {
-			border-bottom: 0;
-		}
-	}
-}
-
-.html > a:hover {color: $html;}
-.css > a:hover {color: $css;}
-.scss > a:hover {color: $scss;}
-.responsive > a:hover {color: $responsive;}
-.javascript > a:hover {color: $javascript;}
-.jquery > a:hover {color: $jquery;}
-.git > a:hover {color: $git;}
-.php > a:hover {color: $php;}
-.mysql > a:hover {color: $mysql;}
-.git > a:hover {color: $git;}
-.linux > a:hover {color: $linux;}
-
-.footer {
-	width: 100%;
-	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-flow: wrap column;
-	background-color: $scss;
-	
-	> ul, 
-	> p {
-		flex: 0 0 100%;
-		padding: 25px;
-		color: #fff;
-	}
-
-	> ul {
-		width: 100%;
-		text-align: center;
-		background-color: rgba(0,0,0,0.5);
-		> li {
-			display: inline-block;
-			padding: 0px 13px;
-
-			> a {color: #fff}
-		}
-	}
-
-	> p {
-		background-color: rgba(0,0,0,0.8);
-		width: 100%;
-		text-align: center;
-	}
-}
-
-/*
-
-> article,
-	> div,
-	> h1 {
-		width: 70%;
-		margin-bottom: 1%;
-		flex: 0 0 70%;
-	}
-	
-	> h1 {
-		text-align: center; 
-		font-weight: 300;
-		text-transform: uppercase;
-		color: #1056ad;
-		border-bottom: 2px solid #1056ad;
-	}
-	
-	.about {
-		margin: 5% 0;
-	}
-
-	> section {
-		> h1 {
-			text-align: center; 
-			font-weight: 300;
-			text-transform: uppercase;
-			color: #1056ad;
-			border-bottom: 2px solid #1056ad;
-		}
-
-		.post {
-			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-			padding: 50px 0;
-
-			> h2 {color: #515151; font-weight: 500;}
-
-			ul {
-				padding: 7px 0;
-
-				> li {
-					padding: 5px;
-					color: inherit;
-					background: rgba(0,0,0,0.1);
-					font-size: 14px;
-					display: inline-block;
-				}
-			}
-
-			> a {
-				color: #313131;
-			}
-
-			&:first-child {
-				padding-top: 0;
-			}
-
-			&:last-child {
-				border-bottom: none;
-			}
-		}
-	}
-
-	.projects {}
-
-	*/
+.banner {transform: translateX(0%);}

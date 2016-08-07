@@ -25,5 +25,5 @@ $(document).ready(function() {
 		var interval = setInterval(move, time);
 	}
 
-	slide4(".projects", ".project", "algo");
+	slide4(".slide", ".banner");
 });

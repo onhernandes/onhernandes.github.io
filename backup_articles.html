@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Backup Articles Theme</title>
+	<style>
+		.articles {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: center;
+			flex-flow: wrap row;
+		}
+
+		.column {
+			flex: 0 0 calc((100% - 4px) / 3);
+			height: auto;
+		}
+
+		.column article {
+			width: 100%;
+			height: 250px;
+			margin-top: 2px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.column article > a {
+			color: #fff;
+		}
+
+		.column article a > h2,
+		.column article a > {
+				padding: 15px;
+				z-index: 9;
+		}
+
+		.column article a div {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url(/img/bg-mobile.jpg);
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			transition: all .5s ease .1s;
+		}
+
+		.column article a:hover div {
+			transform: translateY(60%);
+		}
+		/*.articles {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: center;
+	flex-flow: wrap row;
+
+	.column {
+		flex: 0 0 calc((100% - 4px) / 3);
+		height: auto;
+
+		article {
+			width: 100%;
+			height: 250px;
+			margin-top: 2px;
+			overflow: hidden;
+			position: relative;
+
+			> a  {
+				color: #fff;
+				
+				> h2,
+				> p {
+					padding: 15px;
+					z-index: 9;
+				}
+
+				> div {
+					width: 100%;
+					height: 100%;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-image: url(/img/bg-mobile.jpg);
+					position: absolute;
+					z-index: 10;
+					top: 0;
+					left: 0;
+					transition: all .5s ease .1s;
+				}
+
+				&:hover div {
+					transform: translateY(60%);
+				}
+			}
+		}
+	}
+}*/
+	</style>
+</head>
+<body>
+
+<section class="projects">
+	<div class="column">
+		<article>
+			<a href="#">
+				<h2>title</h2>
+				<p>words</p>
+				<div></div>
+			</a>
+		</article>
+		
+		<article>
+			<a href="#">
+				<h2>title</h2>
+				<p>words</p>
+				<div></div>
+			</a>
+		</article>
+		
+		<article>
+			<a href="#">
+					<h2>title</h2>
+					<p>words</p>
+					<div></div>
+			</a>
+		</article>
+	</div>
+	
+	<div class="column">
+		<article>
+			<a href="#">
+				<h2>title</h2>
+				<p>words</p>
+				<div></div>
+			</a>
+		</article>
+		
+		<article>
+			<a href="#">
+				<h2>title</h2>
+				<p>words</p>
+				<div></div>
+			</a>
+		</article>
+		
+		<article>
+			<a href="#">
+					<h2>title</h2>
+					<p>words</p>
+					<div></div>
+			</a>
+		</article>
+	</div>
+
+	<div class="column">
+		<article>
+			<a href="#">
+				<h2>title</h2>
+				<p>words</p>
+				<div></div>
+			</a>
+		</article>
+		
+		<article>
+			<a href="#">
+				<h2>title</h2>
+				<p>words</p>
+				<div></div>
+			</a>
+		</article>
+		
+		<article>
+			<a href="#">
+					<h2>title</h2>
+					<p>words</p>
+					<div></div>
+			</a>
+		</article>
+	</div>
+</section>
+
+</body>
+</html>
