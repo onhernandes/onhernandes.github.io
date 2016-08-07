@@ -1,5 +1,4 @@
-.articles-home,
-.projects {
+.articles {
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -17,14 +16,13 @@
 		font-weight: 300;
 	}
 
-	> .article,
-	> .project {
+	> .article {
 		border-bottom: 1px solid rgba(0,0,0,0.1);
 		padding: 25px 0;
 		flex: 0 0 70%;
 
 		> a {
-			color: #313131;
+			color: $gray;
 			transition: color .4s ease .001s;
 		}
 
@@ -45,3 +43,47 @@
 .mysql > a:hover {color: $mysql;}
 .git > a:hover {color: $git;}
 .linux > a:hover {color: $linux;}
+
+.about {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	color: $gray;
+	flex-flow: wrap row;
+
+	article {
+		flex: 0 0 70%;
+		border-bottom: 1px solid rgba(0,0,0,0.5);
+		padding: 3% 0;
+		
+		> h1 {padding: 0 0 10px;}
+
+		> p {
+			padding: 7.5px 0;
+			
+			&:last-child {padding-bottom: 0;}
+		}
+	}
+
+	.projects > ul > .project {
+		padding: 15px 0;
+		display: block;
+
+		> a {
+			color: $gray;
+
+			h2 {font-weight: 300;}
+		}
+	}
+
+	.knowledge > ul {
+		list-style-type: disc;
+		padding-left: 20px;
+		font-size: 18px;
+
+		> li {padding: 3.5px 0;}
+	}
+}

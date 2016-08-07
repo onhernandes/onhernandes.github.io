@@ -1,0 +1,23 @@
+.post {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	padding: 6% 0;
+	flex-flow: wrap row;
+	font-size: 18px;
+	color: $gray;
+
+	.post-content {
+		flex: 0 0 70%;
+
+		> p {
+			padding: 0 0 15px;
+			
+			&:last-child {padding-bottom: 0;}
+		}
+	}
+}

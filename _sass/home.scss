@@ -17,7 +17,7 @@
 
 .slide {
 	width: 100%;
-	height: 100vh;
+	height: 70vh;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -41,19 +41,24 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0,0,0,0.5);
+			transition: background-color .3s ease .1s;
 			display: flex;
 			justify-content: flex-start;
 			align-items: flex-start;
 			align-content: flex-start;
-			flex-flow: wrap column;
+			flex-flow: wrap row;
 			padding: 70px;
 			color: #fff;
 
 			> h1,
 			> p {flex: 0 0 auto;}
 
-			> p {font-size: 18px;}
+			> p {
+				flex-basis: 60%;
+				font-size: 18px;
+			}
+
+			&:hover {background-color: rgba(0,0,0,0.3);}
 		}
 	}
 }

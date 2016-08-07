@@ -1,7 +1,8 @@
-nav {
+.nav {
 	display: flex;
 	flex-flow: wrap row;
-	justify-content: space-around;
+	justify-content: space-between;
+	padding: 0 2%;
 	align-items: center;
 	align-content: center;
 	position: fixed;
@@ -12,7 +13,12 @@ nav {
 	height: auto;
 	background-color: rgba(0,0,0,0.7);
 
-	.flaticon-menu {display: none;}
+	//.icon-menu {display: none;}
+	
+	.icon-menu {
+		color: #fff;
+		font-size: 18px;
+	}
 
 	ul {
 		padding: 14px 0;
@@ -46,9 +52,16 @@ nav {
 			}
 		}
 	}
+
+	span > a {
+		color: #fff;
+		font-size: 18px;
+
+		&:nth-child(2) {padding: 0 7px;}
+	}
 }
 
-header {
+.header {
 	width: 100%;
 	height: 100vh;
 	background-size: cover;

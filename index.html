@@ -11,60 +11,38 @@ head-title: "Hernandes"
 </main>
 
 <section class="slide">
-	<article class="banner">
-		<a href="#">
-			<h1>title</h1>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellendus obcaecati voluptate, officia assumenda, a, nostrum hic perspiciatis praesentium aperiam iure ad tempora deserunt culpa tenetur animi rerum repudiandae, quidem pariatur labore beatae. Eaque deleniti corrupti molestiae itaque repellat soluta sint rerum repudiandae illo, quo, ipsum eum nemo quam necessitatibus.
-			</p>
-		</a>
-	</article>
-	<article class="banner"></article>
-	<article class="banner"></article>
-	<article class="banner"></article>
-</section>
-
-<section class="projects">
-	<h1>projects</h1>
-	
 	{% for post in site.posts %}
-		<article class="project {{ post.language }}">
-			<a href="{{ post.permalink }}">
-				<h1>{{ post.title }}</h1>
-			</a>
-			
-			<p>
-				{{ post.content | truncatewords: 35 }}
-			</p>
-		</article>
+		{% if post.type != "article" %}
+			<article class="banner">
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<h1>{{ post.title }}</h1>
+
+					<p>
+						{{ post.content | truncatewords: 45 }}
+					</p>
+				</a>
+			</article>			
+		{% endif %}
 	{% endfor %}
 </section>
 
-{% comment %}
-<article class="article">
-		<a href="#">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-		</a>
-		
-		<p>sunt! Inventore illo nam ratione ducimus veritatis dolore sunt voluptatum reiciendis cumque qui, ut ipsa culpa maxime sit quod, nobis fugiat asperiores!.</p>
-	</article>
-	
-	<article class="article">
-		<a href="#">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-		</a>
-		
-		<p>similique temporibus optio sit reiciendis ipsum, id, nisi, sapiente inventore ad! Cupiditate assumenda, adipisci sapiente minus cumque voluptatum a debitis, quas officia..</p>
-	</article>
-	
-	<article class="article">
-		<a href="#">
-			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-		</a>
-		
-		<p>asperiores quidem. Doloribus molestiae harum deserunt obcaecati voluptas omnis laudantium laborum. Nisi repellat porro nemo iusto. Harum veritatis, quisquam..</p>
-	</article>
-{% endcomment %}
+<section class="articles">
+	<h1>articles</h1>
+
+	{% for post in site.posts %}
+		{% if post.type != "project" %}
+			<article class="article">
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<h1>{{ post.title }}</h1>
+
+					<p>
+						{{ post.content | truncatewords: 45 }}
+					</p>
+				</a>
+			</article>			
+		{% endif %}
+	{% endfor %}
+</section>
 
 {% comment %}
 <div id="wrapper">

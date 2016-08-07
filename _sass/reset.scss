@@ -6,15 +6,10 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     box-sizing: border-box;
+    border: none;
 	margin: 0;
 	padding: 0;
 	z-index: 0;
-}
-
-section {left: 0;}
-
-body {
-	//overflow-x: hidden;
 }
 
 a,
@@ -25,6 +20,7 @@ a:active {
 }
 
 p, span {
+	font-size: 18px;
 }
 
 a,
@@ -51,13 +47,10 @@ h5 {font-size: 13.5px;}
 h6 {font-size: 11px;}
 
 ul {
-	margin: 0;
-	padding: 0;
 	list-style-type: none;
 }
 
 input, textarea, button {
-	border: none;
 	display: block;
 	resize: none;
 }
@@ -65,13 +58,7 @@ input, textarea, button {
 input[type="button"],
 input[type="submit"],
 button {
-	display: block;
 	cursor: pointer;
-}
-
-section {
-	width: 100%;
-	height: auto;
 }
 
 ::-webkit-input-placeholder {}

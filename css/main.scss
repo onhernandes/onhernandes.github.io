@@ -15,10 +15,13 @@ $mysql: #316072;
 $responsive: #52845F;
 $linux: #DD8E3A;
 $node: #7FBD42;
+$gray: #333;
 
 @import 'reset.scss';
+@import 'flaticon.scss';
 @import 'header.scss';
 @import 'home.scss';
 @import 'pages.scss';
+@import 'post.scss';
 @import 'footer.scss';
 @import '_syntax-highlighting.scss';

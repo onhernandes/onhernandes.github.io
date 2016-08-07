@@ -19,3 +19,5 @@ github_username: devmath
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+permalink: /:title/
