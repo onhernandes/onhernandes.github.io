@@ -4,7 +4,7 @@ $(document).ready(function() {
 			slide = $(son),
 			total = slide.length,
 			translate = 0,
-			time = 2000,
+			time = 3000,
 			counter = 0;
 
 		function move() {
@@ -25,5 +25,5 @@ $(document).ready(function() {
 		var interval = setInterval(move, time);
 	}
 
-	slide4(".slide", ".banner");
+	//slide4(".slide", ".banner");
 });
