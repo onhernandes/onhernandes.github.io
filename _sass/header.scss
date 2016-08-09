@@ -11,7 +11,7 @@
 	z-index: 7;
 	width: 100%;
 	height: auto;
-	background-color: rgba(0,0,0,0.7);
+	background-color: $gray; // rgba(0,0,0,0.7)
 
 	//.icon-menu {display: none;}
 	
@@ -57,7 +57,16 @@
 		color: #fff;
 		font-size: 18px;
 
-		&:nth-child(2) {padding: 0 7px;}
+		&:nth-child(2) {padding: 0 9px;}
+	}
+
+	@media screen and (max-width: 900px) {
+		flex-flow: wrap column;
+		padding: 15px 0;
+
+		.icon-menu {
+			font-size: 50px;
+		}
 	}
 }
 
