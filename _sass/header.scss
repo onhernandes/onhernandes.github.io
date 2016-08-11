@@ -67,6 +67,16 @@
 		.icon-menu {
 			font-size: 50px;
 		}
+
+		> ul {
+			align-self: flex-start;
+
+			> li {
+				display: block;
+
+				> a { font-size: 25px; }
+			}
+		}
 	}
 }
 
