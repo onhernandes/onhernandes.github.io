@@ -13,11 +13,11 @@
 	height: auto;
 	background-color: $gray; // rgba(0,0,0,0.7)
 
-	//.icon-menu {display: none;}
+	.icon-menu {display: none;}
 	
-	.icon-menu {
-		color: #fff;
-		font-size: 18px;
+	.logo > img {
+		margin-top: 2px;
+		width: 27px;
 	}
 
 	ul {
@@ -61,10 +61,22 @@
 	}
 
 	@media screen and (max-width: 900px) {
-		flex-flow: wrap column;
-		padding: 15px 0;
+		flex-flow: wrap row;
+		justify-content: space-between;
+		padding: 15px 30px;
+		
+		.logo {
+			flex: 0 0 50%;
+
+			> img {
+				width: 10%;
+			}
+		}
 
 		.icon-menu {
+			flex: 0 0 50%;
+			display: block;
+			text-align: right;
 			font-size: 50px;
 		}
 
@@ -95,5 +107,6 @@
 
 	h1 {
 		font-size: 50px;
+		font-weight: 600;
 	}
 }
