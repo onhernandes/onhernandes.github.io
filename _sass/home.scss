@@ -13,6 +13,10 @@
 	.about {
 		flex: 0 0 70%;
 	}
+
+	@media screen and (max-width: 550px) {
+		.about {flex-basis: 90%;}
+	}
 }
 
 .slide {
@@ -56,6 +60,11 @@
 			> p {
 				flex-basis: 60%;
 				font-size: 18px;
+			}
+
+			@media screen and (max-width: 550px) {
+				padding: 50px 30px;
+				> h1, > p {flex-basis: 90%;}
 			}
 
 			&:hover {background-color: rgba(0,0,0,0.3);}

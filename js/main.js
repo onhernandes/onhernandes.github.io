@@ -26,4 +26,19 @@ $(document).ready(function() {
 	}
 
 	slide4(".slide", ".banner");
+
+	$(".icon-menu").click(function() {
+		$(".nav ul").toggle('fast');
+		$(".nav span").toggle('fast');
+	});
+
+	$("section").click(function() {
+		$(".nav ul").hide('fast');
+		$(".nav span").hide('fast');
+	});
+
+	$("main").click(function() {
+		$(".nav ul").hide('fast');
+		$(".nav span").hide('fast');
+	});
 });
