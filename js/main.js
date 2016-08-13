@@ -41,4 +41,9 @@ $(document).ready(function() {
 		$(".nav ul").hide('fast');
 		$(".nav span").hide('fast');
 	});
+
+	$("header").click(function() {
+		$(".nav ul").hide('fast');
+		$(".nav span").hide('fast');
+	});
 });
