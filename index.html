@@ -12,7 +12,7 @@ head-title: "Hernandes"
 
 <section class="slide">
 	{% for post in site.posts %}
-		{% if post.type != "article" %}
+		{% if post.type == 'project' %}
 			<article class="banner">
 				<a href="{{ post.url | prepend: site.baseurl }}">
 					<h1>{{ post.title }}</h1>
@@ -30,7 +30,7 @@ head-title: "Hernandes"
 	<h1>articles</h1>
 
 	{% for post in site.posts %}
-		{% if post.type != "project" %}
+		{% if post.type == 'article' %}
 			<article class="article">
 				<a href="{{ post.url | prepend: site.baseurl }}">
 					<h1>{{ post.title }}</h1>

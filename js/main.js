@@ -32,7 +32,7 @@ $(document).ready(function() {
 		$(".nav span").toggle('fast');
 	});
 
-	$("section").click(function() {
+	/*$("section").click(function() {
 		$(".nav ul").hide('fast');
 		$(".nav span").hide('fast');
 	});
@@ -45,5 +45,5 @@ $(document).ready(function() {
 	$("header").click(function() {
 		$(".nav ul").hide('fast');
 		$(".nav span").hide('fast');
-	});
+	});*/
 });
