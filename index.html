@@ -7,7 +7,10 @@ head-title: "Hernandes"
 
 <main class="me">
 	<article class="about">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id corrupti repellendus, sequi aliquam mollitia repellat consequuntur nemo ad ex cupiditate excepturi, velit, natus cumque cum dicta sit rem laborum. Sequi facere voluptate ex qui amet culpa officiis, ipsa inventore ratione.</p>
+		<p>
+			Hey. My name is Matheus, I'm a code writer. <br>
+			This is my website/blog. Here I talk about me, some things that I do and I write articles.
+		</p>
 	</article>
 </main>
 
@@ -19,7 +22,7 @@ head-title: "Hernandes"
 					<h1>{{ post.title }}</h1>
 
 					<p>
-						{{ post.content | truncatewords: 45 }}
+						{{ post.intro | truncatewords: 45 }}
 					</p>
 				</a>
 			</article>			
@@ -29,7 +32,7 @@ head-title: "Hernandes"
 
 <section class="articles">
 	<h1>articles</h1>
-
+	
 	{% for post in site.posts %}
 		{% if post.type == 'article' %}
 			<article class="article">

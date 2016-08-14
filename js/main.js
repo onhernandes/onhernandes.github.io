@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	var slide4 = function(wrapper, son) {
-		var wrapper = $(wrapper),
-			slide = $(son),
+	var mustang = function(son) {
+		var slide = $(son),
 			total = slide.length,
 			translate = 0,
 			time = 3000,
@@ -25,25 +24,10 @@ $(document).ready(function() {
 		var interval = setInterval(move, time);
 	}
 
-	slide4(".slide", ".banner");
+	mustang(".banner");
 
 	$(".icon-menu").click(function() {
 		$(".nav ul").toggle('fast');
 		$(".nav span").toggle('fast');
 	});
-
-	/*$("section").click(function() {
-		$(".nav ul").hide('fast');
-		$(".nav span").hide('fast');
-	});
-
-	$("main").click(function() {
-		$(".nav ul").hide('fast');
-		$(".nav span").hide('fast');
-	});
-
-	$("header").click(function() {
-		$(".nav ul").hide('fast');
-		$(".nav span").hide('fast');
-	});*/
 });
