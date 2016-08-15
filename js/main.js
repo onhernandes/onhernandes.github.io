@@ -21,7 +21,9 @@ $(document).ready(function() {
 			slide.css("transform", final);
 		}
 		
-		var interval = setInterval(move, time);
+		if (total > 0) {
+			var interval = setInterval(move, time);
+		}
 	}
 
 	mustang(".banner");
