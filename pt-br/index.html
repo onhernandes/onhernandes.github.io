@@ -1,44 +1,25 @@
 ---
-layout: default
-title: "created to create"
+layout: default-pt
+title: "criado para criar"
 image: "home.jpg"
 head-title: "Hernandes"
-language: eng
+idiom: pt-br
 ---
 
 <main class="me">
 	<article class="about">
 		<p>
-			Hey. My name is Matheus, I'm a code writer and an eternal apprentice. <br>
+			Oi. Me chamo Matheus, sou um desenvolvedor e um eterno aprendiz. <br>
 		</p>
 	</article>
 </main>
 
-{% comment %}
-			This is my website/blog. Here I talk about me, some things that I do and I write articles.
-<section class="slide">
-	{% for post in site.posts %}
-		{% if post.type == 'project' %}
-			<article class="banner">
-				<a href="{{ post.url | prepend: site.baseurl }}">
-					<h1>{{ post.title }}</h1>
-
-					<p>
-						{{ post.intro | truncatewords: 45 }}
-					</p>
-				</a>
-			</article>			
-		{% endif %}
-	{% endfor %}
-</section>
-{% endcomment %}
-
 <section class="articles">
-	<h1>projects</h1>
+	<h1>projetos</h1>
 	
 	{% for post in site.posts %}
 		{% if post.type == 'project' %}
-			{% if post.idiom == 'eng' %}
+			{% if post.idiom == 'pt-br' %}
 				<article class="article">
 					<a href="{{ post.url | prepend: site.baseurl }}">
 						<h1>{{ post.title }}</h1>
@@ -50,11 +31,11 @@ language: eng
 </section>
 
 <section class="articles">
-	<h1>articles</h1>
+	<h1>artigos</h1>
 	
 	{% for post in site.posts %}
 		{% if post.type == 'article' %}
-			{% if post.idiom == 'eng' %}
+			{% if post.idiom == 'pt-br' %}
 				<article class="article">
 					<a href="{{ post.url | prepend: site.baseurl }}">
 						<h1>{{ post.title }}</h1>

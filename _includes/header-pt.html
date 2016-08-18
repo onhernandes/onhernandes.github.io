@@ -1,0 +1,29 @@
+<nav class="nav">
+    <a href="/index" class="logo">
+        <img src="/img/logo.png" alt="">
+    </a>
+    
+    <a href="javascript:void(0);" class="icon icon-menu"></a>
+
+    <ul>
+        <li><a href="/pt-br/">E aí</a></li>
+        <li><a href="/pt-br/artigos">Artigos</a></li>
+        <li><a href="/pt-br/sobre">Sobre mim</a></li>
+    </ul>
+
+    <span>
+        <a href="https://www.github.com/devmath" target="_blank" class="icon icon-github"></a>
+        <a href="https://www.facebook.com/devmath" target="_blank" class="icon icon-facebook"></a>
+        <a href="https://www.twitter.com/devhernandes" target="_blank" class="icon icon-twitter"></a>
+    </span>
+</nav>
+
+<header
+	{% if page.image %}
+		style="background-image: url(/img/{{ page.image }});" 
+	{% endif %} class="header">
+
+    <h1>
+    	{{ page.title }}
+    </h1>
+</header>

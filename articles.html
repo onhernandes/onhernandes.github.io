@@ -8,15 +8,17 @@ image: "articles.jpg"
 <section class="articles">
 	{% for post in site.posts %}
 		{% if post.type == 'article' %}
-			<article class="article {{ post.language }}">
-				<a href="{{ post.permalink }}">
-					<h1>{{ post.title }}</h1>
-				</a>
-				
-				<p>
-					{{ post.content | truncatewords: 35 }}
-				</p>
-			</article>
+			{% if post.idiom == 'eng' %}
+				<article class="article {{ post.language }}">
+					<a href="{{ post.permalink }}">
+						<h1>{{ post.title }}</h1>
+					</a>
+					
+					<p>
+						{{ post.content | truncatewords: 35 }}
+					</p>
+				</article>
+			{% endif %}
 		{% endif %}
 	{% endfor %}
 </section>

@@ -6,14 +6,18 @@ head-title: "Projects"
 
 <section class="projects">
 	{% for post in site.posts %}
-		<article class="project {{ post.language }}">
-			<a href="{{ post.permalink }}">
-				<h1>{{ post.title }}</h1>
-			</a>
-			
-			<p>
-				{{ post.content | truncatewords: 35 }}
-			</p>
-		</article>
+		{% if post.type == 'project' %}
+			{% if post.idiom == 'eng' %}
+				<article class="project {{ post.language }}">
+					<a href="{{ post.permalink }}">
+						<h1>{{ post.title }}</h1>
+					</a>
+					
+					<p>
+						{{ post.content | truncatewords: 35 }}
+					</p>
+				</article>
+			{% endif %}
+		{% endif %}
 	{% endfor %}
 </section>

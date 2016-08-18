@@ -4,6 +4,7 @@ title:  "My own style guide"
 date:   2016-08-13 21:44:49 -0300
 type: project
 intro: Do you know the why about write a style guide?
+language: eng
 ---
 
 Hey!
