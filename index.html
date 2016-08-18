@@ -9,11 +9,12 @@ head-title: "Hernandes"
 	<article class="about">
 		<p>
 			Hey. My name is Matheus, I'm a code writer and an eternal apprentice. <br>
-			This is my website/blog. Here I talk about me, some things that I do and I write articles.
 		</p>
 	</article>
 </main>
 
+{% comment %}
+			This is my website/blog. Here I talk about me, some things that I do and I write articles.
 <section class="slide">
 	{% for post in site.posts %}
 		{% if post.type == 'project' %}
@@ -29,6 +30,21 @@ head-title: "Hernandes"
 		{% endif %}
 	{% endfor %}
 </section>
+{% endcomment %}
+
+<section class="articles">
+	<h1>projects</h1>
+	
+	{% for post in site.posts %}
+		{% if post.type == 'project' %}
+			<article class="article">
+				<a href="{{ post.url | prepend: site.baseurl }}">
+					<h1>{{ post.title }}</h1>
+				</a>
+			</article>			
+		{% endif %}
+	{% endfor %}
+</section>
 
 <section class="articles">
 	<h1>articles</h1>
@@ -38,10 +54,6 @@ head-title: "Hernandes"
 			<article class="article">
 				<a href="{{ post.url | prepend: site.baseurl }}">
 					<h1>{{ post.title }}</h1>
-
-					<p>
-						{{ post.content | truncatewords: 45 }}
-					</p>
 				</a>
 			</article>			
 		{% endif %}
