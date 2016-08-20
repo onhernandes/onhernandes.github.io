@@ -1,0 +1,144 @@
+.articles {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: wrap row;
+	border-bottom: 1px solid #919191;
+	padding: 20px 0;
+
+	> h1 {
+		flex: 0 0 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	> .article {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		padding: 25px 0;
+		flex: 0 0 70%;
+
+		> a {
+			color: $gray;
+			transition: color .4s ease .001s;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		@media screen and (max-width: 550px) {
+			flex-basis: 90%;
+		}
+	}
+
+	.advice {
+		text-transform: lowercase;
+	}
+}
+
+.html > a:hover {color: $html;}
+.css > a:hover {color: $css;}
+.scss > a:hover {color: $scss;}
+.responsive > a:hover {color: $responsive;}
+.javascript > a:hover {color: $javascript;}
+.jquery > a:hover {color: $jquery;}
+.git > a:hover {color: $git;}
+.php > a:hover {color: $php;}
+.mysql > a:hover {color: $mysql;}
+.git > a:hover {color: $git;}
+.linux > a:hover {color: $linux;}
+
+.about {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	color: $gray;
+	flex-flow: wrap row;
+	font-size: 18px;
+
+	article {
+		flex: 0 0 70%;
+		border-bottom: 1px solid rgba(0,0,0,0.5);
+		padding: 3% 0;
+		
+		> h1 {padding: 0 0 10px;}
+
+		> p {
+			padding: 7.5px 0;
+			
+			&:last-child {padding-bottom: 0;}
+		
+			> a {
+				color: $gray;
+				padding-bottom: 1px;
+
+				&:hover {border-bottom: 1px dashed $gray;}
+			}
+		}
+
+		@media screen and (max-width: 550px) {
+			flex-basis: 90%;
+			font-size: 18px;
+		}
+	}
+
+	.knowledge > ul {
+		list-style-type: disc;
+		padding-left: 20px;
+		font-size: 18px;
+
+		> li {padding: 3.5px 0;}
+	}
+
+	.projects > ul > .project {
+		padding: 15px 0;
+		display: block;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		
+		> a {
+			color: $gray;
+
+			h2 {font-weight: 300;}
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	.talk {
+		> ul {
+			list-style-type: disc;
+			padding-left: 20px;
+			font-size: 18px;
+
+			> li {
+				padding: 3.5px 0;
+
+				> a {
+					color: $gray;
+					padding-bottom: 1px;
+
+					&:hover {border-bottom: 1px dashed $gray;}
+				}
+			}
+		}
+
+		> p {
+			padding-top: 12px;
+
+			> a {
+				color: $gray;
+
+				&:hover {border-bottom: 1px dashed $gray;}
+			}
+		}
+	}
+}

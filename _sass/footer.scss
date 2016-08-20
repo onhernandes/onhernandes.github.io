@@ -1,0 +1,19 @@
+.footer {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-flow: wrap column;
+	background-color: $scss;
+	
+	> p {
+		background-color: rgba(0,0,0,0.5);
+		color: #fff;
+		flex: 0 0 100%;
+		padding: 13px;
+		text-align: center;
+		width: 100%;
+	}
+}

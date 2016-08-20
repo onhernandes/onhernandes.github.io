@@ -1,0 +1,27 @@
+---
+layout: default
+title: "articles"
+head-title: "Articles"
+image: "articles.jpg"
+---
+
+<section class="articles">
+	{% for post in site.posts %}
+		{% if post.type == 'article' %}
+			{% if post.idiom == 'eng' %}
+				<article class="article {{ post.language }}">
+					<a href="{{ post.permalink }}">
+						<h1>{{ post.title }}</h1>
+					</a>
+					
+					<p>
+						{{ post.content | truncatewords: 35 }}
+					</p>
+				</article>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+
+	<h1 class="advice">Ops!</h1>
+	<h1 class="advice">I have not written anything yet, come back later</h1>
+</section>
