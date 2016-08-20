@@ -93,11 +93,16 @@
 	.projects > ul > .project {
 		padding: 15px 0;
 		display: block;
-
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		
 		> a {
 			color: $gray;
 
 			h2 {font-weight: 300;}
+		}
+
+		&:last-child {
+			border-bottom: 0;
 		}
 	}
 

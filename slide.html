@@ -34,3 +34,15 @@
 		{% endif %}
 	{% endfor %}
 </section>
+
+
+			{% for project in site.posts %}
+				{% if project.type == "project" %}
+					<li class="project {{ project.language }}">
+						<a href="{{ project.url | prepend: site.baseurl }}">
+							<h2>{{ project.title }}</h2>
+							<p>{{ project.intro }}</p>
+						</a>
+					</li>					
+				{% endif %}
+			{% endfor %}

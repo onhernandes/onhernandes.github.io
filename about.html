@@ -39,16 +39,42 @@ head-title: "About me"
 		<h1>Projects</h1>
 
 		<ul>
-			{% for project in site.posts %}
-				{% if project.type == "project" %}
-					<li class="project {{ project.language }}">
-						<a href="{{ project.url | prepend: site.baseurl }}">
-							<h2>{{ project.title }}</h2>
-							<p>{{ project.intro }}</p>
-						</a>
-					</li>					
-				{% endif %}
-			{% endfor %}
+			<li class="project">
+				<a href="https://github.com/devmath/mustang-js" target="_blank">
+					<h2>Mustang.js</h2>
+					<p>
+						Simple jQuery slider plugin.
+					</p>
+				</a>
+			</li>
+			
+			<li class="project">
+				<a href="https://github.com/devmath/my-own-styleguide" target="_blank">
+					<h2>Personal Styleguide</h2>
+					<p>Rules that I follow and I think that are good for web development.</p>
+				</a>
+			</li>
+			
+			<li class="project">
+				<a href="https://github.com/devmath/favorite-articles" target="_blank">
+					<h2>Favorite Articles</h2>
+					<p>Awesome list with my favorite articles on 2016.</p>
+				</a>
+			</li>
+			
+			<li class="project">
+				<a href="https://github.com/devmath/shield-scss" target="_blank">
+					<h2>Shield SCSS</h2>
+					<p>Cool files that I use on my work with SCSS.</p>
+				</a>
+			</li>
+			
+			<li class="project">
+				<a href="https://github.com/devmath/storage-calc" target="_blank">
+					<h2>Storage Calc</h2>
+					<p>Type out your device storage size and you'll know how many files can be charged.</p>
+				</a>
+			</li>
 		</ul>
 	</article>
 
