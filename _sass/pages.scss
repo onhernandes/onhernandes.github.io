@@ -34,6 +34,10 @@
 			flex-basis: 90%;
 		}
 	}
+
+	.advice {
+		text-transform: lowercase;
+	}
 }
 
 .html > a:hover {color: $html;}
