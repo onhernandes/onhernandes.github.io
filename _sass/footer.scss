@@ -6,10 +6,10 @@
 	align-items: center;
 	align-content: center;
 	flex-flow: wrap column;
-	background-color: $scss;
+	background-color: $gray;
 	
 	> p {
-		background-color: rgba(0,0,0,0.5);
+		//background-color: rgba(0,0,0,0.5);
 		color: #fff;
 		flex: 0 0 100%;
 		padding: 13px;
