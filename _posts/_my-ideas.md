@@ -4,3 +4,4 @@ This file is for note my web ideas.
 1. A simple CMS(for e-commerce) write in PHP for future projects
 1. A tic-tac-toe in JS
 1. Rebuild Mustang.js homepage
+1. Rebuild my own website
