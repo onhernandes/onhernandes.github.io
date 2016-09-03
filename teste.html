@@ -13,10 +13,24 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<section class="teste">
-		<div class="content">
-			<h1>te</h1>
-		</div>
-	</section>
+<nav class="nav-new">
+    <ul class="menu-icon">
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    </ul>
+</nav>
+
+<script>
+	var ulButton = document.querySelector('.menu-icon');
+
+	ulButton.onclick = function () {
+		this.style.transform = 'rotate(0deg)';
+		setTimeout(function(){
+			ulButton.classList.add('active');
+		}, 300);
+	}
+</script>
+
 </body>
 </html>
