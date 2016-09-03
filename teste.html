@@ -15,7 +15,7 @@
 <body>
 <nav class="nav-new">
 	<div class="icon-wrapper">
-		<ul class="menu-icon">
+		<ul id="menu-icon">
 	    	<li class="first-icon"></li>
 	    	<li class="second-icon"></li>
 	    	<li class="third-icon"></li>
@@ -36,7 +36,7 @@
 </nav>
 
 <script>
-	var icon = document.querySelector('.menu-icon'),
+	var icon = document.querySelector('#menu-icon'),
 		first_icon = document.querySelector('.first-icon'),
 		second_icon = document.querySelector('.second-icon'),
 		third_icon = document.querySelector('.third-icon');
@@ -51,39 +51,89 @@
 		second_social = document.querySelector('.second-social'),
 		third_social = document.querySelector('.third-social');
 
-	icon.onclick = function () {
-		this.style.transform = 'rotate(180deg)';
+	var width = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
 
-		setTimeout(function(){
-			second_icon.classList.add('a');
-			first_icon.classList.add('b');
-			third_icon.classList.add('b');
-		}, 100);
+	if (width > 1024) {
+		function itemsDisplay() {
+			
+			setTimeout(function(){
+				items.style.display = 'block';
+			}, 100);
 
-		items.style.display = 'block';
-		
-		setTimeout(function(){
-			items.style.left = '20px';
-		}, 100);
+			setTimeout(function(){
+				items.style.left = '20px';
+				second_item.style.transform = 'translateX(0)';
+				third_item.style.transform = 'translateX(0)';
+			}, 300);
+		}
 
-		setTimeout(function(){
-			second_item.style.transform = 'translateX(0)';
-			third_item.style.transform = 'translateX(0)';
-		}, 300);
+		function socialDisplay() {		
+			setTimeout(function(){
+				socials.style.display = 'block';
+			}, 100);
 
-		socials.style.display = 'block';
-		
-		setTimeout(function(){
-			socials.style.left = '20px';
-		}, 100);
+			setTimeout(function(){
+				socials.style.top = '50px';
+				second_social.style.transform = 'translateY(0)';
+				third_social.style.transform = 'translateY(0)';
+			}, 300);
+		}
 
-		setTimeout(function(){
-			second_social.style.transform = 'translateY(0)';
-			third_social.style.transform = 'translateY(0)';
-		}, 300);
+		function undoItems() {
+			setTimeout(function(){
+				third_item.style.transform = 'translateX(-97px)';
+				second_item.style.transform = 'translateX(-47px)';
+			}, 100);
+			
+			setTimeout(function(){
+				items.style.left = '-20px';
+				items.style.display = 'none';
+			}, 300);
+		}
 
-		this.classList.add('active');
+		function undoSocial() {
+			setTimeout(function(){
+				second_social.style.transform = 'translateY(-24px)';
+				third_social.style.transform = 'translateY(-50px)';
+			}, 100);
 
+			setTimeout(function(){
+				socials.style.top = '10px';
+				socials.style.display = 'none';
+			}, 300);
+		}
+
+		icon.onclick = function () {
+			if (this.classList.contains('active')) {
+				undoItems();
+				undoSocial();
+				this.style.transform = 'rotate(90deg)';
+
+				setTimeout(function(){
+					second_icon.classList.remove('a');
+					first_icon.classList.remove('b');
+					third_icon.classList.remove('b');
+				}, 100);
+
+				this.classList.remove('active');
+			} else {
+				this.style.transform = 'rotate(180deg)';
+
+				setTimeout(function(){
+					second_icon.classList.add('a');
+					first_icon.classList.add('b');
+					third_icon.classList.add('b');
+				}, 100);
+
+				itemsDisplay();
+				socialDisplay();		
+
+				this.classList.add('active');
+			}
+
+		}
 	}
 </script>
 
