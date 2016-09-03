@@ -18,12 +18,15 @@
     </span>
 </nav>
 
-<header
-	{% if page.image %}
-		style="background-image: url(/img/{{ page.image }});" 
-	{% endif %} class="header">
+<header class="header">
 
-    <h1>
-    	{{ page.title }}
-    </h1>
+    <div class="content" 
+    {% if page.image %}
+        style="background-image: url(/img/{{ page.image }});" 
+    {% endif %} >
+        <h1>
+        	{{ page.title }}
+        </h1>
+    </div>
+
 </header>
