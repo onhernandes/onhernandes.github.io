@@ -15,82 +15,80 @@ var socials = document.querySelector('.menu-social'),
 
 var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-if (width > 1024) {
-	function itemsDisplay() {		
+function itemsDisplay() {		
+	setTimeout(function(){
+		items.style.display = 'block';
+	}, 100);
+
+	setTimeout(function(){
+		items.style.left = '20px';
+		second_item.style.transform = 'translateX(0)';
+		third_item.style.transform = 'translateX(0)';
+	}, 300);
+}
+
+function socialDisplay() {		
+	setTimeout(function(){
+		socials.style.display = 'block';
+	}, 100);
+
+	setTimeout(function(){
+		socials.style.top = '50px';
+		second_social.style.transform = 'translateY(0)';
+		third_social.style.transform = 'translateY(0)';
+	}, 300);
+}
+
+function undoItems() {
+	setTimeout(function(){
+		third_item.style.transform = 'translateX(-116px)';
+		second_item.style.transform = 'translateX(-57px)';
+	}, 100);
+	
+	setTimeout(function(){
+		items.style.left = '-20px';
+		items.style.display = 'none';
+	}, 300);
+}
+
+function undoSocial() {
+	setTimeout(function(){
+		second_social.style.transform = 'translateY(-24px)';
+		third_social.style.transform = 'translateY(-50px)';
+	}, 100);
+
+	setTimeout(function(){
+		socials.style.top = '10px';
+		socials.style.display = 'none';
+	}, 300);
+}
+
+icon.onclick = function () {
+	if (this.classList.contains('active')) {
+		undoItems();
+		undoSocial();
+		this.style.transform = 'rotate(90deg)';
+
 		setTimeout(function(){
-			items.style.display = 'block';
+			second_icon.classList.remove('a');
+			first_icon.classList.remove('b');
+			third_icon.classList.remove('b');
 		}, 100);
 
-		setTimeout(function(){
-			items.style.left = '20px';
-			second_item.style.transform = 'translateX(0)';
-			third_item.style.transform = 'translateX(0)';
-		}, 300);
-	}
+		this.classList.remove('active');
+	} else {
+		this.style.transform = 'rotate(180deg)';
 
-	function socialDisplay() {		
 		setTimeout(function(){
-			socials.style.display = 'block';
+			second_icon.classList.add('a');
+			first_icon.classList.add('b');
+			third_icon.classList.add('b');
 		}, 100);
 
-		setTimeout(function(){
-			socials.style.top = '50px';
-			second_social.style.transform = 'translateY(0)';
-			third_social.style.transform = 'translateY(0)';
-		}, 300);
+		itemsDisplay();
+		socialDisplay();		
+
+		this.classList.add('active');
 	}
 
-	function undoItems() {
-		setTimeout(function(){
-			third_item.style.transform = 'translateX(-116px)';
-			second_item.style.transform = 'translateX(-57px)';
-		}, 100);
-		
-		setTimeout(function(){
-			items.style.left = '-20px';
-			items.style.display = 'none';
-		}, 300);
-	}
-
-	function undoSocial() {
-		setTimeout(function(){
-			second_social.style.transform = 'translateY(-24px)';
-			third_social.style.transform = 'translateY(-50px)';
-		}, 100);
-
-		setTimeout(function(){
-			socials.style.top = '10px';
-			socials.style.display = 'none';
-		}, 300);
-	}
-
-	icon.onclick = function () {
-		if (this.classList.contains('active')) {
-			undoItems();
-			undoSocial();
-			this.style.transform = 'rotate(90deg)';
-
-			setTimeout(function(){
-				second_icon.classList.remove('a');
-				first_icon.classList.remove('b');
-				third_icon.classList.remove('b');
-			}, 100);
-
-			this.classList.remove('active');
-		} else {
-			this.style.transform = 'rotate(180deg)';
-
-			setTimeout(function(){
-				second_icon.classList.add('a');
-				first_icon.classList.add('b');
-				third_icon.classList.add('b');
-			}, 100);
-
-			itemsDisplay();
-			socialDisplay();		
-
-			this.classList.add('active');
-		}
-
-	}
 }
