@@ -1,39 +1,3 @@
-$(document).ready(function() {
-	var mustang = function(son) {
-		var slide = $(son),
-			total = slide.length,
-			translate = 0,
-			time = 3000,
-			counter = 0;
-
-		function move() {
-			translate += 100;
-			counter++;
-
-			if (counter < total) {
-				var final = "translateX(-" + translate + "%)";
-			} else {
-				var final = "translateX(0%)";
-				counter = 0;
-				translate = 0;
-			}
-
-			slide.css("transform", final);
-		}
-		
-		if (total > 0) {
-			var interval = setInterval(move, time);
-		}
-	}
-
-	mustang(".banner");
-
-	$(".icon-menu").click(function() {
-		$(".nav ul").toggle('fast');
-		$(".nav span").toggle('fast');
-	});
-});
-
 var icon = document.querySelector('#menu-icon'),
 	first_icon = document.querySelector('.first-icon'),
 	second_icon = document.querySelector('.second-icon'),
@@ -49,13 +13,10 @@ var socials = document.querySelector('.menu-social'),
 	second_social = document.querySelector('.second-social'),
 	third_social = document.querySelector('.third-social');
 
-var width = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.body.clientWidth;
+var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 if (width > 1024) {
-	function itemsDisplay() {
-		
+	function itemsDisplay() {		
 		setTimeout(function(){
 			items.style.display = 'block';
 		}, 100);
@@ -81,8 +42,8 @@ if (width > 1024) {
 
 	function undoItems() {
 		setTimeout(function(){
-			third_item.style.transform = 'translateX(-97px)';
-			second_item.style.transform = 'translateX(-47px)';
+			third_item.style.transform = 'translateX(-116px)';
+			second_item.style.transform = 'translateX(-57px)';
 		}, 100);
 		
 		setTimeout(function(){
