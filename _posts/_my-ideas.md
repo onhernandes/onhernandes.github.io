@@ -7,3 +7,5 @@ This file is for note my web ideas.
 1. Rebuild my homepage
 1. Add favicon
 1. Take some shots about Front-end Challenges
+1. Create a repo with my favorite blogs
+1. Create a repo about myself
