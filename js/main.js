@@ -18,49 +18,49 @@ var width = window.innerWidth || document.documentElement.clientWidth || documen
 function itemsDisplay() {		
 	setTimeout(function(){
 		items.style.display = 'block';
-	}, 100);
+	}, 600);
 
 	setTimeout(function(){
-		items.style.left = '20px';
+		//items.style.left = '20px';
 		second_item.style.transform = 'translateX(0)';
 		third_item.style.transform = 'translateX(0)';
-	}, 300);
+	}, 700);
 }
 
 function socialDisplay() {		
 	setTimeout(function(){
 		socials.style.display = 'block';
-	}, 100);
+	}, 600);
 
 	setTimeout(function(){
-		socials.style.top = '50px';
+		//socials.style.top = '50px';
 		second_social.style.transform = 'translateY(0)';
 		third_social.style.transform = 'translateY(0)';
-	}, 300);
+	}, 700);
 }
 
 function undoItems() {
 	setTimeout(function(){
 		third_item.style.transform = 'translateX(-116px)';
 		second_item.style.transform = 'translateX(-57px)';
-	}, 100);
+	}, 500);
 	
 	setTimeout(function(){
-		items.style.left = '-20px';
+		//items.style.left = '-20px';
 		items.style.display = 'none';
-	}, 300);
+	}, 700);
 }
 
 function undoSocial() {
 	setTimeout(function(){
 		second_social.style.transform = 'translateY(-24px)';
 		third_social.style.transform = 'translateY(-50px)';
-	}, 100);
+	}, 500);
 
 	setTimeout(function(){
-		socials.style.top = '10px';
+		//socials.style.top = '10px';
 		socials.style.display = 'none';
-	}, 300);
+	}, 700);
 }
 
 icon.onclick = function () {
