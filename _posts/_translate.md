@@ -18,7 +18,7 @@ Qual era o sonho que tínhamos? Alguma coisa sobre começar uma empresa ou viver
 
 Ficamos com um texto engraçado. Você acha que o novo iPhone vai sair neste outono?
 
-Alguém nos envia um link para um artigo no **Medium**. Um jovem escritor tinha publicado com caixa alta "ACORDE SEU BASTARDO. SUA VIDA ESTÁ QUASE NO FIM". 
+Alguém envia pra gente um link de um artigo no **Medium**. Um jovem escritor tinha publicado com caixa alta "ACORDE SEU BASTARDO. SUA VIDA ESTÁ QUASE NO FIM". 
 
 Alguém compartilhou um vídeo engraçado no Facebook.
 
