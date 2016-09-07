@@ -18,49 +18,49 @@ var width = window.innerWidth || document.documentElement.clientWidth || documen
 function itemsDisplay() {		
 	setTimeout(function(){
 		items.style.display = 'block';
-	}, 600);
+	}, 490);
 
 	setTimeout(function(){
 		//items.style.left = '20px';
 		second_item.style.transform = 'translateX(0)';
 		third_item.style.transform = 'translateX(0)';
-	}, 700);
+	}, 500);
 }
 
 function socialDisplay() {		
 	setTimeout(function(){
 		socials.style.display = 'block';
-	}, 600);
+	}, 490);
 
 	setTimeout(function(){
 		//socials.style.top = '50px';
 		second_social.style.transform = 'translateY(0)';
 		third_social.style.transform = 'translateY(0)';
-	}, 700);
+	}, 500);
 }
 
 function undoItems() {
 	setTimeout(function(){
 		third_item.style.transform = 'translateX(-116px)';
 		second_item.style.transform = 'translateX(-57px)';
-	}, 500);
+	}, 200);
 	
 	setTimeout(function(){
 		//items.style.left = '-20px';
 		items.style.display = 'none';
-	}, 700);
+	}, 400);
 }
 
 function undoSocial() {
 	setTimeout(function(){
 		second_social.style.transform = 'translateY(-24px)';
 		third_social.style.transform = 'translateY(-50px)';
-	}, 500);
+	}, 200);
 
 	setTimeout(function(){
 		//socials.style.top = '10px';
 		socials.style.display = 'none';
-	}, 700);
+	}, 400);
 }
 
 icon.onclick = function () {
@@ -73,7 +73,7 @@ icon.onclick = function () {
 			second_icon.classList.remove('a');
 			first_icon.classList.remove('b');
 			third_icon.classList.remove('b');
-		}, 100);
+		}, 200);
 
 		this.classList.remove('active');
 	} else {
