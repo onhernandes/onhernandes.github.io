@@ -61,3 +61,13 @@ Aqui vai uma listinha muito bacana sobre as PSRs:
 1. [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/)
 1. [PSR-3: Logger Interface](http://www.php-fig.org/psr/psr-3/)
 1. [PSR-4: Autoloader](http://www.php-fig.org/psr/psr-4/)
+1. [PSR-6: Caching Interface](http://www.php-fig.org/psr/psr-6/)
+1. [PSR-7: HTTP message interfaces](http://www.php-fig.org/psr/psr-7/)
+
+Tem um site muito bacana, se chama *[PHP The Right Way](http://www.phptherightway.com/)*, é uma referência sobre como escrever e trabalhar com o PHP do jeito certo. Se quiser, tem a tradução dele [bem aqui](http://br.phptherightway.com/).
+
+Bom, se tem o jeito certo de escrever, então também dever ter o jeito errado né nom? [PHP The Wrong Way](http://www.phpthewrongway.com/) e [PHP da maneira errada](http://www.phpthewrongway.com/pt_br/).
+
+## Escrever bem não é tudo
+
+Não vejo muita validade em
