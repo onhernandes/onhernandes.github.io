@@ -35,7 +35,7 @@ Já vi muita gente - e eu fiz/faço parte desse grupo - que, concluiu algumas co
 
 É o que comumente chamamos de **sobrinho**. Dei uma rápida pesquisada sobre o termo *sobrinho* no Google e inclusive fiz um [post em um grupo sobre dev web](https://www.facebook.com/groups/desenvolvimentoweb/permalink/1191013837623720/) a respeito disso, a maioria das pessoas definiram o sobrinho como um **amador**. Ou seja, o carinha-que-mora-logo-ali, que só viu algumas coisas no YT e aprendeu a mexer no WordPress, depois muda seu status no Facebook para "PHP Developer".
 
-Okok, eu entendo que nem todo mundo tem grana pra fazer uma faculdade, ou ficar fazendo cursos aqui e acolá, etc. Mas isso não significa que você meu caro leitor(que talvez nem seja um sobrinho, mas apenas não aprimorou seus conhecimentos em PHP), tem que parar aí.  Mas...
+Okok, eu entendo que nem todo mundo tem grana pra fazer uma faculdade, ou ficar fazendo cursos aqui e acolá, etc. Mas isso não significa que você meu caro leitor(que talvez nem seja um sobrinho, mas apenas não aprimorou seus conhecimentos em PHP), tem que parar aí. Mas...
 
 	"A vida é muito mais do que isso" - Autor desconhecido
 
@@ -43,7 +43,7 @@ Não só a vida, mas como o PHP também.
 
 Você pode ter feito N cursos e lido XYZ de posts falando sobre PHP. Sempre tem alguma coisa nova. E não estou falando de frameworks, middlewares, libs ou coisas do tipo.
 
-Esse vai ser um artigo um tanto quanto grande, por isso vou deixar um pequeno sumário aqui.
+Esse vai ser um artigo um tanto quanto grande, por isso eu o dividi em duas partes e deixo para vocês, um pequeno sumário aqui.
 
 ## First things first
 
@@ -55,9 +55,23 @@ Se você já tem um conhecimento sobre OOP, e quiser, pode pular para a [próxim
 
 Vou aproveitar o gancho sobre OOP e também te trazer um pouco sobre PDO - PHP Data Object. E vou afirmar, **se você não conhece nada sobre OOP e não quer aprender sobre, sugiro que você pare de ler por aqui.** Programação orientada à objetos no PHP é o que vai te poupar de muita cagada(tabom, nem tanta assim, mas vai) e vai te ajudar muito nas futuras melhorias/atualizações/correções.
 
-Existem várias definições sobre OOP, e a maioria deduz que PHP não é uma linguagem orientada à objetos por N motivos, mas isso não importa aqui, o que importa aqui é o aprendizado.
+Existem várias definições sobre OOP, e alguns deduzem que PHP não é uma linguagem orientada à objetos por N motivos, mas isso não importa aqui, o que importa aqui é o aprendizado.
 
 Vamos começar com o básico.
+
+[OOP para iniciantes](http://code.tutsplus.com/pt/tutorials/object-oriented-php-for-beginners--net-12762) é um artigo muito bom para você começar, vai te dar um pequeno background geral sobre POO - PHP Oriented Object.
+
+No site oficial do PHP, também tem uma [série de artigos](http://php.net/manual/pt_BR/language.oop5.php) falando sobre POO, não é 100% clara(pelo menos pra mim), mas vale uma leitura rápida.
+
+Até no Viva o Linux(que é um fórum basicamente pra Linux, derrr), tem um [artigo bacana falando sobre PHP e OO](https://www.vivaolinux.com.br/artigo/PHP-Orientado-a-Objetos-Para-quem-esta-comecando)
+
+E por último, eu recomendo você dar uma lida nesse [artigo do DevFuria](http://www.devfuria.com.br/php/oop-primeiro-contato/), fala sobre OOP com PHP, é bom ler.
+
+Acredito que até aqui você já tem uma ideia de como trabalhar com POO, o resto fica por tua conta e pela prática :D
+
+## PDO - PHP Data Object
+
+Okok, você já tem um background generalizado sobre programação orientada à objetos
 
 ## Escrevendo bem
 
