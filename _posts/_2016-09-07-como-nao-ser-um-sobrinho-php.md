@@ -9,7 +9,13 @@ language: portuguese
 
 Hey guys!
 
-Numa roda de amigos, batendo aquele lero sobre novas linguagens, daqui a pouco aparece o Lucas. Ele já chega fazendo alarde: "Galera, adivinha quem é o novo programador de PHP aqui hein? Euzinho \o, terminei aquele curso intensivo ontem, peguei meu certificado e já estou na área!"
+---------------
+
+Bom, se você gosta do PHP, se você quer melhorar seus conhecimentos, se você quer deixar de ser um sobrinho, se você tá sem o que fazer, ou sei lá o que, continue lendo este artigo, garanto que vai te ajudar pra caramba.
+
+---------------
+
+Numa roda de amigos, batendo aquele lero sobre novas linguagens, daqui a pouco aparece o Lucas. Ele já chega fazendo alarde: "Galera, adivinha quem é o novo programador de PHP aqui hein? Euzinho \o, terminei aquele curso intensivo ontem, peguei meu certificado e já sou um programador de PHP!"
 
 É, parece uma coisa sem nexo, mas é mais frequente do que tu consegue pensar em comida/café.
 
@@ -17,25 +23,31 @@ PHP é uma linguagem um tanto quanto velha já. Nosso companheiro de guerra surg
 
 De uns tempos pra cá, muitas ferramentas super bacanas foram criadas com PHP. [Wordpress](https://wordpress.org/), [PrestaShop](https://www.prestashop.com/pt/), [Magento](https://magento.com/), entre outros. Sem falar nos frameworks, mini-frameworks, libraries, etc.
 
-Obviamente, você sabe disso melhor do que eu, juntamente com todas essas coisas bacanas veio também uma enxurrada de cursos sobre PHP. Joga "php" no YouTube e você vai encontrar muito mais cursos te ensinando a fazer um CRUD fajuto em PHP do que encontraria cursos de informática pela tua cidade.
+Obviamente, você sabe disso melhor do que eu, juntamente com todas essas coisas bacanas veio também uma enxurrada de cursos sobre PHP. Joga "php" no YouTube e você vai encontrar muito mais cursos te ensinando a fazer um CRUD fajuto em PHP do que encontraria igrejas evangélicas em SP.
 
 Me desculpa, mas essa daqui vai doer um bocado em boa parte:
 
 Ter feito aquele curso no CodeCademy e saber mexer no WordPress não te faz um PHP Developer. Tampouco o teu certificado que conseguiu no/na/do Zend.
 
-Não que as ferramentas e o certificado sejam ruins, pelo contrário, são ótimas, a questão é: não é aí que a missão acaba.
+Não que as ferramentas e o certificado sejam ruins, pelo contrário, são ótimas, a questão é: não é aí que a linguagem acaba.
 
 Já vi muita gente - e eu fiz/faço parte desse grupo - que, concluiu algumas coisas sobre PHP, montou alguma coisa meia-boca(me refiro à ideia de não ser algo completo) e já se acha o PHP Developer Ultimate FreeStyle LifeHacker. 
 
-O problema é que, pensando nisso, a gente para. Ficamos estagnados. Não estudamos mais do que meia dúzia de artigos ao mês.
+É o que comumente chamamos de **sobrinho**. Dei uma rápida pesquisada sobre o termo *sobrinho* no Google e inclusive fiz um [post em um grupo sobre dev web](https://www.facebook.com/groups/desenvolvimentoweb/permalink/1191013837623720/) a respeito disso, a maioria das pessoas definiram o sobrinho como um **amador**. Ou seja, o carinha-que-mora-logo-ali, que só viu algumas coisas no YT e aprendeu a mexer no WordPress, depois muda seu status no Facebook para "PHP Developer".
+
+Okok, eu entendo que nem todo mundo tem grana pra fazer uma faculdade, ou ficar fazendo cursos aqui e acolá, etc. Mas isso não significa que você meu caro leitor(que talvez nem seja um sobrinho, mas apenas não aprimorou seus conhecimentos em PHP), tem que parar aí.  Mas...
 
 	"A vida é muito mais do que isso" - Autor desconhecido
 
 Não só a vida, mas como o PHP também.
 
-Você pode ter feito n cursos e lido xyz de posts falando sobre PHP. Sempre tem alguma coisa nova. E não estou falando de frameworks, middlewares, libs ou coisas do tipo.
+Você pode ter feito N cursos e lido XYZ de posts falando sobre PHP. Sempre tem alguma coisa nova. E não estou falando de frameworks, middlewares, libs ou coisas do tipo.
 
 ## First things first
+
+Você já ouviu falar sobre OOP? 
+
+**Oriented Object Programming**, ou Programação Orientada à Objetos, é um paradigma muito bacana e útil para se seguir. Principalmente quando estamos no universo PHPzista.
 
 Escrever um código de qualquer forma, ou seguindo seu conceito mental de OOP - Oriented object programming -, criar uma mistureba com os nomes, organizar seus arquivos da mesma forma que um adolescente de 13 anos faz com o seu quarto, não é exatamente e nem 100% ruim mas também não é o melhor a se fazer.
 

@@ -9,3 +9,4 @@ This file is for note my web ideas.
 1. Take some shots about Front-end Challenges
 1. Create a repo with my favorite blogs
 1. Create a repo about myself
+1. Create SQL Pop - a SQL populator, generate SQL code to populate your database
