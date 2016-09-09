@@ -43,11 +43,23 @@ Não só a vida, mas como o PHP também.
 
 Você pode ter feito N cursos e lido XYZ de posts falando sobre PHP. Sempre tem alguma coisa nova. E não estou falando de frameworks, middlewares, libs ou coisas do tipo.
 
+Esse vai ser um artigo um tanto quanto grande, por isso vou deixar um pequeno sumário aqui.
+
 ## First things first
 
 Você já ouviu falar sobre OOP? 
 
 **Oriented Object Programming**, ou Programação Orientada à Objetos, é um paradigma muito bacana e útil para se seguir. Principalmente quando estamos no universo PHPzista.
+
+Se você já tem um conhecimento sobre OOP, e quiser, pode pular para a [próxima](#writing-well) seção.
+
+Vou aproveitar o gancho sobre OOP e também te trazer um pouco sobre PDO - PHP Data Object. E vou afirmar, **se você não conhece nada sobre OOP e não quer aprender sobre, sugiro que você pare de ler por aqui.** Programação orientada à objetos no PHP é o que vai te poupar de muita cagada(tabom, nem tanta assim, mas vai) e vai te ajudar muito nas futuras melhorias/atualizações/correções.
+
+Existem várias definições sobre OOP, e a maioria deduz que PHP não é uma linguagem orientada à objetos por N motivos, mas isso não importa aqui, o que importa aqui é o aprendizado.
+
+Vamos começar com o básico.
+
+## Escrevendo bem
 
 Escrever um código de qualquer forma, ou seguindo seu conceito mental de OOP - Oriented object programming -, criar uma mistureba com os nomes, organizar seus arquivos da mesma forma que um adolescente de 13 anos faz com o seu quarto, não é exatamente e nem 100% ruim mas também não é o melhor a se fazer.
 
