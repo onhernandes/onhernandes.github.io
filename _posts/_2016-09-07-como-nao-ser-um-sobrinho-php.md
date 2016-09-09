@@ -64,10 +64,27 @@ Aqui vai uma listinha muito bacana sobre as PSRs:
 1. [PSR-6: Caching Interface](http://www.php-fig.org/psr/psr-6/)
 1. [PSR-7: HTTP message interfaces](http://www.php-fig.org/psr/psr-7/)
 
+Ainda sobre escrever bem:
+
 Tem um site muito bacana, se chama *[PHP The Right Way](http://www.phptherightway.com/)*, é uma referência sobre como escrever e trabalhar com o PHP do jeito certo. Se quiser, tem a tradução dele [bem aqui](http://br.phptherightway.com/).
 
 Bom, se tem o jeito certo de escrever, então também dever ter o jeito errado né nom? [PHP The Wrong Way](http://www.phpthewrongway.com/) e [PHP da maneira errada](http://www.phpthewrongway.com/pt_br/).
 
 ## Escrever bem não é tudo
 
-Não vejo muita validade em
+Um bom escritor não escreve um bestseller da noite pro dia, sem um plano. 
+
+Escrever bem e não ter um plano, é a mesma coisa que nada: você vai escrever muito bem, e vai apagar tudo que escreveu várias vezes porque organizando os arquivos da forma Y é melhor que X. E daqui há alguns meses, vai mudar tudo porque Z é melhor que XY.
+
+Conheça os *Design Patterns*, ou, *Padrões de Projetos*. São padrões para você seguir e conseguir manter seu projeto de uma forma que, seja produtivo e que ajude futuras alterações e melhorias no código.
+
+Aqui vai uma lista bacana sobre design patterns:
+
+[O que são Design Patterns?](http://www.princiweb.com.br/blog/programacao/design-patterns/o-que-sao-design-patterns.html)
+[Uma pequena introdução](http://www.devmedia.com.br/introducao-design-pattern/18838)
+
+Existem vários padrões de projetos super bacanas e úteis pra seguir. Eles são ótimos, e o melhor de tudo é que você **não tem que seguir o padrão escolhido por completo**, você simplesmente pode alterar coisas que não lhe serão úteis e até adicionar o que você precisa.
+
+A ideia é que através dos padrões de projeto você consiga ter uma ideia de como seguir com o projeto sem que te afete lá na frente - quero dizer, a gente sempre se lasca com atualizações, mas vamos tentar diminuir.
+
+Esses são alguns dos padrões de projetos mais conhecidos hoje em dia(você não precisa decorá-los, faça como eu, só dê uma lida por cima e no que mais te agradar, vai fundo).
