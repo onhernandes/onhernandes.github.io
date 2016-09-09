@@ -71,7 +71,9 @@ Acredito que até aqui você já tem uma ideia de como trabalhar com POO, o rest
 
 ## PDO - PHP Data Object
 
-Okok, você já tem um background generalizado sobre programação orientada à objetos
+Okok, você já tem um background generalizado sobre programação orientada à objetos, então é hora de começar a mexer com dados!
+
+Eu sei que você provavelmente já deve ter visto tags/funções do PHP com *mysql_\* /*, e se está usando o PHP7(não sei porque estou falando isso, quase 2017 e não ter atualizado seu PHP é pedir pra apanhar do Apache) percebeu que essas funções já não funcionam como antes. E isto é porque o PHP7 já não usa mais o pacote(tá certo?) das funções *mysql_\*
 
 ## Escrevendo bem
 
