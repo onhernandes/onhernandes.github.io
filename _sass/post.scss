@@ -28,6 +28,10 @@
 					border-bottom: 1px solid  $gray;
 				}
 			}
+
+			strong {
+				font-weight: bold;
+			}
 		}
 		
 		blockquote {
@@ -73,5 +77,10 @@
 		@media screen and (max-width: 550px) {
 			flex-basis: 90%;
 		}
+	}
+
+	#disqus_thread {
+		padding-top: 50px;
+		flex: 0 0 70%;
 	}
 }

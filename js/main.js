@@ -18,10 +18,9 @@ var width = window.innerWidth || document.documentElement.clientWidth || documen
 function itemsDisplay() {		
 	setTimeout(function(){
 		items.style.display = 'block';
-	}, 490);
+	}, 400);
 
 	setTimeout(function(){
-		//items.style.left = '20px';
 		second_item.style.transform = 'translateX(0)';
 		third_item.style.transform = 'translateX(0)';
 	}, 500);
@@ -30,10 +29,9 @@ function itemsDisplay() {
 function socialDisplay() {		
 	setTimeout(function(){
 		socials.style.display = 'block';
-	}, 490);
+	}, 400);
 
 	setTimeout(function(){
-		//socials.style.top = '50px';
 		second_social.style.transform = 'translateY(0)';
 		third_social.style.transform = 'translateY(0)';
 	}, 500);
@@ -43,10 +41,9 @@ function undoItems() {
 	setTimeout(function(){
 		third_item.style.transform = 'translateX(-116px)';
 		second_item.style.transform = 'translateX(-57px)';
-	}, 200);
+	}, 100);
 	
 	setTimeout(function(){
-		//items.style.left = '-20px';
 		items.style.display = 'none';
 	}, 400);
 }
@@ -55,10 +52,9 @@ function undoSocial() {
 	setTimeout(function(){
 		second_social.style.transform = 'translateY(-24px)';
 		third_social.style.transform = 'translateY(-50px)';
-	}, 200);
+	}, 100);
 
 	setTimeout(function(){
-		//socials.style.top = '10px';
 		socials.style.display = 'none';
 	}, 400);
 }
