@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Como não ser um sobrinho - PHP
+title:  Como não ser um sobrinho no PHP
 date:   2016-09-07 20:50:39 -0300
 type: article
 intro: Nem tudo é um cursinho de 3 meses
@@ -37,7 +37,7 @@ Já vi muita gente - e eu fiz/faço parte desse grupo - que, concluiu algumas co
 
 Okok, eu entendo que nem todo mundo tem grana pra fazer uma faculdade, ou ficar fazendo cursos aqui e acolá, etc. Mas isso não significa que você meu caro leitor(que talvez nem seja um sobrinho, mas apenas não aprimorou seus conhecimentos em PHP), tem que parar aí. Mas...
 
-	"A vida é muito mais do que isso" - Autor desconhecido
+> "A vida é muito mais do que isso" - Autor desconhecido
 
 Não só a vida, mas como o PHP também.
 
@@ -75,7 +75,7 @@ Okok, você já tem um background generalizado sobre programação orientada à 
 
 O PDO, é uma classe nativa(não exatamente, você tem que instalar e ativar no php.ini) do PHP para tratar as conexões com o banco de dados.
 
-	Mas eu realmente preciso usar o PDO?
+> Mas eu realmente preciso usar o PDO?
 
 Não, você pode continuar usando o MySQLi, mas PDO é mais seguro e melhor, os motivos, vou deixar você escolhê-los.
 
@@ -128,7 +128,7 @@ Um bom escritor não escreve um bestseller da noite pro dia, sem um plano é cla
 
 Escrever bem e não ter um plano, é a mesma coisa que nada: você vai escrever muito bem, e vai apagar tudo que escreveu várias vezes porque organizando os arquivos da forma Y é melhor que X. E daqui há alguns meses, vai mudar tudo porque Z é melhor que XY. Isso se você estiver trabalhando sozinho, porque se estiver em um grupo, vai ter que aguentar a equipe te perguntando o que raios significa *prntUrDta()* ou qualquer coisa pior.
 
-	Ah, mas eu posso usar um framework, todo mundo vai saber trabalhar!
+> Ah, mas eu posso usar um framework, todo mundo vai saber trabalhar!
 
 Exato. Mas e se nenhum framework ou coisa do tipo, saciar o projeto em questão? E se toda a equipe precisar trabalhar do zero?
 
@@ -156,7 +156,7 @@ Obs.: vou pegar só alguns artigos, nada tão profundo. No que você gostar, mer
 1. [Strategy](http://blog.caelum.com.br/entendendo-o-pattern-strategy-em-php/)
 1. [Front Controller e Command](http://www.devmedia.com.br/padroes-de-projetos-introducao-aos-padroes-front-controller-e-command/30644)
 
---------------
+<br>
 
 Até aqui, posso deduzir que você já sabe um pouco de OO, PDO, escrever bem e até tem uma ideia sobre padrões de projetos. O que acha de praticar? Vou lançar um pequeno desafio aqui:
 
@@ -173,8 +173,6 @@ O **worke**, é um sistema de cadastro de funcionários. Certifique-se de ter:
 1. Remoção de funcionários
 
 Deixe guardado em algum lugar. Daqui algum tempo, volte para ver o projeto. Isso te dará uma visão panorâmica de como você mudou.
-
---------------
 
 ## E se...
 

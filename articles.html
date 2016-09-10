@@ -6,9 +6,14 @@ image: "articles.jpg"
 ---
 
 <section class="articles">
+	<h1 class="advice">Ops!</h1>
+	<h1 class="advice">I have not written anything yet, come back later</h1>
+</section>
+
+{% comment %}
 	{% for post in site.posts %}
 		<article class="article {{ post.language }}">
-			<a href="{{ post.permalink }}">
+			<a href="{{ post.url }}">
 				<h1>{{ post.title }} -  {{ post.language }}</h1>
 			</a>
 			
@@ -17,6 +22,4 @@ image: "articles.jpg"
 			</p>
 		</article>
 	{% endfor %}
-	<h1 class="advice">Ops!</h1>
-	<h1 class="advice">I have not written anything yet, come back later</h1>
-</section>
+{% endcomment %}
