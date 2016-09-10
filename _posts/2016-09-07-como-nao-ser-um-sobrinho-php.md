@@ -8,13 +8,9 @@ master: php
 
 Hey guys!
 
----------------
-
 Bom, se você gosta do PHP, se você quer melhorar seus conhecimentos, se você quer deixar de ser um sobrinho, se você tá sem o que fazer, ou sei lá o que, continue lendo este artigo, garanto que vai te ajudar pra caramba.
 
----------------
-
-Numa roda de amigos, batendo aquele lero sobre novas linguagens, daqui a pouco aparece o Lucas. Ele já chega fazendo alarde: "Galera, adivinha quem é o novo programador de PHP aqui hein? Euzinho \o, terminei aquele curso intensivo ontem, peguei meu certificado e já sou um programador de PHP!"
+> Numa roda de amigos, batendo aquele lero sobre novas linguagens, daqui a pouco aparece o Lucas. Ele já chega fazendo alarde: "Galera, adivinha quem é o novo programador de PHP aqui hein? Euzinho \o, terminei aquele curso intensivo ontem, peguei meu certificado e já sou um programador de PHP!"
 
 É, parece uma coisa sem nexo, mas é mais frequente do que tu consegue pensar em comida/café.
 
