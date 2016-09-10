@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "My own style guide"
+title:  My own style guide
 date:   2016-08-13 21:44:49 -0300
-type: project
+master: php
 intro: Do you know the why about write a style guide?
-language: english
 ---
 
 Hey!

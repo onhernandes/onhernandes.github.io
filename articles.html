@@ -1,25 +1,26 @@
 ---
 layout: default
-title: "articles"
-head-title: "Articles"
-image: "articles.jpg"
+title: Articles
+image: articles.jpg
 ---
 
 <section class="articles">
-	<h1 class="advice">Ops!</h1>
-	<h1 class="advice">I have not written anything yet, come back later</h1>
-</section>
-
-{% comment %}
 	{% for post in site.posts %}
-		<article class="article {{ post.language }}">
+		<article class="article {{ post.master }}">
 			<a href="{{ post.url }}">
-				<h1>{{ post.title }} -  {{ post.language }}</h1>
+				<h1>{{ post.title }}</h1>
 			</a>
 			
 			<p>
-				{{ post.excerpt | truncatewords: 35 }}
+				{{ post.intro }}
 			</p>
 		</article>
 	{% endfor %}
+</section>
+
+{% comment %}
+	<h1 class="advice">Ops!</h1>
+	<h1 class="advice">I have not written anything yet, come back later</h1>
+
+	
 {% endcomment %}

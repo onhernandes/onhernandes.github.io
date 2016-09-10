@@ -19,12 +19,16 @@
 
 	> .article {
 		border-bottom: 1px solid rgba(0,0,0,0.1);
-		padding: 25px 0;
+		padding: 25px;
 		flex: 0 0 70%;
 
 		> a {
 			color: $gray;
 			transition: color .4s ease .001s;
+
+			&:hover {
+				color: $blue;
+			}
 		}
 
 		&:last-child {
