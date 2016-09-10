@@ -6,11 +6,15 @@ image: articles.jpg
 
 <section class="articles">
 	{% for post in site.posts %}
-		<article class="article {{ post.master }}">
+		<article class="article {{ post.master }}-article">
+			<span class="date">
+				{% include post-date.html %}
+			</span>
+
 			<a href="{{ post.url }}">
 				<h1>{{ post.title }}</h1>
 			</a>
-			
+
 			<p>
 				{{ post.intro }}
 			</p>

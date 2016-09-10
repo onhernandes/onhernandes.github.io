@@ -18,23 +18,23 @@ var width = window.innerWidth || document.documentElement.clientWidth || documen
 function itemsDisplay() {		
 	setTimeout(function(){
 		items.style.display = 'block';
-	}, 400);
+	}, 200);
 
 	setTimeout(function(){
 		second_item.style.transform = 'translateX(0)';
 		third_item.style.transform = 'translateX(0)';
-	}, 500);
+	}, 300);
 }
 
 function socialDisplay() {		
 	setTimeout(function(){
 		socials.style.display = 'block';
-	}, 400);
+	}, 200);
 
 	setTimeout(function(){
 		second_social.style.transform = 'translateY(0)';
 		third_social.style.transform = 'translateY(0)';
-	}, 500);
+	}, 300);
 }
 
 function undoItems() {

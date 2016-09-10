@@ -1,7 +1,6 @@
 .post {
 	width: 100%;
 	height: auto;
-	//background-color: $blue;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -13,6 +12,11 @@
 
 	article {
 		flex: 0 0 70%;
+
+		@media screen and (max-width: 960px) {
+			flex-basis: 100%;
+			padding-left: 40px;
+		}
 	}
 
 	.comments {
@@ -64,16 +68,13 @@
 			vertical-align: middle;
 			font-style: italic;
 
-			> em > a,
-			> em:visited > a,
-			> em:active > a,
 			> a,
 			> a:visited,
 			> a:active {
 				color: darken($green, 15%);
 				
 				&:hover {
-					border-bottom: 1px solid  $gray;
+					border-bottom: 1px solid  $green;
 				}
 			}
 		}
@@ -115,8 +116,424 @@
 		height: auto;
 		padding: 10px 0;
 	}
+}
 
-	@media screen and (max-width: 550px) {
-		flex-basis: 90%;
+.js-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($js, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $js;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($js, 0.2);
+
+		p {
+			color: $js;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($js, 15%);
+				
+				&:hover {
+					border-bottom-color: $js;
+				}
+			}
+		}
+	}
+}
+
+.css-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($css, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $css;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($css, 0.2);
+
+		p {
+			color: $css;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($css, 15%);
+				
+				&:hover {
+					border-bottom-color: $css;
+				}
+			}
+		}
+	}
+}
+
+.html-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($html, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $html;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($html, 0.2);
+
+		p {
+			color: $html;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($html, 15%);
+				
+				&:hover {
+					border-bottom-color: $html;
+				}
+			}
+		}
+	}
+}
+
+.scss-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($scss, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $scss;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($scss, 0.2);
+
+		p {
+			color: $scss;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($scss, 15%);
+				
+				&:hover {
+					border-bottom-color: $scss;
+				}
+			}
+		}
+	}
+}
+
+.oop-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($oop, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $oop;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($oop, 0.2);
+
+		p {
+			color: $oop;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($oop, 15%);
+				
+				&:hover {
+					border-bottom-color: $oop;
+				}
+			}
+		}
+	}
+}
+
+.jquery-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($jquery, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $jquery;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($jquery, 0.2);
+
+		p {
+			color: $jquery;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($jquery, 15%);
+				
+				&:hover {
+					border-bottom-color: $jquery;
+				}
+			}
+		}
+	}
+}
+
+.git-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($git, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $git;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($git, 0.2);
+
+		p {
+			color: $git;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($git, 15%);
+				
+				&:hover {
+					border-bottom-color: $git;
+				}
+			}
+		}
+	}
+}
+
+.mysql-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($mysql, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $mysql;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($mysql, 0.2);
+
+		p {
+			color: $mysql;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($mysql, 15%);
+				
+				&:hover {
+					border-bottom-color: $mysql;
+				}
+			}
+		}
+	}
+}
+
+.responsive-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($responsive, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $responsive;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($responsive, 0.2);
+
+		p {
+			color: $responsive;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($responsive, 15%);
+				
+				&:hover {
+					border-bottom-color: $responsive;
+				}
+			}
+		}
+	}
+}
+
+.linux-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($linux, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $linux;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($linux, 0.2);
+
+		p {
+			color: $linux;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($linux, 15%);
+				
+				&:hover {
+					border-bottom-color: $linux;
+				}
+			}
+		}
+	}
+}
+
+.node-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($node, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $node;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($node, 0.2);
+
+		p {
+			color: $node;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($node, 15%);
+				
+				&:hover {
+					border-bottom-color: $node;
+				}
+			}
+		}
+	}
+}
+
+.php-content {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($php, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $php;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($php, 0.2);
+
+		p {
+			color: $php;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($php, 15%);
+				
+				&:hover {
+					border-bottom-color: $php;
+				}
+			}
+		}
 	}
 }

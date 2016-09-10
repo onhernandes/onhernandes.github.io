@@ -20,22 +20,29 @@
 	> .article {
 		border-bottom: 1px solid rgba(0,0,0,0.1);
 		padding: 25px;
-		flex: 0 0 70%;
+		flex: 0 0 60%;
+		
+		.date {
+			font-size: 15px;
+			color: rgba(0,0,0,0.6);
+		}
 
 		> a {
 			color: $gray;
 			transition: color .4s ease .001s;
-
-			&:hover {
-				color: $blue;
-			}
 		}
 
 		&:last-child {
 			border-bottom: 0;
 		}
 
-		@media screen and (max-width: 550px) {
+		ul li {
+			display: inline-block;
+			padding: 10px;
+			margin-left: 3px;
+		}
+
+		@media screen and (max-width: 960px) {
 			flex-basis: 90%;
 		}
 	}
@@ -45,17 +52,17 @@
 	}
 }
 
-.html > a:hover {color: $html;}
-.css > a:hover {color: $css;}
-.scss > a:hover {color: $scss;}
-.responsive > a:hover {color: $responsive;}
-.javascript > a:hover {color: $javascript;}
-.jquery > a:hover {color: $jquery;}
-.git > a:hover {color: $git;}
-.php > a:hover {color: $php;}
-.mysql > a:hover {color: $mysql;}
-.git > a:hover {color: $git;}
-.linux > a:hover {color: $linux;}
+.html-article > a:hover {color: $html;}
+.css-article > a:hover {color: $css;}
+.scss-article > a:hover {color: $scss;}
+.responsive-article > a:hover {color: $responsive;}
+.javascript-article > a:hover {color: $javascript;}
+.jquery-article > a:hover {color: $jquery;}
+.git-article > a:hover {color: $git;}
+.php-article > a:hover {color: $php;}
+.mysql-article > a:hover {color: $mysql;}
+.git-article > a:hover {color: $git;}
+.linux-article > a:hover {color: $linux;}
 
 .about {
 	width: 100%;
@@ -89,9 +96,10 @@
 			}
 		}
 
-		@media screen and (max-width: 550px) {
+		@media screen and (max-width: 960px) {
 			flex-basis: 90%;
 			font-size: 18px;
+			padding-left: 30px;
 		}
 	}
 
