@@ -1,11 +1,8 @@
 .footer {
 	width: 100%;
 	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-flow: wrap column;
+	@include flex(wrap column);
+	@include flex-align(center, center, center);
 	background-color: $blue;
 	
 	> p {

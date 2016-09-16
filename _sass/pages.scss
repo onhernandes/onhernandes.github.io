@@ -1,11 +1,10 @@
 .articles {
 	width: 100%;
 	height: auto;
-	display: flex;
-	justify-content: center;
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
 	align-items: center;
 	align-content: center;
-	flex-flow: wrap row;
 	margin-top: 50px;
 	border-bottom: 1px solid #919191;
 	padding: 20px 0;
@@ -67,12 +66,9 @@
 .about {
 	width: 100%;
 	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	align-content: flex-start;
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
 	color: $gray;
-	flex-flow: wrap row;
 	margin-top: 50px;
 	font-size: 18px;
 

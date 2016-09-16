@@ -1,12 +1,9 @@
 .post {
 	width: 100%;
 	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	align-content: flex-start;
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
 	padding: 6% 0;
-	flex-flow: wrap row;
 	font-size: 18px;
 	color: $gray;
 

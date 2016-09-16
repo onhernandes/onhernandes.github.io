@@ -1,12 +1,9 @@
 .me {
 	width: 100%;
 	height: auto;
-	display: flex;
+	@include flex(wrap row);
+	@include flex-align(flex-end, center, center);
 	padding: 30px;
-	justify-content: flex-end;
-	align-items: center;
-	align-content: center;
-	flex-flow: wrap row;
 	font-size: 18px;
 	margin-top: 20px;
 	text-align: right;
@@ -26,12 +23,9 @@
 .slide {
 	width: 100%;
 	height: 70vh;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: center;
+	@include flex(nowrap row);
+	@include flex-align(flex-start, center, center);
 	border-bottom: 1px solid #919191;
-	flex-flow: nowrap row;
 	overflow: hidden;
 
 	> .banner {
@@ -50,11 +44,8 @@
 			width: 100%;
 			height: 100%;
 			transition: background-color .3s ease .1s;
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-			align-content: flex-start;
-			flex-flow: wrap row;
+			@include flex(wrap row);
+			@include flex-align(flex-start, flex-start, flex-start);
 			padding: 70px;
 			color: #fff;
 
