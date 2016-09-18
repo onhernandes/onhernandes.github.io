@@ -70,3 +70,39 @@
 	-o-transform: $transform;
 	transform: $transform;
 }
+
+// Define colors in an article
+@mixin article-style($color) {
+	p {
+		> em > a,
+		> em:visited > a,
+		> em:active > a,
+		> a,
+		> a:visited,
+		> a:active {
+			color: darken($color, 15%);
+			
+			&:hover {
+				border-bottom: 1px solid $color;
+			}
+		}
+	}
+
+	blockquote {
+		border-left-color: rgba($color, 0.2);
+
+		p {
+			color: $color;
+
+			> a,
+			> a:visited,
+			> a:active {
+				color: darken($color, 15%);
+				
+				&:hover {
+					border-bottom-color: $color;
+				}
+			}
+		}
+	}
+}

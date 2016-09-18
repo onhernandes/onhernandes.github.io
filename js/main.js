@@ -19,7 +19,7 @@ nav.addEventListener('click', function() {
         nav.style.transform =  "translateY(0)";
     } else {
         div.style.height = '201px';
-        nav.style.transform =  "translateY(209px)";
+        nav.style.transform =  "translateY(208px)";
     }
 
     computedStyle = window.getComputedStyle(div);
