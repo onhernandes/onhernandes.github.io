@@ -55,7 +55,7 @@ Quando você tem uma "história" assim, e você vê outras pessoas que passaram 
 Lá você encontrava de tudo, desde aquele cara que tava entrando no mundo de TI agora até um Software Engineer do Google(óbvio, se estávamos no Google, lógicamente teria gente deles lá). Falando nisso, se algum dia você tiver a oportunidade de conhecer esse lugar incrível, não pense duas vezes e chegue cedo. Eu não tirei muitas fotos, mas fica aqui uma breve visão da sacada:
 
 (alerta de baixa qualidade)
-![Imagem da sacada](/img/posts/eventid.jpg)
+![Imagem da sacada](/img/entidv.jpg)
 
 Passei o dia ao lado do Claudenir, um cara muito bacana, já deu algumas palestras, aulas e trabalha com suporte. Cada momento era incrível, o que não nos faltou foi assunto falando sobre desenvolvimento web, Android, Java, etc.
 
