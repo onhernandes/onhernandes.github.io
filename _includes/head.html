@@ -1,6 +1,7 @@
 <head>
 	<!-- Add IE Conditionals -->
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 
 	<title>
@@ -11,8 +12,28 @@
 		{% endif %}
 	</title>
 
-	<!-- Add Facebook tags -->
-	<!-- Add Twitter tags -->
+	<!-- Facebook tags -->
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	{% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}">
+    {% else %}
+    <meta property="og:image" content="{{ "/img/home.jpg" | prepend: site.url }}">
+    {% endif %}
+    <meta property="og:description" content="{% if page.intro %}{{ page.intro | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@devhernandes">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.intro %}{{ page.intro | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.image %}
+    <meta property="twitter:image:src" content="{{ site.url }}/img/{{page.image }}">
+    {% else %}
+    <meta property="twitter:image:src" content="{{ "/img/home.jpg" | prepend: site.url }}">
+    {% endif %}
 	<!-- Add Usual tags -->
 	<link rel="stylesheet" href="/css/main.css">
 </head>
