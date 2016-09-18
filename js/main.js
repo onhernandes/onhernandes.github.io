@@ -3,66 +3,33 @@ var icon = document.querySelector('#menu-icon'),
 	second_icon = document.querySelector('.second-icon'),
 	third_icon = document.querySelector('.third-icon');
 
-var items = document.querySelector('.menu-items'),
-	first_item = document.querySelector('.first-item'),
-	second_item = document.querySelector('.second-item'),
-	third_item = document.querySelector('.third-item');
+var nav = document.querySelector('.nav'),
+    div = document.querySelector('.menu-new'),
+    computedStyle = window.getComputedStyle(div),
+    style = computedStyle.getPropertyValue('height');
 
-var socials = document.querySelector('.menu-social'),
-	first_social = document.querySelector('.first-social'),
-	second_social = document.querySelector('.second-social'),
-	third_social = document.querySelector('.third-social');
+nav.addEventListener('click', function() {
+    event.preventDefault();
+
+    computedStyle = window.getComputedStyle(div);
+    style = computedStyle.getPropertyValue('height');
+    
+    if (style !== '0px') {
+        div.style.height = '0px';
+        nav.style.transform =  "translateY(0)";
+    } else {
+        div.style.height = '201px';
+        nav.style.transform =  "translateY(209px)";
+    }
+
+    computedStyle = window.getComputedStyle(div);
+    style = computedStyle.getPropertyValue('height');
+});
 
 var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-function itemsDisplay() {		
-	setTimeout(function(){
-		items.style.display = 'block';
-	}, 200);
-
-	setTimeout(function(){
-		second_item.style.transform = 'translateX(0)';
-		third_item.style.transform = 'translateX(0)';
-	}, 300);
-}
-
-function socialDisplay() {		
-	setTimeout(function(){
-		socials.style.display = 'block';
-	}, 200);
-
-	setTimeout(function(){
-		second_social.style.transform = 'translateY(0)';
-		third_social.style.transform = 'translateY(0)';
-	}, 300);
-}
-
-function undoItems() {
-	setTimeout(function(){
-		third_item.style.transform = 'translateX(-116px)';
-		second_item.style.transform = 'translateX(-57px)';
-	}, 100);
-	
-	setTimeout(function(){
-		items.style.display = 'none';
-	}, 400);
-}
-
-function undoSocial() {
-	setTimeout(function(){
-		second_social.style.transform = 'translateY(-24px)';
-		third_social.style.transform = 'translateY(-50px)';
-	}, 100);
-
-	setTimeout(function(){
-		socials.style.display = 'none';
-	}, 400);
-}
-
 icon.onclick = function () {
 	if (this.classList.contains('active')) {
-		undoItems();
-		undoSocial();
 		this.style.transform = 'rotate(90deg)';
 
 		setTimeout(function(){
@@ -80,11 +47,8 @@ icon.onclick = function () {
 			first_icon.classList.add('b');
 			third_icon.classList.add('b');
 		}, 100);
-
-		itemsDisplay();
-		socialDisplay();		
+		
 
 		this.classList.add('active');
 	}
-
 }
