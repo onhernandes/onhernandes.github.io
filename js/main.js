@@ -52,3 +52,12 @@ icon.onclick = function () {
 		this.classList.add('active');
 	}
 }
+
+var content_header = document.querySelector('#content_header');
+
+
+function parallax(){
+	content_header.style.marginBottom = (window.pageYOffset * 3) + 'px';
+}
+
+window.addEventListener("scroll", parallax, false);
