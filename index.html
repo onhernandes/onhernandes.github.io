@@ -5,8 +5,6 @@ title: 'Home'
 
 <section class="myself">
 	<article class="myself-article">
-		<h1>Me, myself and I</h1>
-		
 		<p>
 			Hey. My name is Matheus Hernandes, I'm a code writer and an eternal apprentice.
 		</p>
@@ -19,33 +17,18 @@ title: 'Home'
 	</article>
 
 	<article class="projects__wrapper">
-		<div class="projects__wrapper_item">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p> 
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--red">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--blue">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--yellow">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
+		{% for project in site.posts %}
+			{% if project.type == 'project' %}
+				<div class="projects__wrapper_item">
+					<a href="{{ project.link }}" target="_blank">
+						<h2>{{ project.title }}</h2>
+						<p>
+							{{ project.description }}
+						</p> 
+					</a>
+				</div>
+			{% endif %}
+		{% endfor %}
 	</article>
 </section>
 

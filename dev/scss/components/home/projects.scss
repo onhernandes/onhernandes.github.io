@@ -26,25 +26,31 @@
 
 .projects__wrapper_item {
 	flex: 0 0 calc(100% / 4);
-	height: auto;
+	//height: auto;
+	height: 150px;
 	background-color: $green;
 	padding: 15px;
 
-	h2, p {
-		color: #fff;
-		@include transform(skewY(1deg));
-		padding-bottom: 10px;
+	a {
+		h2, p {
+			color: #fff;
+			@include transform(skewY(1deg));
+			padding-bottom: 10px;
+		}
+
+		h2 {padding-top: 15px;}
+		
+		p {padding-bottom: 15px;}
 	}
 
-	h2 {padding-top: 15px;}
+	&:nth-child(2),
+	&:nth-child(5) {background-color: $red;}
 	
-	p {padding-bottom: 15px;}
+	&:nth-child(3),
+	&:nth-child(6) {background-color: $blue;}
 
-	&--red {background-color: $red;}
-	
-	&--blue {background-color: $blue;}
-
-	&--yellow {background-color: $yellow;}
+	&:nth-child(4),
+	&:nth-child(7) {background-color: $yellow;}
 
 	@media screen and (max-width: 900px) {
 		flex-basis: (100% / 2);
