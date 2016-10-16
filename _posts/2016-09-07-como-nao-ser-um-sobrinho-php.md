@@ -2,8 +2,10 @@
 layout: post
 title:  Como não ser um sobrinho no PHP
 date:   2016-09-07 20:50:39 -0300
-intro: Nem tudo é um cursinho de 3 meses
-master: php
+introduction: Nem tudo é um cursinho de 3 meses
+type: 'post'
+language: 'php'
+tags: php curso tempo estudo
 ---
 
 Hey guys!

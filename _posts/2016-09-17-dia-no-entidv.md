@@ -1,10 +1,12 @@
 ---
 layout: post
-title: ENTIDV, histórias, superação e acessibilidade
+title: 'ENTIDV, histórias, superação e acessibilidade'
 date:   2016-09-17 22:21:39 -0300
-intro: Histórias incríveis, pessoas incríveis, um lugar incrível
+introduction: 'Histórias incríveis, pessoas incríveis, um lugar incrível'
 image: entidv.jpg
-master: dev
+type: 'post'
+language: 'dev'
+tags: evento entidv
 ---
 
 # ENTIDV - se você não conhece, deveria
