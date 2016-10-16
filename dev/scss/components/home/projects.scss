@@ -30,6 +30,7 @@
 	height: 150px;
 	background-color: $green;
 	padding: 15px;
+	transition: transform .4s ease .2s;
 
 	a {
 		h2, p {
