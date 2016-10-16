@@ -6,19 +6,32 @@ title: 'About'
 
 <section class="about">
 	<article class="about__content">
-		<h1>Title</h1>
+		<h1>So, let's go.</h1>
 		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem quis quasi consectetur facere doloribus sequi, ad corporis consequatur, impedit consequuntur, voluptatum! Laboriosam maxime deleniti laborum itaque voluptas saepe dolor pariatur unde numquam magni provident et ex, distinctio possimus minus!
-		</p>
+		<p>First of everything, my name is Matheus and I'm from Brazil, Earth.</p>
+		<p>I have 17 years and I'm a tech lover since kid.</p>
+		<p>I started into tech world, because my brother. He knew how to fix computers and do some cool things on computer, and it inspired me to do the same. With 9 years, I used an app to create - or try to create - a simple game. After, at around my 13 or 14 years, I entered in a course about computer maintenance and other about using Windows Seven.</p>
+		<p>I left the courses, because I was thinking this was awful for my time.</p>
+		<p>Strangely, at same time on my life, I started to valorize my time, as if he was precious like gold</p>
+		<p>Around october/2013, I started learn how to use Photoshop, Illustrator and some others things about graphic design. I confess, sometimes I tried learn about HTML and CSS, but, I couldn't because I was very lazy.</p>
+		<p>Around january/2014 I started learn a lot of things about front-end.</p>
+		<p>At january of this year I started learn about back-end side, like PHP, MySQL, and others things - oh, I also started to use definetely the Ubuntu.</p>
+		<p>I am currently working on <a href="http://www.gasoline-digital.com/" target="_blank">Gasoline Digital</a>, is an awesome place.</p>
+		<p>Now, I'm learning about JavaScript deeply - I think.</p>
+	</article>
+
+	<article class="about__knowledge">
+		<h1>Knowledge</h1>
 		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, modi quod quisquam incidunt. Mollitia voluptas minus tempore nam ex, optio fuga beatae! Placeat ut ab itaque, nam quos, repellat deleniti quae animi, doloremque id nihil aperiam quaerat laborum ducimus veritatis.
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore enim blanditiis doloremque earum! Ullam, iste rerum repudiandae mollitia earum possimus, voluptas vel, repellendus quod sunt commodi exercitationem facilis voluptatum maiores? Ipsam esse veritatis consequatur, vero aut tempora nam et.
-		</p>
+		<ul>
+			<li>HTML</li>
+			<li>CSS - SCSS</li>
+			<li>Responsive Design</li>
+			<li>JavaScript - jQuery</li>
+			<li>PHP</li>
+			<li>MySQL</li>
+			<li>Git</li>
+		</ul>
 	</article>
 </section>
 
@@ -28,50 +41,17 @@ title: 'About'
 	</article>
 
 	<article class="projects__wrapper" id="projects__wrapper">
-		<div class="projects__wrapper_item">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--red">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--blue">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--yellow">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-	</article>
-</section>
-
-<section class="about">
-	<article class="about__content">
-		<h1>Title</h1>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem quis quasi consectetur facere doloribus sequi, ad corporis consequatur, impedit consequuntur, voluptatum! Laboriosam maxime deleniti laborum itaque voluptas saepe dolor pariatur unde numquam magni provident et ex, distinctio possimus minus!
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, modi quod quisquam incidunt. Mollitia voluptas minus tempore nam ex, optio fuga beatae! Placeat ut ab itaque, nam quos, repellat deleniti quae animi, doloremque id nihil aperiam quaerat laborum ducimus veritatis.
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore enim blanditiis doloremque earum! Ullam, iste rerum repudiandae mollitia earum possimus, voluptas vel, repellendus quod sunt commodi exercitationem facilis voluptatum maiores? Ipsam esse veritatis consequatur, vero aut tempora nam et.
-		</p>
+		{% for project in site.posts %}
+			{% if project.type == 'project' %}
+				<div class="projects__wrapper_item">
+					<a href="{{ project.link }}" target="_blank">
+						<h2>{{ project.title }}</h2>
+						<p>
+							{{ project.description }}
+						</p> 
+					</a>
+				</div>
+			{% endif %}
+		{% endfor %}
 	</article>
 </section>
