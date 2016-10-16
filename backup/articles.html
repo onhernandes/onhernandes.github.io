@@ -1,0 +1,27 @@
+---
+layout: default
+title: Articles
+image: articles.jpg
+---
+
+
+
+{% comment %}
+<section class="articles">
+	{% for post in site.posts %}
+		<article class="article {{ post.master }}-article">
+			<span class="date">
+				{% include post-date.html %}
+			</span>
+
+			<a href="{{ post.url }}">
+				<h1>{{ post.title }}</h1>
+			</a>
+
+			<p>
+				{{ post.intro }}
+			</p>
+		</article>
+	{% endfor %}
+</section>
+{% endcomment %}

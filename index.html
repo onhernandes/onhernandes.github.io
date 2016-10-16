@@ -1,78 +1,88 @@
 ---
 layout: default
-title: Matheus Hernandes
-image: home.jpg
+title: 'Home'
 ---
 
-<main class="me">
-	<p>
-		Hey. My name is Matheus Hernandes, I'm a code writer and an eternal apprentice. <br>
-	</p>
-</main>
+<section class="myself">
+	<article class="myself-article">
+		<h1>Me, myself and I</h1>
+		
+		<p>
+			Hey. My name is Matheus Hernandes, I'm a code writer and an eternal apprentice.
+		</p>
+	</article>
+</section>
 
-<section class="articles">
-	<h1>projects</h1>
-
-	<article class="article">
-		<a href="https://github.com/devmath/front-challenges" target="_blank">
-			<h1>Front-end Challenges</h1>
-			<p>
-				Cool list with some front end challenges.
-			</p>
-		</a>
+<section class="projects">
+	<article class="projects__title">
+		<h1>Projects</h1>
 	</article>
 
-	<article class="article">
-		<a href="https://devmath.github.io/pomodoro-timer" target="_blank">
-			<h1>Pomodoro Timer</h1>
+	<article class="projects__wrapper">
+		<div class="projects__wrapper_item">
+			<h2>Project Name</h2>
 			<p>
-				A very simple Pomodoro Timer.
-			</p>
-		</a>
-	</article>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
+			</p> 
+		</div>
 
-	<article class="article">
-		<a href="https://devmath.github.io/mustang-js" target="_blank">
-			<h1>Mustang.js</h1>
+		<div class="projects__wrapper_item projects__wrapper_item--red">
+			<h2>Project Name</h2>
 			<p>
-				Simple jQuery slider plugin.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
 			</p>
-		</a>
-	</article>
-	
-	<article class="article">
-		<a href="https://github.com/devmath/my-own-styleguide" target="_blank">
-			<h1>Personal Styleguide</h1>
+		</div>
+
+		<div class="projects__wrapper_item projects__wrapper_item--blue">
+			<h2>Project Name</h2>
 			<p>
-				Rules that I follow and I think that are good for web development.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
 			</p>
-		</a>
-	</article>
-	
-	<article class="article">
-		<a href="https://github.com/devmath/favorite-articles" target="_blank">
-			<h1>Favorite Articles</h1>
+		</div>
+
+		<div class="projects__wrapper_item projects__wrapper_item--yellow">
+			<h2>Project Name</h2>
 			<p>
-				Awesome list with my favorite articles on 2016.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
 			</p>
-		</a>
+		</div>
 	</article>
-	
-	<article class="article">
-		<a href="https://github.com/devmath/shield-scss" target="_blank">
-			<h1>Shield SCSS</h1>
-			<p>
-				Cool files that I use on my work with SCSS.
-			</p>
-		</a>
-	</article>
-	
-	<article class="article">
-		<a href="https://devmath.github.io/storage-calc/" target="_blank">
-			<h1>Storage Calc</h1>
-			<p>
-				Type out your device storage size and you'll know how many files can be charged.
-			</p>
-		</a>
-	</article>
+</section>
+
+<section class="blog">
+	{% for post in site.posts %}
+		<article class="blog__article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
+			<h1 class="blog__article_title">{{ post.language }}</h1>
+
+			<div class="blog__article_content">
+				<a href="{{ post.url }}">
+					<h1>{{ post.title }}</h1>
+					<p>{{ post.introduction }}</p>
+				</a>
+
+				<span>tags:</span>
+
+				<ul class="tags">
+					{% for tag in post.tags %}
+						<li>
+							<a href="/tags/#{{ tag }}">
+								#{{ tag }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="blog__article_background"></div>
+		</article>
+	{% endfor %}
+</section>
+
+<section class="icons__home">
+	<ul class="icons__home_list">
+		<li><a href="#" class="flaticon-github" target="_blank"></a></li>
+		<li><a href="#" class="flaticon-email" target="_blank"></a></li>
+		<li><a href="#" class="flaticon-facebook" target="_blank"></a></li>
+		<li><a href="#" class="flaticon-instagram" target="_blank"></a></li>
+	</ul>
 </section>

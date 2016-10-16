@@ -4,13 +4,17 @@
 {% include head.html %}
 
 <body>
+
     {% include header.html %}
+    {% include menu.html %}
 
     {{ content }}
 
-    {% include footer.html %}
+	{% if page.warning %}
+		{% include warning.html %}
+	{% endif %}
 
-    {% include analytics.html %}
+    {% include footer.html %}
 </body>
 
 </html>

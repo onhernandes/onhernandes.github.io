@@ -4,22 +4,25 @@
 {% include head.html %}
 
 <body>
+
     {% include header.html %}
+    {% include menu.html %}
 
     <section class="post">
-    	<article class="post-content {{ page.master }}-content">
-    		{{ content }}
+    	<article class="post__wrapper">
+    		<div class="post__wrapper_content">
+    			{{ content }}
+    		</div>
     	</article>
 
-    	{% include author.html %}
-
-    	{% include comments.html %}
-		
+    	{% include share.html %}
     </section>
 
-    {% include footer.html %}
-    {% include analytics.html %}
+    {% include comments.html %}
 
+    {% include warning.html %}
+
+	{% include footer.html %}
 </body>
 
 </html>
