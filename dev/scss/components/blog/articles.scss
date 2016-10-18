@@ -1,11 +1,33 @@
 .blog {
 	@include flex(wrap row);
 	@include flex-align(space-around, flex-start, flex-start);
+
+	article {
+		flex: 0 0 25%;
+	}
+}
+
+.post {
+	background-color: $green;
+	$t: 1;
+	@while $t > 3 {
+		&:nth-child(#{$t}) {
+			background-color: $blue;
+			flex-basis: 75%;
+		}
+
+		$t: $t + 3;
+	}
+}
+
+/*.blog {
+	@include flex(wrap row);
+	@include flex-align(space-around, flex-start, flex-start);
 	margin: 50px 0 0;
 }
 
 .blog__article {
-	flex: 0 0 calc(90% / 3);
+	flex: 0 0 calc(100% / 2);
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, flex-start);
 	min-height: 300px;
@@ -15,8 +37,8 @@
 	div, .blog__article_title {
 	}
 
-	.blog__article_content, 
-	.blog__article_title {
+	&_content, 
+	&_title {
 		z-index: 5;
 		position: relative;
 	}
@@ -36,6 +58,7 @@
 
 .blog__article_title {
 	color: #fff;
+	display: none;
 	padding: 15px 25px;
 
 	@media screen and (max-width: 820px) {padding: 15px 60px;}
@@ -44,17 +67,17 @@
 }
 
 .blog__article_content {
-	width: 80%;
-	background-color: #fff;
-	border: 1px solid rgba($gray, 0.5);
+	width: 100%;
+	background-color: rgba(#000, 0.2);
+	//border: 1px solid rgba($gray, 0.5);
 	padding: 10px;
 	min-height: 300px;
 
 	a {
-		color: $gray;
+		color: #fff;
 		display: block;
 
-		h1, p {color: $gray;}
+		h1, p {color: #fff;}
 	}
 
 	span {
@@ -109,4 +132,4 @@
 			//border-bottom: 1px solid $blue;
 		}
 	}
-}
+}*/
