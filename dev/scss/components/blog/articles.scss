@@ -31,14 +31,21 @@
 		height: 100%;
 		position: relative;
 		//background-color: rgba(darken($gray, 15%), 0.9);
-		background-color: $blue;
-		border: 1px solid #fff;
+		background-color: $purple;
+		border: 1px solid darken($purple, 15%);
 		padding: 15px;
 		color: #fff;
 
-		a {
-			color: #fff;
+		@include flex(wrap row);
+		@include flex-align(center, center, center);
+
+		a, ul, p {
+			flex: 0 0 auto;
+			text-align: center;
+			text-align: center;
 		}
+
+		a {color: #fff;}
 
 		&_tags {
 			width: 100%;
@@ -49,20 +56,21 @@
 				display: inline-block;
 				margin-left: 5px;
 				padding: 3px 4px;
-				background-color: $green;
+				background-color: lighten($yellow, 15%);
 				text-transform: uppercase;
 				font-size: 14px;
 			}
 		}
+
 	}
 
 	&.one-four {
-		background-color: $blue;
+		background-color: $purple;
 		//flex-basis: 25%;
 	}
 
 	&.two-four {
-		background-color: $blue;
+		background-color: $purple;
 		flex-basis: 50%;
 	}
 
