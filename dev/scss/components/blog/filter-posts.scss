@@ -3,7 +3,10 @@
 	text-align: center;
 	//@include transform(skewY(-1deg));
 
-	h1 {color: $gray;}
+	h1 {
+		color: $gray;
+		padding-bottom: 7px;
+	}
 
 	&__list {
 		&_category {
