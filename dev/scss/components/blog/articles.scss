@@ -34,18 +34,17 @@
 		background-color: $purple;
 		border: 1px solid darken($purple, 15%);
 		padding: 15px;
-		color: #fff;
+		text-align: center;
 
 		@include flex(wrap row);
 		@include flex-align(center, center, center);
 
-		a, ul, p {
+		a {
 			flex: 0 0 auto;
 			text-align: center;
-			text-align: center;
+			color: #fff;
+			display: block;
 		}
-
-		a {color: #fff;}
 
 		&_tags {
 			width: 100%;
