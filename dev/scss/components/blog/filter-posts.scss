@@ -1,4 +1,24 @@
-.filter-posts {
-	padding: 20px;
+.filters {
+	padding: 30px;
+	text-align: center;
+	//@include transform(skewY(-1deg));
+
 	h1 {color: $gray;}
+
+	&__list {
+		&_category {
+			display: inline-block;
+			padding: 0 7px;
+
+			a {
+				display: block;
+				color: #fff;
+				background-color: $blue;
+				padding: 3px 4px;
+				font-weight: bold;
+				font-size: 15px;
+				text-transform: uppercase;
+			}
+		}
+	}
 }

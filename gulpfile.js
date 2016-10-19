@@ -46,6 +46,14 @@ gulp.task('rebuild', ['build'], function() {
 
 // Generate and minify SCSS
 gulp.task('compile-scss', function() {
+	paths_dev = {
+		js: [dev + '/js/*.js', dev + '/js/**/*.js'],
+		main_scss: dev + '/scss/main.scss',
+		scss: [dev + '/scss/*', dev + '/scss/**/*', dev + '/scss/**/**/*', dev + '/scss/**/**/**/*'],
+		img: dev + '/img/*.{jpg,jpeg,png,gif}',
+		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
+	};
+
 	gulp.src(paths_dev.main_scss)
 		.pipe(plumber())
 		.pipe(scss())
