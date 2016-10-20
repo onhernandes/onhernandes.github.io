@@ -63,16 +63,6 @@
 
 	}
 
-	&.one-four {
-		background-color: $purple;
-		//flex-basis: 25%;
-	}
-
-	&.two-four {
-		background-color: $purple;
-		flex-basis: 50%;
-	}
-
 	&:nth-child(1),
 	&:nth-child(3),
 	&:nth-child(5),
@@ -83,6 +73,11 @@
 	&:nth-child(12) {
 		flex-basis: 25%;
 	}
+}
+
+.post__content:hover .post__content_tags li {
+	font-size: 20px;
+	transition: all 0.4s ease 0.2s;
 }
 
 /*.blog {
