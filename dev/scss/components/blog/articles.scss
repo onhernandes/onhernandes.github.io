@@ -12,7 +12,6 @@
 	height: 300px;
 	position: relative;
 	overflow: hidden;
-	transition: all 0.2s ease 0.17s;
 
 	&__background {
 		position: absolute;
@@ -23,7 +22,6 @@
 		background: url('/assets/img/office.jpg') left top no-repeat;
 		background-size: cover;
 		z-index: 10;
-		transition: all 0.2s ease 0.17s;
 	}
 	
 	&__content {
@@ -37,7 +35,6 @@
 		border: 1px solid darken($purple, 15%);
 		padding: 15px;
 		text-align: center;
-		transition: all 0.2s ease 0.17s;
 
 		@include flex(wrap row);
 		@include flex-align(center, center, center);
@@ -64,15 +61,6 @@
 				transition: all 0.2s ease 0.17s;
 			}
 		}
-
-		&_title {
-			transition: all 0.2s ease 0.17s;
-		}
-
-		&_intro {
-			transition: all 0.2s ease 0.17s;
-		}
-
 	}
 
 	&:nth-child(1),
@@ -85,6 +73,16 @@
 	&:nth-child(12) {
 		flex-basis: 25%;
 	}
+}
+
+.post,
+.post__content,
+.post__content a,
+.post__content_title,
+.post__content_tags,
+.post__content_tags > li,
+.post__content_intro {
+	transition: all 0.2s ease 0.16s;
 }
 
 .post__content:hover .post__content_tags li {
