@@ -4,6 +4,13 @@
 
 	article {
 		flex: 0 0 50%;
+
+		@media screen and (max-width: 1024px) {flex-basis: 50% !important;}
+
+		@media screen and (max-width: 680px) {
+			flex-basis: 100% !important;
+			height: 200px;
+		}
 	}
 }
 
@@ -81,7 +88,8 @@
 .post__content_title,
 .post__content_tags,
 .post__content_tags > li,
-.post__content_intro {
+.post__content_intro,
+.filters__list {
 	transition: all 0.2s ease 0.001s;
 	-webkit-animation-duration: 0.8s;
 	animation-duration: 0.8s;
