@@ -58,7 +58,6 @@
 				background-color: lighten($yellow, 15%);
 				text-transform: uppercase;
 				font-size: 14px;
-				transition: all 0.2s ease 0.17s;
 			}
 		}
 	}
@@ -87,27 +86,6 @@
 	animation-duration: 0.8s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
-}
-
-.post__content:hover {
-	.post__content_title {@include transform(translateY(90px));}
-	
-	.post__content_tags {
-		padding: 9px 0;
-
-		li {
-			margin-left: 0;
-			@include transform(scale(1.2));
-			
-			&:nth-child(2) {margin: 0 17px;}
-		}
-	}
-
-	.post__content_intro {
-		font-size: 18px;
-		padding-top: 5px;
-		@include transform(translateY(-90px));
-	}
 }
 
 .post__content {
@@ -172,6 +150,22 @@
 			font-size: 18px;
 			padding-top: 5px;
 			@include transform(translateY(-90px));
+		}
+	}
+
+	&[magic="explode"]:hover {
+		.post__content_title {@include transform(scale(3));}
+		
+		.post__content_tags {
+			z-index: 15;
+			li {
+				margin-left: 17px;
+				@include transform(scale(2));
+			}
+		}
+
+		.post__content_intro {
+			@include transform(scale(2));
 		}
 	}
 }
