@@ -34,24 +34,3 @@ title: 'About'
 		</ul>
 	</article>
 </section>
-
-<section class="projects">
-	<article class="projects__title">
-		<h1>Projects</h1>
-	</article>
-
-	<article class="projects__wrapper" id="projects__wrapper">
-		{% for project in site.posts %}
-			{% if project.type == 'project' %}
-				<div class="projects__wrapper_item">
-					<a href="{{ project.link }}" target="_blank">
-						<h2>{{ project.title }}</h2>
-						<p>
-							{{ project.description }}
-						</p> 
-					</a>
-				</div>
-			{% endif %}
-		{% endfor %}
-	</article>
-</section>
