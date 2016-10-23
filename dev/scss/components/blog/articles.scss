@@ -69,9 +69,10 @@
 	&:nth-child(7),
 	&:nth-child(8),
 	&:nth-child(11),
-	&:nth-child(12) {
-		flex-basis: 25%;
-	}
+	&:nth-child(12) {flex-basis: 25%;}
+
+	&[sizer="two-four"] {flex-basis: 25%;}
+	&[sizer="half"] {flex-basis: 50%;}
 }
 
 .post,
