@@ -1,0 +1,12 @@
+// For making post content tags colorful
+.post__content_tags li {
+	&[tag="yellow"] { background-color: lighten($yellow, 15%); }
+
+	&[tag="red"] { background-color: lighten($red, 15%); }
+
+	&[tag="purple"] { background-color: mix($red, $blue); }
+
+	&[tag="blue"] { background-color: lighten($blue, 15%); }
+
+	&[tag="green"] { background-color: lighten($green, 7%); }
+}
