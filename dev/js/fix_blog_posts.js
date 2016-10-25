@@ -15,3 +15,17 @@ filters.addEventListener('click', function() {
 	var filter_value = this.getAttribute('filter');
 	verifyFilter(filter_value);
 });
+
+if (window_width < 680) {
+	var posts_background = document.getElementsByClassName('post__background');
+	
+	for (var i = 0; i < posts_background.length; i++) {
+		posts_background[i].parentNode.removeChild(posts_background[i]);
+	}
+
+	var posts_content = document.getElementsByClassName('post__content');
+
+	for (var k = 0; k < ; k--) {
+		posts_content[k].getAttribute('');
+	}
+}
