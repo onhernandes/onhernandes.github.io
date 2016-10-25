@@ -25,7 +25,7 @@ if (window_width < 680) {
 
 	var posts_content = document.getElementsByClassName('post__content');
 
-	for (var k = 0; k < ; k--) {
+	/*for (var k = 0; k < ; k--) {
 		posts_content[k].getAttribute('');
-	}
+	}*/
 }
