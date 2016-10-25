@@ -1,18 +1,17 @@
-var blog_posts = document.querySelector('.post'),
-	filters    = document.querySelector('.filters__list_category');
+var filters = document.querySelector('.filters__list_category');
 
-function verifyFilter() {
-	for (var i = 0; i < filters.length; i++) {
-		for (var j = 0; j < blog_posts.length; j++) {
-			var tags = blog_posts[j].querySelector('.post__content_tags');
-			if (tags.indexOf(filters[i].getAttribute('filter')) == -1) {
-				break_filters = true;
-				break;
-			}
-		}
+function verifyFilter(value) {
+	var blog_posts = document.getElementsByClassName('post');
 
-		if (break_filters) {
-			break;
+	for (var i = 0; i < blog_posts.length; i++) {
+		var tags = blog_posts[i].querySelector('.post__content_tags');
+		if (tags.getAttribute('tags').indexOf(value) == -1) {
+			blog_posts[i].style.display = 'none';
 		}
 	}
 }
+
+filters.addEventListener('click', function() {
+	var filter_value = this.getAttribute('filter');
+	verifyFilter(filter_value);
+});
