@@ -22,19 +22,15 @@ if (window_width < 680) {
 	var posts_background = document.getElementsByClassName('post__background');
 	
 	for (var i = 0; i < posts_background.length; i++) {
-	//	posts_background[i].parentNode.removeChild(posts_background[i]);
+		posts_background[i].parentNode.removeChild(posts_background[i]);
 	}
+
+	// for loop doesn't get .post__content and I don't know why
 
 	var posts_content = document.getElementsByClassName('post__content');
 
 	for (var k = 0; k < posts_content.length; k++) {
-
-		var color = posts_content[k].getAttribute('bg-color');
-		console.log(color);
-
-		if (!color) {
-			post__content[k].className = 'bg-color';
-		}
+		var color = posts_content[k].getAttribute('color');
+		post__content[k].setAttribute('bg-color', color);
 	}
-	console.log('color');
 }
