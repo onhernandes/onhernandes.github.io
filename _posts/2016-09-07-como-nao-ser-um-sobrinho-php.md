@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  Como não ser um sobrinho no PHP
 date:   2016-09-07 20:50:39 -0300
 introduction: Nem tudo é um cursinho de 3 meses
