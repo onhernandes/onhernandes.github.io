@@ -26,4 +26,8 @@
 
 	&[sizer="two-four"] {flex-basis: 25%;}
 	&[sizer="half"] {flex-basis: 50%;}
+
+	@media screen and (max-width: 1024px) { flex-basis: 50% !important; }
+
+	@media screen and (max-width: 660px) { flex-basis: 100% !important; }
 }
