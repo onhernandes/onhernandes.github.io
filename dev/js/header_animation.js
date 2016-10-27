@@ -11,8 +11,10 @@ function randomNum() {
 randomNum();
 
 window.addEventListener('scroll', function() {
-	if (rand > 1) {
+	if (rand < 3) {
 		header[0].querySelector('.header__title').style.marginLeft = (window.pageYOffset / 5) + 'px';
+	} else if (rand < 6) {
+		header[0].querySelector('.header__title').style.marginTop = (window.pageYOffset / 5) + 'px';
 	} else {
 		header[0].querySelector('.header__title').style.marginRight = (window.pageYOffset / 5) + 'px';
 	}
