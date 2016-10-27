@@ -27,7 +27,6 @@ if (window_width < 680) {
 		that.removeChild(that.childNodes[3]);
 	}
 
-	// for loop doesn't get .post__content and I don't know why
 	var posts_content = document.getElementsByClassName('post__content');
 	
 	for (var k = 0; k < posts_content.length; k++) {

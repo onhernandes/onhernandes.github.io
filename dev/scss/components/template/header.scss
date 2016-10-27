@@ -2,14 +2,14 @@
 	position: relative;
 	min-height: 100vh;
 	overflow: hidden;
-	@include transform(skewY(-1deg));
+	//@include transform(skewY(-1deg));
 	z-index: 6;
 	margin-top: -25px;
 	color: #fff;	
 }
 
 .header__wrapper {
-	@include transform(skewY(1deg));
+	//@include transform(skewY(1deg));
 	position: absolute;
 	top: 0;
 	left: 0;

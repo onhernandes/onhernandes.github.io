@@ -1,39 +1,29 @@
 .about {
 	@include flex(wrap row);
-	@include flex-align(center, flex-start, flex-start);
-	padding: 40px 0;
-
-	article {flex: 0 0 80%;}
+	@include flex-align(space-around, flex-start, flex-start);
+	//padding: 40px 0;
 }
 
-.about__content {
-	h1, p {color: $gray;}
+.about__piece {
+	flex: 0 0 50%;
+	height: 200px;
+	background-color: $blue;
+	text-align: center;
+	color: #fff;
+	border: 1px solid rgba(#000, 0.5);
 
-	h1 {padding: 15px 0;}
-
-	p {
-		padding: 7px 0 12px;
-		
-		&:last-child {padding-bottom: 0;}
+	&:nth-child(1),
+	&:nth-child(3),
+	&:nth-child(5),
+	&:nth-child(6),
+	&:nth-child(7),
+	&:nth-child(8),
+	&:nth-child(11),
+	&:nth-child(12) {
+		background-color: $red;
+		flex-basis: 25%;
 	}
 
-	@media screen and (max-width: $tablet) {
-		flex-basis: 95%;
-	}
-}
-
-.about__knowledge {
-	padding-top: 40px;
-
-	h1 {color: $green;}
-
-	ul {
-		padding-left: 20px;
-		padding: 10px;
-
-		li {
-			font-size: 20px;
-			padding: 7px 0;
-		}
-	}
+	&[sizer="two-four"] {flex-basis: 25%;}
+	&[sizer="half"] {flex-basis: 50%;}
 }
