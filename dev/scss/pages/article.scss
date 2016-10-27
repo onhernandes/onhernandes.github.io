@@ -1,2 +1,7 @@
 // Import from ../components/article/*
-@import '../components/article/post';
+@import '../components/article/article_header';
+@import '../components/article/article_content';
+@import '../components/article/back_article';
+@import '../components/article/comments';
+@import '../components/article/warning';
+@import '../components/article/share';
