@@ -74,3 +74,9 @@ title: 'Blog'
 		</article>
 	{% endfor %}
 </section>
+
+{% for post in site.posts %}
+	<a href="{{ post.url }}">
+		{{ post.title }}
+	</a>
+{% endfor %}
