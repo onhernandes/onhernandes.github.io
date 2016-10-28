@@ -2,16 +2,39 @@
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
 
-	article {flex: 0 0 auto;}
+	article {flex: 0 0 80%;}
 }
 
 .article__content {
-	flex-basis: 80% !important;
+	//flex-basis: 80% !important;
 	background-color: rgba($blue, 0.02);
 
 	h1, h2, h3,
-	p, blockquote,
-	pre, ul, ol {
-		padding: 15px;
+	> p, blockquote,
+	ul, ol {
+		padding: 16px;
 	}
+
+	blockquote {
+		margin: 16px;
+		font-style: italic;
+		color: $green;
+		border-top: 4px solid rgba($green, 0.3);
+		border-bottom: 4px solid rgba($green, 0.3);
+	}
+
+	h1, h2, h3 { 
+		padding: 45px 16px 0;
+		
+		&:first-child { padding-top: 14px; }
+	}
+
+	img, pre { 
+		width: 100%;
+		height: auto;
+	}
+
+	a { font-weight: bold; }
+
+	ol { padding: 10px 35px 0; }
 }
