@@ -1,0 +1,17 @@
+.article {
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
+
+	article {flex: 0 0 auto;}
+}
+
+.article__content {
+	flex-basis: 80% !important;
+	background-color: rgba($blue, 0.02);
+
+	h1, h2, h3,
+	p, blockquote,
+	pre, ul, ol {
+		padding: 15px;
+	}
+}
