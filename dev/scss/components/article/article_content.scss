@@ -2,12 +2,14 @@
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
 
-	article {flex: 0 0 80%;}
+	article {
+		background-color: rgba($blue, 0.04);
+		flex: 0 0 80%;
+	}
 }
 
 .article__content {
 	//flex-basis: 80% !important;
-	background-color: rgba($blue, 0.02);
 
 	h1, h2, h3,
 	> p, blockquote,
@@ -34,7 +36,12 @@
 		height: auto;
 	}
 
-	a { font-weight: bold; }
+	strong { font-weight: bold; }
+
+	a {
+		font-weight: bold;
+		// add link symbol with ::after
+	}
 
 	ol { padding: 10px 35px 0; }
 }
