@@ -22,6 +22,20 @@
 		.menu__links, 
 		.menu__logo {flex-basis: 100%;}
 	}
+
+	&[color="green"] { background-color: darken($green, 15%); }
+
+	&[color="blue"] { background-color: darken($blue, 5%); }
+
+	&[color="purple"] { background-color: darken($purple, 7%); }
+
+	&[color="pink"] { background-color: darken($pink, 25%); }
+
+	&[color="yellow"] { background-color: $yellow; }
+
+	&[color="red"] { background-color: $red; }
+
+	&[color="orange"] { background-color: darken($orange, 20%); }
 }
 
 .menu__logo {
