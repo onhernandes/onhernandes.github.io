@@ -1,0 +1,73 @@
+.article__content {
+	&[color="green"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $green;
+		}
+
+		h1, h2, h3 { color: darken($green, 8%); }
+
+		a:hover { color: $green; }
+	}
+
+	&[color="blue"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $blue;
+		}
+
+		h1, h2, h3 { color: darken($blue, 8%); }
+
+		a:hover { color: $blue; }
+	}
+
+	&[color="yellow"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $yellow;
+		}
+
+		h1, h2, h3 { color: darken($yellow, 8%); }
+
+		a:hover { color: $yellow; }
+	}
+
+	&[color="red"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $red;
+		}
+
+		h1, h2, h3 { color: darken($red, 8%); }
+
+		a:hover { color: $red; }
+	}
+
+	&[color="purple"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $purple;
+		}
+
+		h1, h2, h3 { color: darken($purple, 8%); }
+
+		a:hover { color: $purple; }
+	}
+
+	&[color="orange"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $orange;
+		}
+
+		h1, h2, h3 { color: darken($orange, 8%); }
+
+		a:hover { color: $orange; }
+	}
+}

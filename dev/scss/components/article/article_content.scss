@@ -22,9 +22,9 @@
 	blockquote {
 		margin: 16px;
 		font-style: italic;
-		color: $green;
-		border-top: 4px solid rgba($green, 0.3);
-		border-bottom: 4px solid rgba($green, 0.3);
+		color: $gray;
+		border-top: 4px solid rgba($gray, 0.3);
+		border-bottom: 4px solid rgba($gray, 0.3);
 	}
 
 	h1, h2, h3 { 
@@ -41,14 +41,15 @@
 	strong { font-weight: bold; }
 
 	a {
+		color: $gray;
+		transition: all 0.2s linear 0.001s;
+		
 		&::after {
 			font-family: Flaticon;
 			content: $icon-link;
 			padding-left: 4px;
 			font-weight: normal;
 		}
-
-		&:hover { border-bottom: 1px dashed $blue; }
 	}
 
 	ol { padding: 10px 35px 0; }
