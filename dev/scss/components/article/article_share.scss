@@ -11,8 +11,10 @@
 		display: inline-block;
 		padding: 0 8px;
 
-		a::before {
-			font-size: 28px;
+		a {
+			color: $gray;
+			
+			&::before { font-size: 28px; }
 		}
 	}
 }

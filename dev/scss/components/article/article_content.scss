@@ -6,6 +6,9 @@
 		background-color: rgba($blue, 0.04);
 		flex: 0 0 80%;
 
+		h1, h2, h3, 
+		strong, a { color: $gray; }
+
 		@media screen and (max-width: 960px) {
 			flex-basis: 100%;
 		}
@@ -15,14 +18,15 @@
 .article__content {
 	h1, h2, h3,
 	> p, blockquote,
+	strong, a,
 	ul, ol {
+		color: $gray;
 		padding: 16px;
 	}
 
 	blockquote {
 		margin: 16px;
 		font-style: italic;
-		color: $gray;
 		border-top: 4px solid rgba($gray, 0.3);
 		border-bottom: 4px solid rgba($gray, 0.3);
 	}
@@ -41,7 +45,6 @@
 	strong { font-weight: bold; }
 
 	a {
-		color: $gray;
 		transition: all 0.2s linear 0.001s;
 		
 		&::after {
