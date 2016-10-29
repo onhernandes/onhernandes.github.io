@@ -1,12 +1,4 @@
-var header = document.getElementsByClassName('header'),
-	rand = 0;
-
-function randomNum() {
-	rand = Math.floor((Math.random() * 10) + 1);
-	return this;
-}
-
-randomNum();
+var header = document.getElementsByClassName('header');
 
 if (header.length > 0) {
 	window.addEventListener('scroll', function() {

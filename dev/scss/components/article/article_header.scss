@@ -1,14 +1,14 @@
 .header__article {
 	height: 100vh;
 	text-align: center;
-	background: url('/assets/img/office.jpg') left top no-repeat fixed;
-	background-size: cover;
 	color: #fff;
+	position: relative;
+	overflow: hidden;
 
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
 
-	h1, h4, p, div {
+	h1, h4, p {
 		flex: 0 0 80%;
 		z-index: 9;
 	}
@@ -29,6 +29,17 @@
 	&_intro {
 		font-weight: bold;
 		font-size: 19px;
+	}
+
+	&_background {
+		background: url('/assets/img/office.jpg') left top no-repeat fixed;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 7;
 	}
 
 	&::after {
