@@ -71,3 +71,19 @@
 		a:hover { color: $orange; }
 	}
 }
+
+.article__share_list {
+	&[color="yellow"] li a { color: lighten($yellow, 10%); }
+
+	&[color="blue"] li a { color: lighten($blue, 15%); }
+
+	&[color="red"] li a { color: lighten($red, 15%); }
+
+	&[color="green"] li a { color: lighten($green, 10%); }
+
+	&[color="pink"] li a { color: darken($pink, 8%); }
+
+	&[color="purple"] li a { color: lighten($purple, 15%); }
+
+	&[color="orange"] li a { color: darken($orange, 5%); }
+}
