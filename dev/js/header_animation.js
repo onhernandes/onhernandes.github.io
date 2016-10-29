@@ -6,9 +6,9 @@ function randomNum() {
 	return this;
 }
 
-if (header.length > 0) {
-	randomNum();
+randomNum();
 
+if (header.length > 0) {
 	window.addEventListener('scroll', function() {
 		if (rand < 3) {
 			if (window_width > 960) {

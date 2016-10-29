@@ -12,7 +12,7 @@ function verifyFilter(value) {
 	}
 }
 
-if (filters.length > 0) {
+if (filters) {
 	filters.addEventListener('click', function() {
 		var filter_value = this.getAttribute('filter');
 		verifyFilter(filter_value);
@@ -31,7 +31,7 @@ if (window_width < 680) {
 
 	var posts_content = document.getElementsByClassName('post__content');
 	
-	if (post_content.length > 0) {
+	if (posts_content.length > 0) {
 		for (var k = 0; k < posts_content.length; k++) {
 			var color = posts_content[k].getAttribute('color');
 			posts_content[k].setAttribute('bg-color', color);
