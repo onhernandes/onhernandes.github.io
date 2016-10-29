@@ -1,5 +1,11 @@
+.social_icons_title {
+	padding: 50px 0 25px;
+	text-align: center;
+	color: $gray;
+}
+
 .social_icons_list {
-	padding: 70px 0 50px;
+	padding: 0 0 50px;
 	text-align: center;
 
 	@media screen and (max-width: 680px) {
