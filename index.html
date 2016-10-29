@@ -10,38 +10,28 @@ title: 'Home'
 </section>
 
 <section class="blog">
-	{% for i in (1..6) %}
+	{% for post in site.posts %}
 		<article class="post">
-			<div class="post__content">
-				<a href="">
-					<h1 class="post__content_title">
-						Title here
-					</h1>
+			<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
+				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+					<h2 class="post__content_title">
+						{{ post.title | truncatewords: 5 }}
+					</h2>
 				</a>
 
 				<ul class="post__content_tags">
-					<li>
-						<a href="">
-							tagX
-						</a>
-					</li>
-					
-					<li>
-						<a href="">
-							tagX
-						</a>
-					</li>
-					
-					<li>
-						<a href="">
-							tagX
-						</a>
-					</li>
+					{% for category in post.categories %}
+						<li tag="{{ category }}">
+							<a href="{{ category }}">
+								{{ category }}
+							</a>
+						</li>						
+					{% endfor %}
 				</ul>
 
-				<a href="">
+				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 					<p class="post__content_intro">
-						introduction here for show
+						{{ post.intro | truncatewords: 10 }}
 					</p>
 				</a>
 			</div>
