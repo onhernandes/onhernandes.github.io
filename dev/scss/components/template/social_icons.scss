@@ -2,6 +2,22 @@
 	padding: 50px 0 25px;
 	text-align: center;
 	color: $gray;
+
+	&[color="green"] { color: darken($green, 15%); }
+
+	&[color="blue"] { color: darken($blue, 5%); }
+
+	&[color="purple"] { color: darken($purple, 7%); }
+
+	&[color="pink"] { color: darken($pink, 25%); }
+
+	&[color="yellow"] { color: $yellow; }
+
+	&[color="red"] { color: $red; }
+
+	&[color="orange"] { color: darken($orange, 20%); }
+
+	&[color="gray"] { color: $gray; }
 }
 
 .social_icons_list {
@@ -65,6 +81,22 @@
 			}
 		}
 	}
+
+	&[color="green"] li a { color: darken($green, 15%); }
+
+	&[color="blue"] li a { color: darken($blue, 5%); }
+
+	&[color="purple"] li a { color: darken($purple, 7%); }
+
+	&[color="pink"] li a { color: darken($pink, 25%); }
+
+	&[color="yellow"] li a { color: $yellow; }
+
+	&[color="red"] li a { color: $red; }
+
+	&[color="orange"] li a { color: darken($orange, 20%); }
+
+	&[color="gray"] li a { color: $gray; }
 }
 
 .social_icons_list li:hover { animation-name: flip; }
