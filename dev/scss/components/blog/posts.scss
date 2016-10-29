@@ -82,11 +82,11 @@
 	&:nth-child(11),
 	&:nth-child(12) {flex-basis: 25%;}
 
-	&[kind="project"] {flex-basis: 25%;}
-	&[kind="article"] {flex-basis: 50%;}
+	//&[kind="project"] {flex-basis: 25%;}
+	//&[kind="article"] {flex-basis: 50%;}
 
-	&[sizer="two-four"] {flex-basis: 25%;}
-	&[sizer="half"] {flex-basis: 50%;}
+	//&[sizer="two-four"] {flex-basis: 25%;}
+	//&[sizer="half"] {flex-basis: 50%;}
 }
 
 .post,
