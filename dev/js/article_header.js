@@ -1,6 +1,6 @@
 var article_header = document.getElementsByClassName('header__article');
 
-if (article_header.length > 0) {
+if (article_header.length > 0 && window_width > 960) {
 	window.addEventListener('scroll', function() {
 		var article_background = article_header[0].querySelector('.header__article_background'),
 			article_title 	   = article_header[0].querySelector('.header__article_title'),

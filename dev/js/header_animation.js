@@ -1,6 +1,6 @@
 var header = document.getElementsByClassName('header');
 
-if (header.length > 0) {
+if (header.length > 0 && window_width > 960) {
 	window.addEventListener('scroll', function() {
 		if (rand < 3) {
 			if (window_width > 960) {
