@@ -76,7 +76,7 @@ title: 'Blog'
 </section>
 
 {% for post in site.posts %}
-	<a href="{{ post.url }}">
+	<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 		{{ post.title }}
 	</a>
 {% endfor %}

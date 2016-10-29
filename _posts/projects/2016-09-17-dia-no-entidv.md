@@ -7,6 +7,7 @@ image: entidv.jpg
 type: 'post'
 language: 'dev'
 tags: evento entidv
+link: 'https://www.facebook.com/mthernandes'
 ---
 
 # ENTIDV - se você não conhece, deveria
