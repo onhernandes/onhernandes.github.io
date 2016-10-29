@@ -21,6 +21,7 @@ highlighter: rouge
 permalink: /:title/
 
 color: gray
+lang: en
 
 exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js']
 
