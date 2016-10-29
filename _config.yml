@@ -20,6 +20,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+color: gray
+
 exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js']
 
 sass:
