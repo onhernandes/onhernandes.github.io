@@ -21,5 +21,7 @@ if (header.length > 0) {
 				header[0].querySelector('.header__title').style.transform = 'translateX(-' + (window.pageYOffset / 1.5) + 'px)';
 			}
 		}
+
+		header[0].querySelector('.header__background').style.transform = 'translateY(' + (window.pageYOffset / 2) + 'px)';
 	});
 }

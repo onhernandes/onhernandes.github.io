@@ -4,7 +4,7 @@
 	overflow: hidden;
 	z-index: 6;
 	color: #fff;
-	background-color: $blue;
+	//background-color: $blue;
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
 
