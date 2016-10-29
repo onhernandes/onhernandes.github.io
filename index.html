@@ -36,7 +36,7 @@ title: 'Home'
 				</a>
 			</div>
 
-			<div class="post__background"></div>
+			<div class="post__background"{% if post.image %}style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
 		</article>
 	{% endfor %}
 </section>

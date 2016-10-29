@@ -34,49 +34,33 @@ title: 'Blog'
 </section>
 
 <section class="blog">
-	{% for i in (1..6) %}
+	{% for post in site.posts %}
 		<article class="post">
-			<div class="post__content" color="red">
-				<a href="">
-					<h1 class="post__content_title">
-						Title here
-					</h1>
+			<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
+				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+					<h2 class="post__content_title">
+						{{ post.title | truncatewords: 5 }}
+					</h2>
 				</a>
 
-				<ul tags="abc abc abc abc abc" class="post__content_tags">
-					<li tag="tag_name">
-						<a href="">
-							tagX
-						</a>
-					</li>
-					
-					<li tag="tag_name">
-						<a href="">
-							tagX
-						</a>
-					</li>
-					
-					<li tag="tag_name">
-						<a href="">
-							tagX
-						</a>
-					</li>
+				<ul class="post__content_tags">
+					{% for category in post.categories %}
+						<li tag="{{ category }}">
+							<a href="{{ category }}">
+								{{ category }}
+							</a>
+						</li>						
+					{% endfor %}
 				</ul>
 
-				<a href="">
+				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 					<p class="post__content_intro">
-						introduction here for show
+						{{ post.intro | truncatewords: 10 }}
 					</p>
 				</a>
 			</div>
 
-			<div class="post__background"></div>
+			<div class="post__background"{% if post.image %}style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
 		</article>
 	{% endfor %}
 </section>
-
-{% for post in site.posts %}
-	<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-		{{ post.title }}
-	</a>
-{% endfor %}
