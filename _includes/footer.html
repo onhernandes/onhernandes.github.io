@@ -1,5 +1,5 @@
 <footer class="social_icons">
-	<h2 class="social_icons_title">Be in touch</h2>
+	<h2 class="social_icons_title" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">Be in touch</h2>
 	
 	<ul class="social_icons_list" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
 		<li><a href="https://www.github.com/{{ site.github_username }}" class="flaticon-github" target="_blank"></a></li>
