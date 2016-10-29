@@ -1,5 +1,6 @@
 ---
 layout: 'article'
+lang: 'en'
 date: 2016-09-17 22:21:39 -0300
 title: 'Boilerplate'
 intro: 'your thing introduction'
