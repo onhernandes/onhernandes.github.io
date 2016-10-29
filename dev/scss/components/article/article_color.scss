@@ -6,7 +6,7 @@
 			color: $green;
 		}
 
-		h1, h2, h3 { color: darken($green, 8%); }
+		h1, h2, h3 { color: darken($green, 15%); }
 
 		a:hover { color: $green; }
 	}
@@ -18,7 +18,7 @@
 			color: $blue;
 		}
 
-		h1, h2, h3 { color: darken($blue, 8%); }
+		h1, h2, h3 { color: darken($blue, 5%); }
 
 		a:hover { color: $blue; }
 	}
@@ -54,7 +54,7 @@
 			color: $purple;
 		}
 
-		h1, h2, h3 { color: darken($purple, 8%); }
+		h1, h2, h3 { color: darken($purple, 5%); }
 
 		a:hover { color: $purple; }
 	}
@@ -66,7 +66,7 @@
 			color: $orange;
 		}
 
-		h1, h2, h3 { color: darken($orange, 8%); }
+		h1, h2, h3 { color: darken($orange, 10%); }
 
 		a:hover { color: $orange; }
 	}
