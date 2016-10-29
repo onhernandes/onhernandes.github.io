@@ -5,12 +5,14 @@
 	article {
 		background-color: rgba($blue, 0.04);
 		flex: 0 0 80%;
+
+		@media screen and (max-width: 960px) {
+			flex-basis: 100%;
+		}
 	}
 }
 
 .article__content {
-	//flex-basis: 80% !important;
-
 	h1, h2, h3,
 	> p, blockquote,
 	ul, ol {
