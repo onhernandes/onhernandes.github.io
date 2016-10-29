@@ -12,7 +12,7 @@ function verifyFilter(value) {
 	}
 }
 
-if (filters) {
+if (filters.length > 0) {
 	filters.addEventListener('click', function() {
 		var filter_value = this.getAttribute('filter');
 		verifyFilter(filter_value);
@@ -22,15 +22,19 @@ if (filters) {
 if (window_width < 680) {
 	var post_wrapper = document.getElementsByClassName('post');
 	
-	for (var i = 0; i < post_wrapper.length; i++) {
-		var that = post_wrapper[i];
-		that.removeChild(that.childNodes[3]);
+	if (post_wrapper.length > 0) {
+		for (var i = 0; i < post_wrapper.length; i++) {
+			var that = post_wrapper[i];
+			that.removeChild(that.childNodes[3]);
+		}
 	}
 
 	var posts_content = document.getElementsByClassName('post__content');
 	
-	for (var k = 0; k < posts_content.length; k++) {
-		var color = posts_content[k].getAttribute('color');
-		posts_content[k].setAttribute('bg-color', color);
+	if (post_content.length > 0) {
+		for (var k = 0; k < posts_content.length; k++) {
+			var color = posts_content[k].getAttribute('color');
+			posts_content[k].setAttribute('bg-color', color);
+		}
 	}
 }
