@@ -6,7 +6,9 @@
 			color: $green;
 		}
 
-		h1, h2, h3 { color: darken($green, 15%); }
+		blockquote { border-color: rgba($green, 0.3); }
+
+		h1, h2, h3 { color: darken($green, 5%); }
 
 		a:hover { color: $green; }
 	}
@@ -17,6 +19,8 @@
 		ul, ol, li {
 			color: $blue;
 		}
+
+		blockquote { border-color: rgba($blue, 0.3); }
 
 		h1, h2, h3 { color: darken($blue, 5%); }
 
@@ -30,6 +34,8 @@
 			color: $yellow;
 		}
 
+		blockquote { border-color: rgba($yellow, 0.3); }
+
 		h1, h2, h3 { color: darken($yellow, 8%); }
 
 		a:hover { color: $yellow; }
@@ -41,6 +47,8 @@
 		ul, ol, li {
 			color: $red;
 		}
+
+		blockquote { border-color: rgba($red, 0.3); }
 
 		h1, h2, h3 { color: darken($red, 8%); }
 
@@ -54,6 +62,8 @@
 			color: $purple;
 		}
 
+		blockquote { border-color: rgba($purple, 0.3); }
+
 		h1, h2, h3 { color: darken($purple, 5%); }
 
 		a:hover { color: $purple; }
@@ -65,6 +75,8 @@
 		ul, ol, li {
 			color: $orange;
 		}
+
+		blockquote { border-color: rgba($orange, 0.3); }
 
 		h1, h2, h3 { color: darken($orange, 10%); }
 
