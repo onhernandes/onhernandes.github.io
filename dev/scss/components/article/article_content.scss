@@ -39,8 +39,14 @@
 	strong { font-weight: bold; }
 
 	a {
-		font-weight: bold;
-		// add link symbol with ::after
+		&::after {
+			font-family: Flaticon;
+			content: $icon-link;
+			padding-left: 4px;
+			font-weight: normal;
+		}
+
+		&:hover { border-bottom: 1px dashed $blue; }
 	}
 
 	ol { padding: 10px 35px 0; }

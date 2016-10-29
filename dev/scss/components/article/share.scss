@@ -1,29 +1,18 @@
-.share {
-	flex-basis: 100% !important;
-	height: auto;
-	padding: 30px 0 !important;
-	background-color: $blue;
-	@include flex(wrap row);
-	@include flex-align(center, center, center);
-	@include transform(skewY(-1deg) !important);
+.article__share {
+	text-align: center;
 }
 
-.share__list {
-	@include transform(skewY(1deg));
-	text-align: center;
-	flex: 0 0 auto;
+.article__share_title { padding: 20px 0 5px; }
+
+.article__share_list {
+	padding: 5px 0 20px;
 
 	li {
 		display: inline-block;
-		margin: 0 10px;
-		a {
-			color: #fff;
+		padding: 0 8px;
 
-			&:before {
-				font-size: 42px;
-				
-				@media screen and (max-width: $iphone-five) {font-size: 33px;}
-			}
+		a::before {
+			font-size: 28px;
 		}
 	}
 }
