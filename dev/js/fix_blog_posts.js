@@ -1,23 +1,28 @@
-var filters = document.querySelector('.filters__list_category');
+var filters = document.querySelector('.filters__list_category'),
+	blog_posts_tags = that_tag = tags = 0;
 
 
 function verifyFilter(value) {
-	var blog_posts = document.getElementsByClassName('post');
+	blog_posts_tags = document.getElementsByClassName('post__content_tags');
 
-	for (var i = 0; i < blog_posts.length; i++) {
-		var tags = blog_posts[i].querySelector('.post__content_tags');
-		console.log(tags);
-		/*if (tags.getAttribute('tags').indexOf(value) == -1) {
-			blog_posts[i].style.display = 'none';
-		}*/
+	console.log(value);
+
+	for (var i = 0; i < blog_posts_tags.length; i++) {
+		that_tag = blog_posts_tags[i]; 
+		tags = that_tag.getAttribute('tags');
+
+		if (value === 'undo') {
+			that_tag.parentNode.parentNode.style.display = 'block';
+		} else {
+			if (tags.indexOf(value) == -1) {
+				that_tag.parentNode.parentNode.style.display = 'none';
+			} else {
+				that_tag.parentNode.parentNode.style.display = 'block';
+			}
+		}
 	}
-}
 
-if (filters) {
-	filters.addEventListener('click', function() {
-		var filter_value = filters.getAttribute('category');
-		verifyFilter(filter_value);
-	});
+	blog_posts_tags = that_tag = tags = 0;
 }
 
 if (window_width < 680) {

@@ -9,11 +9,17 @@ title: 'Blog'
 	<ul class="filters__list">
 		{% for category in site.categorys %}
 			<li class="filters__list_category" category="{{ category }}">
-				<a href="javascript:void(0);">
+				<a href="javascript:void(0);" onclick="verifyFilter('{{ category }}');">
 					{{ category }}
 				</a>
 			</li>
 		{% endfor %}
+
+		<li class="filters__list_category" category="undo">
+			<a href="javascript:void(0);" onclick="verifyFilter('undo');">
+				Undo
+			</a>
+		</li>
 	</ul>
 </section>
 
