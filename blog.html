@@ -8,7 +8,7 @@ title: 'Blog'
 	
 	<ul class="filters__list">
 		{% for category in site.categorys %}
-			<li class="filters__list_category" filter="{{ category }}">
+			<li class="filters__list_category" category="{{ category }}">
 				<a href="javascript:void(0);">
 					{{ category }}
 				</a>
