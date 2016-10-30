@@ -37,32 +37,34 @@ title: 'Blog'
 	</article>
 
 	{% for post in site.posts reversed %}
-		<article class="post">
-			<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
-				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-					<h2 class="post__content_title">
-						{{ post.title | truncatewords: 5 }}
-					</h2>
-				</a>
+		{% if post.kind == 'article' %}
+			<article class="post">
+				<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
+					<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+						<h2 class="post__content_title">
+							{{ post.title | truncatewords: 5 }}
+						</h2>
+					</a>
 
-				<ul tags="{% for category in post.categories %}{{ category }} {% endfor %}" class="post__content_tags">
-					{% for category in post.categories %}
-						<li category="{{ category }}">
-							<a href="{{ category }}">
-								{{ category }}
-							</a>
-						</li>						
-					{% endfor %}
-				</ul>
+					<ul tags="{% for category in post.categories %}{{ category }} {% endfor %}" class="post__content_tags">
+						{% for category in post.categories %}
+							<li category="{{ category }}">
+								<a href="{{ category }}">
+									{{ category }}
+								</a>
+							</li>						
+						{% endfor %}
+					</ul>
 
-				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-					<p class="post__content_intro">
-						{{ post.intro | truncatewords: 10 }}
-					</p>
-				</a>
-			</div>
+					<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+						<p class="post__content_intro">
+							{{ post.intro | truncatewords: 10 }}
+						</p>
+					</a>
+				</div>
 
-			<div class="post__background"{% if post.image %}style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
-		</article>
+				<div class="post__background"{% if post.image %}style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
+			</article>
+		{% endif %}
 	{% endfor %}
 </section>

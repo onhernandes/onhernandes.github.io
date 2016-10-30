@@ -10,6 +10,8 @@ function verifyFilter(value) {
 	for (var i = 0; i < blog_posts_tags.length; i++) {
 		that_tag = blog_posts_tags[i]; 
 		tags = that_tag.getAttribute('tags');
+		var tag_counter = 0;
+
 
 		if (value === 'undo') {
 			that_tag.parentNode.parentNode.style.display = 'block';
@@ -18,7 +20,12 @@ function verifyFilter(value) {
 				that_tag.parentNode.parentNode.style.display = 'none';
 			} else {
 				that_tag.parentNode.parentNode.style.display = 'block';
+				tag_counter++;
 			}
+		}
+
+		if (tag_counter % 3 !== 0) {
+			 
 		}
 	}
 
