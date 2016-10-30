@@ -10,7 +10,7 @@ title: 'Home'
 </section>
 
 <section class="blog">
-	{% for post in site.posts %}
+	{% for post in site.posts reversed %}
 		<article class="post">
 			<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
 				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
