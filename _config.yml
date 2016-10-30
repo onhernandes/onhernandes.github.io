@@ -25,6 +25,26 @@ permalink: /:title/
 color: gray
 lang: en
 
+categories:
+  - scss
+  - js
+  - front-end
+  - php
+  - dev
+
+non_categories: 
+  - back-end
+  - front-end
+  - html
+  - css
+  - scss
+  - js
+  - php
+  - mysql
+  - linux
+  - dev
+  - life
+
 exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js']
 
 sass:
