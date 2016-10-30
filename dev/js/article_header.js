@@ -30,6 +30,6 @@ if (article_header.length > 0 && window_width > 960) {
 			article_title.style.transform = 'translateX(' + (window.pageYOffset / 5) + 'px)';
 		}
 
-		article_background.style.transform = 'translateY(' + (window.pageYOffset / 15) + 'px)';
+		article_background.style.transform = 'translateY(' + (window.pageYOffset / 10) + 'px)';
 	});
 }
