@@ -39,7 +39,7 @@ title: 'Blog'
 					</h2>
 				</a>
 
-				<ul class="post__content_tags">
+				<ul tags="{% for category in post.categories %}{{ category }} {% endfor %}" class="post__content_tags">
 					{% for category in post.categories %}
 						<li category="{{ category }}">
 							<a href="{{ category }}">

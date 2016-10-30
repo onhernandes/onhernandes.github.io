@@ -6,15 +6,16 @@ function verifyFilter(value) {
 
 	for (var i = 0; i < blog_posts.length; i++) {
 		var tags = blog_posts[i].querySelector('.post__content_tags');
-		if (tags.getAttribute('tags').indexOf(value) == -1) {
+		console.log(tags);
+		/*if (tags.getAttribute('tags').indexOf(value) == -1) {
 			blog_posts[i].style.display = 'none';
-		}
+		}*/
 	}
 }
 
 if (filters) {
 	filters.addEventListener('click', function() {
-		var filter_value = this.getAttribute('filter');
+		var filter_value = filters.getAttribute('category');
 		verifyFilter(filter_value);
 	});
 }
