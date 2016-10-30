@@ -25,14 +25,14 @@ permalink: /:title/
 color: gray
 lang: en
 
-categories:
+categorys:
   - scss
   - js
   - front-end
   - php
   - dev
 
-non_categories: 
+non_categorys: 
   - back-end
   - front-end
   - html
