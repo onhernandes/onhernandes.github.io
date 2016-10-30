@@ -10,6 +10,18 @@ title: 'Home'
 </section>
 
 <section class="blog">
+	<article class="post">
+		<div class="post__content" bg-color="green" magic="crazy">
+			<a href="javascript:void(0);">
+				<h2 class="post__content_title">
+					Hey
+				</h2>
+			</a>
+		</div>
+
+		<div class="post__background"></div>
+	</article>
+
 	{% for post in site.posts reversed %}
 		<article class="post">
 			<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
