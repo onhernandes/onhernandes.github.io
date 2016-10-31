@@ -15,18 +15,19 @@
 
 	&:nth-child(1),
 	&:nth-child(3),
+	&:nth-child(4),
 	&:nth-child(5),
-	&:nth-child(6),
 	&:nth-child(7),
-	&:nth-child(8),
+	&:nth-child(9),
 	&:nth-child(11),
-	&:nth-child(12) {
+	&:nth-child(12),
+	&:nth-child(13),
+	&:nth-child(15),
+	&:nth-child(16),
+	&:nth-child(17) {
 		background-color: $red;
 		flex-basis: 25%;
 	}
-
-	&[sizer="two-four"] {flex-basis: 25%;}
-	&[sizer="half"] {flex-basis: 50%;}
 
 	@media screen and (max-width: 1024px) { flex-basis: 50% !important; }
 
