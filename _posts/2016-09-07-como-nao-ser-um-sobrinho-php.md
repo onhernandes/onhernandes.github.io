@@ -9,7 +9,7 @@ tags: php curso tempo estudo
 color: 'purple'
 kind: 'article'
 bg-color: 'purple'
-magic: 'trade'
+magic: 'explode'
 ---
 
 Hey guys!

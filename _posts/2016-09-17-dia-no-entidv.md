@@ -10,7 +10,7 @@ kind: 'article'
 sizer: 'two-four'
 color: 'green'
 bg-color: 'green'
-magic: 'trade'
+magic: 'crazy'
 categories: php
 ---
 
