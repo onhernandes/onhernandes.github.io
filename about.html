@@ -4,9 +4,37 @@ title: 'About'
 ---
 
 <section class="about">
-	{% for t in (1..9) %}
-		<article class="about__piece">
-			<h1>something cool here</h1>
-		</article>
+	<article class="about__piece">
+		<h1>actual project</h1>
+	</article>
+
+	<article class="about__piece">
+		<h1>instagram</h1>
+	</article>
+
+	<article class="about__piece">
+		<h1>life summary</h1>
+	</article>
+
+	<article class="about__piece">
+		<h1>github</h1>
+	</article>
+
+	<article class="about__piece">
+		<h1>knowledge</h1>
+	</article>
+
+	<article class="about__piece">
+		<h1>twitter</h1>
+	</article>
+
+	{% for project in site.posts %}
+		{% if project.kind == 'project' %}
+			<article class="about__piece">
+				<a href="{{ project.link }}">
+					<h1>{{ project.title }}</h1>
+				</a>
+			</article>
+		{% endif %}
 	{% endfor %}
 </section> 
