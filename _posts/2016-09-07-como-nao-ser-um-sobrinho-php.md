@@ -7,6 +7,7 @@ intro: 'Nem tudo é um cursinho de 3 meses'
 categories: 'php'
 tags: php curso tempo estudo
 color: 'purple'
+kind: 'article'
 bg-color: 'purple'
 magic: 'trade'
 ---
