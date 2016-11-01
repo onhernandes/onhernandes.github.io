@@ -33,3 +33,25 @@
 
 	@media screen and (max-width: 660px) { flex-basis: 100% !important; }
 }
+
+.about__modal {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(#000, 0.7);
+
+	&_content {
+		display: block;
+		width: 75%;
+		margin: 15px auto;
+		padding: 15px;
+		height: auto;
+		top: 0;
+		left: 0;
+		background-color: mix(#fff, #000, 90%);
+	}
+}
