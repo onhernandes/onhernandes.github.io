@@ -46,12 +46,16 @@
 
 	&_content {
 		display: block;
-		width: 75%;
+		width: 50%;
 		margin: 15px auto;
-		padding: 15px;
-		height: auto;
+		height: calc(100% - 30px);
 		top: 0;
 		left: 0;
 		background-color: mix(#fff, #000, 90%);
+
+		&[image="on"] {
+			padding: 5px;
+			img { height: 100%; }
+		}
 	}
 }
