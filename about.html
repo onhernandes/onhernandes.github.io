@@ -8,7 +8,7 @@ title: 'About'
 		<h1>current project</h1>
 	</article>
 
-	<article sizer="two-four" class="about__piece">
+	<article sizer="two-four" class="about__piece" onclick="aboutModal('life_summary');">
 		<h1>life summary</h1>
 	</article>
 
@@ -40,7 +40,9 @@ title: 'About'
 </section>
 
 <section class="about__modal">
-	<article class="about__modal_content" image="off">
+	<a href="javascript:void(0);" class="about__modal_quit"></a>
+	
+	<article class="about__modal_content" image="off" what="life_summary">
 		<h1>Título</h1>
 
 		<p>
