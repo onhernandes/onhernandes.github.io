@@ -13,11 +13,15 @@ title: 'About'
 	</article>
 
 	<article class="about__piece">
-		<h1>instagram</h1>
+		<a href="https://www.instagram.com/{{ site.instagram_username }}">
+			<h1>instagram</h1>
+		</a>
 	</article>
 
 	<article sizer="two-four" class="about__piece">
-		<h1>github</h1>
+		<a href="https://www.github.com/{{ site.github_username }}">
+			<h1>github</h1>
+		</a>
 	</article>
 
 	<article class="about__piece">
@@ -25,7 +29,9 @@ title: 'About'
 	</article>
 
 	<article sizer="two-four" class="about__piece">
-		<h1>twitter</h1>
+		<a href="https://www.twitter.com/{{ site.twitter_username }}">
+			<h1>twitter</h1>
+		</a>
 	</article>
 
 	{% for project in site.posts %}
@@ -41,7 +47,7 @@ title: 'About'
 
 <section class="about__modal">
 	<a href="javascript:void(0);" class="about__modal_quit"></a>
-	
+
 	<article class="about__modal_content" image="off" what="life_summary">
 		<h1>Título</h1>
 

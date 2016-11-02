@@ -15,7 +15,7 @@ url: "https://mhernandes.github.io" # the base hostname & protocol for your site
 facebook_username: mthernandes
 instagram_username: mt_hernandes
 twitter_username: mt_hernandes
-github_username: mthernandes
+github_username: mhernandes
 
 # Build settings
 markdown: kramdown
