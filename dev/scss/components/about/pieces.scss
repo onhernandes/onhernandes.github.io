@@ -50,16 +50,26 @@
 		width: 80%;
 		margin: 15px auto;
 		height: auto;
+		padding-top: 8px;
 		top: 0;
 		left: 0;
-		//background-color: mix(#fff, #000, 90%);
+		background-color: mix(#fff, #000, 90%);
 
+		h1, h2, h3, p { padding: 6px 15px; }
+	
+		img { 
+			padding: 15px 0;
+			width: 100%; 
+		}
 
 		&[image="on"] {
+			background-color: transparent;
 			height: calc(100vh - 30px);
+			padding-top: 0;
 
 			img {
 				height: 100%;
+				padding: 0;
 				margin: 0 auto;
 				display: block;
 				width: auto;
