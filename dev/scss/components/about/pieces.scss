@@ -10,9 +10,9 @@
 	padding: 15px;
 	text-align: center;
 	color: #fff;
-	background: $blue center no-repeat;
+	background: $gray center no-repeat;
 	background-size: cover;
-	border: 1px solid rgba(#000, 0.5);
+	//border: 1px solid rgba(#000, 0.5);
 	cursor: pointer;
 
 	&:nth-child(1),
@@ -27,7 +27,6 @@
 	&:nth-child(15),
 	&:nth-child(16),
 	&:nth-child(17) {
-		background-color: $red;
 		flex-basis: 25%;
 	}
 
@@ -38,6 +37,10 @@
 	&:nth-child(2) {
 		background-image: url('/assets/img/life_summary.jpg');
 	}
+
+	&:nth-child(3) { background-color: $gray; }
+	&:nth-child(4) { background-color: $gray; }
+	&:nth-child(6) { background-color: #3F77BD; }
 
 	&:nth-child(5) {
 		background-image: url('/assets/img/knowledge.jpg');
