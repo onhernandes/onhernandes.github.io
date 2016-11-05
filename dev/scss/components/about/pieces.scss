@@ -93,6 +93,10 @@
 				width: auto;
 			}			
 		}
+
+		&[what="life_summary"] {
+			padding-bottom: 5px;
+		}
 	}
 }
 
