@@ -1,5 +1,7 @@
 <header class="header__article">
-	<h4 class="header__article_date">05/05/2005</h4>
+	<h4 class="header__article_date">
+		{% include article_date.html  %}
+	</h4>
 
     <h1 class="header__article_title">
         {{ page.title }}
