@@ -45,7 +45,7 @@ non_categorys:
   - dev
   - life
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js']
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
 
 sass:
   sass_dir: dev/scss

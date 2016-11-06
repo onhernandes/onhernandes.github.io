@@ -9,5 +9,7 @@
 
 	<h4 class="header__article_time">{{ page.intro }}</h4>
 
-    <div class="header__article_background"></div>
+    <div class="header__article_background" {% if page.image %}
+    	style="background-image: url(/assets/img/{{ page.image }});"
+    {% endif %}></div>
 </header>
