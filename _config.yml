@@ -24,6 +24,7 @@ permalink: /:title/
 
 color: gray
 lang: en
+taggs: "developer, coder, web, development, programmation, design, github"
 
 categorys:
   - scss

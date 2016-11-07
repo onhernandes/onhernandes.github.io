@@ -1,5 +1,6 @@
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="content-language" content="en">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +12,9 @@
 		{% endif %}
 	</title>
 
+	<meta name=”robots” content="index, follow">
 	<meta name="description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}, {% endfor %}{% else %}{{ site.taggs }}{% endif %}">
 
 	<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
 </head>
