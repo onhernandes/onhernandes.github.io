@@ -26,26 +26,6 @@ color: gray
 lang: en
 taggs: "developer, coder, web, development, programmation, design, github"
 
-categorys:
-  - scss
-  - js
-  - front-end
-  - php
-  - dev
-
-non_categorys: 
-  - back-end
-  - front-end
-  - html
-  - css
-  - scss
-  - js
-  - php
-  - mysql
-  - linux
-  - dev
-  - life
-
 exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
 
 sass:
