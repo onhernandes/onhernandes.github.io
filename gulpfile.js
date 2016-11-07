@@ -17,7 +17,7 @@ var basePath = './',
 		js: [dev + '/js/*.js', dev + '/js/**/*.js'],
 		main_scss: dev + '/scss/main.scss',
 		scss: [dev + '/scss/*', dev + '/scss/**/*', dev + '/scss/**/**/*', dev + '/scss/**/**/**/*'],
-		img: [dev + '/img/*.{jpg,png,gif}', dev + '/img/**/*.{jpg,png,gif}'],
+		img: [dev + '/img/*.{jpg,png,gif}', dev + '/img/**/*.{jpg,png,gif,svg,json,xml}'],
 		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
 	},
 	paths_assets = {
