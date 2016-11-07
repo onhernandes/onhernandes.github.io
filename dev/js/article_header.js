@@ -14,7 +14,7 @@ if (article_header.length > 0 && window_width > 960) {
 			article_title.style.transform = 'translateX(-' + (window.pageYOffset / 5) + 'px)';
 		} else if (rand < 6) {
 			// rotate
-			if ((window.pageYOffset / 15) < 15) {
+			if ((window.pageYOffset / 15) < 20) {
 				article_title.style.transform = 'rotate(' + (window.pageYOffset / 15) + 'deg)';
 				article_time.style.transform = 'rotate(' + (window.pageYOffset / 15) + 'deg)';
 				article_date.style.transform = 'rotate(' + (window.pageYOffset / 15) + 'deg)';

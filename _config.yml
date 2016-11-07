@@ -15,7 +15,7 @@ url: "https://mhernandes.github.io" # the base hostname & protocol for your site
 facebook_username: mthernandes
 instagram_username: mt_hernandes
 twitter_username: mt_hernandes
-github_username: mthernandes
+github_username: mhernandes
 
 # Build settings
 markdown: kramdown
@@ -24,6 +24,7 @@ permalink: /:title/
 
 color: gray
 lang: en
+taggs: "developer, coder, web, development, programmation, design, github"
 
 categorys:
   - scss
@@ -45,7 +46,7 @@ non_categorys:
   - dev
   - life
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js']
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
 
 sass:
   sass_dir: dev/scss
