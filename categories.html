@@ -1,8 +1,34 @@
 ---
 layout: default
-title: 'Categorias'
+title: 'Categories'
 ---
 
+<section class="categories">
+	<article class="categories__list">
+		<h1 class="categories__list_title">Title</h1>
+
+		<ul class="categories__list_content">
+			<li><a href="">TESTE</a></li>
+			<li><a href="">TESTE</a></li>
+			<li><a href="">TESTE</a></li>
+			<li><a href="">TESTE</a></li>
+		</ul>
+	</article>
+
+	
+	<article class="categories__list">
+		<h1 class="categories__list_title">Title</h1>
+
+		<ul class="categories__list_content">
+			<li><a href="">TESTE</a></li>
+			<li><a href="">TESTE</a></li>
+			<li><a href="">TESTE</a></li>
+			<li><a href="">TESTE</a></li>
+		</ul>
+	</article>
+</section>
+
+{% comment %}
 {% for category in site.categories  %}
     <span class="tag-title" id="{{ category[0] | slugify }}">{{ category[0] }}</span>
     <ul class="post-list">
@@ -18,3 +44,4 @@ title: 'Categorias'
         {% assign group = nil %}
     </ul>
 {% endfor %}
+{% endcomment %}

@@ -1,0 +1,32 @@
+.categories {
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+
+	&__list {
+		flex: 0 0 80%;
+		padding: 60px 0 0;
+
+		@media screen and (max-width: 960px) {
+			flex-basis: 100% !important;
+		}
+	}
+}
+
+.categories__list {
+	&_title {
+		padding: 15px 0 5px;
+	}
+
+	&_content {
+		padding-left: 10px;
+
+		li {
+			padding: 10px 0;
+			text-transform: none;
+
+			a {
+				text-transform: none;
+			}
+		}
+	}
+}
