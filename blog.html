@@ -52,7 +52,7 @@ image: 'blog.jpg'
 					<ul tags="{% for category in post.categories %}{{ category }} {% endfor %}" class="post__content_tags">
 						{% for category in post.categories %}
 							<li category="{{ category }}">
-								<a href="{{ category }}">
+								<a href="/categories/#{{ category }}">
 									{{ category }}
 								</a>
 							</li>						
