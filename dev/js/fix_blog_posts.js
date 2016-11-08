@@ -1,5 +1,6 @@
 var filters = document.querySelector('.filters__list_category'),
-	blog_posts_tags = that_tag = tags = 0;
+	blog_posts_tags = that_tag = tags = 0,
+	posts_content = document.getElementsByClassName('post__content');
 
 
 function verifyFilter(value) {
@@ -49,5 +50,11 @@ if (window_width < 680) {
 			var color = posts_content[k].getAttribute('color');
 			posts_content[k].setAttribute('bg-color', color);
 		}
+	}
+}
+
+if (window_width < 960 && posts_content.length > 0) {
+	for (var i = 0; i < posts_content.length; i++) {
+		posts_content[i].setAttribute('magic', '')
 	}
 }
