@@ -4,28 +4,24 @@ title: 'Categories'
 ---
 
 <section class="categories">
-	<article class="categories__list">
-		<h1 class="categories__list_title">Title</h1>
+	{% for category in site.categories  %}
+		<article class="categories__list" id="{{ category[0] | slugify }}">
+			<h1 class="categories__list_title">{{ category[0] }}</h1>
 
-		<ul class="categories__list_content">
-			<li><a href="">TESTE</a></li>
-			<li><a href="">TESTE</a></li>
-			<li><a href="">TESTE</a></li>
-			<li><a href="">TESTE</a></li>
-		</ul>
-	</article>
-
-	
-	<article class="categories__list">
-		<h1 class="categories__list_title">Title</h1>
-
-		<ul class="categories__list_content">
-			<li><a href="">TESTE</a></li>
-			<li><a href="">TESTE</a></li>
-			<li><a href="">TESTE</a></li>
-			<li><a href="">TESTE</a></li>
-		</ul>
-	</article>
+			<ul class="categories__list_content">
+		        {% assign pages_list = category[1] %}
+		        {% for post in pages_list reversed %}
+		            {% if post.title != null %}
+		            {% if group == null or group == post.group %}
+		            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+		            {% endif %}
+		            {% endif %}
+		        {% endfor %}
+		        {% assign pages_list = nil %}
+		        {% assign group = nil %}
+			</ul>
+		</article>
+	{% endfor %}
 </section>
 
 {% comment %}
