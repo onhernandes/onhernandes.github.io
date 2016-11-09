@@ -25,7 +25,7 @@ image: 'home.jpg'
 
 	{% for post in site.posts reversed %}
 		<article class="post">
-			<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
+			<div class="post__content" bg-color="{{ post.bg-color }}" color="{{ post.color }}" magic="{{ post.magic }}">
 				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 					<h2 class="post__content_title">
 						{{ post.title | truncatewords: 5 }}

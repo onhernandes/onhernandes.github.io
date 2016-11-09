@@ -33,7 +33,7 @@ function verifyFilter(value) {
 	blog_posts_tags = that_tag = tags = 0;
 }
 
-if (window_width < 680) {
+if (window_width < 960) {
 	var post_wrapper = document.getElementsByClassName('post');
 	
 	if (post_wrapper.length > 0) {

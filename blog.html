@@ -42,7 +42,7 @@ image: 'blog.jpg'
 	{% for post in site.posts reversed %}
 		{% if post.kind == 'article' %}
 			<article class="post">
-				<div class="post__content" bg-color="{{ post.bg-color }}" magic="{{ post.magic }}">
+				<div class="post__content" bg-color="{{ post.bg-color }}" color="{{ post.color }}" magic="{{ post.magic }}">
 					<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 						<h2 class="post__content_title">
 							{{ post.title | truncatewords: 5 }}
@@ -66,7 +66,7 @@ image: 'blog.jpg'
 					</a>
 				</div>
 
-				<div class="post__background"{% if post.image %}style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
+				<div class="post__background"{% if post.image %} style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
 			</article>
 		{% endif %}
 	{% endfor %}
