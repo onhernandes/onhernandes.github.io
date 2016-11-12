@@ -1,11 +1,16 @@
 ---
-layout: post
-title:  Como não ser um sobrinho no PHP
+layout: 'article'
+title:  'Como não ser um sobrinho no PHP'
+lang: 'pt'
 date:   2016-09-07 20:50:39 -0300
-introduction: Nem tudo é um cursinho de 3 meses
-type: 'post'
-language: 'php'
+image: 'como_nao_ser_um_sobrinho.jpg'
+intro: 'Nem tudo é um cursinho de 3 meses'
+categories: 'php'
 tags: php curso tempo estudo
+color: 'purple'
+kind: 'article'
+bg-color: 'purple'
+magic: 'explode'
 ---
 
 Hey guys!

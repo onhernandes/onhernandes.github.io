@@ -9,18 +9,24 @@
 title: Hernandes
 email: midia.matheus@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  That's my website/blog, I write somethings about me and tht awesome code world.
+  That's my website/blog, I write somethings about me and the awesome code world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mhernandes.github.io" # the base hostname & protocol for your site
-twitter_username: devhernandes
-github_username: devmath
+facebook_username: mthernandes
+instagram_username: mt_hernandes
+twitter_username: mt_hernandes
+github_username: mhernandes
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots']
+color: gray
+lang: en
+taggs: "developer, coder, web, development, programmation, design, github"
+
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
 
 sass:
   sass_dir: dev/scss

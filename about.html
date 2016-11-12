@@ -1,11 +1,57 @@
 ---
 layout: default
-warning: true
 title: 'About'
+image: 'about.jpg'
 ---
 
 <section class="about">
-	<article class="about__content">
+	<article class="about__piece">
+		<h1>hey</h1>
+	</article>
+
+	<article sizer="two-four" title="life summary" class="about__piece" onclick="aboutModal('life_summary');">
+		<h1>life summary</h1>
+	</article>
+
+	<article class="about__piece" title="Instagram">
+		<a href="https://www.instagram.com/{{ site.instagram_username }}">
+			<h1>instagram</h1>
+		</a>
+	</article>
+
+	<article sizer="two-four" title="Github" class="about__piece">
+		<a href="https://www.github.com/{{ site.github_username }}">
+			<h1>github</h1>
+		</a>
+	</article>
+
+	<article class="about__piece" title="knowledge" onclick="aboutModal('knowledge');">
+		<h1>knowledge</h1>
+	</article>
+
+	<article sizer="two-four" title="Twitter" class="about__piece">
+		<a href="https://www.twitter.com/{{ site.twitter_username }}">
+			<h1>twitter</h1>
+		</a>
+	</article>
+
+	{% comment %}
+	{% for project in site.posts %}
+		{% if project.kind == 'project' %}
+			<article class="about__piece" title="{{ project.title }}">
+				<a href="{{ project.link }}">
+					<h1>{{ project.title }}</h1>
+				</a>
+			</article>
+		{% endif %}
+	{% endfor %}
+	{% endcomment %}
+</section>
+
+<section class="about__modal">
+	<a href="javascript:void(0);" class="about__modal_quit"></a>
+
+	<article class="about__modal_content" image="off" what="life_summary">
 		<h1>So, let's go.</h1>
 		
 		<p>First of everything, my name is Matheus and I'm from Brazil, Earth.</p>
@@ -17,10 +63,9 @@ title: 'About'
 		<p>Around january/2014 I started learn a lot of things about front-end.</p>
 		<p>At january of this year I started learn about back-end side, like PHP, MySQL, and others things - oh, I also started to use definetely the Ubuntu.</p>
 		<p>I am currently working on <a href="http://www.gasoline-digital.com/" target="_blank">Gasoline Digital</a>, is an awesome place.</p>
-		<p>Now, I'm learning about JavaScript deeply - I think.</p>
 	</article>
 
-	<article class="about__knowledge">
+	<article class="about__modal_content" image="off" what="knowledge">
 		<h1>Knowledge</h1>
 		
 		<ul>
@@ -32,26 +77,5 @@ title: 'About'
 			<li>MySQL</li>
 			<li>Git</li>
 		</ul>
-	</article>
-</section>
-
-<section class="projects">
-	<article class="projects__title">
-		<h1>Projects</h1>
-	</article>
-
-	<article class="projects__wrapper" id="projects__wrapper">
-		{% for project in site.posts %}
-			{% if project.type == 'project' %}
-				<div class="projects__wrapper_item">
-					<a href="{{ project.link }}" target="_blank">
-						<h2>{{ project.title }}</h2>
-						<p>
-							{{ project.description }}
-						</p> 
-					</a>
-				</div>
-			{% endif %}
-		{% endfor %}
 	</article>
 </section>
