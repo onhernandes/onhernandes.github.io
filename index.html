@@ -11,7 +11,7 @@ image: 'home.jpg'
 </section>
 
 <section class="blog">
-	<article class="post">
+	<article class="post" title="hey">
 		<div class="post__content" bg-color="green" magic="crazy">
 			<a href="javascript:void(0);">
 				<h2 class="post__content_title">
@@ -24,7 +24,7 @@ image: 'home.jpg'
 	</article>
 
 	{% for post in site.posts reversed %}
-		<article class="post">
+		<article class="post" title="{{ post.title }}">
 			<div class="post__content" bg-color="{{ post.bg-color }}" color="{{ post.color }}" magic="{{ post.magic }}">
 				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 					<h2 class="post__content_title">

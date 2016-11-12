@@ -27,7 +27,7 @@ image: 'blog.jpg'
 {% endcomment %}
 
 <section class="blog" sizer="on" kind="on">
-	<article class="post">
+	<article class="post" title="hey">
 		<div class="post__content" bg-color="green" magic="crazy">
 			<a href="javascript:void(0);">
 				<h2 class="post__content_title">
@@ -41,7 +41,7 @@ image: 'blog.jpg'
 
 	{% for post in site.posts reversed %}
 		{% if post.kind == 'article' %}
-			<article class="post">
+			<article class="post" title="{{ post.title }}">
 				<div class="post__content" bg-color="{{ post.bg-color }}" color="{{ post.color }}" magic="{{ post.magic }}">
 					<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
 						<h2 class="post__content_title">

@@ -9,27 +9,27 @@ image: 'about.jpg'
 		<h1>hey</h1>
 	</article>
 
-	<article sizer="two-four" class="about__piece" onclick="aboutModal('life_summary');">
+	<article sizer="two-four" title="life summary" class="about__piece" onclick="aboutModal('life_summary');">
 		<h1>life summary</h1>
 	</article>
 
-	<article class="about__piece">
+	<article class="about__piece" title="Instagram">
 		<a href="https://www.instagram.com/{{ site.instagram_username }}">
 			<h1>instagram</h1>
 		</a>
 	</article>
 
-	<article sizer="two-four" class="about__piece">
+	<article sizer="two-four" title="Github" class="about__piece">
 		<a href="https://www.github.com/{{ site.github_username }}">
 			<h1>github</h1>
 		</a>
 	</article>
 
-	<article class="about__piece" onclick="aboutModal('knowledge');">
+	<article class="about__piece" title="knowledge" onclick="aboutModal('knowledge');">
 		<h1>knowledge</h1>
 	</article>
 
-	<article sizer="two-four" class="about__piece">
+	<article sizer="two-four" title="Twitter" class="about__piece">
 		<a href="https://www.twitter.com/{{ site.twitter_username }}">
 			<h1>twitter</h1>
 		</a>
@@ -38,7 +38,7 @@ image: 'about.jpg'
 	{% comment %}
 	{% for project in site.posts %}
 		{% if project.kind == 'project' %}
-			<article class="about__piece">
+			<article class="about__piece" title="{{ project.title }}">
 				<a href="{{ project.link }}">
 					<h1>{{ project.title }}</h1>
 				</a>
