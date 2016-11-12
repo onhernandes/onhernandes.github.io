@@ -25,8 +25,32 @@
 			text-transform: none;
 
 			a {
+				color: inherit;
 				text-transform: none;
 			}
 		}
 	}
+
+
+	&[id="back-end"] { color: lighten($red, 15%); }
+
+	&[id="front-end"] { color: lighten($blue, 15%); }
+
+	&[id="html"] { color: $html; }
+
+	&[id="css"] { color: $css; }
+
+	&[id="scss"] { color: $scss; }
+
+	&[id="js"] { color: $javascript; }
+
+	&[id="php"] { color: $php; }
+
+	&[id="mysql"] { color: $mysql; }
+
+	&[id="linux"] { color: $linux; }
+
+	&[id="dev"] { color: $node; }
+
+	&[id="life"] { color: $orange; }
 }
