@@ -32,9 +32,9 @@
 	}
 
 
-	&[id="back-end"] { color: lighten($red, 15%); }
+	&[id="back-end"] { color: lighten($red, 10%); }
 
-	&[id="front-end"] { color: lighten($blue, 15%); }
+	&[id="front-end"] { color: lighten($blue, 10%); }
 
 	&[id="html"] { color: $html; }
 
@@ -44,7 +44,7 @@
 
 	&[id="js"] { color: $javascript; }
 
-	&[id="php"] { color: $php; }
+	&[id="php"] { color: darken($php, 8%); }
 
 	&[id="mysql"] { color: $mysql; }
 
