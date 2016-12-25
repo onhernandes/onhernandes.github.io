@@ -4,19 +4,15 @@
 	overflow: hidden;
 	z-index: 6;
 	color: #fff;
-	-webkit-clip-path: polygon(100% 0, 100% 50%, 50% 70%, 0 49%, 0% 0%);
-	clip-path: polygon(100% 0, 100% 80%, 50% 95%, 0 80%, 0% 0%);
-	background-color: $blue;
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
 
 	&__title,
 	&__background {
 		flex: 0 0 auto;
-		display: none;
 	}
 
-	/*&__title {
+	&__title {
 		flex-basis: 90%;
 		position: relative;
 		text-align: center;
@@ -45,5 +41,5 @@
 			left: 0;
 			z-index: 8;
 		}
-	}*/
+	}
 }
