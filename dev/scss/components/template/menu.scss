@@ -1,6 +1,32 @@
 .menu {
 	width: 100%;
 	height: auto;
+	background-color: rgba(#000, 0.3);
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+
+	&__list {
+		padding: 15px 0;
+
+		&_item {
+			display: inline-block;
+			padding: 0 8px;
+
+			&-link {
+				color: #fff;
+			}
+		}
+	}
+}
+
+/*.menu {
+	width: 100%;
+	height: auto;
 	padding: 10px 20px;
 	position: fixed;
 	top: 0;
@@ -85,4 +111,4 @@
 		order: 1;
 		display: none;
 	}
-}
+}*/
