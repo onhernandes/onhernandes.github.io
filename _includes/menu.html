@@ -15,8 +15,24 @@
         <li class="menu__list_item">
             <a href="" class="menu__list_item-link">Stories</a>
         </li>
+
+        <li class="menu__list_item">
+            <a href="javascript:void(0);" class="menu__list_item-link flaticon-search"></a>
+        </li>
     </ul>
 </nav>
+
+<section class="search">
+    <article class="search__wrapper">
+        <h1>Search</h1>
+
+        <span class="quit flaticon-quit" id="quit-search"></span>
+
+        <input id="search" title="type your search" type="text" placeholder="type your search">
+
+        <ul id="results-container"></ul>
+    </article>
+</section>
 
 {% comment %}
 <nav class="menu" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
@@ -32,16 +48,4 @@
 
     <a title="Search" href="javascript:void(0);" class="menu__search flaticon-search"></a>
 </nav>
-
-<section class="search">
-    <article class="search__wrapper">
-        <h1>Search</h1>
-
-        <span class="quit flaticon-quit" id="quit-search"></span>
-
-        <input id="search" title="type your search" type="text" placeholder="type your search">
-
-        <ul id="results-container"></ul>
-    </article>
-</section>
 {% endcomment %}

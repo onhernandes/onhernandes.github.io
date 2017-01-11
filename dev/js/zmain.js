@@ -7,11 +7,13 @@ var launcher = document.querySelector('.flaticon-search'),
 launcher.addEventListener('click', function() {
 	searchSection.style.height = '100vh';
 	searchActive = true;
+	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 });
 
 quitSearch.addEventListener('click', function() {
 	searchSection.style.height = '0';
 	searchActive = false;
+	document.getElementsByTagName('body')[0].style.overflow = 'scroll';
 });
 
 SimpleJekyllSearch({
