@@ -1,7 +1,8 @@
 .menu {
 	width: 100%;
 	height: auto;
-	background-color: rgba(#000, 0.1);
+	//background-color: rgba(#000, 0.1);
+	background-color: darken($gray, 5%);
 	text-align: center;
 	color: #fff;
 	text-transform: uppercase;
@@ -22,7 +23,7 @@
 			}
 
 			&:first-child { padding-left: 0; }
-			
+
 			&:last-child { padding-right: 0; }
 		}
 	}

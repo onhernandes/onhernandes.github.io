@@ -1,4 +1,5 @@
-var header = document.getElementsByClassName('header');
+var header = document.getElementsByClassName('header'),
+	bgsize = 100;
 
 if (header.length > 0 && window_width > 960) {
 	window.addEventListener('scroll', function() {
@@ -11,6 +12,9 @@ if (header.length > 0 && window_width > 960) {
 			header[0].querySelector('.header__title').style.transform = 'translateX(-' + (window.pageYOffset / 5) + 'px)';
 		}*/
 
+		//bgsize += (window.pageYOffset / 3000);
+
 		header[0].querySelector('.header__background').style.transform = 'translateY(' + (window.pageYOffset / 10) + 'px)';
+		//header[0].querySelector('.header__background').style.backgroundSize = bgsize + '%';
 	});
 }
