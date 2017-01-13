@@ -12,21 +12,48 @@
 	left: 0;
 
 	&__list {
-		padding: 15px 0;
+		padding: 25px 0;
 
 		&_item {
 			display: inline-block;
 			padding: 0 15px;
+			transition: all 0.2s ease 0.1s;
 
-			&-link {
-				color: #fff;
-			}
+			&:hover { transform: translateY(-5px); }
+			
+			&-link { color: #fff; }
 
 			&:first-child { padding-left: 0; }
 
 			&:last-child { padding-right: 0; }
 		}
+
+		@media screen and (max-width: $tablet) {
+			padding: 10px 0 20px;
+			order: 2;
+
+			li {
+				display: block;
+				padding: 12px 0;
+
+				a {font-size: 18px;}
+			}
+		}
 	}
+
+	&[color="green"] { background-color: darken($green, 15%); }
+
+	&[color="blue"] { background-color: darken($blue, 5%); }
+
+	&[color="purple"] { background-color: darken($purple, 7%); }
+
+	&[color="pink"] { background-color: darken($pink, 25%); }
+
+	&[color="yellow"] { background-color: $yellow; }
+
+	&[color="red"] { background-color: $red; }
+
+	&[color="orange"] { background-color: darken($orange, 20%); }
 }
 
 /*.menu {
