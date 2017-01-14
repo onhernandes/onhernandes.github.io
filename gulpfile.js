@@ -33,7 +33,7 @@ var basePath = './',
 
 // Build Jekyll
 gulp.task('build', function(done) {
-	return cp.spawn('jekyll', ['b'], {stdio: 'inherit'})
+	return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
 		.on('error', function(err) {
 			console.log(err);
 		})
@@ -87,7 +87,7 @@ gulp.task('set-server', ['build'], function() {
 });
 
 function runner() {
-	gulp.run('compile-scss', 'js', 'image', 'set-server');
+	//gulp.run('compile-scss', 'js', 'image', 'set-server');
 
 	gulp.watch(paths_dev.scss, ['compile-scss']);
 	gulp.watch(paths_dev.js, ['js']);
@@ -96,4 +96,4 @@ function runner() {
 }
 
 // Watch files for changes
-gulp.task('default', runner);
+gulp.task('default', ['compile-scss', 'js', 'image', 'set-server'], runner);

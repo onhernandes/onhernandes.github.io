@@ -1,10 +1,9 @@
 .header {
 	position: relative;
-	min-height: 100vh;
+	min-height: 125vh;
 	overflow: hidden;
 	z-index: 6;
 	color: #fff;
-	//background-color: $blue;
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
 
