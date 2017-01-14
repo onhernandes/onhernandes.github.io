@@ -14,7 +14,7 @@ if (header.length > 0 && window_width > 960) {
 
 		//bgsize += (window.pageYOffset / 3000);
 
-		header[0].querySelector('.header__background').style.transform = 'translateY(' + (window.pageYOffset / 10) + 'px)';
+		header[0].querySelector('.header__background').style.transform = 'translateY(' + (window.pageYOffset / 12) + 'px)';
 		//header[0].querySelector('.header__background').style.backgroundSize = bgsize + '%';
 	});
 }
