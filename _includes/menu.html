@@ -1,21 +1,15 @@
 <nav class="menu" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
-    <ul class="menu__list">
-        <li class="menu__list_item">
-            <a href="" class="menu__list_item-link">Home</a>
-        </li>
-
-        <li class="menu__list_item">
-            <a href="/blog" class="menu__list_item-link">Articles</a>
-        </li>
-
-        <li class="menu__list_item">
-            <a href="/about" class="menu__list_item-link">About</a>
-        </li>
-
-        <li class="menu__list_item">
-            <a href="javascript:void(0);" class="menu__list_item-link flaticon-search"></a>
-        </li>
+    <a href="/" class="menu__logo" title="Hernandes">
+        <img src="/assets/img/logo.png">
+    </a>
+    
+    <ul class="menu__links">
+        <li><a title="Home" href="/">Home</a></li>
+        <li><a title="Blog" href="/blog">Blog</a></li>
+        <li><a title="About me" href="/about">About me</a></li>
     </ul>
+
+    <a title="Search" href="javascript:void(0);" class="menu__search flaticon-search"></a>
 </nav>
 
 <section class="search">
@@ -29,19 +23,3 @@
         <ul id="results-container"></ul>
     </article>
 </section>
-
-{% comment %}
-<nav class="menu" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
-    <a href="/" class="menu__logo" title="Hernandes">
-        <img src="/assets/img/logo.png">
-    </a>
-    
-    <ul class="menu__links">
-        <li><a title="Home" href="/">Home</a></li>
-        <li><a title="Blog" href="/blog">Blog</a></li>
-        <li><a title="About me" href="/about">About me</a></li>
-    </ul>
-
-    <a title="Search" href="javascript:void(0);" class="menu__search flaticon-search"></a>
-</nav>
-{% endcomment %}
