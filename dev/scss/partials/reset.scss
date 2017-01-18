@@ -18,9 +18,7 @@ a:active {
 	text-decoration: none;
 }
 
-p, span {
-	font-size: $font-size-tablet;
-}
+p, span { font-size: $font-size-tablet; }
 
 section, header {
 	width: 100%;
@@ -30,6 +28,7 @@ section, header {
 h1, h2, h3,
 h4, h5, h6 {
 	font-weight: 400;
+	//font-family: "Gloria Hallelujah", $family-whole-page, $family-font-type;
 }
 
 h1 {font-size: 32px;}
@@ -39,9 +38,7 @@ h4 {font-size: 16px;}
 h5 {font-size: 13.5px;}
 h6 {font-size: 11px;}
 
-ul {
-	list-style-type: none;
-}
+ul { list-style-type: none; }
 
 input, textarea, button {
 	display: block;
@@ -50,11 +47,9 @@ input, textarea, button {
 
 input[type="button"],
 input[type="submit"],
-button {
-	cursor: pointer;
-}
+button { cursor: pointer; }
 
-::-webkit-input-placeholder {color: #fff;}
+/*::-webkit-input-placeholder {color: #fff;}
 :-moz-placeholder {color: #fff;}
 ::-moz-placeholder {color: #fff;}
-:-ms-input-placeholder {color: #fff;}
+:-ms-input-placeholder {color: #fff;}*/
