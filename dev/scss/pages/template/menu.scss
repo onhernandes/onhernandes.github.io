@@ -3,25 +3,44 @@
 	height: 70vh;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: -100px;
 	background-color: rgba(#000, 0.7);
+	transition: all 0.4s ease 0.01s;
 	z-index: 9;
 
 	&__list {
-		text-align: center;
+		text-align: right;
 
 		&_item {
 			display: block;
-			padding: 8px 30px;
+			padding: 30px;
 
-			a {
+			//&:first-child { padding-top: 30px; }
+
+			&-link {
 				color: #fff;
+				font-size: 18px;
+
+				> i {
+					font-size: 30px;
+					vertical-align: middle;
+					padding-left: 40px;
+					transition: all 0.4s ease 0.1s;
+				}
 			}
 		}
 	}
+
+	&:hover,
+	&:focus {
+		left: 0 !important;
+		
+		.menu__list_item-link i { padding-left: 10px !important; }
+	}
 }
+
 .t {
 	width: 100%;
 	height: 600px;
-	background-color: $red;
+	background-color: darken($blue, 15%);
 }
