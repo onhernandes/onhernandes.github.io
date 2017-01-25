@@ -70,3 +70,9 @@
 	-o-transform: $transform;
 	transform: $transform;
 }
+
+@mixin gradient($coloring) {
+	background-image: -webkit-linear-gradient($coloring);
+	background-image: -o-linear-gradient($coloring);
+	background-image: linear-gradient($coloring);
+}

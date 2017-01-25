@@ -1,46 +1,79 @@
 .menu {
-	width: auto;
-	height: 70vh;
+	width: 100%;
+	height: 100vh;
 	position: fixed;
 	top: 0;
-	left: -100px;
-	background-color: rgba(#000, 0.7);
-	transition: all 0.4s ease 0.01s;
-	z-index: 9;
+	left: 0;
+	@include flex(wrap row);
+	@include flex-align(flex-start, flex-start, flex-start);
+	//background-color: rgba(#000, 0.7);
+	//transition: all 0.4s ease 0.01s;
+	z-index: 99;
+
+	&__list,
+	&__search,
+	&__icon { flex: 0 0 auto; }
 
 	&__list {
+		order: 1;
+		width: auto;
+		height: 100vh;
+		margin-left: -168px;
+		background-color: rgba(#000, 0.5);
 		text-align: right;
+		transition: all 0.4s ease 0.01s;
+		padding: 15px;
 
-		&_item {
+		li {
 			display: block;
-			padding: 30px;
+			padding: 20px 7px;
 
-			//&:first-child { padding-top: 30px; }
-
-			&-link {
+			a { 
 				color: #fff;
-				font-size: 18px;
+				padding: 20px 7px;
 
-				> i {
-					font-size: 30px;
+				i {
+					font-size: 25px;
+					padding-left: 30px;
 					vertical-align: middle;
-					padding-left: 40px;
-					transition: all 0.4s ease 0.1s;
+				}
+
+				span { 
+					display: inline-block;
+					transition: all 0.4s ease 0.01s;
+				}
+
+				&:hover span {
+					transform: translateX(15px);
+					transition: all 0.4s ease 0.01s;
 				}
 			}
 		}
 	}
 
-	&:hover,
-	&:focus {
-		left: 0 !important;
-		
-		.menu__list_item-link i { padding-left: 10px !important; }
+	.active {
+		margin-left: 0;
+		transition: all 0.4s ease 0.01s;
+	}
+
+	&__icon {
+		order: 2;
+		@extend .icon-menu;
+		font-size: 30px;
+		color: #fff;
+		padding: 20px 30px;
+	}
+
+	&__search {
+		@extend .icon-search;
+		@extend .menu__icon;
+		order: 3;
+		margin-left: auto;
 	}
 }
 
 .t {
 	width: 100%;
 	height: 600px;
-	background-color: darken($blue, 15%);
+	background-color: $blue;
 }
