@@ -44,5 +44,10 @@
 			&:-ms-input-placeholder,
 			&:-moz-placeholder { color: #fff; }
 		}
+
+		@media screen and (max-width: 760px) {
+			flex-basis: 85%;
+			margin-top: 30px;
+		}
 	}
 }

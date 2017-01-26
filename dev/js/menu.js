@@ -6,22 +6,23 @@ var menu = document.getElementsByClassName('menu'),
 	search_title = document.getElementsByClassName('search__form_title'),
 	close_search = search_title[0].childNodes[1];
 
-//menu__list.style.marginLeft = '-' + (menu__list.clientWidth + 10) + 'px';
 
-if (window_width > 960) {
-	menu__icon.addEventListener('click', function() {
-		if (menu__list.className.indexOf('active') !== -1) {
-			menu__list.className = 'menu__list';
-		} else {
-			menu__list.className += ' active';
-		}
-	});
+menu__icon.addEventListener('click', function() {
+	if (menu__list.className.indexOf('active') !== -1) {
+		menu__list.className = 'menu__list';
+	} else {
+		menu__list.className += ' active';
+	}
+});
 
-	menu__search.addEventListener('click', function() {
-		search[0].style.marginTop = 0;
-	});
+menu__search.addEventListener('click', function() {
+	search[0].style.marginTop = 0;
+});
 
-	close_search.addEventListener('click', function() {
-		search[0].style.marginTop = '-100vh';
-	});
+close_search.addEventListener('click', function() {
+	search[0].style.marginTop = '-100vh';
+});
+
+if (window_width < 760) {
+	menu__list.style.marginTop = '-' + (menu__list.clientHeight + 10) + 'px';
 }
