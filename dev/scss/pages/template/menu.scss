@@ -8,7 +8,7 @@
 	@include flex-align(flex-start, flex-start, flex-start);
 	//background-color: rgba(#000, 0.7);
 	//transition: all 0.4s ease 0.01s;
-	z-index: 99;
+	z-index: map-get($z-index, nav);
 
 	&__list,
 	&__search,
@@ -69,6 +69,7 @@
 		@extend .menu__icon;
 		order: 3;
 		margin-left: auto;
+		z-index: map-get($z-index, icon_search);
 	}
 }
 
