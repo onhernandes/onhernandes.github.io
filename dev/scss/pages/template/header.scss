@@ -10,8 +10,12 @@
 		flex: 0 0 60%;
 		z-index: 2;
 
-		&_title {
+		&_title,
+		&_subtitle {
 			color: #fff;
+		}
+
+		&_title {
 			font-size: 40px;
 			font-weight: 700;
 		}
