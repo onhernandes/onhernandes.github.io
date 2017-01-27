@@ -17,10 +17,12 @@ menu__icon.addEventListener('click', function() {
 
 menu__search.addEventListener('click', function() {
 	search[0].style.marginTop = 0;
+	lockBody();
 });
 
 close_search.addEventListener('click', function() {
 	search[0].style.marginTop = '-100vh';
+	unlockBody();
 });
 
 if (window_width < 760) {
