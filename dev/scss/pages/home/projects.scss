@@ -3,11 +3,17 @@
 	height: 400px;
 	@include flex(wrap row);
 	@include flex-align(flex-start, flex-start, flex-start);
-	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 51% 60%, 0 49%);
-	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 51% 60%, 0 49%);
-	background-color: $green;
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 85%, 0 70%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 85%, 0 70%);
 
 	&__item {
 		flex: 0 0 calc(100% / 5);
+		height: 100%;
+
+		&:first-child { background-color: $green; }
+		&:nth-child(2) { background-color: $blue; }
+		&:nth-child(3) { background-color: $red; }
+		&:nth-child(4) { background-color: $purple; }
+		&:last-child { background-color: $yellow; }
 	}
 }

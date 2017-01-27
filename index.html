@@ -2,17 +2,25 @@
 layout: default
 title: 'Home'
 image: 'home.jpg'
+test:
+- a
+- b
+- c
+- c
+- c
 ---
 
 <section class="projects">
-	<article class="projects__item" title="" color="black">
-		<a href="" class="projects__item_title">
-			<h2 title="">title</h2>
-		</a>
+	{% for t in page.test %}
+		<article class="projects__item" title="" color="black">
+			<a href="" class="projects__item_title">
+				<h2 title="">title</h2>
+			</a>
 
-		<ul class="projects__item_list">
-			<li><a href="" title="" target="">G</a></li>
-			<li><a href="" title="" target="">G</a></li>
-		</ul>
-	</article>
+			<ul class="projects__item_list">
+				<li><a href="" title="" target="">G</a></li>
+				<li><a href="" title="" target="">G</a></li>
+			</ul>
+		</article>
+	{% endfor %}
 </section>
