@@ -1,0 +1,22 @@
+.posts {
+	@include flex(wrap row);
+	@include flex-align(space-between, flex-start, flex-start);
+
+	&__header,
+	&__item {
+		flex: 0 0 auto;
+	}
+
+	&__header {
+		flex-basis: 100%;
+		border-bottom: 1px solid $blue;
+		margin: 30px 0;
+
+		&_title {
+			color: $blue;
+			padding: 17px;
+			font-weight: bold;
+			font-family: "Gloria Hallelujah", $family-whole-page, $family-font-type;
+		}
+	}
+}
