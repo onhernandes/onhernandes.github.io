@@ -3,12 +3,13 @@
 	@include flex-align(space-between, flex-start, flex-start);
 
 	&__header,
+	&__wrapper,
 	&__item {
-		flex: 0 0 auto;
+		flex: 0 0 100%;
+		height: auto;
 	}
 
 	&__header {
-		flex-basis: 100%;
 		border-bottom: 1px solid $blue;
 		margin: 30px 0;
 
@@ -16,7 +17,58 @@
 			color: $blue;
 			padding: 17px;
 			font-weight: bold;
-			font-family: "Gloria Hallelujah", $family-whole-page, $family-font-type;
 		}
+	}
+
+	&__item {
+		flex-basis: calc(86% / 3);
+		height: auto;
+		padding: 15px;
+		margin: 0 auto 30px;
+		display: block;
+
+		@include flex(wrap row);
+		@include flex-align(flex-start, flex-start, flex-start);
+
+		a {
+			color: #fff;
+			flex: 0 0 100%;
+			display: block;
+			font-family: $family-page;
+
+			span {
+				display: block;
+			}
+		}
+
+		&_category {
+			color: #2f3239;
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		&_title {
+			padding: 15% 0;
+			font-size: 23px;
+		}
+
+		&_date {
+		}
+
+		@media screen and (max-width: 1024px) {
+			flex-basis: calc();
+		}
+
+		&:first-child { background-color: $green; }
+		&:nth-child(2),
+		&:nth-child(6) { background-color: $blue; }
+		&:nth-child(3),
+		&:nth-child(7) { background-color: $red; }
+		&:nth-child(4),
+		&:nth-child(8) { background-color: $purple; }
+		&:nth-child(5),
+		&:nth-child(9) { background-color: $gray; }
+		&:last-child { background-color: $yellow; }
 	}
 }

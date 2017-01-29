@@ -1,8 +1,8 @@
 // Reset
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto+Condensed|Roboto:300,400,500,700');
 
 * {
-    font-family: $family-whole-page, $family-font-type;
+    font-family: $family-text, $family-type;
     font-weight: 300;
     box-sizing: border-box;
     border: none;
@@ -28,7 +28,6 @@ section, header {
 h1, h2, h3,
 h4, h5, h6 {
 	font-weight: 400;
-	//font-family: "Gloria Hallelujah", $family-whole-page, $family-font-type;
 }
 
 h1 {font-size: 32px;}

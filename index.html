@@ -11,6 +11,7 @@ test:
 - c
 - c
 - c
+- c
 ---
 
 <section class="projects">
@@ -49,9 +50,25 @@ test:
 
 	{% for t in page.test %}
 		<article class="posts__item">
-			<a href="" class="posts__item_category">category</a>
-			<a href="" class="posts__item_title">Title goes here</a>
-			<a href="" class="posts__item_date">13/12/1970</a>
+			<a href="" class="posts__item_category">
+				<span>
+					category
+				</span>
+			</a>
+
+			<a href="" class="posts__item_title">
+				<span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, facere?here
+				</span>
+			</a>
+
+			<a href="" class="posts__item_date">
+				<span>
+					13/12/1970
+				</span>
+			</a>
 		</article>
 	{% endfor %}
 </section>
+
+<br><br><br><br><br><br><br><br><br>
