@@ -25,8 +25,12 @@ if (total_width >= window_width) {
 		if (item_counter < (total_items - displayed)) {
 			for (var i = 0; i < projects__item.length; i++) {
 				projects__item[i].style.transform = 'translateX(-' + new_width + 'px)';
-			}			
-			console.log('teste');
+			}
+		} else {
+			for (var i = 0; i < projects__item.length; i++) {
+				projects__item[i].style.transform = 'translateX(0)';
+				new_width = item_counter = 0;
+			}
 		}
 	}, 1000);	
 }
