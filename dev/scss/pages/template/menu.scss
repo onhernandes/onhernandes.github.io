@@ -17,11 +17,12 @@
 		order: 1;
 		width: auto;
 		height: auto;
-		//margin-left: -168px;
 		background-color: $gray;
+		margin-left: -229px;
+		padding-left: 20px;
 		text-align: right;
 		transition: all 0.4s ease 0.01s;
-		padding: 0 15px;
+		padding: 0 0 0 20px;
 
 		li {
 			display: inline-block;
@@ -30,7 +31,7 @@
 			a { 
 				display: block;
 				color: #fff;
-				padding: 10px 7px;
+				padding: 14px 7px;
 				font-size: 16px;
 
 				i {
@@ -68,14 +69,6 @@
 					content: "blog";
 				}*/
 			}
-		}
-
-		@media screen and (max-width: 760px) {
-			background-color: rgba(#000, 0.9);
-			margin-left: 0;
-			width: 100%;
-			height: auto;
-			text-align: center;
 		}
 	}
 
