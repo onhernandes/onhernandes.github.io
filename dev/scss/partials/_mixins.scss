@@ -76,3 +76,9 @@
 	background-image: -o-linear-gradient($coloring);
 	background-image: linear-gradient($coloring);
 }
+
+@mixin post-color($color) {
+	@if map-has-key($post-color, $color) == true {
+		background-color: map-get($post-color, $color);
+	}
+}

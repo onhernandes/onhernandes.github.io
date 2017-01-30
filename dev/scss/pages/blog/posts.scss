@@ -2,17 +2,19 @@
 	@include flex(wrap row);
 	@include flex-align(space-between, flex-start, center);
 
+	header {
+		flex: 0 0 100%;
+	}
+
 	&__item {
 		flex: 0 1 calc(89% / 3);
 		min-height: 300px;
 		margin-bottom: 30px;
-		background-color: #F14357;
 		padding: 20px;
+		background-color: $green;
 		@include flex(wrap column);
-
 		div {
 			//flex: 1;
-			color: #fff;
 
 			/*&:nth-child(2) {
 				flex: 2 1 auto;
@@ -22,7 +24,21 @@
 
 			a {
 				//font-size: 20px;
+				color: #fff;
 				font-family: $family-page, sans-serif;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding-bottom: 3px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&_category {
+			a {
+				font-size: 20px;
 			}
 		}
 
@@ -30,9 +46,18 @@
 			flex: 2 1 auto !important;
 			display: flex;
 			align-items: center;
+
+			a {
+				font-size: 24px;
+			}
 		}
 
-		&:nth-child(2) {background-color: #53A2E3;}
-		&:last-child {background-color: #F4AD49;}
+		&_date {
+			color: #fff;
+			font-family: $family-page, sans-serif;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 15px;
+		}
 	}
 }
