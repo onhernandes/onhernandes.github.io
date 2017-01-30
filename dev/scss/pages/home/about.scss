@@ -8,6 +8,9 @@
 	&_line {
 		flex: 0 0 60%;
 		color: $gray;
+
+		@media screen and(max-width: 1024px) { flex-basis: 90%; }
+		@media screen and(max-width: 760px) { flex-basis: 100%; }
 	}
 
 	&_line {
