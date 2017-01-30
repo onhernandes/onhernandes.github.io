@@ -1,74 +1,38 @@
 .posts {
 	@include flex(wrap row);
-	@include flex-align(space-between, flex-start, flex-start);
-
-	&__header,
-	&__wrapper,
-	&__item {
-		flex: 0 0 100%;
-		height: auto;
-	}
-
-	&__header {
-		border-bottom: 1px solid $blue;
-		margin: 30px 0;
-
-		&_title {
-			color: $blue;
-			padding: 17px;
-			font-weight: bold;
-		}
-	}
+	@include flex-align(space-between, flex-start, center);
 
 	&__item {
-		flex-basis: calc(86% / 3);
-		height: auto;
-		padding: 15px;
-		margin: 0 auto 30px;
-		display: block;
+		flex: 0 1 calc(89% / 3);
+		min-height: 300px;
+		margin-bottom: 30px;
+		background-color: #F14357;
+		padding: 20px;
+		@include flex(wrap column);
 
-		@include flex(wrap row);
-		@include flex-align(flex-start, flex-start, flex-start);
-
-		a {
+		div {
+			//flex: 1;
 			color: #fff;
-			flex: 0 0 100%;
-			display: block;
-			font-family: $family-page;
 
-			span {
-				display: block;
+			/*&:nth-child(2) {
+				flex: 2 1 auto;
+				display: flex;
+				align-items: center;
+			}*/
+
+			a {
+				//font-size: 20px;
+				font-family: $family-page, sans-serif;
 			}
 		}
 
-		&_category {
-			color: #2f3239;
-			font-size: 20px;
-			text-transform: uppercase;
-			font-weight: bold;
-		}
-
 		&_title {
-			padding: 15% 0;
-			font-size: 23px;
+			flex: 2 1 auto !important;
+			display: flex;
+			align-items: center;
 		}
 
-		&_date {
-		}
-
-		@media screen and (max-width: 1024px) {
-			flex-basis: calc();
-		}
-
-		&:first-child { background-color: $green; }
-		&:nth-child(2),
-		&:nth-child(6) { background-color: $blue; }
-		&:nth-child(3),
-		&:nth-child(7) { background-color: $red; }
-		&:nth-child(4),
-		&:nth-child(8) { background-color: $purple; }
-		&:nth-child(5),
-		&:nth-child(9) { background-color: $gray; }
-		&:last-child { background-color: $yellow; }
+		&:nth-child(2) {background-color: #53A2E3;}
+		&:last-child {background-color: #F4AD49;}
 	}
 }

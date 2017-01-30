@@ -42,31 +42,25 @@ test:
 </section>
 
 <section class="posts">
-	<header class="posts__header">
-		<h1 class="posts__header_title">
-			title
-		</h1>
-	</header>
-
 	{% for t in page.test %}
 		<article class="posts__item">
-			<a href="" class="posts__item_category">
-				<span>
-					category
-				</span>
-			</a>
+			<div class="posts__item_category">
+				<a>
+					Category
+				</a>
+			</div>
 
-			<a href="" class="posts__item_title">
-				<span>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, facere?here
-				</span>
-			</a>
+			<div class="posts__item_title">
+				<a>
+					ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, aut laborumspandolorum eligendi atque a!
+				</a>
+			</div>
 
-			<a href="" class="posts__item_date">
-				<span>
-					13/12/1970
-				</span>
-			</a>
+			<div class="posts__item_date">
+				<a>
+					13/07/1970
+				</a>
+			</div>
 		</article>
 	{% endfor %}
 </section>
