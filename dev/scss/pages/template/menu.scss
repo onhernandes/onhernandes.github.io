@@ -42,32 +42,24 @@
 					padding-bottom: 5px;
 				}
 			}
+		}
 
-			@media screen and (max-width: 760px) {
-				/*padding: 25px 7px;
+		@media screen and (max-width: 760px) {
+			margin-left: 0 !important;
+			flex-basis: 100%;
+			margin-top: 0;
+			padding: 5px 0;
+			
+			li {
+				display: block;
+				text-align: center;
+				padding: 14px 7px;
 
 				a {
-					padding-right: 0;
-					padding-left: 0;
-				}
-
-				a::after {
-					display: block;
-					padding-top: 10px;
 					font-size: 20px;
-				}
 
-				&:first-child a::after {
-					content: "home";
+					i { font-size: 22px; }
 				}
-
-				&:nth-child(2) a::after {
-					content: "about";
-				}
-
-				&:last-child a::after {
-					content: "blog";
-				}*/
 			}
 		}
 	}
