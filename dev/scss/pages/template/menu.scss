@@ -6,6 +6,7 @@
 	left: 0;
 	@include flex(wrap row);
 	@include flex-align(flex-start, flex-start, flex-start);
+	background-color: $gray;
 	z-index: map-get($z-index, nav);
 
 	&__list,
@@ -17,7 +18,7 @@
 		width: auto;
 		height: 100vh;
 		margin-left: -168px;
-		background-color: rgba(#000, 0.5);
+		background-color: $gray;
 		text-align: right;
 		transition: all 0.4s ease 0.01s;
 		padding: 15px;
