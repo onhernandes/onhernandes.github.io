@@ -1,33 +1,16 @@
-.about {
+.about__intro {
 	@include flex(wrap row);
-	@include flex-align(flex-start, flex-start, flex-start);
+	@include flex-align(center, flex-start, flex-start);
 	padding: 20px;
+	margin-bottom: 60px;
 
-	&__title,
-	&__line,
-	&__button {
-		flex: 0 0 100%;
+	&_title,
+	&_line {
+		flex: 0 0 60%;
+		color: $gray;
 	}
 
-	&__button {
-		flex-basis: auto;
-		margin-top: 40px;
-		margin-left: auto;
-		
-		button {
-			padding: 15px 20px;
-			background-color: $green;
-			color: #fff;
-			text-transform: uppercase;
-			font-weight: bold;
-			font-size: 15px;
-		}
-	}
-
-	@media screen and (max-width: 760px) {
-		&__button {
-			margin-right: auto;
-			flex-basis: 100%;
-		}
+	&_line {
+		font-size: 18px;
 	}
 }
