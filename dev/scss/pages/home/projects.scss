@@ -7,6 +7,7 @@
 	clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 85%, 0 70%);
 	position: relative;
 	overflow: hidden;
+	z-index: map-get($z-index, projects);
 
 	&__item {
 		flex: 0 0 calc(100% / 5);

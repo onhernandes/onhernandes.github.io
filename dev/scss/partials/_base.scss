@@ -28,7 +28,9 @@ $large-desktop: 1366px;
 $padding-article: 12px;
 
 $z-index: (
-	nav: 1000,
-	icon_search: 2000,
-	search: 1500
+	nav: 3000,
+	icon_search: 4000,
+	search: 3500,
+	projects: 100,
+	about__intro: 50
 );

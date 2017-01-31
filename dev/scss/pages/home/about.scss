@@ -3,6 +3,8 @@
 	@include flex-align(center, flex-start, flex-start);
 	padding: 20px;
 	margin-bottom: 60px;
+	margin-top: -250px;
+	z-index: map-get($z-index, about__intro);
 
 	&_title,
 	&_line {
@@ -14,4 +16,8 @@
 	}
 
 	&_line { font-size: 18px; }
+
+	@media screen and (max-width: 1024px) {
+		margin-top: 0 !important;
+	}
 }
