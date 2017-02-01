@@ -1,7 +1,7 @@
 .footer {
 	text-align: center;
 	background-color: $blue;
-	//-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 0 70%);
+	-webkit-clip-path: polygon(0% 30%, 50% 0, 100% 30%, 100% 100%, 0 100%);
 	clip-path: polygon(0% 30%, 50% 0, 100% 30%, 100% 100%, 0 100%);
 	padding: 70px 0;
 
