@@ -2,20 +2,10 @@
 layout: default
 title: 'Home'
 image: 'home.jpg'
-test:
-- a
-- b
-- c
-- c
-- c
-- c
-- c
-- c
-- c
 ---
 
 <section class="projects">
-	{% for t in page.test %}
+	{% for post in site.posts %}
 		<article class="projects__item" title="" color="black">
 			<a href="" class="projects__item_title">
 				<h1 title="">title</h1>
