@@ -2,6 +2,23 @@
 	@include flex(wrap row);
 	@include flex-align(space-between, flex-start, center);
 
+	&__layout {
+		flex: 0 0 100%;
+		padding-bottom: 60px;
+		ul {
+			text-align: center;
+			
+			li {
+				display: inline-block;
+				padding: 15px 12px;
+
+				a {
+					color: $gray;
+				}
+			}
+		}
+	}
+
 	&__header {
 		flex: 0 0 30%;
 		text-align: center;
