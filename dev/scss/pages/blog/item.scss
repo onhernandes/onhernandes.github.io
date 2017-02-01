@@ -7,16 +7,7 @@
 	@include flex(wrap column);
 
 	div {
-		//flex: 1;
-
-		/*&:nth-child(2) {
-			flex: 2 1 auto;
-			display: flex;
-			align-items: center;
-		}*/
-
 		a {
-			//font-size: 20px;
 			color: #fff;
 			font-family: $family-page, sans-serif;
 			text-transform: uppercase;
@@ -47,7 +38,6 @@
 	}
 
 	&_date {
-		//color: #fff;
 		color: #3E4149;
 		font-family: $family-page, sans-serif;
 		text-transform: uppercase;
