@@ -11,4 +11,16 @@
 	.about__title {
 		margin: 0 20%;
 	}
+
+	&_list {
+		flex: 0 0 100%;
+		@include flex(nowrap row);
+
+		li {
+			flex: 1 0 calc(100% / 8);
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
