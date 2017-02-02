@@ -1,0 +1,4 @@
+.about__games {
+	@include flex(wrap row);
+	width: 100% !important;
+}
