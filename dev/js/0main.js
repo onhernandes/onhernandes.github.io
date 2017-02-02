@@ -10,3 +10,11 @@ function unlockBody() {
 	body[0].style.overflowY = 'scroll';
 	return true;
 }
+
+function checkPage(page) {
+	if (body[0].className.indexOf(page) !== -1) {
+		return true;
+	} else {
+		return false;
+	}
+}
