@@ -2,6 +2,10 @@
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, initial);
 
+	.about__title {
+		flex-basis: 100% !important;
+	}
+
 	img, div, h2 {
 		display: block;
 		flex: 0 0 50%;
