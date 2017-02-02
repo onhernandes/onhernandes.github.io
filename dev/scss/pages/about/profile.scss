@@ -1,0 +1,22 @@
+.about__profile {
+	width: 60%;
+	margin: 0 auto;
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, initial);
+
+	img, div, h2 {
+		display: block;
+		flex: 0 0 50%;
+		height: auto;
+	}
+
+	&_title {
+		flex-basis: 100% !important;
+		display: block;
+	}
+
+	img {
+		width: 50%;
+		height: auto;
+	}
+}
