@@ -1,3 +1,15 @@
 .about {
 	//@include flex(wrap row);
+	margin-bottom: 70px;
+
+	&__title {
+		flex-basis: 100% !important;
+		display: block;
+		padding: 50px 0 20px;
+	}
+
+	article {
+		margin: 0 auto;
+		width: 60%;
+	}
 }

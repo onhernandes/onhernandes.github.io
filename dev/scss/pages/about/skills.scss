@@ -1,0 +1,21 @@
+.about__skills {
+	@include flex(wrap row);
+
+	&_list {
+		@include flex(wrap row);
+		width: 100%;
+
+		li {
+			flex: 1 1 calc(100% / 8);
+			padding: 50px 0;
+			display: inline-block;
+			background-color: $green;
+			text-align: center;
+			color: #fff;
+
+			span {
+				display: block;
+			}
+		}
+	}
+}
