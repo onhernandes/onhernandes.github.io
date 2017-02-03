@@ -8,12 +8,12 @@
 
 	.about__title,
 	.about__subtitle {
-		flex: 0 0 60%;
+		flex: 0 0 $about_wrap;
 		margin: 0 auto; 
 	}
 
 	.about__title {
-		margin: 0 20%;
+		margin: 0 $about_wrap_margin;
 	}
 
 	&_list {
