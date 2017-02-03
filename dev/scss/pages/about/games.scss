@@ -2,6 +2,10 @@
 	@include flex(wrap row);
 	width: 100% !important;
 
+	.about__subtitle {
+		padding: 0 0 15px;
+	}
+
 	.about__title,
 	.about__subtitle {
 		flex: 0 0 60%;
@@ -14,10 +18,13 @@
 
 	&_list {
 		flex: 0 0 100%;
+		overflow: hidden;
+		margin-bottom: 50px;
 		@include flex(nowrap row);
 
 		li {
-			flex: 1 0 calc(100% / 8);
+			flex: 1 0 calc(100% / 6);
+
 			img {
 				width: 100%;
 			}
