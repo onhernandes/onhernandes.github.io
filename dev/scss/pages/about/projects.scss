@@ -1,0 +1,22 @@
+.about__projects {
+	/*@extend .projects;
+	height: 150px !important;
+	//width: 100% !important;
+	margin-top: 80px !important;
+	clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%) !important;*/
+
+	&_list {
+		width: 100%;
+		padding-left: 30px;
+		list-style-type: disc;
+
+		li {
+			width: 100%;
+			padding: 0 0 15px;
+
+			a {
+				color: $blue;
+			}
+		}
+	}
+}

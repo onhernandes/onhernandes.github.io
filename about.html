@@ -77,12 +77,15 @@ title: About
 	</article>
 
 	<article class="about__projects">
+		<h2 class="about__title">Projects</h2>
 		<ul class="about__projects_list">
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
+			{% for t in (1..5) %}
+				<li class="about__projects_list-item">
+					<a href="">
+						<h3>title</h3>
+					</a>
+				</li>
+			{% endfor %}
 		</ul>
 	</article>
 
@@ -102,3 +105,19 @@ title: About
 		</ul>
 	</article>
 </section>
+{% comment %}
+	{% for post in site.posts %}
+		<div class="projects__item" title="" color="black">
+			<a href="" class="projects__item_title">
+				<h1 title="">title</h1>
+			</a>
+
+			<a href="" class="projects__item_intro" title="">intro</a>
+
+			<ul class="projects__item_list">
+				<li><a href="" title="" target="">G</a></li>
+				<li><a href="" title="" target="">G</a></li>
+			</ul>
+		</div>
+	{% endfor %}
+{% endcomment %}
