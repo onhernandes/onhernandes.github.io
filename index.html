@@ -36,27 +36,27 @@ image: 'home.jpg'
 		<h1>latest posts</h1>
 	</header>
 
-	{% for post in site.posts %}
+	{% for post in site.posts limit:3 %}
 		<article class="posts__item" color="">
 			<div class="posts__item_category">
-				<a href="">
-					Category
+				<a href="{{ site.url | append: '/category#' | append: post.category }}">
+					{{ post.category }}
 				</a>
 			</div>
 
 			<div class="posts__item_title">
-				<a href="">
-					ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, aut laborumspandolorum eligendi atque a!
+				<a href="{{ post.url | prepend: site.url }}">
+					{{ post.title | truncatewords: 10 }}
 				</a>
 			</div>
 
 			<div class="posts__item_date">
-				13/07/1970
+				{{ post.date | date: '%B %d, %Y' }}
 			</div>
 		</article>
 	{% endfor %}
 
-	<a href="" class="posts__button">
+	<a href="{{ '/blog' | prepend: site.url }}" class="posts__button">
 		<button>Keep reading</button>
 	</a>
 </section>
