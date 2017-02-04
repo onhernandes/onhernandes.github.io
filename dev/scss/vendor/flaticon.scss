@@ -17,11 +17,23 @@
 }
 
 .fi:before,
-.icon-home:before,
-.icon-info:before,
-.icon-menu:before,
-.icon-pencil:before,
-.icon-search:before {
+.icon-pencil:before, 
+.icon-arrow:before, 
+.icon-blog:before, 
+.icon-close:before, 
+.icon-column1:before, 
+.icon-column2:before, 
+.icon-column3:before, 
+.icon-facebook:before, 
+.icon-github:before, 
+.icon-home:before, 
+.icon-instagram:before, 
+.icon-link:before, 
+.icon-mail:before, 
+.icon-menu:before, 
+.icon-search:before, 
+.icon-spotify:before, 
+.icon-twitter:before {
     display: inline-block;
     font-family: "Flaticon";
     font-style: normal;
@@ -36,14 +48,38 @@
     font-smoothing: antialiased;
 }
 
-.icon-home:before { content: "\f100"; }
-.icon-info:before { content: "\f101"; }
-.icon-menu:before { content: "\f102"; }
-.icon-pencil:before { content: "\f103"; }
-.icon-search:before { content: "\f104"; }
-
-$icon-home: "\f100";
-$icon-infor: "\f101";
-$icon-menu: "\f102";
-$icon-pencil: "\f103";
-$icon-search: "\f104";
+.icon-pencil:before { content: "\f100"; }
+.icon-arrow:before { content: "\f101"; }
+.icon-blog:before { content: "\f102"; }
+.icon-close:before { content: "\f103"; }
+.icon-column1:before { content: "\f104"; }
+.icon-column2:before { content: "\f105"; }
+.icon-column3:before { content: "\f106"; }
+.icon-facebook:before { content: "\f107"; }
+.icon-github:before { content: "\f108"; }
+.icon-home:before { content: "\f109"; }
+.icon-instagram:before { content: "\f10a"; }
+.icon-link:before { content: "\f10b"; }
+.icon-mail:before { content: "\f10c"; }
+.icon-menu:before { content: "\f10d"; }
+.icon-search:before { content: "\f10e"; }
+.icon-spotify:before { content: "\f10f"; }
+.icon-twitter:before { content: "\f110"; }
+    
+$icon-pencil: "\f100";
+$icon-arrow: "\f101";
+$icon-blog: "\f102";
+$icon-close: "\f103";
+$icon-column1: "\f104";
+$icon-column2: "\f105";
+$icon-column3: "\f106";
+$icon-facebook: "\f107";
+$icon-github: "\f108";
+$icon-home: "\f109";
+$icon-instagram: "\f10a";
+$icon-link: "\f10b";
+$icon-mail: "\f10c";
+$icon-menu: "\f10d";
+$icon-search: "\f10e";
+$icon-spotify: "\f10f";
+$icon-twitter: "\f110";
