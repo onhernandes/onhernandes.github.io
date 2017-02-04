@@ -3,9 +3,15 @@
 		@include flex(wrap row);
 
 		li {
-			flex: 1 0 calc(100% / 2);
+			flex: 1 0 calc((100% - 4px) / 2);
 			background-color: $green;
 			padding: 50px 0;
+			text-align: center;
+			margin: 1px;
+
+			a {
+				color: #fff;
+			}
 		}
 	}
 }
