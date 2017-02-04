@@ -26,7 +26,7 @@ color: gray
 lang: en
 taggs: "developer, coder, web, development, programmation, design, github"
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*', '*.md']
 
 sass:
   sass_dir: dev/scss
