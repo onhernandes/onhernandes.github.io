@@ -17,7 +17,7 @@
 }
 
 .fi:before,
-.icon-pencil:before, 
+.icon-info:before, 
 .icon-arrow:before, 
 .icon-blog:before, 
 .icon-close:before, 
@@ -48,7 +48,7 @@
     font-smoothing: antialiased;
 }
 
-.icon-pencil:before { content: "\f100"; }
+.icon-info:before { content: "\f100"; }
 .icon-arrow:before { content: "\f101"; }
 .icon-blog:before { content: "\f102"; }
 .icon-close:before { content: "\f103"; }
@@ -66,7 +66,7 @@
 .icon-spotify:before { content: "\f10f"; }
 .icon-twitter:before { content: "\f110"; }
     
-$icon-pencil: "\f100";
+$icon-info: "\f100";
 $icon-arrow: "\f101";
 $icon-blog: "\f102";
 $icon-close: "\f103";
