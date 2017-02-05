@@ -93,6 +93,6 @@ if (checkPage('home') || checkPage('about')) {
 					new_width = item_counter = 0;
 				}
 			}
-		}, 1000);	
+		}, 3000);	
 	}
 }
