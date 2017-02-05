@@ -31,6 +31,16 @@
 
 				a {
 					color: #fff;
+					font-size: 22px;
+					padding-right: 10px;
+
+					&[icon="github"] {
+						@extend .icon-github;
+					}
+
+					&[icon="link"] {
+						@extend .icon-link;
+					}
 				}
 			}
 		}
