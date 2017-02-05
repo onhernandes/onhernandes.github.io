@@ -17,6 +17,17 @@
 		}
 	}
 
+	&__social {
+		a {
+			font-size: 33px;
+
+			&[icon="github"] { @extend .icon-github; }
+			&[icon="spotify"] { @extend .icon-spotify; }
+			&[icon="email"] { @extend .icon-mail; }
+			&[icon="instagram"] { @extend .icon-instagram; }
+		}
+	}
+
 	&_copyright {
 		padding-top: 10px;
 	}
