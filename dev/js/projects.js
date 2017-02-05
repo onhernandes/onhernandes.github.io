@@ -49,6 +49,8 @@ if (checkPage('home') || checkPage('about')) {
 		article.appendChild(title);
 		article.appendChild(intro);
 		article.appendChild(list);
+		article.setAttribute('project', obj.slug);
+		article.setAttribute('title', obj.name);
 		article.className = 'projects__item';
 
 		projects[0].appendChild(article);

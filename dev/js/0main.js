@@ -32,7 +32,7 @@ var window_width = window.innerWidth || document.documentElement.clientWidth || 
 			working: true,
 			link: false,
 			github: 'https://github.com/mhernandes/start-user'
-		},
+		},/*
 		{
 			name: 'awesome-movies',
 			slug: 'awesome-movies',
@@ -48,7 +48,7 @@ var window_width = window.innerWidth || document.documentElement.clientWidth || 
 			working: true,
 			link: false,
 			github: 'https://github.com/mhernandes/awesome-series'
-		},
+		},*/
 		{
 			name: 'diametrum',
 			slug: 'diametrum',
@@ -73,14 +73,14 @@ var window_width = window.innerWidth || document.documentElement.clientWidth || 
 			link: false,
 			github: 'https://github.com/mhernandes/front-challenges'
 		},
-		{
+		/*{
 			name: 'favorite-blogs',
 			slug: 'favorite-blogs',
 			desc: 'List with blogs that I follow',
 			working: true,
 			link: false,
 			github: 'https://github.com/mhernandes/favorite-blogs'
-		},
+		},*/
 		{
 			name: 'storage-calc',
 			slug: 'storage-calc',
