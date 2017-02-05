@@ -23,11 +23,18 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+site_links:
+    - title: home
+      url: / 
+    - title: blog
+      url: /blog
+    - title: about
+      url: /about
+
 color: gray
 lang: en
-taggs: "developer, coder, web, development, programmation, design, github"
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*', 'LICENSE.md', 'README.md']
 
 sass:
   sass_dir: dev/scss
