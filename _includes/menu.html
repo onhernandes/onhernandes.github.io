@@ -3,26 +3,14 @@
 	<a href="javascript:void(0);" class="menu__search" title=""></a>
 
 	<ul class="menu__list">
-		<li>
-			<a href="/" title="home">
-				<i class="icon-home"></i>
-				home
-			</a>
-		</li>
-
-		<li>
-			<a href="/about" title="about">
-				<i class="icon-info"></i>
-				about
-			</a>
-		</li>
-
-		<li>
-			<a href="/blog" title="blog">
-				<i class="icon-blog"></i>
-				blog
-			</a>
-		</li>
+		{% for link in site.site_links %}
+			<li>
+				<a href="{{ sitel.url }}{{ link.url }}" title="{{ link.title }}">
+					<i class="icon-{{ link.icon }}"></i>
+					{{ link.title }}
+				</a>
+			</li>
+		{% endfor %}
 	</ul>
 </nav>
 
