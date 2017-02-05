@@ -11,7 +11,7 @@ sizer: 'two-four'
 color: 'green'
 bg-color: 'green'
 magic: 'crazy'
-categories: php
+category: php
 ---
 
 # ENTIDV - se você não conhece, deveria
