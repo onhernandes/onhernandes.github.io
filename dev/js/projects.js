@@ -46,6 +46,8 @@ if (checkPage('home') || checkPage('about')) {
 			list.appendChild(list_li);
 		}
 
+		list.className = 'projects__item_list';
+
 		article.appendChild(title);
 		article.appendChild(intro);
 		article.appendChild(list);
