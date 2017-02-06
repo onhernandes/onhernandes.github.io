@@ -1,4 +1,4 @@
-<header class="header" {% if page.mode %}mode="{{ page.mode }}"{% endif %}>
+<header class="header" {% if page.mode %}mode="{{ page.mode }}"{% endif %} {% if page.img %}img="{{ page.img }}"{% else %}{% if page.color %}color="{{ page.color }}"{% endif %}{% endif %}>
 	<div class="header__wrapper">
 		<h1 class="header__wrapper_title" title="">
 			{% if page.title %}
