@@ -34,37 +34,6 @@ site_links:
       url: /about
       icon: info
 
-about__skills:
-    - name: php
-      sub:
-        - name: pdo
-        - name: oop
-        - name: composer
-    - name: mysql
-      sub: false
-    - name: html
-      sub: false
-    - name: css
-      sub:
-        - name: scss/sass
-    - name: javascript
-      sub:
-        - name: jquery
-        - name: gulp
-        - name: npm
-    - name: git
-      sub: false
-    - name: linux
-      sub:
-        - name: ubuntu
-        - name: manjaro
-    - name: jekyll
-      sub:
-        - name: front-matter
-        - name: liquid
-    - name: markdown
-      sub: false
-
 color: gray
 lang: en
 

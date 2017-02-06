@@ -1,6 +1,37 @@
 ---
 layout: default
 title: About
+about__skills:
+    - name: php
+      sub:
+        - name: pdo
+        - name: oop
+        - name: composer
+    - name: mysql
+      sub: false
+    - name: html
+      sub: false
+    - name: css
+      sub:
+        - name: scss/sass
+    - name: javascript
+      sub:
+        - name: jquery
+        - name: gulp
+        - name: npm
+    - name: git
+      sub: false
+    - name: linux
+      sub:
+        - name: ubuntu
+        - name: manjaro
+        - name: unix(a bit, not so much)
+    - name: jekyll
+      sub:
+        - name: front-matter
+        - name: liquid
+    - name: markdown
+      sub: false
 ---
 
 <section class="about">
@@ -21,60 +52,11 @@ title: About
 		<h2 class="about__title">Skills</h2>
 
 		<ul class="about__skills_list">
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
-
-			<li>
-				3 years
-				<span>Lang</span>
-			</li>
+			{% for skill in page.about__skills %}
+				<li>
+					{{ skill.name }}
+				</li>
+			{% endfor %}
 		</ul>
 	</article>
 
