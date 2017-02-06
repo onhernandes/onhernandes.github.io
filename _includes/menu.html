@@ -1,4 +1,4 @@
-<nav class="menu">
+<nav class="menu" {% if page.color %}color="{{ page.color }}"{% endif %}>
 	<a href="javascript:void(0);" class="menu__icon" title=""></a>
 	<a href="javascript:void(0);" class="menu__search" title=""></a>
 
@@ -14,7 +14,7 @@
 	</ul>
 </nav>
 
-<section class="search">
+<section class="search" {% if page.color %}color="{{ page.color }}"{% endif %}>
 	<form action="" class="search__form">
 		<label for="search_input" class="search__form_title">search for articles - <a href="javascript:void(0);">close</a></label>
 		<input id="search_input" type="text" class="search__form_input" placeholder="type your search" title="">

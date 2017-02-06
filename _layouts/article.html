@@ -4,14 +4,18 @@
 	{% include header-article.html %}
 	{% include menu.html %}
 	
-	<section class="article">
+	<section class="article" {% if page.color %}color="{{ page.color }}"{% endif %}>
 		<article class="article__content">
 			{{ content }}
 		</article>
 
-		<article class="article__comments"></article>
-		
-		<article class="article__related"></article>
+		<article class="article__related">
+			
+		</article>
+
+		<article class="article__comments">
+			{% include comments.html %}
+		</article>
 	</section>
 
 	{% include footer.html %}
