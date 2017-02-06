@@ -1,0 +1,8 @@
+.article {
+	@include flex(wrap row);
+	justify-content: center;
+
+	article {
+		flex: 0 0 80%;
+	}
+}
