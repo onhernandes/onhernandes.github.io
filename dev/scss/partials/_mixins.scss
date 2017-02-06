@@ -82,3 +82,20 @@
 		background-color: map-get($post-color, $color);
 	}
 }
+
+@mixin post-category($category) {
+	// Get the $category and define the color using a map
+	$category_color: (
+		php: purple,
+		html: orange,
+		html5: orange,
+		css: blue,
+		css3: blue
+	);
+	
+	$color: $category;
+
+	&[category="#{$category}"] {
+		@include post-color(purple);
+	}
+}
