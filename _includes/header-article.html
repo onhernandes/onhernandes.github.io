@@ -1,11 +1,7 @@
-<header class="header" {% if page.mode %}mode="{{ page.mode }}"{% endif %} {% if page.img %}img="{{ page.img }}"{% else %}{% if page.color %}color="{{ page.color }}"{% endif %}{% endif %}>
+<header class="header header__article" {% if page.mode %}mode="{{ page.mode }}"{% endif %} {% if page.img %}img="{{ page.img }}"{% else %}{% if page.color %}color="{{ page.color }}"{% endif %}{% endif %}>
 	<div class="header__wrapper">
-		<h1 class="header__wrapper_title" title="">
-			{% if page.title %}
-				{{ page.title }}
-			{% else %}
-				{{ site.description }}
-			{% endif %}
-		</h1>
+		<h4 class="header__wrapper_subtitle">13/02/1970</h4>
+		<h1 class="header__wrapper_title" title="">{{ page.title }}</h1>
+		<h3 class="header__wrapper_subtitle">{{ page.title }}</h3>
 	</div>
 </header>
