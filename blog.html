@@ -5,14 +5,15 @@ image: 'home.jpg'
 ---
 
 <section class="posts">
-	<nav class="posts__layout">
-		<ul>
-			<li><a href="">A</a></li>
-			<li><a href="">A</a></li>
-			<li><a href="">A</a></li>
-			<li><a href="">A</a></li>
-		</ul>
-	</nav>
+	{% comment %}
+		<nav class="posts__layout">
+			<ul>
+				<li><a href="javascript:void(0);" title="One Column" icon="one-column"></a></li>
+				<li><a href="javascript:void(0);" title="Two Columns" icon="two-column"></a></li>
+				<li><a href="javascript:void(0);" title="Three Columns" icon="three-column"></a></li>
+			</ul>
+		</nav>
+	{% endcomment %}
 
 	{% for post in site.posts %}
 		<article class="posts__item" color="">
