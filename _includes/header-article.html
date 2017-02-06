@@ -1,0 +1,11 @@
+<header class="header" {% if page.mode %}mode="{{ page.mode }}"{% endif %}>
+	<div class="header__wrapper">
+		<h1 class="header__wrapper_title" title="">
+			{% if page.title %}
+				{{ page.title }}
+			{% else %}
+				{{ site.description }}
+			{% endif %}
+		</h1>
+	</div>
+</header>

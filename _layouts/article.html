@@ -1,0 +1,19 @@
+<html>
+	{% include head.html %}
+<body class="article-body">
+	{% include header-article.html %}
+	{% include menu.html %}
+	
+	<section class="article">
+		<article class="article__content">
+			{{ content }}
+		</article>
+
+		<article class="article__comments"></article>
+		
+		<article class="article__related"></article>
+	</section>
+
+	{% include footer.html %}
+</body>
+</html>

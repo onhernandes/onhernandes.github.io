@@ -67,6 +67,7 @@ if (checkPage('home') || checkPage('about')) {
 
 			li.className = 'about__projects_list-item';
 			a.setAttribute('href', obj.github);
+			a.setAttribute('target', '_blank');
 			a.setAttribute('title', obj.name);
 			h3.textContent = obj.name;
 
