@@ -33,8 +33,11 @@ site_links:
     - title: series
       url: /series
       icon: blog
-    - title: categories/tags
+    - title: categories
       url: /categories
+      icon: blog
+    - title: tags
+      url: /tags
       icon: blog
     - title: about
       url: /about
