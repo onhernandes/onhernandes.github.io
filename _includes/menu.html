@@ -1,4 +1,4 @@
-<nav class="menu" {% if page.color %}color="{{ page.color }}"{% endif %}>
+<nav class="menu" {% if page.color %}color="{{ page.color }}"{% else %}{% if page.category %}category="{{ page.category }}"{% endif %}{% endif %}>
 	<a href="javascript:void(0);" class="menu__icon" title=""></a>
 	<a href="javascript:void(0);" class="menu__search" title=""></a>
 

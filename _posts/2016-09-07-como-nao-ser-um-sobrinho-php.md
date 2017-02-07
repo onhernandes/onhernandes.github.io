@@ -7,10 +7,6 @@ image: 'como_nao_ser_um_sobrinho.jpg'
 intro: 'Nem tudo é um cursinho de 3 meses'
 category: 'php'
 tags: php curso tempo estudo
-color: 'purple'
-kind: 'article'
-bg-color: 'purple'
-magic: 'explode'
 ---
 
 Hey guys!

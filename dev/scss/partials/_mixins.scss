@@ -83,32 +83,10 @@
 	}
 }
 
-@mixin get-post-color($color) {
-	@if map-has-key($post-color, $color) == true {
-		@return map-get($post-color, $color);
-	}
-}
-
 @mixin post-category() {
-	// Get the $category and define the color using a map
-	$category_color: (
-		php: purple,
-		mysql: bluegreen,
-		html: orange,
-		html5: orange,
-		css: blue,
-		css3: blue,
-		scss: blue,
-		sass: blue,
-		js: yellow,
-		javascript: yellow,
-		git: red,
-		linux: linux
-	);
-
 	@each $key, $value in $category_color {
 		&[category="#{$key}"] {
-			&__content a {
+			.article__content a {
 				color: map-get($post-color, $value);
 				border-bottom-color: map-get($post-color, $value);
 			}
@@ -116,6 +94,23 @@
 			h1, h2, h3, h4 {
 				color: map-get($post-color, $value);
 			}
+		}
+	}
+}
+
+@mixin menu-category() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			background-color: map-get($post-color, $value);
+
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] {
+			background-color: map-get($post-color, $value);
+
+			ul { background-color: map-get($post-color, $value); }
 		}
 	}
 }

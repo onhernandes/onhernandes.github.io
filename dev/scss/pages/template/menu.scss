@@ -93,4 +93,6 @@
 		margin-left: auto;
 		z-index: map-get($z-index, icon_search);
 	}
+
+	@include menu-category();
 }
