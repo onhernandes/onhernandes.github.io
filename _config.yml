@@ -12,21 +12,41 @@ description: > # this means to ignore newlines until "baseurl:"
   That's my website/blog, I write somethings about me and the awesome code world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mhernandes.github.io" # the base hostname & protocol for your site
-facebook_username: mthernandes
-instagram_username: mt_hernandes
-twitter_username: mt_hernandes
-github_username: mhernandes
+facebook: mthernandes
+instagram: mt_hernandes
+twitter: mt_hernandes
+github: mhernandes
+spotify: mhernandes
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+site_links:
+    - title: home
+      url: /
+      icon: home 
+    - title: blog
+      url: /blog
+      icon: blog
+    - title: series
+      url: /series
+      icon: blog
+    - title: categories
+      url: /categories
+      icon: blog
+    - title: tags
+      url: /tags
+      icon: blog
+    - title: about
+      url: /about
+      icon: info
+
 color: gray
 lang: en
-taggs: "developer, coder, web, development, programmation, design, github"
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*', 'LICENSE.md', 'README.md']
 
 sass:
   sass_dir: dev/scss

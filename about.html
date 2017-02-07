@@ -1,9 +1,130 @@
 ---
 layout: default
+title: About
+about__skills:
+    - name: php
+      sub:
+        - name: pdo
+        - name: oop
+        - name: composer
+    - name: mysql
+      sub: false
+    - name: html
+      sub: false
+    - name: css
+      sub:
+        - name: scss/sass
+    - name: javascript
+      sub:
+        - name: jquery
+        - name: gulp
+        - name: npm
+    - name: git
+      sub: false
+    - name: linux
+      sub:
+        - name: ubuntu
+        - name: manjaro
+        - name: unix(a bit, not so much)
+    - name: jekyll
+      sub:
+        - name: front-matter
+        - name: liquid
+    - name: markdown
+      sub: false
 ---
 
 <section class="about">
-	<h1 class="about__title">title</h1>
-	<p class="about__line">lorem30</p>
-	<a href="" class="about__button"><button>Button</button></a>
+	<article class="about__profile">
+		<h2 class="about__title">About me</h2>
+
+		<img src="/assets/img/home.jpg" alt="">
+		<div>
+			<p>First of everything, my name is Matheus and I'm from Brazil.</p>
+			<p>I've 18 years and I'm a tech lover since I was a little kid</p>
+			<p>I started into tech world, because my brother. He knew how to fix computers and do some cool things on computer, and it inspired me to do the same.</p>
+			<p>Since jan/2014 I'm studying about web development.</p>
+			<p>I'm currently working on Gasoline Digital.</p>
+		</div>
+	</article>
+
+	<article class="about__skills">
+		<h2 class="about__title">Skills</h2>
+
+		<ul class="about__skills_list">
+			{% for skill in page.about__skills %}
+				<li>
+					{{ skill.name }}
+				</li>
+			{% endfor %}
+		</ul>
+	</article>
+
+	<article class="about__projects">
+		<h2 class="about__title">Projects</h2>
+		<ul class="about__projects_list">
+		</ul>
+	</article>
+
+	<article class="about__games">
+		<h2 class="about__title">Games</h2>
+		
+		<h3 class="about__subtitle">GBA</h3>
+		<ul class="about__games_list">
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+		</ul>
+		
+		<h3 class="about__subtitle">PS1 and PS2</h3>
+		<ul class="about__games_list">
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+		</ul>
+	</article>
+
+	<article class="about__spotify">
+		<h2 class="about__title">Spotify Playlists</h2>
+		<ul class="about__spotify_list">
+			{% for t in (1..4) %}
+				<li><a href="" target="" title="">playlist name</a></li>
+			{% endfor %}
+		</ul>
+	</article>
+
+	<article class="about__end">
+		<h2 class="about__title">That's it!</h2>
+		
+		<p class="about__end_line">
+			Lorem ipsum dolor sit amet.
+		</p>
+		
+		<ul class="about__end_list">
+			<li><a href="">link social</a></li>
+			<li><a href="">link social</a></li>
+			<li><a href="">link social</a></li>
+		</ul>
+	</article>
 </section>
+
+{% comment %}
+	{% for post in site.posts %}
+		<div class="projects__item" title="" color="black">
+			<a href="" class="projects__item_title">
+				<h1 title="">title</h1>
+			</a>
+
+			<a href="" class="projects__item_intro" title="">intro</a>
+
+			<ul class="projects__item_list">
+				<li><a href="" title="" target="">G</a></li>
+				<li><a href="" title="" target="">G</a></li>
+			</ul>
+		</div>
+	{% endfor %}
+{% endcomment %}

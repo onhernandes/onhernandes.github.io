@@ -23,7 +23,12 @@
 			> a {
 				color: #fff;
 				font-weight: bold;
-				//font-style: italic;
+				@extend .icon-close;
+				font-size: 20px;
+				vertical-align: middle;
+				padding-left: 20px;
+
+				//@media screen and (max-width: 760px) { font-size: 22px; }
 			}
 		}
 

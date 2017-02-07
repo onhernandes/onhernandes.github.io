@@ -1,0 +1,48 @@
+.article__content {
+	padding-top: 40px;
+	> p, 
+	> a, 
+	> h1, 
+	> h2, 
+	> h3, 
+	> h4,
+	> blockquote { padding: 0 10%; }
+
+	> p, > a {
+		padding-bottom: 20px;
+	}
+
+	p,
+	a,
+	blockquote,
+	ol,
+	ul,
+	li {
+		color: $gray;
+		font-size: $font-size-tablet;
+	}
+
+	a { border-bottom: 1px dashed $gray; }
+
+	li {
+		padding-bottom: 8px;
+
+		a { padding-bottom: 2px; }
+	}
+
+	> h1, 
+	> h2, 
+	> h3, 
+	> h4 { padding: 40px 10% 15px !important; }
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: 20px auto;
+	}
+
+	ol, ul { padding: 5px 10% 25px 11.5% }
+
+	p:last-child { padding-bottom: 0 !important; }
+}

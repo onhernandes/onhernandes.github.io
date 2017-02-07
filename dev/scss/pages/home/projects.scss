@@ -7,6 +7,7 @@
 	clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 85%, 0 70%);
 	position: relative;
 	overflow: hidden;
+	z-index: map-get($z-index, projects);
 
 	&__item {
 		flex: 0 0 calc(100% / 5);
@@ -27,19 +28,34 @@
 				display: inline-block;
 				padding-top: 10px;
 				padding-right: 8px;
+
+				a {
+					color: #fff;
+					font-size: 22px;
+					padding-right: 10px;
+
+					&[icon="github"] {
+						@extend .icon-github;
+					}
+
+					&[icon="link"] {
+						@extend .icon-link;
+					}
+				}
 			}
 		}
 
-		&:first-child { background-color: $green; }
-		&:nth-child(2),
-		&:nth-child(6) { background-color: $blue; }
-		&:nth-child(3),
-		&:nth-child(7) { background-color: $red; }
-		&:nth-child(4),
-		&:nth-child(8) { background-color: $purple; }
-		&:nth-child(5),
-		&:nth-child(9) { background-color: $gray; }
-		&:last-child { background-color: $yellow; }
+		&[project="mustang-js"] { background-color: $mysql; }
+		&[project="shield-scss"] { background-color: map-get($post-color, blue); }
+		&[project="keyguard"] { background-color: darken(map-get($post-color, yellow), 10%); }
+		&[project="start-user"] { background-color: $gray; }
+		&[project="awesome-series"] { background-color: $yellow; }
+		&[project="awesome-movies"] { background-color: $yellow; }
+		&[project="diametrum"] { background-color: mix($blue, $red); }
+		&[project="favorite-articles"] { background-color: darken(map-get($post-color, green), 30%); }
+		&[project="favorite-blogs"] { background-color: $green; }
+		&[project="front-challenges"] { background-color: darken($php, 5%); }
+		&[project="storage-calc"] { background-color: mix(darken($html, 5%), $gray); }
 
 		@media screen and (max-width: 1280px) {
 			flex-basis: calc(100% / 4);

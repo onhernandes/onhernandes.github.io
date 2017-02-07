@@ -34,4 +34,8 @@
 		height: 70vh;
 		background-color: rgba(#000, 0.7);
 	}
+
+	&[mode='diagonal'] {
+		// Test with clip-path
+	}
 }

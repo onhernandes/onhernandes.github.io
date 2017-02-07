@@ -82,3 +82,35 @@
 		background-color: map-get($post-color, $color);
 	}
 }
+
+@mixin post-category() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			.article__content a {
+				color: map-get($post-color, $value);
+				border-bottom-color: map-get($post-color, $value);
+			}
+
+			h1, h2, h3, h4 {
+				color: map-get($post-color, $value);
+			}
+		}
+	}
+}
+
+@mixin menu-category() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			background-color: map-get($post-color, $value);
+
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] {
+			background-color: map-get($post-color, $value);
+
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+}

@@ -6,12 +6,7 @@ title: 'ENTIDV, histórias, superação e acessibilidade'
 intro: 'Histórias incríveis, pessoas incríveis, um lugar incrível'
 image: 'entidv.jpg'
 tags: evento entidv
-kind: 'article'
-sizer: 'two-four'
-color: 'green'
-bg-color: 'green'
-magic: 'crazy'
-categories: php
+category: php
 ---
 
 # ENTIDV - se você não conhece, deveria

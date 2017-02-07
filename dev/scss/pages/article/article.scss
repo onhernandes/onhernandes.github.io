@@ -1,0 +1,23 @@
+.article {
+	@include flex(wrap row);
+	justify-content: center;
+
+	article {
+		h1, 
+		h2, 
+		h3, 
+		h4 {
+			color: $gray;
+			padding: 40px 0 15px;
+		}
+	}
+
+	article:not(.article__content) {
+		flex: 0 0 80%;
+		//margin: 0 10%;
+	}
+
+	&__content { flex: 0 0 100%; }
+	
+	@include post-category();
+}

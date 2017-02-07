@@ -1,0 +1,17 @@
+$about_wrap: 80%;
+$about_wrap_margin: 10%;
+
+.about {
+	margin-bottom: 70px;
+
+	&__title {
+		flex-basis: 100%;
+		display: block;
+		padding: 50px 0 20px;
+	}
+
+	article {
+		margin: 0 auto;
+		width: $about_wrap;
+	}
+}

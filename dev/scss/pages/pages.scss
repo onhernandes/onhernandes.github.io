@@ -10,3 +10,22 @@
 
 // Blog
 @import 'blog/posts';
+@import 'blog/header';
+@import 'blog/layout';
+@import 'blog/button';
+@import 'blog/item';
+
+// About
+@import 'about/about';
+@import 'about/profile';
+@import 'about/skills';
+@import 'about/games';
+@import 'about/projects';
+@import 'about/spotify';
+
+// Article
+@import "article/article";
+@import "article/header";
+@import "article/content";
+@import "article/related";
+@import "article/comments";

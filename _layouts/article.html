@@ -1,0 +1,43 @@
+<html>
+	{% include head.html %}
+<body class="article-body">
+	{% include header-article.html %}
+	{% include menu.html %}
+	
+	<section class="article" {% if page.category %}category="{{ page.category }}"{% endif %}>
+		<article class="article__content" {% if page.category %}category="{{ page.category }}"{% endif %}>
+			{{ content }}
+		</article>
+
+		<article class="article__related">
+			<h2>Related Posts</h2>
+			
+			{% for related in site.related_posts limit:3 %}
+				<article class="posts__item" color="">
+					<div class="posts__item_category">
+						<a href="{{ site.url | append: '/category#' | append: related.category }}">
+							{{ related.category }}
+						</a>
+					</div>
+
+					<div class="posts__item_title">
+						<a href="{{ related.url | prepend: site.url }}">
+							{{ related.title | truncatewords: 10 }}
+						</a>
+					</div>
+
+					<div class="posts__item_date">
+						{{ related.date | date: '%B %d, %Y' }}
+					</div>
+				</article>
+			{% endfor %}
+		</article>
+
+		<article class="article__comments">
+			{% include comments.html %}
+		</article>
+	</section>
+
+	{% include footer.html %}
+</body>
+</html>

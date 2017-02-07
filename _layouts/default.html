@@ -1,6 +1,6 @@
 <html>
 	{% include head.html %}
-<body>
+<body {% if page.title %}class="{{ page.title | downcase }}-body"{% endif %}>
 	{% include header.html %}
 	{% include menu.html %}
 	

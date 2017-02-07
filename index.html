@@ -2,42 +2,19 @@
 layout: default
 title: 'Home'
 image: 'home.jpg'
-test:
-- a
-- b
-- c
-- c
-- c
-- c
-- c
-- c
-- c
 ---
 
 <section class="projects">
-	{% for t in page.test %}
-		<article class="projects__item" title="" color="black">
-			<a href="" class="projects__item_title">
-				<h1 title="">title</h1>
-			</a>
-
-			<a href="" class="projects__item_intro" title="">intro</a>
-
-			<ul class="projects__item_list">
-				<li><a href="" title="" target="">G</a></li>
-				<li><a href="" title="" target="">G</a></li>
-			</ul>
-		</article>
-	{% endfor %}
 </section>
 
 <section class="about__intro">
-	<a href="" class="about__intro_title" title="">
+	<a href="{{ '/about' | prepend: site.url }}" class="about__intro_title" title="">
 		<h1>About</h1>
 	</a>
 	
-	<a href="" class="about__intro_line">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis molestiae pariatur adipisci cum, molestias possimus eius ea, ducimus harum, modi a. Quam ad atque autem quos! Eum libero atque enim.
+	<a href="{{ '/about' | prepend: site.url }}" class="about__intro_line">
+		First of everything, my name is Matheus and I'm from Brazil.
+		I've 18 years and I'm a tech lover since I was a little kid
 	</a>
 </section>
 
@@ -46,25 +23,27 @@ test:
 		<h1>latest posts</h1>
 	</header>
 
-	{% for t in page.test %}
+	{% for post in site.posts limit:3 %}
 		<article class="posts__item" color="">
 			<div class="posts__item_category">
-				<a href="">
-					Category
+				<a href="{{ site.url | append: '/category#' | append: post.category }}">
+					{{ post.category }}
 				</a>
 			</div>
 
 			<div class="posts__item_title">
-				<a href="">
-					ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, aut laborumspandolorum eligendi atque a!
+				<a href="{{ post.url | prepend: site.url }}">
+					{{ post.title | truncatewords: 10 }}
 				</a>
 			</div>
 
 			<div class="posts__item_date">
-				13/07/1970
+				{{ post.date | date: '%B %d, %Y' }}
 			</div>
 		</article>
 	{% endfor %}
-</section>
 
-<br><br><br><br><br><br><br><br><br>
+	<a href="{{ '/blog' | prepend: site.url }}" class="posts__button">
+		<button>Keep reading</button>
+	</a>
+</section>

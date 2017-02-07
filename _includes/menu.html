@@ -1,34 +1,27 @@
-<nav class="menu">
+<nav class="menu" {% if page.color %}color="{{ page.color }}"{% else %}{% if page.category %}category="{{ page.category }}"{% endif %}{% endif %}>
 	<a href="javascript:void(0);" class="menu__icon" title=""></a>
 	<a href="javascript:void(0);" class="menu__search" title=""></a>
+	
+	<div class="menu__wrapper">
+		<ul class="menu__wrapper_list">
+			<li><a href="javascript:void(0);">menu</a></li>
+			{% for link in site.site_links %}
+				<li>
+					<a href="{{ sitel.url }}{{ link.url }}" title="{{ link.title }}">
+						<i class="icon-{{ link.icon }}"></i>
+						{{ link.title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
 
-	<ul class="menu__list">
-		<li>
-			<a href="" title="">
-				<i class="icon-home"></i>
-				home
-			</a>
-		</li>
-
-		<li>
-			<a href="" title="">
-				<i class="icon-info"></i>
-				about
-			</a>
-		</li>
-
-		<li>
-			<a href="" title="">
-				<i class="icon-pencil"></i>
-				blog
-			</a>
-		</li>
-	</ul>
+		<a href="javascript:void(0);" class="menu__wrapper_close" icon="close" title="close"></a>
+	</div>
 </nav>
 
-<section class="search">
+<section class="search" {% if page.color %}color="{{ page.color }}"{% endif %}>
 	<form action="" class="search__form">
-		<label for="search_input" class="search__form_title">search for articles - <a href="javascript:void(0);">close</a></label>
+		<label for="search_input" class="search__form_title">search for articles  <a href="javascript:void(0);"></a></label>
 		<input id="search_input" type="text" class="search__form_input" placeholder="type your search" title="">
 
 		<span class="warn"></span>
