@@ -89,11 +89,7 @@
 	}
 }
 
-@function get-post-color($color) {
-	@return map-get($post-color, $color);
-}
-
-@mixin post-category($category) {
+@mixin post-category() {
 	// Get the $category and define the color using a map
 	$category_color: (
 		php: purple,
@@ -109,17 +105,17 @@
 		git: red,
 		linux: linux
 	);
-	
-	$color: map-get($category_color, $category);
 
-	&[category="#{$category}"] {
-		a {
-			color: get-post-color($color);
-			border-bottom-color: get-post-color($color);
-		}
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			&__content a {
+				color: map-get($post-color, $value);
+				border-bottom-color: map-get($post-color, $value);
+			}
 
-		h1, h2, h3, h4 {
-			color: get-post-color($color);
+			h1, h2, h3, h4 {
+				color: map-get($post-color, $value);
+			}
 		}
 	}
 }

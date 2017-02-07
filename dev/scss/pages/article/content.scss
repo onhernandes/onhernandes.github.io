@@ -1,4 +1,5 @@
 .article__content {
+	padding-top: 40px;
 	> p, 
 	> a, 
 	> h1, 
@@ -47,17 +48,4 @@
 		display: block;
 		margin: 20px auto;
 	}
-
-	&[category="php"] { @include post-category(php); }
-	&[category="mysql"] { @include post-category(mysql); }
-	&[category="html"] { @include post-category(html); }
-	&[category="html5"] { @include post-category(html5); }
-	&[category="css"] { @include post-category(css); }
-	&[category="css3"] { @include post-category(css3); }
-	&[category="scss"] { @include post-category(scss); }
-	&[category="sass"] { @include post-category(sass); }
-	&[category="js"] { @include post-category(js); }
-	&[category="javascript"] { @include post-category(javascript); }
-	&[category="git"] { @include post-category(git); }
-	&[category="linux"] { @include post-category(linux); }
 }

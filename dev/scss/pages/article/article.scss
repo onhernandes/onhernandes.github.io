@@ -8,4 +8,6 @@
 	}
 
 	&__content { flex: 0 0 100%; }
+	
+	@include post-category();
 }
