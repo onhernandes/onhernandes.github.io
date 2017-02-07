@@ -5,7 +5,7 @@
 	{% include menu.html %}
 	
 	<section class="article" {% if page.category %}category="{{ page.category }}"{% endif %}>
-		<article class="article__content">
+		<article class="article__content" {% if page.category %}category="{{ page.category }}"{% endif %}>
 			{{ content }}
 		</article>
 
