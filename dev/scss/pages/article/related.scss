@@ -1,3 +1,9 @@
 .article__related {
 	@extend .posts;
+
+	h2 {
+		flex: 0 0 100%;
+	}
+
+	.posts__item { margin-bottom: 0 !important; }
 }

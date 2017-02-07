@@ -33,10 +33,7 @@
 	> h1, 
 	> h2, 
 	> h3, 
-	> h4 {
-		color: $gray;
-		padding: 40px 10% 15px;
-	}
+	> h4 { padding: 40px 10% 15px !important; }
 
 	img {
 		width: 100%;
@@ -46,4 +43,6 @@
 	}
 
 	ol, ul { padding: 5px 10% 25px 11.5% }
+
+	p:last-child { padding-bottom: 0 !important; }
 }
