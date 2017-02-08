@@ -1,0 +1,28 @@
+.serie {
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+	
+	&__title,
+	&__subtitle {
+		display: block;
+		flex: 1 0 60%;
+		margin: 0 20%;
+		text-align: center;
+	}
+
+	&__title {
+		margin: 60px 20% 20px;
+		font-size: 40px;
+	}
+
+	&__subtitle {
+		margin-bottom: 60px;
+		font-size: 30px;
+
+		a {
+			color: $gray;
+			padding-bottom: 4px;
+			border-bottom: 2px dashed $gray;
+		}
+	}
+}
