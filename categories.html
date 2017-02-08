@@ -2,3 +2,13 @@
 layout: default
 title: Category
 ---
+
+<section class="categories">
+	<ul>
+		{% for cat in site.categories %}
+			<li>
+				<a href="/category/{{ cat[0] }}">{{ cat[0] }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
