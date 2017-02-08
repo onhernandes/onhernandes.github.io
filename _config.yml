@@ -23,6 +23,9 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+series:
+    - title: title
+
 site_links:
     - title: home
       url: /
