@@ -1,0 +1,15 @@
+$tags_wrapper: 80%;
+$tags_margin: 10%;
+
+.tags {
+	@include flex(wrap row);
+
+	article {
+		flex: 0 0 $tags_wrapper;
+		margin: 0 $tags_margin;
+
+		@media screen and (max-width: 1024px) {
+			flex-basis: 100% !important;
+		}
+	}
+}
