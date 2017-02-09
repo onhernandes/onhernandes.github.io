@@ -17,5 +17,9 @@
 				padding: 6px 10px;
 			}
 		}
+
+
+		@media screen and (max-width: 1024px) { flex-basis: 70% !important; }
+		@media screen and (max-width: 760px) { flex-basis: 90% !important; }
 	}
 }
