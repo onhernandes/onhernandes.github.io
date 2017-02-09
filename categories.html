@@ -5,9 +5,9 @@ title: Categories
 
 <section class="categories">
 	<ul>
-		{% for i in (1..13) %}
+		{% for cat in site.categories %}
 			<li>
-				<a href="/category/">Category{{ i }}</a>
+				<a href="/category/{{ cat[0] }}">{{ cat[0] }}</a>
 			</li>
 		{% endfor %}
 	</ul>
