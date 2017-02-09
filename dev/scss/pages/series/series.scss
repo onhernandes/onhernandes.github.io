@@ -8,11 +8,15 @@
 		flex: 1 0 60%;
 		margin: 0 20%;
 		text-align: center;
+
+		@media screen and (max-width: 760px) { flex-basis: 100% !important; }
 	}
 
 	&__title {
 		margin: 60px 20% 20px;
 		font-size: 40px;
+
+		@media screen and (max-width: 760px) { margin: 50px 0 20px !important; }
 	}
 
 	&__subtitle {
