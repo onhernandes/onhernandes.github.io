@@ -1,1 +1,21 @@
-.tags__cloud {}
+.tags__cloud {
+	ul {
+		width: 50%;
+		height: auto;
+		margin: 0 auto;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			margin: 0 5px 25px;
+
+			a {
+				border: 1px dashed $gray;
+				border-radius: 5px;
+				color: $gray;
+				font-size: $font-size-cellphone;
+				padding: 6px 10px;
+			}
+		}
+	}
+}

@@ -6,10 +6,12 @@ $tags_margin: 10%;
 
 	article {
 		flex: 0 0 $tags_wrapper;
-		margin: 0 $tags_margin;
+		margin: 50px $tags_margin 10px;
 
 		@media screen and (max-width: 1024px) {
 			flex-basis: 100% !important;
 		}
+
+		&:first-child { margin-top: 60px; }
 	}
 }
