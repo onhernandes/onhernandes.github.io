@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Category
+title: Categories
 ---
 
 <section class="categories">
 	<ul>
-		{% for cat in site.categories %}
+		{% for i in (1..13) %}
 			<li>
-				<a href="/category/{{ cat[0] }}">{{ cat[0] }}</a>
+				<a href="/category/">Category{{ i }}</a>
 			</li>
 		{% endfor %}
 	</ul>

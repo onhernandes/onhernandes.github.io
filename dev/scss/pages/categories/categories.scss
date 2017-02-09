@@ -1,6 +1,32 @@
 .categories {
 	ul {
-		width: 60%;
+		//width: 100%;
+		width: 80%;
 		margin: 50px auto;
+		//text-align: center;
+		@include flex(wrap row);
+
+		li {
+			display: inline-block;
+			padding: 60px 0;
+			background-color: $green;
+			text-align: center;
+			flex: 1 0 25%;
+			position: relative;
+
+			a {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include flex(wrap row);
+				@include flex-align(center, center, center);
+				font-size: $font-size-cellphone;
+				color: #fff;
+			}
+
+			&:first-child {background-color: $blue;}
+		}
 	}
 }
