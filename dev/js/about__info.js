@@ -9,7 +9,7 @@ if (checkPage('home')) {
 				final_value = 0;
 			}
 
-			about__intro[0].style.marginTop = '-' + final_value + 'px';
+			about__intro[0].style.transform = 'translateY(-' + final_value + 'px)';
 		});	
 	}
 }

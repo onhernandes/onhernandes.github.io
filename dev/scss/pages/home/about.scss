@@ -3,7 +3,7 @@
 	@include flex-align(center, flex-start, flex-start);
 	padding: 20px;
 	margin-bottom: 60px;
-	margin-top: -250px;
+	transform: translateY(-250px);
 	z-index: map-get($z-index, about__intro);
 
 	&_title,
