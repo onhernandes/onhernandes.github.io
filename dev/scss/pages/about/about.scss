@@ -13,5 +13,9 @@ $about_wrap_margin: 10%;
 	article {
 		margin: 0 auto;
 		width: $about_wrap;
+
+		@media screen and (max-width: 760px) {
+			width: 90% !important;
+		}
 	}
 }

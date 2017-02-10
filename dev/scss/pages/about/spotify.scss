@@ -28,6 +28,10 @@
 				&[title="Living High"] { background: url(/assets/img/living-high.jpg) center center no-repeat; }
 				&[title="Blackbear Mix"] { background: url(/assets/img/blackbear.jpg) center center no-repeat; }
 			}
+
+			@media screen and (max-width: 760px) {
+				flex-basis: 100% !important;
+			}
 		}
 	}
 }
