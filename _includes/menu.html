@@ -1,23 +1,23 @@
 <nav class="menu" {% if page.color %}color="{{ page.color }}"{% else %}{% if page.category %}category="{{ page.category }}"{% endif %}{% endif %}>
 	<a href="javascript:void(0);" class="menu__icon" title=""></a>
-	<a href="javascript:void(0);" class="menu__search" title=""></a>
-	
-	<div class="menu__wrapper">
-		<ul class="menu__wrapper_list">
-			<li><a href="javascript:void(0);">menu</a></li>
-			{% for link in site.site_links %}
-				<li>
-					<a href="{{ sitel.url }}{{ link.url }}" title="{{ link.title }}">
-						<i class="icon-{{ link.icon }}"></i>
-						{{ link.title }}
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-
-		<a href="javascript:void(0);" class="menu__wrapper_close" icon="close" title="close"></a>
-	</div>
+	<a href="javascript:void(0);" class="menu__search" title=""></a>	
 </nav>
+
+<div class="menu__wrapper">
+	<ul class="menu__wrapper_list">
+		<li><a class="menu__wrapper_close-mobile" href="javascript:void(0);">menu</a></li>
+		{% for link in site.site_links %}
+			<li>
+				<a href="{{ sitel.url }}{{ link.url }}" title="{{ link.title }}">
+					<i class="icon-{{ link.icon }}"></i>
+					{{ link.title }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	<a href="javascript:void(0);" class="menu__wrapper_close" icon="close" title="close"></a>
+</div>
 
 <section class="search" {% if page.color %}color="{{ page.color }}"{% endif %}>
 	<form action="" class="search__form">
