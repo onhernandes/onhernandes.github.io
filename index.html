@@ -5,6 +5,22 @@ image: 'home.jpg'
 ---
 
 <section class="projects">
+	{% for project in site.projects %}		
+  		<article class="projects__item" title="{{ project.name }}" project="{{ project.slug }}">		
+  			<a target="_blank" href="{{ project.github }}" class="projects__item_title">		
+  				<h1 title="{{ project.name }}">{{ project.name }}</h1>		
+  			</a>		
+  		
+  			<a target="_blank" href="{{ project.github }}" class="projects__item_intro" title="{{ project.name }}">{{ project.desc }}</a>		
+  		
+  			<ul class="projects__item_list">		
+  				<li><a href="{{ project.github }}" title="{{ project.name }}" target="_blank"></a></li>		
+  				{% if project.link != false %}
+  					<li><a href="{{ project.link }}" title="{{ project.name }}" target="_blank"></a></li>
+  				{% endif %}		
+  			</ul>		
+  		</article>		
+  	{% endfor %}
 </section>
 
 <section class="about__intro">

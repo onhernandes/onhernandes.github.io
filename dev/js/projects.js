@@ -1,20 +1,7 @@
-var projects = {
-	settings: {},
-	next: function (arguments) {
-		// next slide
-	},
-	previous: function(argument) {
-		// body...
-	},
-	startInterval: function() {
-		// body...
-	}
-};
-
 if (checkPage('home') || checkPage('about')) {
-	var projects_section = (checkPage('home') ? document.getElementsByClassName('projects') : document.getElementsByClassName('about__projects'));
+	var projects_section = document.getElementsByClassName('projects');
 	
-	if (checkPage('home')) {
+	/*if (checkPage('home')) {
 		projects_data.forEach(function(obj, index) {
 			var	article = document.createElement('article'),
 				title = document.createElement('a'),
@@ -89,7 +76,7 @@ if (checkPage('home') || checkPage('about')) {
 
 			list.appendChild(li);
 		});
-	}
+	}*/
 
 
 	if (checkPage('home')) {
