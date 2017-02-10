@@ -3,5 +3,9 @@
 		flex-basis: 80%;
 
 		&_title { padding: 10px 0; }
+
+		@media screen and (max-width: 760px) {
+			flex-basis: 90% !important;
+		}
 	}
 }
