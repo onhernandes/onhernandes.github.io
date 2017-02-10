@@ -23,28 +23,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
-# Social
-social_links:
-    - title: github
-      url: www.github.com/
-      username: mhernandes
-
-    - title: facebook
-      url: www.facebook.com/
-      username: mthernandes
-      
-    - title: twitter
-      url: www.twitter.com/
-      username: mt_hernandes
-      
-    - title: instagram
-      url: www.instagram.com/
-      username: mt_hernandes
-      
-    - title: spotify
-      url: www.spotify.com/
-      username: mhernandes
-
 series:
     - title: title
 
