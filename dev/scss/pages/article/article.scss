@@ -20,4 +20,8 @@
 	&__content { flex: 0 0 100%; }
 	
 	@include post-category();
+
+	@media screen and (max-width: 760px) {
+		article:not(.article__content) { flex-basis: 90% !important; }
+	}
 }

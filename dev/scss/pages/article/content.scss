@@ -1,3 +1,5 @@
+$paddding-base: 20px;
+
 .article__content {
 	padding-top: 40px;
 	> p, 
@@ -45,4 +47,24 @@
 	ol, ul { padding: 5px 10% 25px 11.5% }
 
 	p:last-child { padding-bottom: 0 !important; }
+
+	@media screen and (max-width: 760px) {
+		> p, 
+		> a, 
+		> h1, 
+		> h2, 
+		> h3, 
+		> h4,
+		> blockquote {
+			padding-left: 5% !important;
+			padding-right: 5% !important;
+		}
+
+		ol, ul { padding: 5px 10% 20px; }
+
+		> h1, 
+		> h2, 
+		> h3, 
+		> h4 { padding-top: 15px !important; }
+	}
 }
