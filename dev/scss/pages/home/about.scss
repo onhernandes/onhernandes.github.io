@@ -17,7 +17,6 @@
 
 	&_line { font-size: 18px; }
 
-	@media screen and (max-width: 1024px) {
-		margin-top: 0 !important;
-	}
+	@media screen and (max-width: 1024px) { margin-top: 0 !important; }
+	@media screen and (max-width: 760px) { margin-bottom: 20px !important; }
 }

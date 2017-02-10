@@ -9,4 +9,9 @@
 		padding: 15px 0;
 		font-style: italic;
 	}
+
+	@media screen and (max-width: 760px) {
+		flex-basis: 90% !important;
+		margin: 0 auto 20px;
+	}
 }
