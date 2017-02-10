@@ -1,37 +1,6 @@
 ---
 layout: default
 title: About
-about__skills:
-    - name: php
-      sub:
-        - name: pdo
-        - name: oop
-        - name: composer
-    - name: mysql
-      sub: false
-    - name: html
-      sub: false
-    - name: css
-      sub:
-        - name: scss/sass
-    - name: javascript
-      sub:
-        - name: jquery
-        - name: gulp
-        - name: npm
-    - name: git
-      sub: false
-    - name: linux
-      sub:
-        - name: ubuntu
-        - name: manjaro
-        - name: unix(a bit, not so much)
-    - name: jekyll
-      sub:
-        - name: front-matter
-        - name: liquid
-    - name: markdown
-      sub: false
 ---
 
 <section class="about">
@@ -52,16 +21,15 @@ about__skills:
 		<h2 class="about__title">Skills</h2>
 
 		<ul class="about__skills_list">
-			{% for skill in page.about__skills %}
-				<li>
-					{{ skill.name }}
-				</li>
-				{% if skill.sub != false %}
-					{% for sub in skill.sub %}
-						<li>{{ sub.name }}</li>
-					{% endfor %}
-				{% endif %}
-			{% endfor %}
+			<li>HTML / Liquid</li>
+			<li>CSS / SASS-SCSS</li>
+			<li>JavaScript / jQuery</li>
+			<li>NPM / Gulp / Composer</li>
+			<li>Jekyll / Front Matter</li>
+			<li>Git</li>
+			<li>PHP</li>
+			<li>MySQL</li>
+			<li>Linux / Ubuntu / Manjaro</li>
 		</ul>
 	</article>
 
@@ -77,7 +45,7 @@ about__skills:
 	<article class="about__games">
 		<h2 class="about__title">Games</h2>
 		<ul class="about__games_list">
-			{% for i in (1..16) %}
+			{% for i in (1..8) %}
 				<li class="about__games_list-item">
 					<div style="background-image: url(/assets/img/gba_sample.jpg);"></div>
 					<span>

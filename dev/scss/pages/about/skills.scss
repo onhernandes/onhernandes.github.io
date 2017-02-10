@@ -2,22 +2,14 @@
 	@include flex(wrap row);
 
 	&_list {
-		@include flex(wrap row);
-		@include flex-align(flex-start, stretch, center);
 		width: 100%;
+		list-style-type: disc;
+		padding-left: 25px;
 
 		li {
-			flex: 1 0 calc(100% / 5);
-			text-align: center;
-			padding: 25px 0;
-			color: #fff;
 			display: block;
-			background-color: $blue;
-			border: 1px solid  #fff;
-
-			span {
-				display: block;
-			}
+			padding: 10px 0;
+			font-size: $font-size-tablet;
 		}
 	}
 }
