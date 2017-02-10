@@ -16,6 +16,9 @@
 
 			a {
 				color: $blue;
+				font-size: $font-size-tablet;
+				border-bottom: 1px dashed $blue;
+				padding-bottom: 2px;
 			}
 
 			&:last-child {
