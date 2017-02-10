@@ -2,14 +2,14 @@
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, initial);
 
-	.about__title {
-		flex-basis: 100% !important;
-	}
+	.about__title { flex-basis: 100%; }
 
-	img, div, h2 {
+	img, div {
 		display: block;
 		flex: 0 0 50%;
 		height: auto;
+
+		@media screen and (max-width: 760px) { flex-basis: 100% !important; }
 	}
 
 	img {
