@@ -14,9 +14,9 @@ image: 'home.jpg'
   			<a target="_blank" href="{{ project.github }}" class="projects__item_intro" title="{{ project.name }}">{{ project.desc }}</a>		
   		
   			<ul class="projects__item_list">		
-  				<li><a href="{{ project.github }}" title="{{ project.name }}" target="_blank"></a></li>		
+  				<li><a href="{{ project.github }}" icon="github" title="{{ project.name }}" target="_blank"></a></li>		
   				{% if project.link != false %}
-  					<li><a href="{{ project.link }}" title="{{ project.name }}" target="_blank"></a></li>
+  					<li><a href="{{ project.link }}" icon="link" title="{{ project.name }}" target="_blank"></a></li>
   				{% endif %}		
   			</ul>		
   		</article>		
