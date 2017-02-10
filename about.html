@@ -42,20 +42,22 @@ title: About
 		</ul>
 	</article>
 
-	<article class="about__games">
-		<h2 class="about__title">Games</h2>
-		<ul class="about__games_list">
-			{% for i in (1..8) %}
-				<li class="about__games_list-item">
-					<div style="background-image: url(/assets/img/gba_sample.jpg);"></div>
-					<span>
-						<h3>Game name</h3>
-						<h4>Console name</h4>
-					</span>
-				</li>
-			{% endfor %}
-		</ul>
-	</article>
+	{% comment %}
+		<article class="about__games">
+			<h2 class="about__title">Games</h2>
+			<ul class="about__games_list">
+				{% for i in (1..8) %}
+					<li class="about__games_list-item">
+						<div style="background-image: url(/assets/img/gba_sample.jpg);"></div>
+						<span>
+							<h3>Game name</h3>
+							<h4>Console name</h4>
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</article>
+	{% endcomment %}
 
 	<article class="about__spotify">
 		<h2 class="about__title">Spotify Playlists</h2>
