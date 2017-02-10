@@ -68,6 +68,9 @@ about__skills:
 	<article class="about__projects">
 		<h2 class="about__title">Projects</h2>
 		<ul class="about__projects_list">
+			{% for project in site.projects %}
+				<li><a href="{{ project.github }}" target="_blank">{{ project.name }}</a></li>
+			{% endfor %}
 		</ul>
 	</article>
 
