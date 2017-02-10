@@ -56,6 +56,11 @@ about__skills:
 				<li>
 					{{ skill.name }}
 				</li>
+				{% if skill.sub != false %}
+					{% for sub in skill.sub %}
+						<li>{{ sub.name }}</li>
+					{% endfor %}
+				{% endif %}
 			{% endfor %}
 		</ul>
 	</article>
@@ -68,23 +73,31 @@ about__skills:
 
 	<article class="about__games">
 		<h2 class="about__title">Games</h2>
-		
-		<h3 class="about__subtitle">GBA</h3>
 		<ul class="about__games_list">
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-		</ul>
-		
-		<h3 class="about__subtitle">PS1 and PS2</h3>
-		<ul class="about__games_list">
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
-			<li><img src="/assets/img/gba_sample.jpg" alt="" title=""></li>
+			<li>
+				<img src="/assets/img/gba_sample.jpg" alt="" title="">
+				<div></div>
+			</li>
+
+			<li>
+				<img src="/assets/img/gba_sample.jpg" alt="" title="">
+				<div></div>
+			</li>
+
+			<li>
+				<img src="/assets/img/gba_sample.jpg" alt="" title="">
+				<div></div>
+			</li>
+
+			<li>
+				<img src="/assets/img/gba_sample.jpg" alt="" title="">
+				<div></div>
+			</li>
+
+			<li>
+				<img src="/assets/img/gba_sample.jpg" alt="" title="">
+				<div></div>
+			</li>
 		</ul>
 	</article>
 
@@ -111,20 +124,3 @@ about__skills:
 		</ul>
 	</article>
 </section>
-
-{% comment %}
-	{% for post in site.posts %}
-		<div class="projects__item" title="" color="black">
-			<a href="" class="projects__item_title">
-				<h1 title="">title</h1>
-			</a>
-
-			<a href="" class="projects__item_intro" title="">intro</a>
-
-			<ul class="projects__item_list">
-				<li><a href="" title="" target="">G</a></li>
-				<li><a href="" title="" target="">G</a></li>
-			</ul>
-		</div>
-	{% endfor %}
-{% endcomment %}
