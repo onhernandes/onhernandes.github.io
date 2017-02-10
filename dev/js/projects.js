@@ -1,5 +1,18 @@
+var projects = {
+	settings: {},
+	next: function (arguments) {
+		// next slide
+	},
+	previous: function(argument) {
+		// body...
+	},
+	startInterval: function() {
+		// body...
+	}
+};
+
 if (checkPage('home') || checkPage('about')) {
-	var projects = (checkPage('home') ? document.getElementsByClassName('projects') : document.getElementsByClassName('about__projects'));
+	var projects_section = (checkPage('home') ? document.getElementsByClassName('projects') : document.getElementsByClassName('about__projects'));
 	
 	if (checkPage('home')) {
 		projects_data.forEach(function(obj, index) {
@@ -56,7 +69,7 @@ if (checkPage('home') || checkPage('about')) {
 			article.setAttribute('title', obj.name);
 			article.className = 'projects__item';
 
-			projects[0].appendChild(article);
+			projects_section[0].appendChild(article);
 		});
 	} else {
 		projects_data.forEach(function(obj, index) {
@@ -80,7 +93,7 @@ if (checkPage('home') || checkPage('about')) {
 
 
 	if (checkPage('home')) {
-		var	projects__item = projects[0].getElementsByClassName('projects__item'),
+		var	projects__item = projects_section[0].getElementsByClassName('projects__item'),
 			item_width = projects__item[0].clientWidth,
 			new_width = total_width = item_counter = displayed = 0,
 			total_items = projects__item.length;
