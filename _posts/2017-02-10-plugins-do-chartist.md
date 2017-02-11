@@ -3,7 +3,7 @@ layout: article
 title:  "Chartist.js - Plugins"
 date:   2017-02-10 10:21:20 -0300
 image: charts-print-plugin.jpg
-category: js
+category: javascript
 intro: 'Plugins para o Chartist.js'
 ---
 
