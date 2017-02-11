@@ -154,8 +154,6 @@ Obs.: vou pegar só alguns artigos, nada tão profundo. No que você gostar, mer
 1. [Strategy](http://blog.caelum.com.br/entendendo-o-pattern-strategy-em-php/)
 1. [Front Controller e Command](http://www.devmedia.com.br/padroes-de-projetos-introducao-aos-padroes-front-controller-e-command/30644)
 
-<br>
-
 Até aqui, posso deduzir que você já sabe um pouco de OO, PDO, escrever bem e até tem uma ideia sobre padrões de projetos. O que acha de praticar? Vou lançar um pequeno desafio aqui:
 
 Vá no seu Github, Bitbucket, ou na sua própria máquina mesmo, isso não importa, crie uma pasta chamada **worke**(ou dê algum nome outro nome, sua escolha). Depois de criar, comece a projetar um simples CRUD - Create, Read, Update and Delete. 
