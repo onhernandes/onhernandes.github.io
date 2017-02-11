@@ -4,30 +4,16 @@ title: 'Enviando e-mails pelo PHP - PHPMailer'
 date: 2017-02-10 16:12:55 -0300
 color: '#834496'
 category: php
-intro: 'Saiba como enviar emails do seu computador com PHPMailer'
+intro: 'Enviar emails pelo PHP da forma mais simples possível'
 ---
 
 # Ok, acabei tudo, só falta...o envio dos emails ¬¬
-Eu sei que isso, talvez seja algo totalmente simples pros maix velhos, só que, para nós(eternos novatos, e realmente novatos), talvez seja um verdadeiro Monstro do Lago Ness.
-Lá estava eu, me matando lindamente pra criar [URLs Amigáveis com o .htaccess]() - minha primeira vez, estava testando em um servidor gratuito, porque não conseguia localmente -, quando finalmente consegui a tal proeza, me deparei com outra quest:
-*Enviar emails.*
+Enviar emails pelo PHP pode ser uma tarefa um pouco complicada se você for fazer por conta própria. Ainda bem que temos o [PHPMailer](https://github.com/PHPMailer/PHPMailer) - uma lib pra te ajudar à enviar emails.
 
-Pronto. Já era. Quando eu acreditei que não precisava mais de um servidor remoto, me lembrei dessa parada aí.
-
-Fiquei me perguntando se era possível fazer isso localmente e caso sim, se eu não precisaria reinventar a roda só pra poder rodar uns emailzinhos né.
-Falo isso porque eu li em algumas respostas no Yahoo! e nego disse que dava muito trabalho e tudo mais, que era mais fácil usar um remoto e etc.
-Dei uma rápida pesquisada no Google, com a ideia de que: *se ferrar tudo, é só apagar o apache2 e instalar novamente, se isso não funcionar eu taco fogo no PC e viro contador*.
-
-
-Ria de mim o quanto quiser, meu caro amigo. Eu no seu lugar não apenas iria rir como também comentar algum pensamento catastrófico lá em baixo. Hahahahaha.
-
-## Chega de papo furado, vambora configurar issâe!
-Dá até uma dorzinha na alma escrever isso, porque é normal você dizer o "issâe"", mas escrevendo, fica se sentindo uma anta aprendendo o cálculo do Bháskara.
-
-Bom, eu vou dizer o que eu fiz - que funcionou, derr - aqui no meu PC(XUbuntu 14.04):
+Bom, eu vou dizer o que eu fiz aqui no meu PC(XUbuntu 14.04):
 
 Usei o *cd /etc/apache2/mods-enabled* pra chegar até a pasta dos mods do Apache2, depois dei uma olhada se já tinha o SSL ativado, usando *ls*.
-Isso foi o que me retornou:
+Esse foi o meu retorno:
 
 {% highlight unix %}
 	access_compat.load  authz_user.load  filter.load       php7.0.load
@@ -52,23 +38,23 @@ Então, eu apenas dei um *sudo a2enmod ssl* e com isso ativei o SSL no Apache2. 
 {% endhighlight %}
 
 ## Configurando o php.ini
-Então, naveguei até o php.ini usando *cd /etc/php/7.0/apache2*, e editando através do Nano: *sudo nano ./php.ini*.
+Então, navegue até o php.ini - *cd /etc/php/7.0/apache2* -, e edite-o através do nano - *sudo nano php.ini*.
 
-Procure pelo bloco de comentários chamado "Dynamic Extensions", em seguida só removi o *;* na frente das seguintes extensões: *extension=php_openssl.dll* e *extension=php_sockets.dll*.
+Procure pelo bloco de comentários chamado "Dynamic Extensions", em seguida só remova o *;* na frente das seguintes extensões: *php_openssl* e *php_sockets*
 
-Por fim, apenas salve e feche, dê um *cd* e reinicie o servidor Apache2 com *sudo service apache2 restart*.
+Por fim, apenas salve e feche, dê um *cd* e reinicie o servidor Apache2 - *sudo service apache2 restart*.
 
-Prontinho! Teu localhost agora pode enviar emails perfeitamente...nem tão perfeitamente assim.
+Pronto! Teu servidor local agora pode enviar emails perfeitamente...nem tão perfeitamente assim.
 
-## O aclamado PHPMailer
-O PHP por si já tem a função de *mail()*, que faz o envio de emails pelo próprio PHP. O problema é que, essa função, usa **as configurações de SMTP já definidas**. Porém, no localhost, tem nada definido não querido!
+## PHPMailer
+O PHP por si já tem a função de *mail()*, que faz o envio de emails pelo próprio PHP. O problema é que, essa função, usa **as configurações de SMTP já definidas ou não**.
 
-Por isso temos o PHPMailer, ele configura tudinho pra noix. Quer saber como usar? Se liga:
+Por isso temos o PHPMailer, ele configura quase tudo.
 
-Copie a pasta do [PHPMailer](), que está no Github, para o seu projeto. Eu coloquei a pasta toda, porque provavelmente utilizarei muita coisa no decorrer do meu projeto, mas vi alguns comentários de gente que usou apenas as classes **class.phpmailer.php**, **class.pop3.php** e **class.smtp.php**. Não sei se somente com elas funciona, porque eu não testei.
+Copie a pasta do [PHPMailer](https://github.com/PHPMailer/PHPMailer), que está no Github para o seu projeto. Eu coloquei a pasta toda, porque provavelmente utilizarei muita coisa no decorrer do meu projeto.
 
-Em seguida, peça o arquivo **PHPMailerAutoload.php** através do *require*, e instancie.
-No meu caso, eu sempre uso a váriavel $mail pra instanciar, porque realmente fica mais fácil de entender.
+Em seguida, chame o arquivo **PHPMailerAutoload.php** através do *require*, e instancie.
+No meu caso, eu uso a váriavel $mail pra instanciar.
 
 Após instanciar, você só vai precisar dessas linhas:
 
@@ -83,7 +69,7 @@ Após instanciar, você só vai precisar dessas linhas:
 		// Usar autenticação SMTP 
 		$mail->SMTPAuth = true; 
 		// Usuário da conta
-		$mail->Username = 'midia.matheus@gmail.com';
+		$mail->Username = 'seu.email@gmail.com';
 		// Senha da conta 
 		$mail->Password = 'sua_senha';
 		// Tipo de encriptação que será usado na conexão SMTP 
@@ -93,11 +79,11 @@ Após instanciar, você só vai precisar dessas linhas:
 		// Informa se vamos enviar mensagens usando HTML
 		$mail->IsHTML(true); 
 		// Email do Remetente
-		$mail->From = 'midia.matheus@gmail.com';
+		$mail->From = 'remetente@abc.com';
 		// Nome do Remetente 
-		$mail->FromName = 'Matheus'; 
+		$mail->FromName = 'Remetente'; 
 		// Endereço do e-mail do destinatário
-		$mail->addAddress('midia.matheus@gmail.com');
+		$mail->addAddress('destinatario@abc.com');
 		// Assunto do e-mail 
 		$mail->Subject = 'E-mail PHPMailer'; 
 		// Mensagem que vai no corpo do e-mail
@@ -115,10 +101,8 @@ Após instanciar, você só vai precisar dessas linhas:
 Como podem ver, eu utilizei meu GMail para enviar, só que, se você tentar agora, muito provavelmente não vai conseguir **porque o GMail bloqueia outros serviços**, a menos que você permita.
 Se quiser liberar as permissões do Gmail, é só [entrar aqui](http://www.google.com.br/settings/security/lesssecureapps) e selecionar a opção de "Desativar", por fim confirmar.
 
-_Estou ressaltando aqui que, isso pode deixar sua conta mais vulnerável, e eu/o blog nos isentamos de qualquer problema que ocorra com você, relacionado à isto. Tome muito cuidado. Considere-se avisado._
+_Estou ressaltando aqui que, isso pode deixar sua conta vulnerável. Tome muito cuidado. Considere-se avisado._
 
-Eu fiz o teste e consegui normalmente. Caso você esteja utilizando o Windows, infelizmente não poderei responder muitas perguntas, porque eu uso Ubuntu.
-
-Gostou? Não gostou? Tá neutrô? Comenta aí!
+Eu fiz o teste e consegui normalmente. Caso você esteja utilizando o Windows, infelizmente não poderei responder muitas perguntas, porque eu uso Ubuntu e nunca fiz o mesmo procedimento lá - mas a parte de usar o PHPMailer funciona normalmente, você só precisa ativar alguns modes no Apache.
 
 Sugestões, críticas, e etc são sempre bem-vindas!
