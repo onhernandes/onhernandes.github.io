@@ -1,11 +1,12 @@
 ---
 layout: article
-title:  Conheça mais sobre PHP
+title: 'Conheça mais sobre PHP'
 lang: pt
-date:   2016-09-07 20:50:39 -0300
-intro: Você não aprendeu tudo naquele curso de 3 meses
+date: 2016-09-07 20:50:39 -0300
+intro: 'Você não aprendeu tudo naquele curso de 3 meses'
 category: php
-tags: php curso tempo estudo
+color: '#834496'
+tags: php estudo
 ---
 
 Felizmente(ou infelizmente?) você não aprende uma linguagem da noite pro dia, muito menos em 3 meses. Desculpa, mas aquele curso de 3 meses que você fez não cobre tudo o que o PHP tem pra te oferecer, (nem esse artigo) segue algumas fontes pra você saber mais sobre o PHP. 
