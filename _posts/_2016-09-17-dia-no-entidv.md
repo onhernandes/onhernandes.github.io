@@ -13,8 +13,6 @@ category: php
 
 **Encontro Nacional de Profissionais de TI com Deficiência Visual**, ou ENTIDV, é como o próprio nome já diz, um evento que reúne profissionais de TI com Deficiência Visual. O evento acontece anualmente, e essa foi a minha primeira vez lá - primeira de muitas, porque ano que vem eu tô lá!
 
-Assim como a maioria dos developers, writers e etc, eu gosto de trabalhar(ou qualquer coisa que me faça ficar na frente de um monitor) ouvindo música, principalmente músicas em inglês. Senhoras e senhores, estamos com [De olhos fechados](https://play.spotify.com/user/12141429536/playlist/4nJWvGcXxuDhkBs9YJK7eM), uma playlist muito daora, com músicas de vários gêneros.
-
 Bom, já te introduzi ao evento e vou te contar a história desse dia incrível:
 
 ## Ah se não fosse pelo Google Maps!
