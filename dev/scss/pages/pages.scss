@@ -1,0 +1,49 @@
+// Template
+@import 'template/syntax-monokai';
+@import 'template/syntax';
+@import 'template/header';
+@import 'template/menu';
+@import 'template/search';
+@import 'template/footer';
+
+// Home
+@import 'home/about';
+@import 'home/projects';
+
+// Blog
+@import 'blog/posts';
+@import 'blog/header';
+//@import 'blog/layout';
+@import 'blog/button';
+@import 'blog/item';
+
+// About
+@import 'about/about';
+@import 'about/profile';
+@import 'about/projects';
+@import 'about/skills';
+//@import 'about/games';
+@import 'about/spotify';
+@import 'about/end';
+
+// Tags
+@import "tags/tags";
+@import "tags/cloud";
+@import "tags/item";
+
+// Series
+@import "series/series";
+
+// Categories
+@import "categories/categories";
+
+// Article
+@import "article/article";
+@import "article/header";
+@import "article/content";
+@import "article/share";
+@import "article/related";
+@import "article/comments";
+
+// Category
+//@import "category/category";

@@ -1,36 +1,88 @@
 ---
 layout: default
-title: 'About'
-image: 'about.jpg'
+title: About
+image: 'standard.jpg'
+opacity: 0
 ---
 
 <section class="about">
-	<article class="about__content">
-		<h1>So, let's go.</h1>
-		
-		<p>First of everything, my name is Matheus and I'm from Brazil, Earth.</p>
-		<p>I have 17 years and I'm a tech lover since kid.</p>
-		<p>I started into tech world, because my brother. He knew how to fix computers and do some cool things on computer, and it inspired me to do the same. With 9 years, I used an app to create - or try to create - a simple game. After, at around my 13 or 14 years, I entered in a course about computer maintenance and other about using Windows Seven.</p>
-		<p>I left the courses, because I was thinking this was awful for my time.</p>
-		<p>Strangely, at same time on my life, I started to valorize my time, as if he was precious like gold</p>
-		<p>Around october/2013, I started learn how to use Photoshop, Illustrator and some others things about graphic design. I confess, sometimes I tried learn about HTML and CSS, but, I couldn't because I was very lazy.</p>
-		<p>Around january/2014 I started learn a lot of things about front-end.</p>
-		<p>At january of this year I started learn about back-end side, like PHP, MySQL, and others things - oh, I also started to use definetely the Ubuntu.</p>
-		<p>I am currently working on <a href="http://www.gasoline-digital.com/" target="_blank">Gasoline Digital</a>, is an awesome place.</p>
-		<p>Now, I'm learning about JavaScript deeply - I think.</p>
+	<article class="about__profile">
+		<h2 class="about__title">About me</h2>
+
+		<img src="/assets/img/home.jpg" alt="">
+		<div>
+			<p>First of everything, my name is Matheus and I'm from Brazil.</p>
+			<p>I've 18 years and I'm a tech lover since I was a little kid</p>
+			<p>I started into tech world, because my brother. He knew how to fix computers and do some cool things on computer, and it inspired me to do the same.</p>
+			<p>Since jan/2014 I'm studying about web development.</p>
+			<p>I'm currently working on Gasoline Digital.</p>
+		</div>
 	</article>
 
-	<article class="about__knowledge">
-		<h1>Knowledge</h1>
-		
-		<ul>
-			<li>HTML</li>
-			<li>CSS - SCSS</li>
-			<li>Responsive Design</li>
-			<li>JavaScript - jQuery</li>
+	<article class="about__skills">
+		<h2 class="about__title">Skills</h2>
+
+		<ul class="about__skills_list">
+			<li>HTML / Liquid</li>
+			<li>CSS / SASS-SCSS</li>
+			<li>JavaScript / jQuery</li>
+			<li>NPM / Gulp / Composer</li>
+			<li>Jekyll / Front Matter</li>
+			<li>Git</li>
 			<li>PHP</li>
 			<li>MySQL</li>
-			<li>Git</li>
+			<li>Linux / Ubuntu / Manjaro</li>
+		</ul>
+	</article>
+
+	<article class="about__projects">
+		<h2 class="about__title">Projects</h2>
+		<ul class="about__projects_list">
+			{% for project in site.projects %}
+				<li><a href="{{ project.github }}" target="_blank">{{ project.name }}</a></li>
+			{% endfor %}
+		</ul>
+	</article>
+
+	{% comment %}
+		<article class="about__games">
+			<h2 class="about__title">Games</h2>
+			<ul class="about__games_list">
+				{% for i in (1..8) %}
+					<li class="about__games_list-item">
+						<div style="background-image: url(/assets/img/gba_sample.jpg);"></div>
+						<span>
+							<h3>Game name</h3>
+							<h4>Console name</h4>
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</article>
+	{% endcomment %}
+
+	<article class="about__spotify">
+		<h2 class="about__title">Spotify Playlists</h2>
+		<ul class="about__spotify_list">
+			<li><a href="https://open.spotify.com/user/12142196021/playlist/6DH3FO357enPSi8c20AEJm" target="_blank" title="Soul Rest">Soul Rest</a></li>
+			<li><a href="https://open.spotify.com/user/12142196021/playlist/4iCJrJcHNv3b9C0h5hzj3Z" target="_blank" title="Living High">Living High</a></li>
+			<li><a href="https://open.spotify.com/user/12142196021/playlist/3Kxnfdyih2guCM8NNzGKAw" target="_blank" title="Good Vibes">Good Vibes</a></li>
+			<li><a href="https://open.spotify.com/user/12142196021/playlist/43Ppwyk28GS3plUaL34XuQ" target="_blank" title="Blackbear Mix">Blackbear Mix</a></li>
+		</ul>
+	</article>
+
+	<article class="about__end">
+		<h2 class="about__title">That's it!</h2>
+		
+		<p class="about__end_line">
+			If you want to talk with me, use these links:
+		</p>
+		
+		<ul class="about__end_list">
+			<li><a href="https://www.github.com/{{ site.github }}" title="github" target="_blank">github</a></li>
+			<li><a href="https://www.instagram.com/{{ site.instagram }}" title="instagram" target="_blank">instagram</a></li>
+			<li><a href="https://www.spotify.com/{{ site.spotify }}" title="spotify" target="_blank">spotify</a></li>
+			<li><a href="mailto:{{ site.email }}" title="{{ site.email }}" target="_blank">{{ site.email }}</a></li>
 		</ul>
 	</article>
 </section>

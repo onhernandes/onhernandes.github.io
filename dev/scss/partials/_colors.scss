@@ -25,3 +25,30 @@ $pink: #FC5185;
 $purple: #512E5E;
 $orange: #FF7C38;
 $dark-green: darken(#57D131, 15%);
+
+$post-color: (
+	blue: #70A1D7,
+	yellow: #F4AD49,
+	red: #F23557,
+	green: #69DE92,
+	bluegreen: #316072,
+	linux: #52845F,
+	purple: #834496,
+	pink: #F02A71,
+	orange: #FF5722
+);
+
+$category_color: (
+	php: purple,
+	mysql: bluegreen,
+	html: orange,
+	html5: orange,
+	css: blue,
+	css3: blue,
+	scss: blue,
+	sass: blue,
+	js: yellow,
+	javascript: yellow,
+	git: red,
+	linux: linux
+);

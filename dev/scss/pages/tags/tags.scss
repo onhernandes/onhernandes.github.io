@@ -1,0 +1,23 @@
+$tags_wrapper: 80%;
+$tags_margin: 10%;
+
+.tags {
+	@include flex(wrap row);
+
+	article {
+		flex: 0 0 $tags_wrapper;
+		margin: 50px $tags_margin 10px;
+
+		@media screen and (max-width: 1024px) { flex-basis: 90% !important; }
+		
+		@media screen and (max-width: 760px) {
+			margin: 50px auto 10px;
+		}
+		
+		&:nth-child(2) { margin-top: 0 !important; }
+	}
+
+	@-moz-document url-prefix() { 
+		margin-bottom: 30px;
+	}
+}

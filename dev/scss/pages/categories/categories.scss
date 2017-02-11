@@ -1,0 +1,53 @@
+.categories {
+	@extend .tags;
+	
+	&__cloud {
+		width: 80%;
+		margin: 50px auto;
+		//text-align: center;
+		@include flex(wrap row);
+
+		li {
+			display: inline-block;
+			padding: 60px 0;
+			background-color: $green;
+			text-align: center;
+			flex: 1 0 25%;
+			position: relative;
+
+			a {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include flex(wrap row);
+				@include flex-align(center, center, center);
+				font-size: $font-size-cellphone;
+				color: #fff;
+			}
+
+			@include category-color();
+
+			@media screen and (max-width: 760px) { flex-basis: 50% !important; }
+		}
+
+		@media screen and (max-width: 760px) { width: 100% !important; }
+	}
+
+	&__item {
+		@extend .tags__item;
+
+		&_title {
+			@extend .tags__item_title;
+		}
+
+		&_list {
+			@extend .tags__item_list;
+		}
+	}
+
+	@-moz-document url-prefix() { 
+		margin-bottom: 30px;
+	}
+}

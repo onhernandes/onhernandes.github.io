@@ -12,21 +12,106 @@ description: > # this means to ignore newlines until "baseurl:"
   That's my website/blog, I write somethings about me and the awesome code world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mhernandes.github.io" # the base hostname & protocol for your site
-facebook_username: mthernandes
-instagram_username: mt_hernandes
-twitter_username: mt_hernandes
-github_username: mhernandes
+facebook: mthernandes
+instagram: mt_hernandes
+twitter: mt_hernandes
+github: mhernandes
+spotify: mhernandes
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
 
+series:
+    - title: title
+
+site_links:
+    - title: home
+      url: /
+      icon: home 
+      
+    - title: blog
+      url: /blog
+      icon: blog
+      
+    - title: series
+      url: /series
+      icon: blog
+      
+    - title: categories
+      url: /categories
+      icon: blog
+      
+    - title: tags
+      url: /tags
+      icon: blog
+      
+    - title: about
+      url: /about
+      icon: info      
+
 color: gray
 lang: en
-taggs: "developer, coder, web, development, programmation, design, github"
 
-exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*']
+exclude: ['package.json', 'dev', 'node_modules', 'screenshots', 'gulpfile.js', 'back*.*', 'LICENSE.md', 'README.md']
 
 sass:
   sass_dir: dev/scss
+
+projects:
+  - name: mustang.js
+    slug: mustang-js
+    desc: 'A simple jQuery slider'
+    working: false
+    link: false
+    github: 'https://github.com/mhernandes/mustang-js'
+    
+  - name: shield-scss
+    slug: shield-scss
+    desc: 'Simple SCSS files that I use on my work'
+    working: true
+    link: false
+    github: 'https://github.com/mhernandes/shield-scss'
+    
+  - name: keyguard
+    slug: keyguard
+    desc: 'Simple password manager just for practice'
+    working: false
+    link: false
+    github: 'https://github.com/mhernandes/keyguard'
+    
+  - name: start-user
+    slug: start-user
+    desc: 'A cool form that create a new user(ie Admin) to a table just for test any thing'
+    working: true
+    link: false
+    github: 'https://github.com/mhernandes/start-user'
+    
+  - name: awesome-movies
+    slug: awesome-movies
+    desc: 'Awesome list with movies envolving tech'
+    working: true
+    link: false
+    github: 'https://github.com/mhernandes/awesome-movies'
+    
+  - name: diametrum
+    slug: diametrum
+    desc: 'Diametrum is a cool and simple Jekyll theme enjoy it!'
+    working: false
+    link: false
+    github: 'https://github.com/mhernandes/diametrum'
+    
+  - name: favorite-articles
+    slug: favorite-articles
+    desc: 'List with my favorite articles'
+    working: true
+    link: false
+    github: 'https://github.com/mhernandes/favorite-articles'
+    
+  - name: front-challenges
+    slug: front-challenges
+    desc: 'Cool list with some front end challenges'
+    working: true
+    link: false
+    github: 'https://github.com/mhernandes/front-challenges'

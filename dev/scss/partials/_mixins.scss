@@ -5,12 +5,6 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
-	-webkit-display: flex;
-	-moz-display: flex;
-	-ms-display: flex;
-	-o-display: flex;
-	display: flex;
 
 	-webkit-flex-flow: $flow;
 	-moz-flex-flow: $flow;
@@ -26,12 +20,6 @@
 	display: -ms-inline-flex;
 	display: -o-inline-flex;
 	display: inline-flex;
-
-	-webkit-flex-flow: $flow;
-	-moz-flex-flow: $flow;
-	-ms-flex-flow: $flow;
-	-o-flex-flow: $flow;
-	flex-flow: $flow;
 }
 
 // Define the alignment for a flex container
@@ -69,4 +57,81 @@
 	-ms-transform: $transform;
 	-o-transform: $transform;
 	transform: $transform;
+}
+
+@mixin gradient($coloring) {
+	background-image: -webkit-linear-gradient($coloring);
+	background-image: -o-linear-gradient($coloring);
+	background-image: linear-gradient($coloring);
+}
+
+@mixin post-color($color) {
+	@if map-has-key($post-color, $color) == true {
+		background-color: map-get($post-color, $color);
+	}
+}
+
+@mixin post-category() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			.article__content a {
+				color: map-get($post-color, $value);
+				border-bottom-color: map-get($post-color, $value);
+			}
+
+			h1, h2, h3, h4 {
+				color: map-get($post-color, $value);
+			}
+		}
+	}
+}
+
+@mixin menu-category() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			background-color: map-get($post-color, $value);
+
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] {
+			background-color: map-get($post-color, $value);
+
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+}
+
+@mixin menu-wrapper() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] {
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+}
+
+@mixin category-color() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] { background-color: map-get($post-color, $value); }
+	}
+	
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] { background-color: map-get($post-color, $value); }
+	}
+}
+
+@mixin color-share() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] { a { color: map-get($post-color, $value); } }
+	}
+	
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] { a { color: map-get($post-color, $value); } }
+	}
 }

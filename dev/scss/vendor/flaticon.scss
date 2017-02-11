@@ -1,8 +1,3 @@
-/*
-Flaticon icon font: Flaticon
-Creation date: 03/10/2016 21:43
-*/
-
 @font-face {
     font-family: "Flaticon";
     src: url("/assets/font/Flaticon.eot");
@@ -21,21 +16,24 @@ Creation date: 03/10/2016 21:43
     }
 }
 
-
-.flaticon-email:before,
-.flaticon-facebook:before,
-.flaticon-facebook-solo:before,
-.flaticon-github:before,
-.flaticon-instagram:before,
-.flaticon-menu:before,
-.flaticon-rss:before,
-.flaticon-search:before,
-.flaticon-share:before,
-.flaticon-twitter:before,
-.flaticon-twitter-solo:before,
-.flaticon-quit:before,
-.flaticon-link:before,
-.fi:before {
+.fi:before,
+.icon-info:before, 
+.icon-arrow:before, 
+.icon-blog:before, 
+.icon-close:before, 
+.icon-column1:before, 
+.icon-column2:before, 
+.icon-column3:before, 
+.icon-facebook:before, 
+.icon-github:before, 
+.icon-home:before, 
+.icon-instagram:before, 
+.icon-link:before, 
+.icon-mail:before, 
+.icon-menu:before, 
+.icon-search:before, 
+.icon-spotify:before, 
+.icon-twitter:before {
     display: inline-block;
     font-family: "Flaticon";
     font-style: normal;
@@ -50,30 +48,38 @@ Creation date: 03/10/2016 21:43
     font-smoothing: antialiased;
 }
 
-.flaticon-email:before { content: "\f100"; }
-.flaticon-facebook:before { content: "\f101"; }
-.flaticon-facebook-solo:before { content: "\f102"; }
-.flaticon-github:before { content: "\f103"; }
-.flaticon-instagram:before { content: "\f104"; }
-.flaticon-link:before { content: "\f105"; }
-.flaticon-menu:before { content: "\f106"; }
-.flaticon-quit:before { content: "\f107"; }
-.flaticon-rss:before { content: "\f108"; }
-.flaticon-search:before { content: "\f109"; }
-.flaticon-share:before { content: "\f10a"; }
-.flaticon-twitter:before { content: "\f10b"; }
-.flaticon-twitter-solo:before { content: "\f10c"; }
+.icon-info:before { content: "\f100"; }
+.icon-arrow:before { content: "\f101"; }
+.icon-blog:before { content: "\f102"; }
+.icon-close:before { content: "\f103"; }
+.icon-column1:before { content: "\f104"; }
+.icon-column2:before { content: "\f105"; }
+.icon-column3:before { content: "\f106"; }
+.icon-facebook:before { content: "\f107"; }
+.icon-github:before { content: "\f108"; }
+.icon-home:before { content: "\f109"; }
+.icon-instagram:before { content: "\f10a"; }
+.icon-link:before { content: "\f10b"; }
+.icon-mail:before { content: "\f10c"; }
+.icon-menu:before { content: "\f10d"; }
+.icon-search:before { content: "\f10e"; }
+.icon-spotify:before { content: "\f10f"; }
+.icon-twitter:before { content: "\f110"; }
     
-$icon-email: "\f100";
-$icon-facebook: "\f101";
-$icon-facebook-solo: "\f102";
-$icon-github: "\f103";
-$icon-instagram: "\f104";
-$icon-link: "\f105";
-$icon-menu: "\f106";
-$icon-quit: "\f107";
-$icon-rss: "\f108";
-$icon-search: "\f109";
-$icon-share: "\f10a";
-$icon-twitter: "\f10b";
-$icon-twitter-solo: "\f10c";
+$icon-info: "\f100";
+$icon-arrow: "\f101";
+$icon-blog: "\f102";
+$icon-close: "\f103";
+$icon-column1: "\f104";
+$icon-column2: "\f105";
+$icon-column3: "\f106";
+$icon-facebook: "\f107";
+$icon-github: "\f108";
+$icon-home: "\f109";
+$icon-instagram: "\f10a";
+$icon-link: "\f10b";
+$icon-mail: "\f10c";
+$icon-menu: "\f10d";
+$icon-search: "\f10e";
+$icon-spotify: "\f10f";
+$icon-twitter: "\f110";

@@ -1,0 +1,27 @@
+/*.posts__layout {
+	flex: 0 0 100%;
+	padding-bottom: 60px;
+	
+	ul {
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			padding: 15px 12px;
+
+			a {
+				color: $gray;
+				font-size: 30px;
+				display: inline-block;
+
+				&[icon="one-column"] { @extend .icon-column1; }
+				&[icon="two-column"] { @extend .icon-column2; }
+				&[icon="three-column"] {
+					@extend .icon-column3;
+					font-size: 36px;
+					transform: translateY(5px);
+				}
+			}
+		}
+	}
+}*/

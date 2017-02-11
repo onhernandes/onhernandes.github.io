@@ -1,0 +1,23 @@
+.about__end {
+	&_line {
+		font-size: $font-size-cellphone;
+		padding: 0 0 10px;
+	}
+
+	&_list {
+		list-style-type: disc;
+		padding-left: 22px;
+
+		li {
+			padding: 10px 0;
+			color: $gray;
+
+			a {
+				font-size: $font-size-cellphone;
+				color: $gray;
+				border-bottom: 1px dashed $gray;
+				padding-bottom: 2px;
+			}
+		}
+	}
+}

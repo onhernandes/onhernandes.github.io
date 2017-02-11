@@ -1,8 +1,7 @@
 // Reset
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
 
 * {
-    font-family: $family-whole-page, $family-font-type;
+    font-family: $family-text, $family-type;
     font-weight: 300;
     box-sizing: border-box;
     border: none;
@@ -19,10 +18,10 @@ a:active {
 }
 
 p, span {
-	font-size: $font-size-tablet;
+	// @add font-size() mixin
 }
 
-section, header {
+section, header, footer {
 	width: 100%;
 	height: auto;
 }
@@ -30,8 +29,10 @@ section, header {
 h1, h2, h3,
 h4, h5, h6 {
 	font-weight: 400;
+	font-family: $family-page, sans-serif;
 }
 
+// @add header() mixin to generate headers font-size
 h1 {font-size: 32px;}
 h2 {font-size: 24px;}
 h3 {font-size: 18.5px;}
@@ -39,9 +40,7 @@ h4 {font-size: 16px;}
 h5 {font-size: 13.5px;}
 h6 {font-size: 11px;}
 
-ul {
-	list-style-type: none;
-}
+ul { list-style-type: none; }
 
 input, textarea, button {
 	display: block;
@@ -50,11 +49,18 @@ input, textarea, button {
 
 input[type="button"],
 input[type="submit"],
-button {
-	cursor: pointer;
-}
+button { cursor: pointer; }
 
-::-webkit-input-placeholder {color: #fff;}
+/*::-webkit-input-placeholder {color: #fff;}
 :-moz-placeholder {color: #fff;}
 ::-moz-placeholder {color: #fff;}
-:-ms-input-placeholder {color: #fff;}
+:-ms-input-placeholder {color: #fff;}*/
+
+@media screen and (min-width: 1440px) {
+	body, .menu, .header::after {
+		margin: 0 auto !important;
+		left: auto !important;
+	}
+
+	body, .menu, .header::after { width: 1440px !important; }
+}
