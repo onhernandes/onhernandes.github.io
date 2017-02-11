@@ -6,7 +6,7 @@ title: Categories
 <section class="categories">
 	<ul class="categories__cloud">
 		{% for cat in site.categories %}
-			<li>
+			<li category="{{ cat[0] }}">
 				<a href="#{{ cat[0] }}">{{ cat[0] }}</a>
 			</li>
 		{% endfor %}

@@ -27,7 +27,7 @@
 				color: #fff;
 			}
 
-			&:first-child {background-color: $blue;}
+			@include category-color();
 
 			@media screen and (max-width: 760px) { flex-basis: 50% !important; }
 		}
