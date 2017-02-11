@@ -26,13 +26,6 @@
 @import 'about/spotify';
 @import 'about/end';
 
-// Article
-@import "article/article";
-@import "article/header";
-@import "article/content";
-@import "article/related";
-@import "article/comments";
-
 // Tags
 @import "tags/tags";
 @import "tags/cloud";
@@ -43,6 +36,13 @@
 
 // Categories
 @import "categories/categories";
+
+// Article
+@import "article/article";
+@import "article/header";
+@import "article/content";
+@import "article/related";
+@import "article/comments";
 
 // Category
 //@import "category/category";

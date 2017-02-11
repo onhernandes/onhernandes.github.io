@@ -3,17 +3,14 @@
 	justify-content: center;
 
 	article {
-		h1, 
-		h2, 
-		h3, 
-		h4 {
+		h1, h2, h3, h4 {
 			color: $gray;
 			padding: 40px 0 15px;
 		}
 	}
 
 	article:not(.article__content) {
-		flex: 0 0 80%;
+		flex: 0 0 90%;
 		//margin: 0 10%;
 	}
 
@@ -21,7 +18,7 @@
 	
 	@include post-category();
 
-	@media screen and (max-width: 760px) {
-		article:not(.article__content) { flex-basis: 90% !important; }
+	@media screen and (min-width: 1024px) {
+		article:not(.article__content) { flex-basis: 80%; }
 	}
 }
