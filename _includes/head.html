@@ -10,12 +10,14 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="revisit-after" content="7 days">
 	<meta name="rating" content="general">
-
-	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-
 	<meta name=”robots” content="index, follow">
 	<meta name="description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}, {% endfor %}{% else %}{{ site.taggs }}{% endif %}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
 	<!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -41,14 +43,15 @@
     <meta property="og:site_name" content="{{ site.title }}">
 
 	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/fav/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/assets/img/fav/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/assets/img/fav/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/assets/img/fav/manifest.json">
-	<link rel="mask-icon" href="/assets/img/fav/safari-pinned-tab.svg" color="#2141cb">
-	<link rel="shortcut icon" href="/assets/img/fav/favicon.ico">
-	<meta name="msapplication-config" content="/assets/img/fav/browserconfig.xml">
-	<meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}#2141cb{% endif %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/img/favicon/manifest.json">
+	<link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#70a1d7">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+	<meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}#70A1D7{% endif %}">
 
 	<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
 </head>
