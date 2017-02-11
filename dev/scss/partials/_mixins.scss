@@ -118,14 +118,20 @@
 
 @mixin category-color() {
 	@each $key, $value in $category_color {
-		&[category="#{$key}"] {
-			background-color: map-get($post-color, $value);
-		}
+		&[category="#{$key}"] { background-color: map-get($post-color, $value); }
 	}
 	
 	@each $key, $value in $post-color {
-		&[category="#{$key}"] {
-			background-color: map-get($post-color, $value);
-		}
+		&[category="#{$key}"] { background-color: map-get($post-color, $value); }
+	}
+}
+
+@mixin color-share() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] { a { color: map-get($post-color, $value); } }
+	}
+	
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] { a { color: map-get($post-color, $value); } }
 	}
 }
