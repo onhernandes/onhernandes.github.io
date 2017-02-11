@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: article
 title:  "Chartist.js - Plugins"
 date:   2017-02-10 10:21:20 -0300
-image: charts-print-plugin-fb.jpg
+image: charts-print-plugin.jpg
 category: js
 intro: 'Plugins para o Chartist.js'
 ---
@@ -12,7 +12,7 @@ Eu nem sei por onde começar - sinceramente -, mas eu sei que se você ainda nã
 ## O que é esse tal de Chartist.js?
 Um breve resumo aqui, ele é uma lib de charts, feito com JS puro e CSS. Eis aqui um simples exemplo:
 
-![Exemplo do Line Charts](../img/posts/charts-print.jpg)
+![Exemplo do Line Charts](/assets/img/charts-print-normal.jpg)
 
 Se quiser saber mais, [tem um post introduzindo ele aqui](http://blog.pineb.com.br/chartist/).
 
@@ -78,7 +78,7 @@ Nas configurações do Chartist - sim, na mesma váriavel de opções -, ative o
 
 E pronto! Se liga no resultado:
 
-![Resultado do Line Charts](/assets/img/charts-print-plugin.jpg)
+![Resultado do Line Charts](/assets/img/charts-print.jpg)
 
 Se quiser ver mais exemplos do Chartist.js puro, [clique aqui](http://gionkunz.github.io/chartist-js/examples.html)
 
