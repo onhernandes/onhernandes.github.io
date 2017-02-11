@@ -8,4 +8,8 @@
 			flex-basis: 90% !important;
 		}
 	}
+
+	&::after {
+		background-color: rgba(#000, 0.05);
+	}
 }

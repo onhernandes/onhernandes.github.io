@@ -122,6 +122,7 @@
 			background-color: map-get($post-color, $value);
 		}
 	}
+	
 	@each $key, $value in $post-color {
 		&[category="#{$key}"] {
 			background-color: map-get($post-color, $value);

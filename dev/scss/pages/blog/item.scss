@@ -3,7 +3,7 @@
 	min-height: 300px;
 	margin-bottom: 4%;
 	padding: 20px;
-	background-color: map-get($post-color, yellow);
+	//background-color: map-get($post-color, yellow);
 	@include flex(wrap column);
 
 	div {
@@ -52,4 +52,6 @@
 	@-moz-document url-prefix() { 
 		margin-bottom: 20px;
 	}
+
+	@include category-color();
 }

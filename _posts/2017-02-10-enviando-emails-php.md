@@ -6,6 +6,7 @@ color: '#834496'
 category: php
 intro: 'Saiba como enviar emails do seu computador com PHPMailer'
 ---
+
 # Ok, acabei tudo, só falta...o envio dos emails ¬¬
 Eu sei que isso, talvez seja algo totalmente simples pros maix velhos, só que, para nós(eternos novatos, e realmente novatos), talvez seja um verdadeiro Monstro do Lago Ness.
 Lá estava eu, me matando lindamente pra criar [URLs Amigáveis com o .htaccess]() - minha primeira vez, estava testando em um servidor gratuito, porque não conseguia localmente -, quando finalmente consegui a tal proeza, me deparei com outra quest:
