@@ -16,4 +16,8 @@ $tags_margin: 10%;
 		
 		&:nth-child(2) { margin-top: 0 !important; }
 	}
+
+	@-moz-document url-prefix() { 
+		margin-bottom: 30px;
+	}
 }

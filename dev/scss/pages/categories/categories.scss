@@ -46,4 +46,8 @@
 			@extend .tags__item_list;
 		}
 	}
+
+	@-moz-document url-prefix() { 
+		margin-bottom: 30px;
+	}
 }

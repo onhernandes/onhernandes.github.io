@@ -48,4 +48,8 @@
 	@media screen and (max-width: 1024px) { flex-basis: calc(90% / 2) !important; }
 
 	@media screen and (max-width: 760px) { flex-basis: 100% !important; }
+
+	@-moz-document url-prefix() { 
+		margin-bottom: 20px;
+	}
 }

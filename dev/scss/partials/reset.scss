@@ -58,7 +58,7 @@ button { cursor: pointer; }
 :-ms-input-placeholder {color: #fff;}*/
 
 @media screen and (min-width: 1440px) {
-	body, .menu {
+	body, .menu, .header::after {
 		margin: 0 auto !important;
 		left: auto !important;
 	}
