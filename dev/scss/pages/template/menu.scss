@@ -9,7 +9,6 @@
 	background-color: $gray;
 	z-index: map-get($z-index, nav);
 
-	&__wrapper,
 	&__search,
 	&__icon { flex: 0 0 auto; }
 
@@ -140,6 +139,8 @@
 			display: none;
 		}
 	}
+
+	@include menu-wrapper();
 
 	@media screen and (max-width: 1024px) { width: 50%; }
 	@media screen and (max-width: 760px) { width: 100%; }

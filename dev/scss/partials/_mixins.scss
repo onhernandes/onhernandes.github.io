@@ -114,3 +114,16 @@
 		}
 	}
 }
+
+@mixin menu-wrapper() {
+	@each $key, $value in $category_color {
+		&[category="#{$key}"] {
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+	@each $key, $value in $post-color {
+		&[category="#{$key}"] {
+			ul { background-color: map-get($post-color, $value); }
+		}
+	}
+}
