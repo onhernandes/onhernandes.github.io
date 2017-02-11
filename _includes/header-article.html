@@ -1,4 +1,4 @@
-<header class="header header__article" {% if page.mode %}mode="{{ page.mode }}"{% endif %} {% if page.img %}img="{{ page.img }}"{% else %}{% if page.color %}color="{{ page.color }}"{% endif %}{% endif %}>
+<header class="header header__article" {% if page.mode %}mode="{{ page.mode }}"{% endif %} {% if page.image %}style="background-image: url(/assets/img/{{ page.image }});"{% else %}{% if page.color %}color="{{ page.color }}"{% endif %}{% endif %}>
 	<div class="header__wrapper">
 		<h4 class="header__wrapper_subtitle">{{ page.date | date: '%B %d, %Y' }}</h4>
 		<h1 class="header__wrapper_title" title="">{{ page.title }}</h1>

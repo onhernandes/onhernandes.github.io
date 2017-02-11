@@ -14,7 +14,7 @@ title: 'Blog'
 		</nav>
 	{% endcomment %}
 	
-	{% for post in site.posts %}
+	{% for post in site.posts reversed %}
 		<article class="posts__item" color="">
 			<div class="posts__item_category">
 				<a href="{{ site.url | append: '/categories#' | append: post.category }}">

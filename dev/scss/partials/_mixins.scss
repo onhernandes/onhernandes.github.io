@@ -5,12 +5,6 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
-	-webkit-display: flex;
-	-moz-display: flex;
-	-ms-display: flex;
-	-o-display: flex;
-	display: flex;
 
 	-webkit-flex-flow: $flow;
 	-moz-flex-flow: $flow;
@@ -26,12 +20,6 @@
 	display: -ms-inline-flex;
 	display: -o-inline-flex;
 	display: inline-flex;
-
-	-webkit-flex-flow: $flow;
-	-moz-flex-flow: $flow;
-	-ms-flex-flow: $flow;
-	-o-flex-flow: $flow;
-	flex-flow: $flow;
 }
 
 // Define the alignment for a flex container

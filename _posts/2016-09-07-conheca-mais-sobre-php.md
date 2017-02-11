@@ -1,10 +1,10 @@
 ---
-layout: 'article'
-title:  'Conheça mais sobre PHP'
-lang: 'pt'
+layout: article
+title:  Conheça mais sobre PHP
+lang: pt
 date:   2016-09-07 20:50:39 -0300
-intro: 'Você não aprendeu tudo naquele curso de 3 meses'
-category: 'php'
+intro: Você não aprendeu tudo naquele curso de 3 meses
+category: php
 tags: php curso tempo estudo
 ---
 

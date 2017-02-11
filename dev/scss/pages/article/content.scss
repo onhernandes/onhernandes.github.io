@@ -2,24 +2,13 @@ $paddding-base: 20px;
 
 .article__content {
 	padding-top: 40px;
-	> p, 
-	> a, 
-	> h1, 
-	> h2, 
-	> h3, 
-	> h4,
-	> blockquote { padding: 0 10%; }
+	> p, > a, > h1, > h2, 
+	> h3, > h4, > blockquote { padding: 0 10%; }
 
-	> p, > a {
-		padding-bottom: 20px;
-	}
+	> p, > a { padding-bottom: 20px; }
 
-	p,
-	a,
-	blockquote,
-	ol,
-	ul,
-	li {
+	p, a, blockquote,
+	ol, ul, li {
 		color: $gray;
 		font-size: $font-size-tablet;
 	}
@@ -32,10 +21,7 @@ $paddding-base: 20px;
 		a { padding-bottom: 2px; }
 	}
 
-	> h1, 
-	> h2, 
-	> h3, 
-	> h4 { padding: 40px 10% 15px !important; }
+	> h1, > h2, > h3, > h4 { padding: 40px 10% 15px !important; }
 
 	img {
 		width: 100%;
@@ -49,22 +35,14 @@ $paddding-base: 20px;
 	p:last-child { padding-bottom: 0 !important; }
 
 	@media screen and (max-width: 760px) {
-		> p, 
-		> a, 
-		> h1, 
-		> h2, 
-		> h3, 
-		> h4,
-		> blockquote {
+		> p, > a, > h1, > h2, 
+		> h3, > h4, > blockquote {
 			padding-left: 5% !important;
 			padding-right: 5% !important;
 		}
 
 		ol, ul { padding: 5px 10% 20px; }
 
-		> h1, 
-		> h2, 
-		> h3, 
-		> h4 { padding-top: 15px !important; }
+		> h1, > h2, > h3, > h4 { padding-top: 15px !important; }
 	}
 }
