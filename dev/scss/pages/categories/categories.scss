@@ -1,5 +1,7 @@
 .categories {
-	ul {
+	@extend .tags;
+	
+	&__cloud {
 		width: 80%;
 		margin: 50px auto;
 		//text-align: center;
@@ -31,5 +33,17 @@
 		}
 
 		@media screen and (max-width: 760px) { width: 100% !important; }
+	}
+
+	&__item {
+		@extend .tags__item;
+
+		&_title {
+			@extend .tags__item_title;
+		}
+
+		&_list {
+			@extend .tags__item_list;
+		}
 	}
 }
