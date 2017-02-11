@@ -13,10 +13,6 @@ $paddding-base: 20px;
 		font-size: $font-size-tablet;
 	}
 
-	h2 { @extend h1; }
-	h3 { @extend h2; }
-	h4 { @extend h3; }
-
 	a { border-bottom: 1px dashed $gray; }
 
 	li {

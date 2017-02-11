@@ -7,6 +7,10 @@
 			color: $gray;
 			padding: 40px 0 15px;
 		}
+
+		h2 { @extend h1; }
+		h3 { @extend h2; }
+		h4 { @extend h3; }
 	}
 
 	> article:not(.article__content) {
