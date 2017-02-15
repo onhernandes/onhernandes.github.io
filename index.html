@@ -5,62 +5,29 @@ image: 'standard.jpg'
 opacity: 0
 ---
 
-<section class="projects">
-	{% for project in site.projects %}		
-  		<article class="projects__item" title="{{ project.name }}" project="{{ project.slug }}">		
-  			<a target="_blank" href="{{ project.github }}" class="projects__item_title">		
-  				<h1 title="{{ project.name }}">{{ project.name }}</h1>		
-  			</a>		
-  		
-  			<a target="_blank" href="{{ project.github }}" class="projects__item_intro" title="{{ project.name }}">{{ project.desc }}</a>		
-  		
-  			<ul class="projects__item_list">		
-  				<li><a href="{{ project.github }}" icon="github" title="{{ project.name }}" target="_blank"></a></li>		
-  				{% if project.link != false %}
-  					<li><a href="{{ project.link }}" icon="link" title="{{ project.name }}" target="_blank"></a></li>
-  				{% endif %}		
-  			</ul>		
-  		</article>		
-  	{% endfor %}
-</section>
-
-<section class="about__intro">
-	<a href="{{ '/about' | prepend: site.url }}" class="about__intro_title" title="">
-		<h1>About</h1>
-	</a>
-	
-	<a href="{{ '/about' | prepend: site.url }}" class="about__intro_line">
-		First of everything, my name is Matheus and I'm from Brazil.
-		I've 18 years and I'm a tech lover since I was a little kid
-	</a>
-</section>
-
 <section class="posts">
-	<header class="posts__header">
-		<h1>latest posts</h1>
-	</header>
+	{% for post in site.posts %}
+		<article class="posts__item">
+			<a href="{{ post.url }}" class="posts__item_thumb">
+				<figure>
+					{% if post.image %}
+						<img src="/assets/img/posts/{{ post.image }}" alt="{{ post.title }}">
+					{% endif %}
+					<h2>{{ post.title }}</h2>
+				</figure>
+			</a>
 
-	{% for post in site.posts limit:3 %}
-		<article class="posts__item" category="{{ post.category }}">
-			<div class="posts__item_category">
-				<a href="{{ site.url | append: '/categories#' | append: post.category }}">
-					{{ post.category }}
-				</a>
-			</div>
-
-			<div class="posts__item_title">
-				<a href="{{ post.url | prepend: site.url }}">
-					{{ post.title | truncatewords: 10 }}
-				</a>
-			</div>
-
-			<div class="posts__item_date">
-				{{ post.date | date: '%B %d, %Y' }}
-			</div>
+			<h3 class="posts__item_date">{{ post.date }}</h3>
+			
+			<p class="posts__item_excerpt">{{ post.desc | truncatewords: 25 }}</p>
+			
+			{% if post.tags %}
+				<ul class="posts__item_tags">
+					{% for tag in post.tags limit:4 %}
+						<li>{{ tag }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
 		</article>
 	{% endfor %}
-
-	<a href="{{ '/blog' | prepend: site.url }}" class="posts__button">
-		<button>Keep reading</button>
-	</a>
 </section>
