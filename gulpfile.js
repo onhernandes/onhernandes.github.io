@@ -1,11 +1,9 @@
 var gulp 		= require('gulp'),
 	scss 		= require('gulp-sass'),
 	concat 		= require('gulp-concat'),
-	cssmin 		= require('gulp-cssmin'),
-	rename 		= require('gulp-rename'),
+	imagemin    = require('gulp-imagemin'),
 	uglify 		= require('gulp-uglify'),
 	plumber 	= require('gulp-plumber'),
-	//imagemin 	= require('gulp-imagemin'),
 	cp 			= require('child_process'),
 	browserSync = require('browser-sync');
 
@@ -17,7 +15,7 @@ var basePath = './',
 		js: [dev + '/js/*.js', dev + '/js/**/*.js'],
 		main_scss: dev + '/scss/main.scss',
 		scss: [dev + '/scss/*', dev + '/scss/**/*', dev + '/scss/**/**/*', dev + '/scss/**/**/**/*'],
-		img: [dev + '/img/*.{jpg,png,gif}', dev + '/img/**/*.{jpg,png,gif,svg,json,xml}'],
+		img: [dev + '/img/*.{jpg,png,gif,svg}', dev + '/img/**/*.{jpg,png,gif,svg}'],
 		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
 	},
 	paths_assets = {
@@ -49,8 +47,7 @@ gulp.task('rebuild', ['build'], function() {
 gulp.task('compile-scss', function() {
 	gulp.src(paths_dev.main_scss)
 		.pipe(plumber())
-		.pipe(scss())
-		.pipe(cssmin())
+		.pipe(scss({outputStyle: 'compressed'}))
 		.pipe(gulp.dest(paths_site.css))
 		.pipe(browserSync.reload({stream: true}))
 		.pipe(gulp.dest(paths_assets.css));
@@ -71,7 +68,7 @@ gulp.task('js', function() {
 gulp.task('image', function() {
 	gulp.src(paths_dev.img)
 		.pipe(plumber())
-		//.pipe(imagemin())
+		.pipe(imagemin())
 		//.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(paths_site.img))
 		.pipe(gulp.dest(paths_assets.img));
