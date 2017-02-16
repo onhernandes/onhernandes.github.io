@@ -11,4 +11,7 @@ $base_width: (
 @import 'theme/header';
 @import 'theme/footer';
 @import 'theme/menu';
-@import 'theme/search';
+
+// Home
+@import 'home/posts';
+@import 'home/item';

@@ -1,12 +1,16 @@
 .menu {
 	position: fixed;
 	width: 100%;
-	padding: 0 100% - get($base_width, phone);
 	top: 0;
 	left: 0;
+	padding: 0 100% - get($base_width, phone) - 5%;
 	@include flex-container(wrap row);
 	@include jc(space-between);
 	@include z(nav);
+
+	@include min-tablet {
+		padding: 0 100% - get($base_width, phone);
+	}
 
 	&__logo,
 	&__links {
@@ -19,12 +23,11 @@
 		font-size: 25px;
 		font-weight: bold;
 		color: #fff;
-		padding: 15px 0;
+		padding: 10px 0;
 	}
 
 	&__links {
 		text-align: right;
-		right: 0;
 
 		li {
 			display: inline-block;

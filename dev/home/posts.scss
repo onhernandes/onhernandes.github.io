@@ -1,5 +1,7 @@
 .posts {
-	@include flex(wrap row);
+	width: get($base_width, phone);
+	margin-left: auto;
+
+	@include flex-container(wrap row);
 	@include flex-align(space-between, flex-start, center);
-	//padding-top: 40px;
 }

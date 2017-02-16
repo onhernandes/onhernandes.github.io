@@ -3,7 +3,7 @@
 	<ul class="menu__links">
 		{% for link in site.site_links %}
 			<li>
-				<a href="{{ link.url }}" title="{{ link.title }}">
+				<a href="{{ link.url }}" title="{{ link.title }}" icon="{{ link.icon }}">
 					{{ link.title }}
 				</a>
 			</li>

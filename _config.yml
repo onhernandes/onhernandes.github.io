@@ -31,9 +31,9 @@ site_links:
       url: /
       icon: home 
       
-    - title: blog
-      url: /blog
-      icon: blog
+    - title: projects
+      url: /projects
+      icon: projects
       
     - title: about
       url: /about

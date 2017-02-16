@@ -1,57 +1,9 @@
 .posts__item {
-	flex: 0 1 calc(89% / 3);
-	min-height: 300px;
-	margin-bottom: 4%;
-	padding: 20px;
-	//background-color: map-get($post-color, yellow);
-	@include flex(wrap column);
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 3px;
+	border: 1px solid rgba($gray, 0.4);
+	margin-bottom: 3%;
 
-	div {
-		a {
-			color: #fff;
-			font-family: $family-page, sans-serif;
-			text-transform: uppercase;
-			font-weight: bold;
-			padding-bottom: 3px;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-
-	&_category {
-		a {
-			color: #3E4149 !important;
-			font-size: 20px;
-		}
-	}
-
-	&_title {
-		flex: 2 1 auto !important;
-		display: flex;
-		align-items: center;
-
-		a {
-			font-size: 24px;
-		}
-	}
-
-	&_date {
-		color: #3E4149;
-		font-family: $family-page, sans-serif;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 15px;
-	}
-
-	@media screen and (max-width: 1024px) { flex-basis: calc(90% / 2) !important; }
-
-	@media screen and (max-width: 760px) { flex-basis: 100% !important; }
-
-	@-moz-document url-prefix() { 
-		margin-bottom: 20px;
-	}
-
-	@include category-color();
+	@include flex(0 0 calc(96% / 3));
 }
