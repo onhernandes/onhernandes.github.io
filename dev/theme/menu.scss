@@ -1,18 +1,30 @@
 .menu {
 	position: fixed;
 	width: 100%;
+	padding: 0 100% - get($base_width, phone);
 	top: 0;
 	left: 0;
+	@include flex-container(wrap row);
+	@include jc(space-between);
 	@include z(nav);
 
-	ul {
-		width: get($base_width, phone);
-		margin: 0 auto;
-		text-align: right;
+	&__logo,
+	&__links {
+		display: block;
+		//@include flex();
+	}
 
-		@include min-tablet {
-			width: get($base_width, tablet);
-		}
+	&__logo {
+		text-align: left;
+		font-size: 25px;
+		font-weight: bold;
+		color: #fff;
+		padding: 15px 0;
+	}
+
+	&__links {
+		text-align: right;
+		right: 0;
 
 		li {
 			display: inline-block;
