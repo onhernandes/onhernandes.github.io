@@ -1,7 +1,4 @@
-{% if page.image and page.opacity %}
-<style>.header::after { background-color: rgba(0,0,0, 0.{{ page.opacity }}); }</style>
-{% endif %}
-<header class="header" {% if page.mode %}mode="{{ page.mode }}"{% endif %}{% if page.color or page.image %}style="{% if page.image %}background-image: url(/assets/img/{{ page.image }}); {% else if page.color %}background-image: url(); background-color: {{ page.color }};{% endif %}"{% endif %}>
+<header class="header">
 	<div class="header__wrapper">
 		<h1 class="header__wrapper_title" title="">
 			{% if page.title %}
@@ -10,5 +7,20 @@
 				{{ site.title }}
 			{% endif %}
 		</h1>
+
+		<p class="header__wrapper_text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut velit perferendis temporibus, ullam natus molestiae dolores possimus beatae non nobis.
+		</p>
 	</div>
 </header>
+
+<div class="background">
+</div>
+
+<script>
+	var hd = document.getElementsByClassName('header'),
+		h = hd[0].offsetHeight,
+		se = document.getElementsByClassName('background');
+
+	se[0].style.height = h + 'px';
+</script>

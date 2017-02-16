@@ -6,6 +6,10 @@ opacity: 0
 ---
 
 <section class="posts">
+	{% for i in (1..50) %}
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dicta!</p>
+	{% endfor %}
+	
 	{% for post in site.posts %}
 		<article class="posts__item">
 			<a href="{{ post.url }}" class="posts__item_thumb">

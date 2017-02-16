@@ -12,9 +12,9 @@ var basePath = './',
 	dev =  basePath + 'dev',
 	assets =  basePath + 'assets',
 	paths_dev = {
-		js: [dev + '/js/*.js', dev + '/js/**/*.js'],
-		main_scss: dev + '/scss/main.scss',
-		scss: [dev + '/scss/*', dev + '/scss/**/*', dev + '/scss/**/**/*', dev + '/scss/**/**/**/*'],
+		js: [dev + '/*.js', dev + '/**/*.js', dev + '/**/**/*.js'],
+		main_scss: dev + '/main.scss',
+		scss: [dev + '/*', dev + '/**/*.scss', dev + '/**/**/*.scss', dev + '/**/**/**/*.scss'],
 		img: [dev + '/img/*.{jpg,png,gif,svg}', dev + '/img/**/*.{jpg,png,gif,svg}'],
 		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
 	},
@@ -47,7 +47,7 @@ gulp.task('rebuild', ['build'], function() {
 gulp.task('compile-scss', function() {
 	gulp.src(paths_dev.main_scss)
 		.pipe(plumber())
-		.pipe(scss({outputStyle: 'compressed'}))
+		.pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
 		.pipe(gulp.dest(paths_site.css))
 		.pipe(browserSync.reload({stream: true}))
 		.pipe(gulp.dest(paths_assets.css));

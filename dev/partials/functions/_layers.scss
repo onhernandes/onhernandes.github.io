@@ -5,14 +5,14 @@ $z-index: (
 );
 
 @if hasKeyVar(z-index) {
-	$z-index: merge($z-index-initial, getVar(z-index));
+	$z-index: merge($z-index, getVar(z-index));
 }
 
 @function getLayer($z) {
 	@if hasKey($z-index, $z) {
 		@return get($z-index, $z);	
+	} @else {
+		@warn 'this layer/z-index value does not exist';
+		@return null;
 	}
-
-	@warn 'this layer/z-index value does not exist';
-	@return null;
 }

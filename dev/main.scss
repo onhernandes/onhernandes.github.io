@@ -1,0 +1,14 @@
+// Import shield-scss and vendor
+@import 'partials/shield';
+@import 'vendor/flaticon';
+
+$base_width: (
+	tablet: 80%,
+	phone: 90%
+);
+
+// Import theme
+@import 'theme/header';
+@import 'theme/footer';
+@import 'theme/menu';
+@import 'theme/search';

@@ -1,30 +1,50 @@
 .header {
 	width: 100%;
-	height: 70vh;
-	background: $blue url('/assets/img/home.jpg') center no-repeat;
-	background-size: cover;
-	overflow: hidden;
-	@include flex(wrap row);
-	@include flex-align(center, center, center);
+	height: auto;
+	@include flex-container(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+	@include z(base);
 
 	&__wrapper {
-		flex: 0 0 80%;
-		z-index: 2;
+		@include fx(0 0 get($base_width, phone));
 
 		&_title,
-		&_subtitle {
+		&_subtitle,
+		&_text {
 			color: #fff;
 		}
 
 		&_title {
+			padding: 10% 0 0;
 			font-size: 50px;
-			font-weight: 700;
+			font-weight: 800;
 		}
 
-		@media screen and (max-width: 760px) {
-			flex-basis: 90% !important;
+		&_text {
+			padding-top: 2%;
+			padding-bottom: 18%;
+			padding-right: 50%;
+			//max-width: 40%;
+			@include font-size(phone);
+		}
+
+		@include min-tablet {
+			@include fxb(get($base_width, tablet));
 		}
 	}
+}
+
+.background {
+	background-size: cover;
+	background: $blue url('/assets/img/standard.jpg') center no-repeat;
+	clip-path: polygon(0 0, 100% 0%, 100% 80%, 30% 95%, 0% 85%);
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	@include z(bg);
 
 	&::after {
 		content: "";
@@ -34,11 +54,6 @@
 		left: 0;
 		width: 100%;
 		height: 70vh;
-		background-color: rgba(#000, 0.7);
-	}
-
-	&[mode='diagonal'] {
-		-webkit-clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
-		clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
+		background-color: rgba(#000, 0.1);
 	}
 }
