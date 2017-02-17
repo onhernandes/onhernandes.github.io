@@ -3,5 +3,5 @@
 	margin: 0 auto;
 
 	@include flex-container(wrap row);
-	@include flex-align(space-between, flex-start, center);
+	@include flex-align(space-between, stretch, center);
 }
