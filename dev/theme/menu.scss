@@ -3,19 +3,21 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+	background: transparent url(/assets/img/standard.jpg) 0 -60px no-repeat;
+	background-size: 100% 466px;
 	padding: 0 100% - get($base_width, phone) - 5%;
 	@include flex-container(wrap row);
 	@include jc(space-between);
 	@include z(nav);
 
 	@include min-tablet {
-		padding: 0 100% - get($base_width, phone);
+		$v: 100% - get($base_width, tablet);
+		padding: 0 $v / 2;
 	}
 
 	&__logo,
 	&__links {
 		display: block;
-		//@include flex();
 	}
 
 	&__logo {

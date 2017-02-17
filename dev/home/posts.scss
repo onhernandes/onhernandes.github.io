@@ -1,6 +1,6 @@
 .posts {
-	width: get($base_width, phone);
-	margin-left: auto;
+	width: get($base_width, tablet);
+	margin: 0 auto;
 
 	@include flex-container(wrap row);
 	@include flex-align(space-between, flex-start, center);
