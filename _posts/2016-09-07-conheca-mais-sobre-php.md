@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 'Conheça mais sobre PHP'
+title: 'PHP além do básico'
 lang: pt
 date: 2016-09-07 20:50:39 -0300
 intro: 'Você não aprendeu tudo naquele curso de 3 meses'

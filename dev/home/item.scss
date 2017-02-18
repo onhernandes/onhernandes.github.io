@@ -6,13 +6,13 @@ $post__radius: 5px;
 	//border: 1px solid rgba($gray, 0.4);
 	margin-bottom: 3%;
 	@include flex(0 0 calc(96% / 3));
-	text-align: center;
+	text-align: left;
 
 	&_thumb {
 		width: 100%;
 		display: block;
 		height: auto;
-		text-align: center;
+		//text-align: right;
 		border-top-right-radius: $post__radius;
 		border-top-left-radius: $post__radius;
 		background-color: $blue;
@@ -20,7 +20,7 @@ $post__radius: 5px;
 
 		figure {
 			width: 100%;
-			min-height: 135px;
+			min-height: 200px;
 			height: auto;
 			overflow: hidden;
 			position: relative;
@@ -30,7 +30,7 @@ $post__radius: 5px;
 			h2 {
 				display: block;
 				position: relative;
-				padding: 30px 20px;
+				padding: 30px 30px;
 				font-weight: bold;
 				@include z(post__title);
 			}
@@ -49,19 +49,31 @@ $post__radius: 5px;
 	}
 
 	&_date {
-		padding: 7px 20px;
+		//text-align: left;
+		padding: 20px 20px 0;
 	}
 
 	&_excerpt {
 		padding: 15px 20px;
+		display: block;
+		color: #000;
+		
+		p {
+			@include fz(phone);
+		}
 	}
 
 	&_tags {
-		padding: 7px 15px 20px;
+		//text-align: left;
+		padding: 0px 15px 20px;
 
 		li {
 			display: inline-block;
-			padding: 0 7px;
+			padding: 2px 9px;
+			font-size: 13px;
+			border-radius: $post__radius;
+			border: 1px solid gray;
+			margin-left: 5px;
 		}
 	}
 }

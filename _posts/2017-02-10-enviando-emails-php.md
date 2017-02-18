@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 'Enviando e-mails pelo PHP - PHPMailer'
+title: 'Enviando e-mails com PHPMailer'
 date: 2017-02-10 16:12:55 -0300
 color: '#834496'
 category: php
