@@ -6,29 +6,31 @@ opacity: 0
 ---
 
 <section class="posts">
-	{% for post in site.posts %}
-		<article class="posts__item">
-			<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_thumb" category="{{ post.category }}">
-				<h5 title="{{ post.title }}">
-					{{ post.date | date: '%B %d, %Y' }}
-				</h5>
+	{% for i in (1..6) %}
+		{% for post in site.posts %}
+			<article class="posts__item">
+				<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_thumb" category="{{ post.category }}">
+					<h5 title="{{ post.title }}">
+						{{ post.date | date: '%B %d, %Y' }}
+					</h5>
+					
+					<h2>{{ post.title }}</h2>
+				</a>
 				
-				<h2>{{ post.title }}</h2>
-			</a>
-			
-			<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_excerpt">
-				<p title="{{ post.title }}">{{ post.intro | truncatewords: 25 }}</p>
-			</a>
+				<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_excerpt">
+					<p title="{{ post.title }}">{{ post.intro | truncatewords: 25 }}</p>
+				</a>
 
-			{% comment %}
-			{% if post.tags %}
-					<ul class="posts__item_tags">
-						{% for tag in post.tags %}
-							<li>{{ tag }}</li>
-						{% endfor %}
-					</ul>
-				{% endif %}
-			{% endcomment %}
-		</article>
+				{% comment %}
+				{% if post.tags %}
+						<ul class="posts__item_tags">
+							{% for tag in post.tags %}
+								<li>{{ tag }}</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				{% endcomment %}
+			</article>
+		{% endfor %}
 	{% endfor %}
 </section>
