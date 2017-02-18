@@ -28,15 +28,23 @@ $padding: (100% - get($base_width, tablet)) / 2;
 			}
 		}
 	}
+
+	@include article-color();
 }
 
 .to_top {
 	position: fixed;
+	display: none;
 	left: 0;
 	bottom: 0;
-	@include fz(tablet);
 	margin: 15px;
 	padding: 7px 15px;
 	color: #fff;
 	background-color: rgba($blue, 0.5);
+	
+	@include fz(tablet);
+	@include top-button-color();
+	@include min-tablet {
+		display: block;
+	}
 }

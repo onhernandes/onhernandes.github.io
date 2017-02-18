@@ -3,8 +3,10 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: transparent url(/assets/img/standard.jpg) 0 0 no-repeat;
-	background-size: 100% 100vh;
+	//background: transparent url(/assets/img/standard.jpg) 0 0 no-repeat;
+	//background-size: 100% 100vh;
+	//background-image: initial;
+	background-color: rgba($gray, 1);
 	padding: 0 100% - get($base_width, phone) - 5%;
 	@include flex-container(wrap row);
 	@include jc(space-between);
@@ -25,7 +27,7 @@
 		font-size: 25px;
 		font-weight: bold;
 		color: #fff;
-		padding: 10px 0;
+		padding: 12px 0;
 	}
 
 	&__links {
@@ -37,7 +39,7 @@
 			a {
 				color: #fff;
 				display: block;
-				padding: 20px;
+				padding: 18px 20px 20px;
 				@include fz(phone);
 
 				&:last-child { padding-right: 0; }
@@ -46,8 +48,6 @@
 	}
 
 	&--article {
-		position: absolute;
-		background-image: initial;
-		background-color: rgba(#000, 0.6);
+		//position: absolute;
 	}
 }

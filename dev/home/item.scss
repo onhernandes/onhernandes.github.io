@@ -1,35 +1,38 @@
-$post__radius: 5px;
-$post__color: #333;
+$post__radius: 0;
+$post__color: $gray;
 
 .posts__item {
-	background-color: #fff;
 	border-radius: $post__radius;
 	margin-bottom: 3%;
 	text-align: left;
-	box-shadow: 0px 0px 10px rgba(#000, 0.5);
+	transition: all 0.1s linear 0.01s;
 	@include flex(0 0 100%);
 
 	@include min-tablet { @include flex(0 0 calc(90% / 2)); }
 	@include min-desktop { @include flex(0 0 calc(96% / 3)); }
 
+	&:hover {
+		background-color: rgba($gray, 0.05);
+	}
+
 	&_thumb {
 		width: 100%;
 		height: auto;
-		min-height: 180px;
+		padding-top: 15px;
 		display: block;
 		border-top-right-radius: $post__radius;
 		border-top-left-radius: $post__radius;
-		background-color: $blue;
-		color: #fff;
+		color: $gray;
 		text-align: left;
 		@include fc(wrap row);
-		@include fa(flex-end, center, center);
+		@include fa(flex-start, center, center);
 
-		@include min-tablet { text-align: right; }
+		@include min-tablet { text-align: left; }
 
 		h2, h5 { padding: 0 15px 7px; }
 
 		h2 { font-weight: bold; }
+		h5 { color: $gray; }
 	}
 
 	&_excerpt {
@@ -46,20 +49,5 @@ $post__color: #333;
 		}
 	}
 
-	/*
-	&_tags {
-		padding: 0px 15px 20px;
-
-		li {
-			display: inline-block;
-			padding: 5px 11px;
-			font-size: 13px;
-			border-radius: $post__radius;
-			border: 1px solid $blue;
-			transition: all 0.2s ease 0.001s;
-			color: $blue;
-			margin-left: 5px;
-		}
-	}
-	*/
+	@include post-color();
 }

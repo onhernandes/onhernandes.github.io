@@ -2,6 +2,9 @@
 	width: 100%;
 	height: auto;
 	@include flex-container(wrap row);
+		background-size: cover;
+		background: transparent url('/assets/img/standard.jpg') center no-repeat;
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 95%);
 	@include flex-align(center, flex-start, flex-start);
 	@include z(base);
 
@@ -63,6 +66,7 @@
 }
 
 .background {
+	display: none;
 	background-size: cover;
 	background: $blue url('/assets/img/standard.jpg') center no-repeat;
 	clip-path: polygon(0 0, 100% 0%, 100% 80%, 30% 95%, 0% 85%);

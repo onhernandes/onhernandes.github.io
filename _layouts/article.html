@@ -5,11 +5,11 @@
 	{% include menu.html %}
 	
 	<section class="article" category="{{ page.category }}">
-		<article class="article__content" category="{{ page.category }}">
+		<article class="article__content">
 			{{ content }}
 		</article>
 
-		<article class="article__share" category="{{ page.category }}">
+		<article class="article__share">
 			<h2 class="article__share_title">Compartilhe</h2>
 			<ul class="article__share_list">
 				<li><a href="https://twitter.com/intent/tweet?text=&quot;{% if page.twitter_text %}{{ page.twitter_text }}{% else %}{{ page.intro }}{% endif %}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhe no Twitter" icon="twitter">Twitter</a></li>
@@ -61,6 +61,6 @@
 		</article>
 	</section>
 	
-	<a href="#" class="to_top">top</a>
+	<a href="#" class="to_top" category="{{ page.category }}">top</a>
 </body>
 </html>

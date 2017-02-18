@@ -10,8 +10,8 @@ opacity: 0
 	
 	{% for i in (1..6) %}
 		{% for post in site.posts %}
-			<article class="posts__item">
-				<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_thumb" category="{{ post.category }}">
+			<article class="posts__item" category="{{ post.category }}">
+				<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_thumb">
 					<h5 title="{{ post.title }}">
 						{{ post.date | date: '%B %d, %Y' }}
 					</h5>
