@@ -12,4 +12,6 @@
 		padding-bottom: 20px;
 		@include flex(0 0 100%);
 	}
+
+	&.projects { padding-top: 60px; }
 }

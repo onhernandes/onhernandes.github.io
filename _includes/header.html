@@ -5,6 +5,10 @@
 {% endif %}
 <header class="header {{ is_post }}">
 	<div class="header__wrapper">
+		{% if page.date %}
+			<h4 class="header__wrapper_date"> {{ page.date | date: '%B %d, %Y' }} </h4>
+		{% endif %}
+		
 		<h1 class="header__wrapper_title" title="">
 			{% if page.title %}
 				{{ page.title }}
@@ -13,9 +17,12 @@
 			{% endif %}
 		</h1>
 
-		<p class="header__wrapper_text">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut velit perferendis temporibus, ullam natus molestiae dolores possimus beatae non nobis.
-		</p>
+		{% if page.text or page.intro %}
+			<p class="header__wrapper_text">
+				{{ page.text }}
+				{{ page.intro }}
+			</p>
+		{% endif %}
 	</div>
 </header>
 
