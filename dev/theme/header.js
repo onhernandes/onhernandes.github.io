@@ -12,7 +12,7 @@ var header = {
 		this.header_w = this.header_tag.offsetWidth,
 		this.header_h = this.header_tag.offsetHeight;
 		this.menu.style.backgroundSize = this.header_w + 'px ' + this.header_h + 'px';
-		this.bg.style.height = (this.header_h + 80) + 'px';
+		//this.bg.style.height = (this.header_h + 80) + 'px';
 		return true;
 	}
 };

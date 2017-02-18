@@ -6,6 +6,8 @@ opacity: 0
 ---
 
 <section class="posts">
+	<h2 class="posts__header">Posts</h2>
+	
 	{% for i in (1..6) %}
 		{% for post in site.posts %}
 			<article class="posts__item">
@@ -20,16 +22,6 @@ opacity: 0
 				<a title="{{ post.title }}" href="{{ post.url }}" class="posts__item_excerpt">
 					<p title="{{ post.title }}">{{ post.intro | truncatewords: 25 }}</p>
 				</a>
-
-				{% comment %}
-				{% if post.tags %}
-						<ul class="posts__item_tags">
-							{% for tag in post.tags %}
-								<li>{{ tag }}</li>
-							{% endfor %}
-						</ul>
-					{% endif %}
-				{% endcomment %}
 			</article>
 		{% endfor %}
 	{% endfor %}

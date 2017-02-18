@@ -1,5 +1,5 @@
 .highlight {
-	padding: 20px 0 40px;
+	padding: 20px 0;
 
 	pre {
 		width: 100%;
@@ -19,11 +19,7 @@
 			white-space: -o-pre-wrap;
 			word-wrap: break-word;
 			overflow-x: auto;
-			
-			@media screen and (min-width: 1024px) {
-				//transform: translateX(-30px);
-				width: 80%;
-			}
+			width: get($base_width, phone);
 		}
 	}
 

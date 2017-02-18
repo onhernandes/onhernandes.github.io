@@ -15,3 +15,12 @@ $base_width: (
 // Home
 @import 'home/posts';
 @import 'home/item';
+
+// Article
+@import 'article/article';
+@import 'article/content';
+@import 'article/syntax';
+@import 'article/syntax-monokai';
+@import 'article/share';
+@import 'article/related';
+@import 'article/comments';

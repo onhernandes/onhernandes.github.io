@@ -1,25 +1,18 @@
 .article__share {
-	padding-top: 40px;
-	&_title { display: none; }
+	padding: 0 $padding_mobile;
 
-	&_list {
-		width: 100%;
-		height: auto;
-		text-align: center;
-
+	ul {
 		li {
 			display: inline-block;
-			padding: 20px 15px;
+			padding-right: 15px;
+			@include fz(phone);
 
 			a {
-				font-size: 40px;
+				border-bottom: 2px dashed $gray;
 				color: $gray;
-
-				&[icon="twitter"] { @extend .icon-twitter; }
-				&[icon="facebook"] { @extend .icon-facebook; }
 			}
 		}
 	}
 
-	@include color-share();
+	@include min-tablet { padding: 0 $padding; }
 }

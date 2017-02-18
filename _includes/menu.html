@@ -1,4 +1,9 @@
-<nav class="menu">
+{% if page.intro %}
+	{% assign is_post = 'menu--article' %}
+{% else %}
+	{% assign is_post = '' %}
+{% endif %}
+<nav class="menu {{ is_post }}">
 	<span class="menu__logo"></span>
 	<ul class="menu__links">
 		{% for link in site.site_links %}

@@ -1,28 +1,42 @@
+$padding_mobile: (100% - get($base_width, phone)) / 2;
+$padding: (100% - get($base_width, tablet)) / 2;
+
 .article {
-	@include flex(wrap row);
-	justify-content: center;
+	@include fc(wrap row);
+	@include jc(center);
 
 	> article {
-		h1, h2, h3, h4 {
-			color: $gray;
-			padding: 40px 0 15px;
+		background-color: #fff;
+		@include fx(0 0 100%);
+		
+		&:not(.article__related) {
+			> h1, > h2, > h3, > h4 {
+				font-weight: bold;
+				color: $gray;
+			}
 		}
 
-		h2 { @extend h1; }
-		h3 { @extend h2; }
-		h4 { @extend h3; }
-	}
-
-	> article:not(.article__content) {
-		flex: 0 0 90%;
-		//margin: 0 10%;
-	}
-
-	&__content { flex: 0 0 100%; }
+		&:not(.article__content) {
+			padding: 0 $padding_mobile;
 	
-	@include post-category();
+			> h1, > h2, > h3, > h4 {
+				padding: 40px 0 15px;
+			}
 
-	@media screen and (min-width: 1024px) {
-		> article:not(.article__content) { flex-basis: 80%; }
+			@include min-tablet {
+				padding: 0 $padding;
+			}
+		}
 	}
+}
+
+.to_top {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	@include fz(tablet);
+	margin: 15px;
+	padding: 7px 15px;
+	color: #fff;
+	background-color: rgba($blue, 0.5);
 }

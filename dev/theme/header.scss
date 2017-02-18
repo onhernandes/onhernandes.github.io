@@ -24,14 +24,40 @@
 
 		&_text {
 			padding-top: 2%;
-			padding-bottom: 18%;
+			padding-bottom: 10%;
 			padding-right: 50%;
-			//max-width: 40%;
 			@include font-size(phone);
 		}
 
 		@include min-tablet {
 			@include fxb(get($base_width, tablet));
+		}
+	}
+
+	&--article {
+		background-size: cover;
+		background: transparent url('/assets/img/standard.jpg') center no-repeat;
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 95%);
+		padding: 30px 0 60px;
+		position: relative;
+		@include z(header);
+
+		&::after {
+			content: '';
+			width: 100%;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(#000, 0.3);
+			@include z(header_shadow);
+		}
+
+		.header__wrapper {
+			position: relative;
+			top: 0;
+			left: 0;
+			@include z(header_content);
 		}
 	}
 }
@@ -41,7 +67,7 @@
 	background: $blue url('/assets/img/standard.jpg') center no-repeat;
 	clip-path: polygon(0 0, 100% 0%, 100% 80%, 30% 95%, 0% 85%);
 	width: 100%;
-	height: auto;
+	height: 100vh;
 	position: fixed;
 	top: 0;
 	left: 0;

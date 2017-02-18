@@ -1,4 +1,9 @@
-<header class="header">
+{% if page.intro %}
+	{% assign is_post = 'header--article' %}
+{% else %}
+	{% assign is_post = '' %}
+{% endif %}
+<header class="header {{ is_post }}">
 	<div class="header__wrapper">
 		<h1 class="header__wrapper_title" title="">
 			{% if page.title %}
@@ -14,4 +19,6 @@
 	</div>
 </header>
 
-<div class="background"></div>
+{% if page.intro == nil %}
+	<div class="background"></div>
+{% endif %}

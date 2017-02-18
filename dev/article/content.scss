@@ -1,48 +1,47 @@
-$paddding-base: 20px;
-
 .article__content {
-	padding-top: 40px;
-	> p, > a, > h1, > h2, 
-	> h3, > h4, > blockquote { padding: 0 10%; }
+	padding: 0;
+	color: $gray;
+	
+	h1, h2, h3, h4 {
+		padding: 50px $padding_mobile 10px;
 
-	> p, > a { padding-bottom: 20px; }
+		a {	font-weight: bold; }
+	}
 
-	p, a, blockquote,
-	ol, ul, li {
+	p, a, li, blockquote { @include fz(phone); }
+
+	p, ol { padding: 10px $padding_mobile 5px; }
+
+	ol {
+		list-style-type: disc;
+		padding-left: (103% - get($base_width, phone)) / 2;
+		
+		li {
+			padding-bottom: 7px;
+
+			&:last-child { padding-bottom: 0; }
+		}
+	}
+
+	a {
+		border-bottom: 2px dashed $gray;
 		color: $gray;
-		font-size: $font-size-tablet;
 	}
 
-	a { border-bottom: 1px dashed $gray; }
-
-	li {
-		padding-bottom: 8px;
-
-		a { padding-bottom: 2px; }
-	}
-
-	> h1, > h2, > h3, > h4 { padding: 40px 10% 15px !important; }
-
-	img {
+	p img {
 		width: 100%;
 		height: auto;
-		display: block;
-		margin: 20px auto;
 	}
 
-	ol, ul { padding: 5px 10% 25px 11.5% }
-
-	p:last-child { padding-bottom: 0 !important; }
-
-	@media screen and (max-width: 760px) {
-		> p, > a, > h1, > h2, 
-		> h3, > h4, > blockquote {
-			padding-left: 5% !important;
-			padding-right: 5% !important;
+	@include min-tablet {
+		h1, h2, h3, h4,
+		p, ol {
+			padding-left: $padding;
+			padding-right: $padding;
 		}
 
-		ol, ul { padding: 5px 10% 20px; }
-
-		> h1, > h2, > h3, > h4 { padding-top: 15px !important; }
+		ol {
+			padding-left: (103% - get($base_width, tablet)) / 2;
+		}
 	}
 }

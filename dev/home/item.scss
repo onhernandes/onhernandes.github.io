@@ -6,6 +6,7 @@ $post__color: #333;
 	border-radius: $post__radius;
 	margin-bottom: 3%;
 	text-align: left;
+	box-shadow: 0px 0px 10px rgba(#000, 0.5);
 	@include flex(0 0 100%);
 
 	@include min-tablet { @include flex(0 0 calc(90% / 2)); }
