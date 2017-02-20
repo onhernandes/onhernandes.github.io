@@ -1,9 +1,0 @@
-.article__related {
-	@extend .posts;
-
-	> h2 {
-		flex: 0 0 100%;
-		font-weight: bold;
-		color: $gray;
-	}
-}

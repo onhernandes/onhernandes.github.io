@@ -2,13 +2,12 @@
 layout: default
 title: About
 image: 'standard.jpg'
+text: ''
 opacity: 0
 ---
 
 <section class="about">
 	<article class="about__profile">
-		<h2 class="about__title">About me</h2>
-
 		<img src="/assets/img/home.jpg" alt="">
 		<div>
 			<p>First of everything, my name is Matheus and I'm from Brazil.</p>
@@ -41,33 +40,6 @@ opacity: 0
 			{% for project in site.projects %}
 				<li><a href="{{ project.github }}" target="_blank">{{ project.name }}</a></li>
 			{% endfor %}
-		</ul>
-	</article>
-
-	{% comment %}
-		<article class="about__games">
-			<h2 class="about__title">Games</h2>
-			<ul class="about__games_list">
-				{% for i in (1..8) %}
-					<li class="about__games_list-item">
-						<div style="background-image: url(/assets/img/gba_sample.jpg);"></div>
-						<span>
-							<h3>Game name</h3>
-							<h4>Console name</h4>
-						</span>
-					</li>
-				{% endfor %}
-			</ul>
-		</article>
-	{% endcomment %}
-
-	<article class="about__spotify">
-		<h2 class="about__title">Spotify Playlists</h2>
-		<ul class="about__spotify_list">
-			<li><a href="https://open.spotify.com/user/12142196021/playlist/6DH3FO357enPSi8c20AEJm" target="_blank" title="Soul Rest">Soul Rest</a></li>
-			<li><a href="https://open.spotify.com/user/12142196021/playlist/4iCJrJcHNv3b9C0h5hzj3Z" target="_blank" title="Living High">Living High</a></li>
-			<li><a href="https://open.spotify.com/user/12142196021/playlist/3Kxnfdyih2guCM8NNzGKAw" target="_blank" title="Good Vibes">Good Vibes</a></li>
-			<li><a href="https://open.spotify.com/user/12142196021/playlist/43Ppwyk28GS3plUaL34XuQ" target="_blank" title="Blackbear Mix">Blackbear Mix</a></li>
 		</ul>
 	</article>
 

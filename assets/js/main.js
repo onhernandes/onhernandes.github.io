@@ -1,1 +1,0 @@
-function lockBody(){return body[0].style.overflow="hidden",!0}function unlockBody(){return body[0].style.overflowY="scroll",!0}function checkPage(e){return body[0].className.indexOf(e)!==-1}var window_width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,body=document.getElementsByTagName("body");
