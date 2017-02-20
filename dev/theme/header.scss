@@ -21,7 +21,7 @@
 		@include jc(center);
 		
 		div {
-			@include fx(0 0 35%);
+			@include fxb(get($base_width, phone));
 			@include as(flex-end);
 
 			h1 {
@@ -30,6 +30,10 @@
 			}
 
 			p { padding: 10px 0 5px; }
+
+			@include min-tablet {
+				@include fx(0 0 35%);
+			}
 		}
 
 		&_arrow {
