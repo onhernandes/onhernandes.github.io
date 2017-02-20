@@ -48,4 +48,16 @@
 // 	base: 0
 // );
 
-$variables: ();
+$variables: (
+	font-family: (
+		headers: 'Open Sans',
+		texts: 'Merriweather'
+	),
+	z-index: (
+		base: 0,
+		nav: 900,
+		header: 10,
+		header_bg: 15,
+		header_wrap: 20
+	)
+);

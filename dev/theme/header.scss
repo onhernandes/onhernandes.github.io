@@ -3,28 +3,54 @@
 	background-size: cover;
 	background-position: center center;
 	color: #fff;
-	z-index: 2;
-	//border-bottom-left-radius: 100%; 
-	//border-bottom-right-radius: 100%;
+
 	clip-path: ellipse(105% 88% at 50% 11%);
 	height: 90vh;
 	position: relative;
+	@include z(header);
 
 	a { color: #fff; }
 
 	&__wrapper {
 		position: relative;
+		width: 100%;
+		height: 100%;
 		z-index: 5;
+		@include z(header_wrap);
+		@include fc(wrap row);
+		@include jc(center);
+		
+		div {
+			@include fx(0 0 35%);
+			@include as(flex-end);
+
+			h1 {
+				font-size: 60px;
+				line-height: 60px;
+			}
+
+			p { padding: 10px 0 5px; }
+		}
+
+		&_arrow {
+			@include fx(0 0 100%);
+			@include as(flex-end);
+			font-size: 30px;
+			display: block;
+			padding-bottom: 30px;
+		}
 	}
 
 	&::after {
+		background-color: rgba(#000, 0.2);
+	
+		content: '';
+		height: 100%;
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 0;
-		content: '';
 		width: 100%;
-		height: 100%;
-		background-color: rgba(#000, 0.5);
 		z-index: 3;
+		@include z(header_bg);
 	}
 }

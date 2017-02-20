@@ -1,6 +1,11 @@
 // Partials
 @import 'partials/shield';
 
+$base_width: (
+	tablet: 85%,
+	phone: 95%
+);
+
 // Theme
 @import 'theme/header';
 @import 'theme/menu';

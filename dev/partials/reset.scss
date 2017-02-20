@@ -1,7 +1,7 @@
 // Reset
 
 * {
-    @include ff(texts);
+    @include ff(texts, serif);
     @include bs(border-box);
 	@include z(base);
     font-weight: 300;
@@ -17,15 +17,12 @@ a:active {
 	text-decoration: none;
 }
 
-p, span { @include fz(tablet); }
+p, span { @include fz(phone); }
 
 section {
 	width: 100%;
 	height: auto;
 }
-
-h1, h2, h3,
-h4, h5, h6 { font-weight: 400; }
 
 @include ht();
 

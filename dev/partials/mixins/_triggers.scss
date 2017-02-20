@@ -8,7 +8,7 @@
 }
 
 // short-hand for: flex-flow($flow)
-@mixin ff($flow) {
+@mixin ffw($flow) {
 	@include flex-flow($flow);
 }
 
@@ -175,8 +175,8 @@
 }
 
 // short-hand for: font-family($trs);
-@mixin ff($trs) {
-	@include font-family($trs);
+@mixin ff($family, $serif: sans) {
+	@include font-family($family, $serif);
 }
 
 // short-hand for: header-tags();
