@@ -1,66 +1,6 @@
 <html>
 	{% include head.html %}
-<body class="article-body">
-	{% include header.html %}
-	{% include menu.html %}
-	
-	<section class="article" category="{{ page.category }}">
-		<article class="article__content">
-			{{ content }}
-		</article>
-
-		<article class="article__share">
-			<h2 class="article__share_title">Compartilhe</h2>
-			<ul class="article__share_list">
-				<li><a href="https://twitter.com/intent/tweet?text=&quot;{% if page.twitter_text %}{{ page.twitter_text }}{% else %}{{ page.intro }}{% endif %}&quot;%20{{ site.url }}{{ page.url }}%20via%20&#64;{{ site.twitter }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Compartilhe no Twitter" icon="twitter">Twitter</a></li>
-				<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhe no Facebook" icon="facebook">Facebook</a></li>
-			</ul>
-		</article>
-
-		<article class="article__related">
-			<h2>Related Posts</h2>
-			
-			{% for related in site.related_posts limit:3 %}
-				<article class="posts__item">
-					<a title="{{ related.title }}" href="{{ related.url }}" class="posts__item_thumb" category="{{ related.category }}">
-						<h5 title="{{ related.title }}">
-							{{ related.date | date: '%B %d, %Y' }}
-						</h5>
-						
-						<h2>{{ related.title }}</h2>
-					</a>
-					
-					<a title="{{ related.title }}" href="{{ related.url }}" class="posts__item_excerpt">
-						<p title="{{ related.title }}">{{ related.intro | truncatewords: 25 }}</p>
-					</a>
-				</article>
-			{% endfor %}
-		</article>
-
-		<article class="article__comments">
-			<h2>Comments</h2>
-			
-			<div id="disqus_thread"></div>
-			<script>
-
-			/**
-			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-			var disqus_config = function () {
-			this.page.url = '{{ site.url }}';  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = '{{ page.url }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-			(function() { // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = '//matheus-hernandes.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-			</script>
-			<noscript>Por favor ative o JavaScript no seu navegador para conseguir ver os comentários.</noscript>
-		</article>
-	</section>
-	
-	<a href="#" class="to_top" category="{{ page.category }}">top</a>
+<body>
+	{{ content }}
 </body>
 </html>
