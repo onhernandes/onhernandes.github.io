@@ -1,0 +1,51 @@
+.menu {
+	background-color: rgba(#000, 0.2);
+	color: #fff;
+
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	@include fc(wrap row);
+	@include jc(space-between);
+	@include z(nav);
+
+	a, span { @include ff(headers); }
+
+	ul {
+		li {
+			display: inline-block;
+			a { color: #fff; }
+		}
+	}
+
+	&__logo {
+		font-size: 35px;
+		padding: 7px 15px;
+		font-weight: bold;
+	}
+
+	&__links {
+
+		li {
+			line-height: 66px;
+			padding: 0 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+			a { @include fz(desktop); }
+		}
+	}
+
+	&__social {
+		padding: round(((61px - 32px) / 2)) 15px;
+
+		&_item {
+			padding-left: 8px;
+			a svg {
+				width: 22px;
+				height: 32px;
+			}
+		}
+	}
+}
