@@ -6,6 +6,15 @@ $base_width: (
 	phone: 95%
 );
 
+a[data-icon],
+i[data-icon] {
+	svg {
+		max-width: 100px;
+		max-height: 100px;
+		fill: white;
+	}
+}
+
 // Theme
 @import 'theme/header';
 @import 'theme/menu';
