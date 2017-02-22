@@ -1,28 +1,30 @@
 <section class="posts">
 	{% for post in site.posts %}
-		<article class="post__item">
+		<article class="posts__item">
 			<span>{{ post.date | date: '%B %d, %Y' }}</span>
 
-			<a href="" class="post__item_thumb">
-				<figure>
-					<img src="{{ '/assets/images/' | prepend: site.baseurl | prepend: site.url }}{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}">
-				</figure>
+			<a href="" class="posts__item_thumb">
+				<img src="{{ '/assets/images/' | prepend: site.baseurl | prepend: site.url }}{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}">
 			</a>
 			
-			<h2>{{ post.title }}</h2>
+			<a href="" class="posts__item_title">
+				<h2>{{ post.title }}</h2>
+			</a>
 			
-			<p>{{ post.excerpt | truncatewords: 20 }}</p>
+			<a href="" class="posts__item_text">
+				<p>{{ post.title }}</p>
+			</a>
 			
 			{% if post.tags %}
-				<i class="post__item_tag-icon">
+				<i class="posts__item_tag-icon">
 					<svg>
 						<use xlink:href="#tag"></use>
 					</svg>
 				</i>
 
-				<ul class="post__item_tags">
+				<ul class="posts__item_tags">
 					{% for tag in post.tags %}
-						<li><a href="{{ '/tag/' | prepend: site.baseurl | prepend: site.url }}{{ tag[0] }}" title="{{ tag[0] }}">{{ tag[0] }}</a></li>
+						<li><a href="{{ '/tag/' | prepend: site.baseurl | prepend: site.url }}{{ tag }}" title="{{ tag }}">{{ tag }}</a></li>
 					{% endfor %}
 				</ul>
 			{% endif %}

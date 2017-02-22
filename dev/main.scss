@@ -6,6 +6,11 @@ $base_width: (
 	phone: 95%
 );
 
+$base_padding: (
+	tablet: (100% - get($base_width, tablet)),
+	phone: (100% - get($base_width, phone))
+);
+
 a[data-icon],
 i[data-icon] {
 	svg {
