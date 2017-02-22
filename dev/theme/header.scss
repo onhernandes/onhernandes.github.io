@@ -38,7 +38,7 @@
 				i svg {
 					height: 30px;
 					width: 40px;
-					@include trf(rotate(180deg) translate(-5px, -9px));
+					@include trf(translate(3px, 10px));
 				}
 			}
 
