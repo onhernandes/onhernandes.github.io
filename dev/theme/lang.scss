@@ -1,0 +1,22 @@
+.lang {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0 15px 15px;
+	text-align: center;
+
+	a {
+		display: inline-block;
+		color: lighten($gray, 2%);
+		@include trs(all 0.1s linear 0.02s);
+
+		&:hover {
+			color: darken($gray, 5%);
+			border-bottom: 2px solid lighten($gray, 10%);
+		}
+	}
+
+	span {
+		padding: 0 7px;
+	}
+}
