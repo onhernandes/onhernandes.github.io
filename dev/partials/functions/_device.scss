@@ -10,7 +10,7 @@ $devices: (
 @if hasKeyVar(devices) {
 	$devices-custom: getVar(devices);
 	
-	$devices: merge($device, $devices-custom);
+	$devices: merge($devices, $devices-custom);
 }
 
 @function getDevice($dev) {

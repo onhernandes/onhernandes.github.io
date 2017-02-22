@@ -3,12 +3,23 @@
 	color: #fff;
 
 	left: 0;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	width: 100%;
 	@include fc(wrap row);
 	@include jc(space-between);
 	@include z(nav);
+
+	&__logo { order: 1; }
+	&__social { order: 2; }
+	&__links { order: 3; }
+
+	@include min-phone {
+		position: fixed;
+
+		&__links { order: 2; }
+		&__social { order: 3; }
+	}
 
 	a, span { @include ff(headers); }
 
@@ -26,6 +37,8 @@
 	}
 
 	&__links {
+		@include fxb(100%);
+		text-align: center;
 
 		li {
 			line-height: 66px;
@@ -34,6 +47,10 @@
 			letter-spacing: 1px;
 
 			a { @include fz(desktop); }
+		}
+
+		@include min-phone {
+			@include fxb(auto);
 		}
 	}
 
