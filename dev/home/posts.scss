@@ -1,3 +1,7 @@
+$gray_link: darken(#9EABB3, 5%);
+$gray_sub: #4a4a4a;
+$gray_post: darken(mix($gray_link, $gray_sub), 12%);
+
 .posts {
 	padding: 30px get($base_padding, phone) / 2 0px;
 	@include fc(wrap row);
@@ -9,28 +13,22 @@
 
 	&__item {
 		margin-bottom: 30px;
-
 		@include fxb(90% / 2);
 		@include ff(headers);
-
-		color: lighten($gray, 12%);
+		color: $gray_post;
 
 		a {
-			color: lighten($gray, 12%);
+			color: $gray_post;
 			display: block;
 			@include trs(all 0.1s linear 0.01s);
-
-			&:hover {
-				color: $gray;
-			}
 		}
 
 		span {
-			color: lighten($gray, 40%);
+			color: $gray_link;
+			display: block;
 			@include ff(headers);
 			font-size: 14px;
 			padding-bottom: 8px;
-			display: block;
 		}
 
 		&_thumb {
@@ -47,25 +45,42 @@
 			padding: 7px 0 10px;
 
 			h2 {
-				font-size: 35px;
+				font-size: 33px;
+				font-weight: 800;
 				letter-spacing: -1px;
+				line-height: 117%;
 			}
 		}
 
-		&_excerpt {}
+		&_text {
+			padding-bottom: 10px;
+			p { color: lighten($gray_post, 3%); }
+		}
+
+		&_tag-icon,
+		&_tags {
+			display: inline-block;
+			vertical-align: middle;
+		}
 
 		&_tag-icon {
-			display: inline-block;
+			padding: 3px 6px 0 0;
 
 			svg {
 				width: 20px;
-				height: 35px;
-				fill: lighten($gray, 50%);
-
+				height: 20px;
+				fill: lighten($gray_post, 50%);
 				@include trf(rotate(90deg));
 			}
 		}
 
-		&_tags {}
+		&_tags {
+			li {
+				display: inline-block;
+				padding-right: 3px;
+
+				a { @include fz(desktop); }
+			}
+		}
 	}
 }

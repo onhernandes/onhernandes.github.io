@@ -21,7 +21,7 @@
 	@each $h, $val in $headers {
 		#{$h} {
 			font-size: $val;
-			font-weight: bold;
+			font-weight: 600;
 			@include ff(headers);
 		}
 	}
