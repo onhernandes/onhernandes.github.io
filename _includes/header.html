@@ -5,7 +5,8 @@
 			
 			<p>Web developer, android enthusiastic and commom nerd</p>
 			
-			<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
+			{% if page.title != 'About' %}
+				<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
 				Know more
 				<i data-icon>
 					<svg>
@@ -13,6 +14,7 @@
 					</svg>
 				</i>
 			</a>
+			{% endif %}
 		</div>
 
 		<a href="javascript:void(0);" title="scroll down" class="header__wrapper_arrow" data-icon>

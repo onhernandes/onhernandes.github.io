@@ -15,18 +15,18 @@ var basePath = './',
 		js: [dev + '/*.js', dev + '/**/*.js', dev + '/**/**/*.js'],
 		main_scss: dev + '/main.scss',
 		scss: [dev + '/*', dev + '/**/*.scss', dev + '/**/**/*.scss', dev + '/**/**/**/*.scss'],
-		img: [dev + '/img/*.{jpg,png,gif,svg}', dev + '/img/**/*.{jpg,png,gif,svg}'],
+		img: [dev + '/image/*.{jpg,png,gif,svg}', dev + '/image/**/*.{jpg,png,gif,svg}'],
 		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
 	},
 	paths_assets = {
 		js: assets + '/js',
 		css: assets + '/css',
-		img: assets + '/img'
+		img: assets + '/image'
 	},
 	paths_site = {
 		js: baseOut + '/js',
 		css: baseOut + '/css',
-		img: baseOut + '/img'
+		img: baseOut + '/image'
 	};
 
 // Build Jekyll

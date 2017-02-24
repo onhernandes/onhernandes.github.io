@@ -1,0 +1,58 @@
+$padding: (
+	desktop: 20%,
+	phone: 2.5%
+);
+.article {
+	@include fc(wrap row);
+	@include jc(center);
+
+	&__content {
+		@include fx(0 0 100%);
+		padding-top: 60px;
+
+		h1, h2, h3, h4, h5,
+		p, blockquote, ol, ul {
+			padding-right: get($padding, phone);
+			padding-left: get($padding, phone);
+
+			@include min-phone {
+				padding-right: get($padding, desktop);
+				padding-left: get($padding, desktop);
+			}
+		}
+
+		h1, h2, h3, h4, h5 {
+			padding-top: 45px;
+			padding-bottom: 15px;
+
+			&:first-child { padding-top: 0; }
+		}
+
+		p {
+			padding-top: 15px;
+			padding-bottom: 5px;
+
+			img {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+			a {
+				display: inline;
+			}
+		}
+
+		ol, ul {
+			padding-right: get($padding, phone);
+			padding-left: get($padding, phone);
+
+			@include min-phone {
+				padding-right: get($padding, desktop);
+				padding-left: get($padding, desktop);
+			}
+		}
+
+		li { padding-bottom: 6px; } 
+	}
+}
