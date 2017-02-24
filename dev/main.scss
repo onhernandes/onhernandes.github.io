@@ -25,15 +25,15 @@ i[data-icon] {
 @import 'theme/menu';
 @import 'theme/lang';
 
+// Home
+@import 'home/posts';
+
 // Article
 @import 'article/header';
 @import 'article/content';
 @import 'article/share';
 @import 'article/related';
 @import 'article/comments';
-
-// Home
-@import 'home/posts';
 
 // Projects
 @import 'projects/projects';

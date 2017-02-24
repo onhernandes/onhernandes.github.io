@@ -12,6 +12,7 @@ $padding: (
 
 		h1, h2, h3, h4, h5,
 		p, blockquote, ol, ul {
+			color: $gray_post;
 			padding-right: get($padding, phone);
 			padding-left: get($padding, phone);
 
@@ -21,12 +22,27 @@ $padding: (
 			}
 		}
 
+		a { color: $gray_post; }
+
 		h1, h2, h3, h4, h5 {
 			padding-top: 45px;
 			padding-bottom: 15px;
 
 			&:first-child { padding-top: 0; }
+
+			a {
+				color: $gray_post;
+				font-weight: bold;
+				@include ff(headers);
+			}
 		}
+
+		h1 { font-size: 38px; }
+		/*h2 { @extend h1; }
+		h3 { @extend h2; }
+		h4 { @extend h3; }*/
+
+		p, li { font-weight: 300; }
 
 		p {
 			padding-top: 15px;
@@ -34,11 +50,14 @@ $padding: (
 
 			img {
 				display: block;
+				width: auto;
 				height: auto;
-				width: 100%;
+				margin: 0 auto;
+				text-align: center;
 			}
 
 			a {
+				background-color: yellow;
 				display: inline;
 			}
 		}
@@ -46,6 +65,7 @@ $padding: (
 		ol, ul {
 			padding-right: get($padding, phone);
 			padding-left: get($padding, phone);
+			margin-left: 20px;
 
 			@include min-phone {
 				padding-right: get($padding, desktop);
@@ -54,5 +74,7 @@ $padding: (
 		}
 
 		li { padding-bottom: 6px; } 
+
+		@include category-colorful(content);
 	}
 }

@@ -22,10 +22,22 @@ $post-category: (
 	git: orange
 );
 
-@mixin category-colorful() {
+@mixin category-colorful($type: 'post') {
 	@each $key, $val in $post-category {
-		&[category="#{$key}"] {
-			.posts__item_title:hover { color: get($post-color, $val); }
+		@if $type == 'post' {
+			&[category="#{$key}"] {
+				.posts__item_title:hover { color: get($post-color, $val); }
+			}
+		} @else {
+			&[category="#{$key}"] {
+				p a { background-color: lighten(get($post-color, $val), 15%); }
+				
+				h1, h2, h3, h4, h5 {
+					color: get($post-color, $val);
+
+					a { color: get($post-color, $val); }
+				}
+			}
 		}
 	}
 }
