@@ -25,12 +25,18 @@ $post-category: (
 @mixin category-colorful($type: 'post') {
 	@each $key, $val in $post-category {
 		@if $type == 'post' {
-			&[category="#{$key}"] {
+			&[data-category="#{$key}"] {
 				.posts__item_title:hover { color: get($post-color, $val); }
 			}
 		} @else {
-			&[category="#{$key}"] {
-				p a { background-color: lighten(get($post-color, $val), 15%); }
+			&[data-category="#{$key}"] {
+				a {
+					box-shadow: inset 0 -4px 0 0 lighten(get($post-color, $val), 3%);
+
+					&:hover {
+						box-shadow: inset 0 -10px 0 0 lighten(get($post-color, $val), 3%) !important;
+					}
+				}
 				
 				h1, h2, h3, h4, h5 {
 					color: get($post-color, $val);
@@ -38,6 +44,14 @@ $post-category: (
 					a { color: get($post-color, $val); }
 				}
 			}
+		}
+	}
+}
+
+@mixin share-colorful() {
+	@each $key, $val in $post-category {
+		&[data-category="#{$key}"] {
+			a:hover svg { fill: get($post-color, $val) }
 		}
 	}
 }

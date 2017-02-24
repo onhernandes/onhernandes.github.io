@@ -6,8 +6,32 @@
 	{% include menu.html %}
 	
 	<section class="article">
-		<article class="article__content" category="{{ page.category }}">
+		<article class="article__content" data-category="{{ page.category }}">
 			{{ content }}
+		</article>
+
+		<article class="article__share" data-category="{{ page.category }}">
+			<a href="" target="_blank" title="">
+				<svg>
+					<use xlink:href="#twitter"></use>
+				</svg>
+			</a>
+
+			<a href="" target="_blank" title="">
+				<svg>
+					<use xlink:href="#facebook"></use>
+				</svg>
+			</a>
+
+			<a href="" target="_blank" title="">
+				<svg>
+					<use xlink:href="#google-plus"></use>
+				</svg>
+			</a>
+		</article>
+
+		<article class="article__comments">
+			{% include comments.html  %}
 		</article>
 	</section>
 </body>

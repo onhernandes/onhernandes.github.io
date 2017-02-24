@@ -1,0 +1,8 @@
+.article__comments {
+	@include fx(0 0 100%);
+	padding: 0 get($base_padding, phone) 60px;
+
+	@include min-phone {
+		padding: 0 get($base_padding, tablet);
+	}
+}

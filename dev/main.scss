@@ -29,6 +29,8 @@ i[data-icon] {
 @import 'home/posts';
 
 // Article
+@import 'theme/syntax';
+@import 'theme/syntax-monokai';
 @import 'article/header';
 @import 'article/content';
 @import 'article/share';

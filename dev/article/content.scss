@@ -1,5 +1,5 @@
 $padding: (
-	desktop: 20%,
+	desktop: 15%,
 	phone: 2.5%
 );
 .article {
@@ -22,7 +22,13 @@ $padding: (
 			}
 		}
 
-		a { color: $gray_post; }
+		a {
+			box-shadow: inset 0 -4px 0 0 lighten($gray_post, 50%);
+			color: $gray_post;
+			@include trs(all 0.1s linear 0.01s);
+
+			&:hover { box-shadow: inset 0 -10px 0 0 lighten($gray_post, 50%) !important; }
+		}
 
 		h1, h2, h3, h4, h5 {
 			padding-top: 45px;
@@ -38,9 +44,6 @@ $padding: (
 		}
 
 		h1 { font-size: 38px; }
-		/*h2 { @extend h1; }
-		h3 { @extend h2; }
-		h4 { @extend h3; }*/
 
 		p, li { font-weight: 300; }
 
@@ -56,10 +59,7 @@ $padding: (
 				text-align: center;
 			}
 
-			a {
-				background-color: yellow;
-				display: inline;
-			}
+			a { display: inline; }
 		}
 
 		ol, ul {

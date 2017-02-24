@@ -1,6 +1,6 @@
 <section class="posts">
 	{% for post in site.posts %}
-		<article class="posts__item" category="{{ post.category }}">
+		<article class="posts__item" data-category="{{ post.category }}">
 			<span>{{ post.date | date: '%B %d, %Y' }}</span>
 
 			<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="posts__item_thumb">
