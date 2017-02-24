@@ -4,11 +4,11 @@ langs: false
 ---
 
 <section class="projects">
-	<h2 class="projects__title">2017</h2>
+	<h2 class="projects__title">projects</h2>
 
 	<ul class="projects__list">
-		{% for i in (1..10) %}
-			<li><a href="" title="">projectXX</a></li>
+		{% for project in site.projects %}
+			<li><a href="{{ project.github }}" target="_blank" title="{{ project.name }}">{{ project.name }}</a></li>
 		{% endfor %}
 	</ul>
 </section>

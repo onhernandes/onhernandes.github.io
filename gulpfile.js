@@ -69,7 +69,6 @@ gulp.task('image', function() {
 	gulp.src(paths_dev.img)
 		.pipe(plumber())
 		.pipe(imagemin())
-		//.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(paths_site.img))
 		.pipe(gulp.dest(paths_assets.img));
 });
