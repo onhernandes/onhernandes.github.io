@@ -1,0 +1,31 @@
+$post-color: (
+	black: #171213,
+	gray: #394648,
+	red: #A33338,
+	yellow: darken(#E6AF66, 5%),
+	green: #8AA64F,
+	blue: #5A8FAA,
+	orange: #F4442E
+);
+
+$post-category: (
+	js: yellow,
+	javascript: yellow,
+	dev: gray,
+	linux: black,
+	css: blue,
+	scss: blue,
+	ui: red,
+	ux: red,
+	android: green,
+	kotlin: orange,
+	git: orange
+);
+
+@mixin category-colorful() {
+	@each $key, $val in $post-category {
+		&[category="#{$key}"] {
+			.posts__item_title:hover { color: get($post-color, $val); }
+		}
+	}
+}

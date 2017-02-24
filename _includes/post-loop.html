@@ -1,21 +1,21 @@
 <section class="posts">
 	{% for post in site.posts %}
-		<article class="posts__item">
+		<article class="posts__item" category="{{ post.category }}">
 			<span>{{ post.date | date: '%B %d, %Y' }}</span>
 
-			<a href="" class="posts__item_thumb">
+			<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="posts__item_thumb">
 				<img src="{{ '/assets/images/' | prepend: site.baseurl | prepend: site.url }}{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}">
 			</a>
 			
-			<a href="" class="posts__item_title">
+			<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="posts__item_title">
 				<h2>{{ post.title }}</h2>
 			</a>
 			
-			<a href="" class="posts__item_text">
+			<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="posts__item_text">
 				<p>{{ post.title }}</p>
 			</a>
 			
-			{% if post.tags %}
+			{% if post.tags != nil or post.tags != false %}
 				<i class="posts__item_tag-icon">
 					<svg>
 						<use xlink:href="#tag"></use>
