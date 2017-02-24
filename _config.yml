@@ -27,17 +27,14 @@ series:
     - title: title
 
 site_links:
-    - title: home
-      url: /
-      icon: home 
+    - title: articles
+      url: / 
       
     - title: projects
       url: /projects
-      icon: projects
       
     - title: about
-      url: /about
-      icon: info      
+      url: /about      
 
 color: gray
 lang: en
