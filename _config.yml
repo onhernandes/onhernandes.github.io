@@ -32,9 +32,6 @@ site_links:
       
     - title: projects
       url: /projects
-      
-    - title: about
-      url: /about      
 
 color: gray
 lang: en

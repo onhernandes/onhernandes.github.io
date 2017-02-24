@@ -20,12 +20,17 @@ i[data-icon] {
 	}
 }
 
+$gray_link: darken(#9EABB3, 5%);
+$gray_sub: #4a4a4a;
+$gray_post: darken(mix($gray_link, $gray_sub), 8%);
+
 // Theme
 @import 'theme/header';
 @import 'theme/menu';
 @import 'theme/lang';
 
 // Home
+@import 'home/profile';
 @import 'home/posts';
 
 // Article
@@ -41,6 +46,6 @@ i[data-icon] {
 @import 'projects/projects';
 
 // About
-@import 'about/profile';
-@import 'about/listing';
-@import 'about/contact';
+//@import 'about/profile';
+//@import 'about/listing';
+//@import 'about/contact';

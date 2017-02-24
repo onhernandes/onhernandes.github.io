@@ -1,6 +1,21 @@
 ---
 layout: default
-langs: true
 ---
+
+<section class="profile">
+	<article class="profile__content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias.</p>
+	</article>
+
+	<ul class="profile__links">
+		<li><a href="instagram" target="_blank"><svg><use xlink:href="#instagram"></use></svg></a></li>
+		<li><a href="twitter" target="_blank"><svg><use xlink:href="#twitter"></use></svg></a></li>
+		<li><a href="github" target="_blank"><svg><use xlink:href="#github"></use></svg></a></li>
+	</ul>
+</section>
+
+{% include lang.html %}
 
 {% include post-loop.html  %}

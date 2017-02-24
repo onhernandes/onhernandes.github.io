@@ -1,7 +1,3 @@
-$gray_link: darken(#9EABB3, 5%);
-$gray_sub: #4a4a4a;
-$gray_post: darken(mix($gray_link, $gray_sub), 8%);
-
 .posts {
 	padding: 30px get($base_padding, phone) / 2 0px;
 	@include fc(wrap row);

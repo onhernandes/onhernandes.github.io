@@ -1,0 +1,28 @@
+.profile {
+	padding: 30px get($base_padding, phone) / 2 0px;
+
+	@include min-tablet {
+		padding: 30px get($base_padding, tablet) / 2 0px;
+	}
+
+	p {
+		font-size: 20px;
+		padding-bottom: 6px;
+		color: $gray_post;
+	}
+
+	&__links {
+		padding-top: 20px;
+		li {
+			display: inline-block;
+			padding-right: 10px;
+
+			a {
+				svg {
+					height: 50px;
+					width: 40px;
+				}
+			}
+		}
+	}
+}

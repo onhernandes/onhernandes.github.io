@@ -4,17 +4,6 @@
 			<h1>Matheus Hernandes</h1>
 			
 			<p>Web developer, android enthusiastic and commom nerd</p>
-			
-			{% if page.title != 'About' %}
-				<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
-				Know more
-				<i data-icon>
-					<svg>
-						<use xlink:href="#arrow-simple"/>
-					</svg>
-				</i>
-			</a>
-			{% endif %}
 		</div>
 
 		<a href="javascript:void(0);" title="scroll down" class="header__wrapper_arrow" data-icon>
@@ -26,9 +15,18 @@
 </header>
 
 {% if page.langs %}
-<nav class="lang">
-	<a href="javascript:void(0);" id="portuguese" lang="pt">portuguese</a>
-	<span>•</span>
-	<a href="javascript:void(0);" id="english" lang="en">english</a>
-</nav>
+	{% include lang.html %}
 {% endif %}
+
+{% comment %}
+	{% if page.title != 'About' %}
+		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
+		Know more
+		<i data-icon>
+			<svg>
+				<use xlink:href="#arrow-simple"/>
+			</svg>
+		</i>
+	</a>
+	{% endif %}
+{% endcomment %}
