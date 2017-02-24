@@ -5,7 +5,7 @@
 			
 			<p>Web developer, android enthusiastic and commom nerd</p>
 			
-			<a href="" title="">
+			<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
 				Know more
 				<i data-icon>
 					<svg>
@@ -15,7 +15,7 @@
 			</a>
 		</div>
 
-		<a href="javascript:void(0);" class="header__wrapper_arrow" data-icon>
+		<a href="javascript:void(0);" title="scroll down" class="header__wrapper_arrow" data-icon>
 			<svg>
 				<use xlink:href="#arrow-simple"/>
 			</svg>
@@ -23,8 +23,10 @@
 	</div>
 </header>
 
+{% if page.langs %}
 <nav class="lang">
 	<a href="javascript:void(0);" id="portuguese" lang="pt">portuguese</a>
 	<span>•</span>
 	<a href="javascript:void(0);" id="english" lang="en">english</a>
 </nav>
+{% endif %}
