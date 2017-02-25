@@ -10,7 +10,7 @@ $icon_height: (
 .menu {
 	background-color: rgba(#000, 0.2);
 	color: #fff;
-
+	@include trs(all 0.2s ease 0.01s);
 	left: 0;
 	position: absolute;
 	top: 0;
@@ -90,4 +90,9 @@ $icon_height: (
 
 		@include min-phone { padding: round(((61px - get($icon_height, desktop)) / 2)) 15px; }
 	}
+}
+
+.headroom--unpinned {
+	margin-top: -66px !important;
+	@include trs(all 0.2s ease 0.01s);
 }

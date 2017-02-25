@@ -79,6 +79,7 @@
 			li {
 				display: inline-block;
 				padding-right: 3px;
+				color: lighten($gray_post, 20%);
 
 				a {
 					color: lighten($gray_post, 20%);
