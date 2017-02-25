@@ -1,66 +1,28 @@
 ---
 layout: default
-title: 'Home'
-image: 'standard.jpg'
-opacity: 0
+title: articles
 ---
 
-<section class="projects">
-	{% for project in site.projects %}		
-  		<article class="projects__item" title="{{ project.name }}" project="{{ project.slug }}">		
-  			<a target="_blank" href="{{ project.github }}" class="projects__item_title">		
-  				<h1 title="{{ project.name }}">{{ project.name }}</h1>		
-  			</a>		
-  		
-  			<a target="_blank" href="{{ project.github }}" class="projects__item_intro" title="{{ project.name }}">{{ project.desc }}</a>		
-  		
-  			<ul class="projects__item_list">		
-  				<li><a href="{{ project.github }}" icon="github" title="{{ project.name }}" target="_blank"></a></li>		
-  				{% if project.link != false %}
-  					<li><a href="{{ project.link }}" icon="link" title="{{ project.name }}" target="_blank"></a></li>
-  				{% endif %}		
-  			</ul>		
-  		</article>		
-  	{% endfor %}
+<section class="profile">
+	<article class="profile__content">
+		<p>Hey! My name is <i>Matheus Hernandes</i>, I'm 18 years old and I'm working as a front-end developer since 2015 and as back-end since 2016.</p>
+
+		<p>Now I'm working at <a href="https://www.gasoline-digital.com" target="_blank">Gasoline Digital</a> as front-end developer(also playing with WordPress).</p>
+
+		<p>I've created some cool and small open-source projects like <a href="https://github.com/mhernandes/shield-scss" target="_blank">Shield</a> and even <a href="https://github.com/mhernandes/dragon-theme" target="_blank">some Jekyll simple themes</a>.</p>
+
+		<p>I like to read a lot, principally about tech/dev, so <a href="https://github.com/mhernandes/favorite-articles" target="_blank">here you can see some of my favorite-articles</a> and follow me on <a href="https://getpocket.com/@mhernandes" target="_blank">Pocket</a> and <a href="https://medium.com/@devhernandes" target="_blank">Medium</a>.</p>
+
+		<p>Wanna talk? Send me an <a href="mailto:midia.matheus@gmail.com" class="email-flag">email</a> or check out my link below</p>
+	</article>
+
+	<ul class="profile__links">
+		<li><a href="https://www.instagram.com/mt_hernandes" target="_blank"><svg><use xlink:href="#instagram"></use></svg></a></li>
+		<li><a href="https://www.twitter.com/mt_hernandes" target="_blank"><svg><use xlink:href="#twitter"></use></svg></a></li>
+		<li><a href="https://www.github.com/mhernandes" target="_blank"><svg><use xlink:href="#github"></use></svg></a></li>
+	</ul>
 </section>
 
-<section class="about__intro">
-	<a href="{{ '/about' | prepend: site.url }}" class="about__intro_title" title="">
-		<h1>About</h1>
-	</a>
-	
-	<a href="{{ '/about' | prepend: site.url }}" class="about__intro_line">
-		First of everything, my name is Matheus and I'm from Brazil.
-		I've 18 years and I'm a tech lover since I was a little kid
-	</a>
-</section>
+{% include lang.html %}
 
-<section class="posts">
-	<header class="posts__header">
-		<h1>latest posts</h1>
-	</header>
-
-	{% for post in site.posts limit:3 %}
-		<article class="posts__item" category="{{ post.category }}">
-			<div class="posts__item_category">
-				<a href="{{ site.url | append: '/categories#' | append: post.category }}">
-					{{ post.category }}
-				</a>
-			</div>
-
-			<div class="posts__item_title">
-				<a href="{{ post.url | prepend: site.url }}">
-					{{ post.title | truncatewords: 10 }}
-				</a>
-			</div>
-
-			<div class="posts__item_date">
-				{{ post.date | date: '%B %d, %Y' }}
-			</div>
-		</article>
-	{% endfor %}
-
-	<a href="{{ '/blog' | prepend: site.url }}" class="posts__button">
-		<button>Keep reading</button>
-	</a>
-</section>
+{% include post-loop.html  %}

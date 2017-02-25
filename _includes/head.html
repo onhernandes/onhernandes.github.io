@@ -1,3 +1,4 @@
+<html>
 <head>
 	<!-- Meta tags -->
 	<meta charset="utf-8">
@@ -16,9 +17,6 @@
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-
-	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-
 	<!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ site.twitter_username }}">
@@ -35,24 +33,27 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}/assets/img/{{ page.image }}">
+    <meta property="og:image" content="{{ site.url }}/assets/image/{{ page.image }}">
     {% else %}
-    <meta property="og:image" content="{{ '/assets/img/blog.jpg' | prepend: site.url }}">
+    <meta property="og:image" content="{{ '/assets/image/blog.jpg' | prepend: site.url }}">
     {% endif %}
     <meta property="og:description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
 
 	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
-	<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/assets/img/favicon/manifest.json">
-	<link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#70a1d7">
-	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
-	<meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/image/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/assets/image/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/image/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/assets/image/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/image/favicon/manifest.json">
+	<link rel="mask-icon" href="/assets/image/favicon/safari-pinned-tab.svg" color="#70a1d7">
+	<link rel="shortcut icon" href="/assets/image/favicon/favicon.ico">
+	<meta name="msapplication-config" content="/assets/image/favicon/browserconfig.xml">
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
 	<meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}#70A1D7{% endif %}">
 
 	<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,600,800" rel="stylesheet">
 </head>
+<body>

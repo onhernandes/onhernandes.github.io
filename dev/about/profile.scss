@@ -1,0 +1,29 @@
+.about {
+	@include fc(wrap row);
+	@include jc(center);
+
+	article {
+		color: $gray_post;
+		padding-right: get($base_padding, phone);
+		padding-left: get($base_padding, phone);
+		@include fx(0 0 100%);
+		//@include fx(0 0 get($base_width, phone));
+
+		@include min-phone {
+			padding-right: get($base_padding, tablet);
+			padding-left: get($base_padding, tablet);
+			//@include fxb(get($base_width, tablet));
+		}
+	}
+
+	&__profile {
+		padding-bottom: 60px;
+		
+		h1 {
+			font-size: 38px;
+			padding: 0 0 20px;
+		}
+
+		p { padding-bottom: 8px; }
+	}
+}

@@ -1,11 +1,9 @@
-<html>
 	{% include head.html %}
-<body {% if page.title %}class="{{ page.title | downcase }}-body"{% endif %}>
+	{% include svg-icons.html %}
 	{% include header.html %}
 	{% include menu.html %}
 	
-	{{ content }}
-
-	{% include footer.html %}
+	{{ content }}	
+	{% include scripts.html %}
 </body>
 </html>

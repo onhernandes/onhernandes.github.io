@@ -1,0 +1,125 @@
+$icon_width: (
+	desktop: 22px,
+	phone: 27px
+);
+
+$icon_height: (
+	desktop: 32px,
+	phone: 37px
+);
+.menu {
+	background-color: rgba(#000, 0.2);
+	color: #fff;
+	@include trs(all 0.2s ease 0.01s);
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	@include fc(wrap row);
+	@include jc(space-between);
+	@include z(nav);
+
+	&__logo { order: 1; }
+	&__social { order: 2; }
+	&__links { order: 3; }
+
+	@include min-phone {
+		position: fixed;
+
+		&__links { order: 2; }
+		&__social { order: 3; }
+	}
+
+	a, span { @include ff(headers); }
+
+	ul {
+		li {
+			display: inline-block;
+			a { color: #fff; }
+		}
+	}
+
+	&__logo {
+		color: #fff;
+		font-size: 40px;
+		padding: 7px 15px;
+		font-weight: bold;
+
+		@include min-phone {
+			font-size: 35px;
+		}
+	}
+
+	&__links {
+		@include fxb(100%);
+		width: 100%;
+		text-align: center;
+		//position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(#000, 0.2);
+		@include trs(all 0.2s ease 0.01s);
+
+		li {
+			line-height: 66px;
+			padding: 0 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+			a {
+				@include fz(desktop);
+
+				@include max-phone {
+					@include fz(tablet);
+					width: 100%;
+					display: block;
+				}
+			}
+
+			@include max-phone {
+				width: calc(50% - 20px);
+			
+				&[active] { border-bottom: 3px solid #fff; }
+			}
+		}
+
+		@include min-phone {
+			background-color: transparent;
+			width: auto;
+			position: static;
+			top: auto;
+			left: auto;
+			@include fxb(auto);
+		}
+	}
+
+	&__social {
+		padding: round(((61px - get($icon_height, phone)) / 2)) 15px;
+
+		&_item {
+			padding-top: 4px;
+			padding-left: 15px;
+
+			a svg {
+				width: get($icon_width, phone);
+				height: get($icon_height, phone);
+
+				@include min-phone {
+					width: get($icon_width, desktop);
+					height: get($icon_height, desktop);
+				}
+			}
+
+			@include min-phone { padding-top: 0; }
+		}
+
+		@include min-phone { padding: round(((61px - get($icon_height, desktop)) / 2)) 15px; }
+	}
+}
+
+.headroom--unpinned {
+	margin-top: -66px;
+	@include trs(all 0.2s ease 0.01s);
+}
+
+ul.headroom--unpinned { margin-top: -69px; }

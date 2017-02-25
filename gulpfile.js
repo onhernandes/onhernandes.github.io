@@ -1,11 +1,9 @@
 var gulp 		= require('gulp'),
 	scss 		= require('gulp-sass'),
 	concat 		= require('gulp-concat'),
-	cssmin 		= require('gulp-cssmin'),
-	rename 		= require('gulp-rename'),
+	imagemin    = require('gulp-imagemin'),
 	uglify 		= require('gulp-uglify'),
 	plumber 	= require('gulp-plumber'),
-	//imagemin 	= require('gulp-imagemin'),
 	cp 			= require('child_process'),
 	browserSync = require('browser-sync');
 
@@ -14,21 +12,21 @@ var basePath = './',
 	dev =  basePath + 'dev',
 	assets =  basePath + 'assets',
 	paths_dev = {
-		js: [dev + '/js/*.js', dev + '/js/**/*.js'],
-		main_scss: dev + '/scss/main.scss',
-		scss: [dev + '/scss/*', dev + '/scss/**/*', dev + '/scss/**/**/*', dev + '/scss/**/**/**/*'],
-		img: [dev + '/img/*.{jpg,png,gif}', dev + '/img/**/*.{jpg,png,gif,svg,json,xml}'],
+		js: [dev + '/*.js', dev + '/**/*.js', dev + '/**/**/*.js'],
+		main_scss: dev + '/main.scss',
+		scss: [dev + '/*', dev + '/**/*.scss', dev + '/**/**/*.scss', dev + '/**/**/**/*.scss'],
+		img: [dev + '/image/*.{jpg,png,gif,svg}', dev + '/image/**/*.{jpg,png,gif,svg}'],
 		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
 	},
 	paths_assets = {
 		js: assets + '/js',
 		css: assets + '/css',
-		img: assets + '/img'
+		img: assets + '/image'
 	},
 	paths_site = {
 		js: baseOut + '/js',
 		css: baseOut + '/css',
-		img: baseOut + '/img'
+		img: baseOut + '/image'
 	};
 
 // Build Jekyll
@@ -49,8 +47,7 @@ gulp.task('rebuild', ['build'], function() {
 gulp.task('compile-scss', function() {
 	gulp.src(paths_dev.main_scss)
 		.pipe(plumber())
-		.pipe(scss())
-		.pipe(cssmin())
+		.pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
 		.pipe(gulp.dest(paths_site.css))
 		.pipe(browserSync.reload({stream: true}))
 		.pipe(gulp.dest(paths_assets.css));
@@ -71,8 +68,7 @@ gulp.task('js', function() {
 gulp.task('image', function() {
 	gulp.src(paths_dev.img)
 		.pipe(plumber())
-		//.pipe(imagemin())
-		//.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+		.pipe(imagemin())
 		.pipe(gulp.dest(paths_site.img))
 		.pipe(gulp.dest(paths_assets.img));
 });

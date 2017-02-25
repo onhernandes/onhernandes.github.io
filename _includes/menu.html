@@ -1,32 +1,27 @@
-<nav class="menu" {% if page.category %}category="{{ page.category }}"{% else %}{% if page.color %}color="{{ page.color }}"{% endif %}{% endif %}>
-	<a href="javascript:void(0);" class="menu__icon" title=""></a>
-	<a href="javascript:void(0);" class="menu__search" title=""></a>	
-</nav>
+<nav class="menu">
+	<a href="/" class="menu__logo">h</a>
 
-<div class="menu__wrapper" {% if page.category %}category="{{ page.category }}"{% else if page.color %}color="{{ page.color }}"{% endif %}>
-	<ul class="menu__wrapper_list">
-		<li><a class="menu__wrapper_close-mobile" href="javascript:void(0);">menu</a></li>
+	<ul class="menu__links">
 		{% for link in site.site_links %}
-			<li>
-				<a href="{{ sitel.url }}{{ link.url }}" title="{{ link.title }}">
-					<i class="icon-{{ link.icon }}"></i>
-					{{ link.title }}
-				</a>
-			</li>
+			<li {% if link.title == page.title %}active{% endif %}><a href="{{ link.url | prepend: site.baseurl | prepend: site.url }}">{{ link.title }}</a></li>
 		{% endfor %}
 	</ul>
+	
+	<ul class="menu__social">
+		<li class="menu__social_item">
+			<a href="https://www.instagram.com/mt_hernandes" data-icon target="_blank">
+				<svg>
+					<use xlink:href="#instagram" />
+				</svg>
+			</a>
+		</li>
 
-	<a href="javascript:void(0);" class="menu__wrapper_close" icon="close" title="close"></a>
-</div>
-
-<section class="search" {% if page.color %}color="{{ page.color }}"{% endif %}>
-	<form action="" class="search__form">
-		<label for="search_input" class="search__form_title">search for articles  <a href="javascript:void(0);"></a></label>
-		<input id="search_input" type="text" class="search__form_input" placeholder="type your search" title="">
-
-		<span class="warn"></span>
-		
-		<ul class="search__form_results" id="search_results">
-		</ul>
-	</form>
-</section>
+		<li class="menu__social_item">
+			<a href="https://www.github.com/mhernandes" data-icon target="_blank">
+				<svg>
+					<use xlink:href="#github" />
+				</svg>
+			</a>
+		</li>
+	</ul>
+</nav>
