@@ -20,7 +20,7 @@ window.addEventListener('scroll', function() {
 		}
 	}
 
-	if (window.pageYOffset >= header_position) {
+	if ((window.pageYOffset + 100) >= header_position) {
 		menu.style.backgroundColor = '#333';
 	} else {
 		menu.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
