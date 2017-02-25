@@ -3,7 +3,7 @@
 
 	<ul class="menu__links">
 		{% for link in site.site_links %}
-			<li><a href="{{ link.url | prepend: site.baseurl | prepend: site.url }}">{{ link.title }}</a></li>
+			<li {% if link.title == page.title %}active{% endif %}><a href="{{ link.url | prepend: site.baseurl | prepend: site.url }}">{{ link.title }}</a></li>
 		{% endfor %}
 	</ul>
 	

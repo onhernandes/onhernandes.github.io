@@ -8,10 +8,17 @@
 	}
 
 	&__item {
-		margin-bottom: 120px;
-		@include fxb(92% / 2);
+		margin-bottom: 60px;
+		@include fxb(100%);
 		@include ff(headers);
 		color: $gray_post;
+
+		&:last-child { margin-bottom: 20px; }
+
+		@include min-phone {
+			margin-bottom: 120px;
+			@include fxb(92% / 2);
+		}
 
 		a {
 			color: $gray_post;

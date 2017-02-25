@@ -52,7 +52,13 @@ $icon_height: (
 
 	&__links {
 		@include fxb(100%);
+		width: 100%;
 		text-align: center;
+		//position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(#000, 0.2);
+		@include trs(all 0.2s ease 0.01s);
 
 		li {
 			line-height: 66px;
@@ -60,10 +66,29 @@ $icon_height: (
 			text-transform: uppercase;
 			letter-spacing: 1px;
 
-			a { @include fz(desktop); }
+			a {
+				@include fz(desktop);
+
+				@include max-phone {
+					@include fz(tablet);
+					width: 100%;
+					display: block;
+				}
+			}
+
+			@include max-phone {
+				width: calc(50% - 20px);
+			
+				&[active] { border-bottom: 3px solid #fff; }
+			}
 		}
 
 		@include min-phone {
+			background-color: transparent;
+			width: auto;
+			position: static;
+			top: auto;
+			left: auto;
 			@include fxb(auto);
 		}
 	}
@@ -93,6 +118,8 @@ $icon_height: (
 }
 
 .headroom--unpinned {
-	margin-top: -66px !important;
+	margin-top: -66px;
 	@include trs(all 0.2s ease 0.01s);
 }
+
+ul.headroom--unpinned { margin-top: -69px; }
