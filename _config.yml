@@ -42,6 +42,12 @@ sass:
   sass_dir: dev/scss
 
 projects:
+  - name: SASS/SCSS Snippets for Sublime Text 
+    github: 'https://github.com/mhernandes/sublime-scss-snippets'
+    
+  - name: dragon-theme
+    github: 'https://github.com/mhernandes/dragon-theme'
+
   - name: mustang.js
     github: 'https://github.com/mhernandes/mustang-js'
     
@@ -51,14 +57,8 @@ projects:
   - name: keyguard
     github: 'https://github.com/mhernandes/keyguard'
     
-  - name: start-user
-    github: 'https://github.com/mhernandes/start-user'
-    
   - name: awesome-movies
     github: 'https://github.com/mhernandes/awesome-movies'
-    
-  - name: diametrum
-    github: 'https://github.com/mhernandes/diametrum'
     
   - name: favorite-articles
     github: 'https://github.com/mhernandes/favorite-articles'
