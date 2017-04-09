@@ -11,10 +11,10 @@ hr {
 }
 
 .projects {
-	padding: 0 get($base_padding, phone) / 2 30px;
+	padding: 0 get($base_padding, phone) / 2 10px;
 
 	@include min-tablet {
-		padding: 0 get($base_padding, tablet) / 2 50px;
+		padding: 0 get($base_padding, tablet) / 2 20px;
 	}
 
 	&__list {
