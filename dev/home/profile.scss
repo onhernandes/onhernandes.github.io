@@ -1,8 +1,8 @@
 .profile {
-	padding: 30px get($base_padding, phone) / 2 0px;
+	padding: 10px get($base_padding, phone) / 2 0px;
 
 	@include min-tablet {
-		padding: 30px get($base_padding, tablet) / 2 0px;
+		padding: 50px get($base_padding, tablet) / 2 0px;
 	}
 
 	p {
@@ -18,12 +18,16 @@
 	}
 
 	&__links {
-		padding-top: 10px;
-		padding-bottom: 20px;
+		padding-bottom: 10px;
+		text-align: center;
 
 		li {
 			display: inline-block;
-			padding-right: 20px;
+			padding-right: 15px;
+
+			@include min-tablet {
+				padding-right: 20px;
+			}
 
 			a {
 				svg {
@@ -32,6 +36,14 @@
 					fill: $gray_post;
 				}
 			}
+
+			&:last-child { padding-right: 0; }
+		}
+
+		@include min-tablet {
+			text-align: left;
+			padding-top: 10px;
+			padding-bottom: 20px;
 		}
 	}
 }
