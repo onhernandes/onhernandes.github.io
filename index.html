@@ -5,24 +5,28 @@ title: articles
 
 <section class="profile">
 	<article class="profile__content">
-		<p>Hey! My name is <i>Matheus Hernandes</i>, I'm 18 years old and I'm working as a front-end developer since 2015 and as back-end since 2016.</p>
+		<p>Hey! My name is <i>Matheus Hernandes</i>, I'm 18 years old and I work as a front and back-end developer - with stuff like HTML5/Liquid, JS/jQuery/Gulp, CSS3/SASS, PHP/MySQL and even Linux!</p>
 
 		<p>Now I'm working at <a href="https://www.gasoline-digital.com" target="_blank">Gasoline Digital</a> as front-end developer(also playing with WordPress).</p>
 
-		<p>I've created some cool and small open-source projects like <a href="https://github.com/mhernandes/shield-scss" target="_blank">Shield</a> and even <a href="https://github.com/mhernandes/dragon-theme" target="_blank">some Jekyll simple themes</a>.</p>
+		<p>I like to read a lot, principally about tech/dev and life, so <a href="https://github.com/onhernandes/favorite-articles" target="_blank">here you can see some of my favorite-articles</a>. Why don't you follow me on <a href="https://getpocket.com/@onhernandes" target="_blank">Pocket</a> and <a href="https://medium.com/@onhernandes" target="_blank">Medium</a>? I've some cool things there, you'll like!</p>
 
-		<p>I like to read a lot, principally about tech/dev, so <a href="https://github.com/mhernandes/favorite-articles" target="_blank">here you can see some of my favorite-articles</a> and follow me on <a href="https://getpocket.com/@mhernandes" target="_blank">Pocket</a> and <a href="https://medium.com/@devhernandes" target="_blank">Medium</a>.</p>
-
-		<p>Wanna talk? Send me an <a href="mailto:midia.matheus@gmail.com" class="email-flag">email</a> or check out my link below</p>
+		<p>Wanna talk? Send me an <a href="mailto:midia.matheus@gmail.com" class="email-flag">email</a> or check out my links below</p>
 	</article>
 
 	<ul class="profile__links">
-		<li><a href="https://www.instagram.com/mt_hernandes" target="_blank"><svg><use xlink:href="#instagram"></use></svg></a></li>
-		<li><a href="https://www.twitter.com/mt_hernandes" target="_blank"><svg><use xlink:href="#twitter"></use></svg></a></li>
-		<li><a href="https://www.github.com/mhernandes" target="_blank"><svg><use xlink:href="#github"></use></svg></a></li>
+		<li><a href="https://www.instagram.com/onhernandes" target="_blank"><svg><use xlink:href="#instagram"></use></svg></a></li>
+		<li><a href="https://www.twitter.com/onhernandes" target="_blank"><svg><use xlink:href="#twitter"></use></svg></a></li>
+		<li><a href="https://www.github.com/onhernandes" target="_blank"><svg><use xlink:href="#github"></use></svg></a></li>
+		<li><a href="https://www.medium.com/@onhernandes" target="_blank"><svg><use xlink:href="#medium"></use></svg></a></li>
+		<li><a href="https://getpocket.com/@onhernandes" target="_blank"><svg><use xlink:href="#pocket"></use></svg></a></li>
 	</ul>
 </section>
-
-{% include lang.html %}
-
-{% include post-loop.html  %}
+<hr>
+<section class="projects">
+	<ul class="projects__list">
+		{% for project in site.projects %}
+			<li><a href="{{ project.github }}" target="_blank" title="{{ project.name }}">{{ project.name }}</a></li>
+		{% endfor %}
+	</ul>
+</section>

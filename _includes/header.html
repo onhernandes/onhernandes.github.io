@@ -1,32 +1,11 @@
 <header class="header">
 	<div class="header__wrapper">
-		<div>
-			<h1>Matheus Hernandes</h1>
-			
-			<p>Web developer, android enthusiastic and commom nerd</p>
-		</div>
-
-		<a href="javascript:void(0);" title="scroll down" class="header__wrapper_arrow" data-icon>
-			<svg>
-				<use xlink:href="#arrow-simple"/>
-			</svg>
-		</a>
+		<div></div>
+		<h1>Matheus Hernandes</h1>
+		<p>front and back-end developer</p>
 	</div>
 </header>
 
 {% if page.langs %}
 	{% include lang.html %}
 {% endif %}
-
-{% comment %}
-	{% if page.title != 'About' %}
-		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">
-		Know more
-		<i data-icon>
-			<svg>
-				<use xlink:href="#arrow-simple"/>
-			</svg>
-		</i>
-	</a>
-	{% endif %}
-{% endcomment %}

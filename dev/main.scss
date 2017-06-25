@@ -27,23 +27,23 @@ $gray_post: darken(mix($gray_link, $gray_sub), 8%);
 // Theme
 @import 'theme/header';
 @import 'theme/menu';
-@import 'theme/lang';
+// @import 'theme/lang';
 
 // Home
 @import 'home/profile';
-@import 'home/posts';
+@import 'home/projects';
 
 // Article
-@import 'theme/syntax';
-@import 'theme/syntax-monokai';
-@import 'article/header';
-@import 'article/content';
-@import 'article/share';
-@import 'article/related';
-@import 'article/comments';
+// @import 'theme/syntax';
+// @import 'theme/syntax-monokai';
+// @import 'article/header';
+// @import 'article/content';
+// @import 'article/share';
+// @import 'article/related';
+// @import 'article/comments';
 
 // Projects
-@import 'projects/projects';
+// @import 'projects/projects';
 
 // About
 //@import 'about/profile';

@@ -11,12 +11,12 @@ email: midia.matheus@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   That's my website/blog, I write somethings about me and the awesome code world.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mhernandes.github.io" # the base hostname & protocol for your site
-facebook: mthernandes
-instagram: mt_hernandes
-twitter: mt_hernandes
-github: mhernandes
-spotify: mhernandes
+url: "https://onhernandes.github.io" # the base hostname & protocol for your site
+facebook: onhernandes
+instagram: onhernandes
+twitter: onhernandes
+github: onhernandes
+spotify: onhernandes
 
 # Build settings
 markdown: kramdown
@@ -42,23 +42,14 @@ sass:
   sass_dir: dev/scss
 
 projects:
+  - name: SASS/SCSS Snippets for Sublime Text 
+    github: 'https://github.com/mhernandes/sublime-scss-snippets'
+    
+  - name: dragon-theme
+    github: 'https://github.com/mhernandes/dragon-theme'
+
   - name: mustang.js
     github: 'https://github.com/mhernandes/mustang-js'
-    
-  - name: shield-scss
-    github: 'https://github.com/mhernandes/shield-scss'
-    
-  - name: keyguard
-    github: 'https://github.com/mhernandes/keyguard'
-    
-  - name: start-user
-    github: 'https://github.com/mhernandes/start-user'
-    
-  - name: awesome-movies
-    github: 'https://github.com/mhernandes/awesome-movies'
-    
-  - name: diametrum
-    github: 'https://github.com/mhernandes/diametrum'
     
   - name: favorite-articles
     github: 'https://github.com/mhernandes/favorite-articles'
