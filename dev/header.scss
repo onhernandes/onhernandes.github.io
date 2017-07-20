@@ -1,1 +1,20 @@
-header, .about, footer { display: none; }
+header {
+	// position: absolute;
+	z-index: 99;
+	width: 100%;
+	// left: 0;
+	// top: calc(100vh - 3.53rem);
+	text-align: right;
+	padding: 0.9rem 1.8rem 0;
+	min-height: 10vh;
+	background-color: $intro;
+	clip-path: polygon($l); 
+	// margin-top: -1px;
+
+	span {
+		// color: $intro !important;
+		// display: block;
+	}
+}
+
+footer { display: none; }

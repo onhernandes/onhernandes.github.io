@@ -1,5 +1,18 @@
 @import 'shield/shield';
+$intro: darken(#222831, 5%);
+$alt: 80%;
+$alt_max: 100%;
+$i: 100%;
+$l: 0 0, 100% 0, 100% 100%;
+
+@while $i > 0 {
+	$i: $i - 2.5%;
+	$l: append($l, ($i $alt), 'comma');
+	$i: $i - 2.5%;
+	$l: append($l, ($i $alt_max), 'comma');
+}
 @import 'header';
-@import 'intro';
 @import 'buttons';
+@import 'intro';
+@import 'about';
 @import 'footer';

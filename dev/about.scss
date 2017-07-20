@@ -1,0 +1,49 @@
+$sep: 3px;
+
+.about {
+	@include fc(wrap row);
+	@include jc(center);
+	height: auto;
+	padding: 3rem;
+
+	article { 
+		@include fx(0 0 calc(45% - 3px)); 
+	}
+
+	&__sep { 
+		@include fx(0 0 $sep); 
+		height: 80%;
+		margin: 0 3rem;
+		background-color: rgba(#fff, 0.7);
+	}
+
+	&__wrapper {
+		padding-top: 1rem;
+		text-align: right;
+
+		&_social {
+			padding-top: 1rem;
+
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__projects {
+		text-align: justify;
+
+		&_list {
+			padding-top: 1rem;
+
+			li {
+				display: inline-block;
+
+				a:hover {
+					border-bottom: 2px solid rgba(#fff, 0.7);
+					padding-bottom: 1px;
+				}
+			}
+		}
+	}
+}
