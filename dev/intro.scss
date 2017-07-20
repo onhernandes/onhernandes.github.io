@@ -1,0 +1,46 @@
+.intro {
+	background: darken(#222831, 5%) center center no-repeat;
+	background-size: cover;
+	width: 100%;
+	min-height: 100vh;
+	$alt: 95%;
+	$alt_max: 100%;
+	$i: 100%;
+	$l: 0 0, 100% 0, 100% 100%;
+
+	@while $i > 0 {
+		$l: join($l, ($i - 2.5%, $alt), comma);
+		$l: join($l, ($i - 2.5%, $alt_max), comma);
+	}
+
+	$l: 0;
+
+	// clip-path: polygon(0 0, 100% 0, 100% 100%, 
+	// 	97.5% $alt, 95% $alt_max, 
+	// 	92.5% $alt, 90% $alt_max, 
+	// 	92.5% $alt, 90% $alt_max, 
+	// 	87.5% $alt, 85% $alt_max, 
+	// 	82.5% $alt, 80% $alt_max, 
+	// 	85% $alt, 82.5% $alt_max, 
+	// 0 100%);
+	// clip-path: polygon($l);
+	@include fc(wrap row);
+	@include fa(center, center, center);
+
+	* { display: block; }
+
+	&__image {
+		background: url(profile.jpg) center center no-repeat;
+		background-size: cover;
+		border-radius: 10rem;
+		height: 15rem;
+		@include fxb(15rem);
+	}
+
+	&__title {
+		color: lighten(#363D3F, 33%);
+		@include fx(0 0 auto);
+		margin: 1.3rem 100% 0;
+		text-align: center;
+	}
+}

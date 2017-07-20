@@ -1,28 +1,43 @@
----
-layout: default
-title: articles
----
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- Add meta-tags -->
+	<title>hernands</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+	<header>
+		<span>hernands</span>
+	</header>
 
-<section class="profile">
-	<article class="profile__content">
-		<p>Hey! My name is <i>Matheus Hernandes</i>, I'm 18 years old and I'm working as a front-end developer since 2015 and as back-end since 2016.</p>
+	<section class="intro">
+		<div class="intro__image"></div>
 
-		<p>Now I'm working at <a href="https://www.gasoline-digital.com" target="_blank">Gasoline Digital</a> as front-end developer(also playing with WordPress).</p>
+		<h3 class="intro__title">hernandes</h3>
+	</section>
 
-		<p>I've created some cool and small open-source projects like <a href="https://github.com/mhernandes/shield-scss" target="_blank">Shield</a> and even <a href="https://github.com/mhernandes/dragon-theme" target="_blank">some Jekyll simple themes</a>.</p>
+	<section class="about">
+		<article class="about__wrapper">
+			<p>lorem10</p>
+			<ul class="about__wrapper_social">
+				<!-- 
+					- Email
+					- Medium
+					- Pocket
+				 -->
 
-		<p>I like to read a lot, principally about tech/dev, so <a href="https://github.com/mhernandes/favorite-articles" target="_blank">here you can see some of my favorite-articles</a> and follow me on <a href="https://getpocket.com/@mhernandes" target="_blank">Pocket</a> and <a href="https://medium.com/@devhernandes" target="_blank">Medium</a>.</p>
+				<li><a href=""></a></li>
+			</ul>
+		</article>
 
-		<p>Wanna talk? Send me an <a href="mailto:midia.matheus@gmail.com" class="email-flag">email</a> or check out my link below</p>
-	</article>
+		<div class="about__sep"></div>
 
-	<ul class="profile__links">
-		<li><a href="https://www.instagram.com/mt_hernandes" target="_blank"><svg><use xlink:href="#instagram"></use></svg></a></li>
-		<li><a href="https://www.twitter.com/mt_hernandes" target="_blank"><svg><use xlink:href="#twitter"></use></svg></a></li>
-		<li><a href="https://www.github.com/mhernandes" target="_blank"><svg><use xlink:href="#github"></use></svg></a></li>
-	</ul>
-</section>
+		<article class="about__projects"></article>
+	</section>
 
-{% include lang.html %}
+	<footer class="final"><span>© 2017</span></footer>
 
-{% include post-loop.html  %}
+	<script src="assets/main.js"></script>
+</body>
+</html>

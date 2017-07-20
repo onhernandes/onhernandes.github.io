@@ -4,8 +4,7 @@ var gulp 		= require('gulp'),
 	imagemin    = require('gulp-imagemin'),
 	uglify 		= require('gulp-uglify'),
 	plumber 	= require('gulp-plumber'),
-	cp 			= require('child_process'),
-	browserSync = require('browser-sync');
+	bs = require('browser-sync');
 
 var basePath = './',
 	baseOut = basePath + '_site/assets',
@@ -16,41 +15,17 @@ var basePath = './',
 		main_scss: dev + '/main.scss',
 		scss: [dev + '/*', dev + '/**/*.scss', dev + '/**/**/*.scss', dev + '/**/**/**/*.scss'],
 		img: [dev + '/image/*.{jpg,png,gif,svg}', dev + '/image/**/*.{jpg,png,gif,svg}'],
-		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
+		html: ['*.html', '**/*.html']
 	},
-	paths_assets = {
-		js: assets + '/js',
-		css: assets + '/css',
-		img: assets + '/image'
-	},
-	paths_site = {
-		js: baseOut + '/js',
-		css: baseOut + '/css',
-		img: baseOut + '/image'
-	};
-
-// Build Jekyll
-gulp.task('build', function(done) {
-	return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-		.on('error', function(err) {
-			console.log(err);
-		})
-		.on('close', done);
-});
-
-// Rebuild Jekyll
-gulp.task('rebuild', ['build'], function() {
-	browserSync.reload();
-});
+	paths_assets = assets;
 
 // Generate and minify SCSS
-gulp.task('compile-scss', function() {
+gulp.task('styles', function() {
 	gulp.src(paths_dev.main_scss)
-		.pipe(plumber())
+		// .pipe(plumber())
 		.pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
-		.pipe(gulp.dest(paths_site.css))
-		.pipe(browserSync.reload({stream: true}))
-		.pipe(gulp.dest(paths_assets.css));
+		.pipe(gulp.dest(paths_assets))
+		.pipe(bs.reload({stream: true}));
 });
 
 // Concat and uglify JS
@@ -59,9 +34,8 @@ gulp.task('js', function() {
 		.pipe(plumber())
 		.pipe(concat('main.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest(paths_site.js))
-		.pipe(browserSync.reload({stream: true}))
-		.pipe(gulp.dest(paths_assets.js));
+		.pipe(gulp.dest(paths_assets))
+		.pipe(bs.reload({stream: true}));
 });
 
 // Minify images
@@ -69,28 +43,22 @@ gulp.task('image', function() {
 	gulp.src(paths_dev.img)
 		.pipe(plumber())
 		.pipe(imagemin())
-		.pipe(gulp.dest(paths_site.img))
 		.pipe(gulp.dest(paths_assets.img));
 });
 
 // Set a server
-gulp.task('set-server', ['build'], function() {
-	browserSync.init({
+gulp.task('server', ['styles', 'js'], function() {
+	bs.init({
+		open: false,
 		server: {
-			baseDir: '_site'
-		},
-		open: false
+			baseDir: basePath
+		}
 	});
+
+	gulp.watch(paths_dev.js, ['js']);
+	gulp.watch(paths_dev.scss, ['styles']);
+	gulp.watch(paths_dev.html).on('change', bs.reload);
 });
 
-function runner() {
-	//gulp.run('compile-scss', 'js', 'image', 'set-server');
-
-	gulp.watch(paths_dev.scss, ['compile-scss']);
-	gulp.watch(paths_dev.js, ['js']);
-	gulp.watch(paths_dev.img, ['image']);
-	gulp.watch(paths_dev.jekyll, ['rebuild']);
-}
-
 // Watch files for changes
-gulp.task('default', ['compile-scss', 'js', 'image', 'set-server'], runner);
+gulp.task('default', ['server']);

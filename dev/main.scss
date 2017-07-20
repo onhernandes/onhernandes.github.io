@@ -1,51 +1,5 @@
-// Partials
-@import 'partials/shield';
-
-$base_width: (
-	tablet: 85%,
-	phone: 95%
-);
-
-$base_padding: (
-	tablet: (100% - get($base_width, tablet)),
-	phone: (100% - get($base_width, phone))
-);
-
-a[data-icon],
-i[data-icon] {
-	svg {
-		max-width: 100px;
-		max-height: 100px;
-		fill: white;
-	}
-}
-
-$gray_link: darken(#9EABB3, 5%);
-$gray_sub: #4a4a4a;
-$gray_post: darken(mix($gray_link, $gray_sub), 8%);
-
-// Theme
-@import 'theme/header';
-@import 'theme/menu';
-@import 'theme/lang';
-
-// Home
-@import 'home/profile';
-@import 'home/posts';
-
-// Article
-@import 'theme/syntax';
-@import 'theme/syntax-monokai';
-@import 'article/header';
-@import 'article/content';
-@import 'article/share';
-@import 'article/related';
-@import 'article/comments';
-
-// Projects
-@import 'projects/projects';
-
-// About
-//@import 'about/profile';
-//@import 'about/listing';
-//@import 'about/contact';
+@import 'shield/shield';
+@import 'header';
+@import 'intro';
+@import 'buttons';
+@import 'footer';
