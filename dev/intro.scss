@@ -1,15 +1,17 @@
 .intro {
-	background: $intro center center no-repeat;
+	background: url(bg.jpg) center center no-repeat fixed;
 	background-size: cover;
 	width: 100%;
-	min-height: 90vh;
+	min-height: 100vh;
+	position: relative;
+	z-index: 1;
 
-	// clip-path: polygon($l);
+	clip-path: polygon($l);
 	@include fc(wrap row);
 	@include fa(center, center, center);
 
 	&__image,
-	&__title { display: block; }
+	&__title { z-index: 3; position: relative; display: block; }
 
 	&__image {
 		background: url(profile.jpg) center center no-repeat;
@@ -24,5 +26,16 @@
 		@include fx(0 0 auto);
 		margin: 1.3rem 100% 0;
 		text-align: center;
+
+		&:last-child { margin-top: 0.3rem; }
+	}
+
+	&::after {
+		position: absolute;
+		z-index: 2;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: rgba($intro, 1);
 	}
 }
