@@ -1,0 +1,25 @@
+//  Name: input-placeholder
+//  Trigger: inpl($inpl)
+// 	Return placeholder custom
+@mixin input-placeholder($input) {
+	#{$input}::-webkit-input-placeholder {
+		@content;
+	}
+
+	#{$input}:-moz-placeholder {
+		@content;
+	}
+
+	#{$input}::-moz-placeholder {
+		@content;
+	}
+
+	#{$input}:-ms-input-placeholder {
+		@content;
+	}
+}
+
+// short-hand for: input-placeholder($trs);
+@mixin inpl($trs) {
+	@include input-placeholder($trs);
+}
