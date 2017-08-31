@@ -1,0 +1,20 @@
+.header--article > div {
+	h1, h4 {
+		display: block;
+		@include fxb(100%);
+		text-align: center;
+	}
+
+	h1 {
+		@include as(center);
+		font-size: 45px;
+		margin-top: 15%;
+		text-shadow: 3px 3px rgba(#000, 0.5);
+	}
+
+	h4 {
+		@include as(flex-end);
+		padding-bottom: 50px;
+		font-weight: 300;
+	}
+}

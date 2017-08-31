@@ -1,0 +1,59 @@
+<html>
+<head>
+	<!-- Meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="copyright" content="© 2017 Hernandes">
+	<meta http-equiv="content-language" content="en-US, pt-BR">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="cache-control" content="cache">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="revisit-after" content="7 days">
+	<meta name="rating" content="general">
+	<meta name=”robots” content="index, follow">
+	<meta name="description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}, {% endfor %}{% else %}{{ site.taggs }}{% endif %}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+	<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.image %}
+    <meta property="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
+    {% else %}
+    <meta property="twitter:image:src" content="{{ '/assets/img/blog.jpg' | prepend: site.url }}">
+    {% endif %}
+
+	<!-- Facebook / Open Graph -->
+    <meta property="fb:admins" content="100003273268848" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/assets/image/{{ page.image }}">
+    {% else %}
+    <meta property="og:image" content="{{ '/assets/image/blog.jpg' | prepend: site.url }}">
+    {% endif %}
+    <meta property="og:description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/image/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/assets/image/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/image/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/assets/image/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/image/favicon/manifest.json">
+	<link rel="mask-icon" href="/assets/image/favicon/safari-pinned-tab.svg" color="#70a1d7">
+	<link rel="shortcut icon" href="/assets/image/favicon/favicon.ico">
+	<meta name="msapplication-config" content="/assets/image/favicon/browserconfig.xml">
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+	<meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}#70A1D7{% endif %}">
+
+	<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif|Open+Sans:400,600,800" rel="stylesheet">
+</head>
+<body>

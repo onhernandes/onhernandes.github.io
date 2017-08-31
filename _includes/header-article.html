@@ -1,0 +1,9 @@
+{% if page.opacity %}
+	<style>.header::after { background-color: rgba(0,0,0,0.{{ page.opacity }}); }</style>
+{% endif %}
+<header class="header header--article" {% if page.color or page.image %}style="{% if page.image %}background-image: url({{ '/assets/image/' | prepend: site.baseurl | prepend: site.url }}{{ page.image }}); {% else if page.color %}background-image: url(); background-color: {{ page.color }};{% else %}background-image: url({{ '/assets/image/standard.jpg' | prepend: site.baseurl | prepend: site.url }});{% endif %}"{% endif %}>
+	<div class="header__wrapper">
+		<h1>{{ page.title }}</h1>
+		<h4>{{ page.date | date: '%B %d, %Y' }}</h4>
+	</div>
+</header>

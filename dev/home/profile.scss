@@ -1,0 +1,49 @@
+.profile {
+	padding: 10px get($base_padding, phone) / 2 0px;
+
+	@include min-tablet {
+		padding: 50px get($base_padding, tablet) / 2 0px;
+	}
+
+	p {
+		font-size: 20px;
+		display: block;
+		padding-bottom: 20px;
+		color: $gray_post;
+		line-height: 130%;
+
+		a {
+			color: darken($gray_post, 25%);
+		}
+	}
+
+	&__links {
+		padding-bottom: 10px;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			padding-right: 15px;
+
+			@include min-tablet {
+				padding-right: 20px;
+			}
+
+			a {
+				svg {
+					height: 55px;
+					width: 45px;
+					fill: $gray_post;
+				}
+			}
+
+			&:last-child { padding-right: 0; }
+		}
+
+		@include min-tablet {
+			text-align: left;
+			padding-top: 10px;
+			padding-bottom: 20px;
+		}
+	}
+}

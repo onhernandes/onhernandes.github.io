@@ -1,0 +1,27 @@
+{% comment %}<nav class="menu">
+	<a href="/" class="menu__logo">h</a>
+
+	<ul class="menu__links">
+		{% for link in site.site_links %}
+			<li {% if link.title == page.title %}active{% endif %}><a href="{{ link.url | prepend: site.baseurl | prepend: site.url }}">{{ link.title }}</a></li>
+		{% endfor %}
+	</ul>
+	
+	<ul class="menu__social">
+		<li class="menu__social_item">
+			<a href="https://www.instagram.com/mt_hernandes" data-icon target="_blank">
+				<svg>
+					<use xlink:href="#instagram" />
+				</svg>
+			</a>
+		</li>
+
+		<li class="menu__social_item">
+			<a href="https://www.github.com/mhernandes" data-icon target="_blank">
+				<svg>
+					<use xlink:href="#github" />
+				</svg>
+			</a>
+		</li>
+	</ul>
+</nav>{% endcomment %}
