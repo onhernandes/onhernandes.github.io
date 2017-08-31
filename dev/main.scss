@@ -1,24 +1,17 @@
-// Partials
-@import 'partials/shield';
+@import 'shield/shield';
+$intro: darken(#222831, 5%);
+$alt: 95%;
+$alt_max: 100%;
+$i: 100%;
+$l: 0 0, 100% 0, 100% 100%;
 
-$base_width: (
-	tablet: 85%,
-	phone: 95%
-);
-
-$base_padding: (
-	tablet: (100% - get($base_width, tablet)),
-	phone: (100% - get($base_width, phone))
-);
-
-a[data-icon],
-i[data-icon] {
-	svg {
-		max-width: 100px;
-		max-height: 100px;
-		fill: white;
-	}
+@while $i > 0 {
+	$i: $i - 2.5%;
+	$l: append($l, ($i $alt), 'comma');
+	$i: $i - 2.5%;
+	$l: append($l, ($i $alt_max), 'comma');
 }
+<<<<<<< HEAD
 
 $gray_link: darken(#9EABB3, 5%);
 $gray_sub: #4a4a4a;
@@ -49,3 +42,10 @@ $gray_post: darken(mix($gray_link, $gray_sub), 8%);
 //@import 'about/profile';
 //@import 'about/listing';
 //@import 'about/contact';
+=======
+@import 'header';
+@import 'buttons';
+@import 'intro';
+@import 'about';
+@import 'footer';
+>>>>>>> dev
