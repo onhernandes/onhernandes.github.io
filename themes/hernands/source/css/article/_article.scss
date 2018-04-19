@@ -3,6 +3,8 @@ section.article > article {
         margin-top: 4rem;
         margin-bottom: 2rem;
     }
+    
+    p > img { width: 100%; }
 }
 
 pre[class="language-*"] {
