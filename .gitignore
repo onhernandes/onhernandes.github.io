@@ -1,0 +1,11 @@
+_site
+.sass-cache
+.jekyll-metadata
+nohup.out
+node_modules
+.sublime-gulp.cache
+build/*
+assets/*
+*.log
+public/
+vendor/

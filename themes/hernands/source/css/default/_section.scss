@@ -1,0 +1,28 @@
+.section {
+    @include fc(wrap row);
+    @include jc(center);
+    height: auto;
+
+    
+    article { 
+        @include fx(0 0 90%);
+        margin: 0 100%;
+
+        @media screen and (min-width: 960px) {
+            @include fxb(50%);
+        }
+    }
+
+    h1, h2, h5 {
+        color: lighten($yellow, 3);
+    }
+
+    a {
+        border-bottom: 2px solid rgba(#fff, 0.1);
+        padding-bottom: 1px;
+        
+        &:hover {
+            border-bottom: 2px solid rgba($yellow, 0.7);
+        }
+    }
+}

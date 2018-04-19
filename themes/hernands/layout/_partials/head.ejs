@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%
+        var title = config.title, 
+            description = config.description, 
+            thumbnail = config.thumbnail;
+
+        if (page.title) {
+            title = config.title;
+        }
+
+        if (page.description) {
+            description = page.description;
+        }
+
+        if (page.thumbnail) {
+            thumbnail = page.thumbnail;
+        }
+    %>
+    <title><%- title %></title>
+    <meta name="description" content="<%- description %>"/>
+    <meta name="author" content="<%- config.author %>"/>
+    <link rel="base" href="<%- config.url %>"/>
+    <link rel="canonical" href="<%- config.url %>"/>
+    <meta name="robots" content="index/follow"/>
+    <meta name="googlebot" content="index/follow"/>
+    <% if (config.color) { %>
+        <meta name="theme-color" content="<%- config.color %>"/>
+        <meta name="msapplication-navbutton-color" content="<%- config.color %>"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="<%- config.color %>"/>
+    <% } %>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="<%- title %>"/>
+    <meta itemprop="description" content="<%- description %>"/>
+    <meta rel="canonical" itemprop="image" content="<%- config.url %>/assets/<%- thumbnail %>"/>
+
+    <!-- markup for facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="<%- title %>"/>
+    <meta property="og:url" content="<%- config.url %>"/>
+    <meta property="og:site_name" content="<%- config.title %>"/>
+    <meta property="og:image" content="<%- config.url %>/assets/<%- thumbnail %>"/>
+
+    <meta property="og:description" content="<%- description %>"/>
+    <meta property="og:locale" content="pt_BR"/>
+    <!-- markup for twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="<%- title %>"/>
+    <meta name="twitter:description" content="<%- description %>"/>
+    <meta name="twitter:creator" content="<%- config.author %>"/>
+    <meta name="twitter:image" content="<%- config.url %>/assets/<%- config.thumbnail %>"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+    <%- css('css/main') %>
+</head>

@@ -1,0 +1,19 @@
+$intro: darken(#222831, 5%);
+$yellow: #f1e309;
+$alt: 95%;
+$alt_max: 100%;
+
+// Default
+@import 'shield/_shield';
+@import 'default/_section';
+@import 'default/_footer';
+@import 'default/_spacer';
+
+// Home
+@import 'home/_about';
+@import 'home/_header';
+@import 'home/_projects';
+@import 'home/_articles_list';
+
+// Articles
+@import 'article/_article';

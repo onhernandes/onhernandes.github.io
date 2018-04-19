@@ -1,0 +1,36 @@
+// @import '../main.scss';
+$sep: 3px;
+
+.about {
+    &__wrapper {
+        @include fc(wrap row);
+
+        &_social {
+            margin-left: 4%;
+            margin-top: -0.3rem;
+            vertical-align: top;
+            display: inline-block;
+
+            li {
+                display: inline-block;
+                padding-right: 15px;
+
+                a {
+                    border-bottom: none;
+                    padding-bottom: 0;
+
+                    &:hover {
+                        border-bottom: none;
+                        padding-bottom: 0;
+                    }
+                }
+
+                svg {
+                    width: 28px;
+                    height: 38px;
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}

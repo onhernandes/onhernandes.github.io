@@ -1,0 +1,10 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+
+node_sass:
+  outputStyle: compressed
+  precision: 5
+  sourceComments: false
+  file: themes/hernands/source/css/main.scss
