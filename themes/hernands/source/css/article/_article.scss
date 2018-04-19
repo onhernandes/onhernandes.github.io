@@ -5,6 +5,11 @@ section.article > article {
     }
     
     p > img { width: 100%; }
+
+    p > code {
+        background-color: rgba(#000, 0.3);
+        padding: 1.5px 4px;
+    }
 }
 
 pre[class="language-*"] {
