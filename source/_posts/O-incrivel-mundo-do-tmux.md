@@ -1,7 +1,9 @@
 ---
 title: O incrível mundo do tmux
 date: 2018-04-19 15:52:16
-tags:
+tags: tmux produtividade terminal
+description: Você tem um momento para falar de tmux? Venha para o lado negro da força e aumente sua produtividade!
+thumbnail: thumbnail.jpg
 ---
 
 # tmux - o que é
