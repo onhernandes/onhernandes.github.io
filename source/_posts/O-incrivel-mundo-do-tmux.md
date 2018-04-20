@@ -24,11 +24,11 @@ simple, modern, BSD-licensed alternative to programs such as GNU screen
 Provavelmente o tmux é suportado pelo seu gerenciador de pacotes - não sei como estão as coisas pra Windows.
 
 Usando o Pacman: `sudo pacman -S tmux`
+Usando o apt-get: `sudo apt-get install tmux`
 
 # Básico
 
-Para começar o tmux, você precisa criar uma sessão. Você tem duas formas, apenas digitando `tmux` no terminal(criando uma sessão chamada 0), ou 
-`tmux new -s <nome-da-sessao>`
+Para começar o tmux, você precisa criar uma sessão. Você tem duas formas, apenas digitando `tmux` no terminal(criando uma sessão chamada 0), ou `tmux new -s <nome-da-sessao>`
 
 Assim que você entrar no tmux, estará dentro de uma sessão, no primeiro painel e na primeira janela.
 
@@ -58,7 +58,8 @@ Você vai dividir sua tela em duas partes. Quer ir para o outro painel? `prefix 
 
 # Até a próxima!
 
-Isso foi só por hoje. No próximo vou falar mais sobre as janelas do tmux, mas isso já é o suficiente pra você aprender a brincar com o tmux.
+Isso foi só por hoje. No próximo artigo vou falar mais sobre as janelas do tmux, mas isso já é o suficiente pra você aprender a brincar com o 
+tmux.
 
 tmux no Github: [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
 Wiki to tmux: [https://github.com/tmux/tmux/wiki](https://github.com/tmux/tmux/wiki)
