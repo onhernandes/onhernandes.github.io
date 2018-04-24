@@ -58,8 +58,7 @@ Você vai dividir sua tela em duas partes. Quer ir para o outro painel? `prefix 
 
 # Até a próxima!
 
-Isso foi só por hoje. No próximo artigo vou falar mais sobre as janelas do tmux, mas isso já é o suficiente pra você aprender a brincar com o 
-tmux.
+Isso foi só por hoje. No próximo artigo vou falar mais sobre as janelas do tmux, mas isso já é o suficiente pra você aprender a brincar com o tmux.
 
 tmux no Github: [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
 Wiki to tmux: [https://github.com/tmux/tmux/wiki](https://github.com/tmux/tmux/wiki)
