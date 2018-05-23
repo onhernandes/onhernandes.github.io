@@ -8,13 +8,10 @@ thumbnail: thumbnail.jpg
 
 # tmux - o que é
 
-Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom 
-e velho `xterm` e configurar como quiser. Segundo o Wiki deles:
+Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom e velho `xterm` e configurar como quiser. Segundo o Wiki deles:
 
 {% blockquote %}
-tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
-to be accessed and controlled from a single terminal. tmux is intended to be a
-simple, modern, BSD-licensed alternative to programs such as GNU screen
+tmux is a "terminal multiplexer", it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen
 {% endblockquote %}
 
 ![](tmux.gif)
@@ -32,18 +29,15 @@ Para começar o tmux, você precisa criar uma sessão. Você tem duas formas, ap
 
 Assim que você entrar no tmux, estará dentro de uma sessão, no primeiro painel e na primeira janela.
 
-Para acionar qualquer coisa do tmux, você precisa apertar o prefixo primeiro, para dizer ao tmux que está acionando um comando. O prefixo 
-padrão é `CTRL + b`.
+Para acionar qualquer coisa do tmux, você precisa apertar o prefixo primeiro, para dizer ao tmux que está acionando um comando. O prefixo padrão é `CTRL + b`.
 
 {% blockquote %}
-Vou usar o acento `^` para indicar o `CTRL`. Por exemplo, `^b` é o mesmo que `CTRL + b`. Lembre-se que todos os comandos do tmux *são* sensivos 
-a caixa alta e baixa. Então, `^b` não é o mesmo que `^B`. Todo conteúdo sobre tmux que você pesquisar, vai usar essa notação.
+Vou usar o acento `^` para indicar o `CTRL`. Por exemplo, `^b` é o mesmo que `CTRL + b`. Lembre-se que todos os comandos do tmux *são* sensivos a caixa alta e baixa. Então, `^b` não é o mesmo que `^B`. Todo conteúdo sobre tmux que você pesquisar, vai usar essa notação.
 {% endblockquote %}
 
 ## Alguns pontos sobre o tmux:
 
-- Você vai notar uma barra inferior assim que entrar em uma sessão do tmux, nela você vai ver o nome da sua sessão, suas janelas, seu 
-usuário@grupo, horário e data atual
+- Você vai notar uma barra inferior assim que entrar em uma sessão do tmux, nela você vai ver o nome da sua sessão, suas janelas, seu usuário@grupo, horário e data atual
 - Se você quiser sair do tmux, basta digitar `exit` no terminal
 
 ## Painéis
