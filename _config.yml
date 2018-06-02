@@ -81,10 +81,11 @@ pagination_dir: page
 theme: hernands
 
 plugins: 
+  - hexo-server
   - hexo-generator-robotstxt
 
 robotstxt:
-  useragent: *
+  useragent: "*"
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
