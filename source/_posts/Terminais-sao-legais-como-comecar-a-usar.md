@@ -1,9 +1,12 @@
 ---
 title: 'Terminais são legais: como começar a usar'
+description: 'Todo mundo talvez precise usar o terminal uma hora ou outra, e não é tão difícil quanto parece!'
+thumbnail: 'learning.jpg'
 date: 2018-06-02 16:47:14
 tags:
 ---
 
+![](learning.jpg)
 
 # Terminal, o que é?
 
