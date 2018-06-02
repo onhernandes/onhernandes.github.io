@@ -13,7 +13,7 @@ Basicamente, uma janela onde você escreve `comandos` para o computador executar
 
 Bom, se você já programa, trabalha com PHP, NodeJS, Python, etc, talvez já tenha usado o terminal algumas vezes, copiando e colando comandos da documentação e/ou do StackOverflow. Mas hoje vou mostrar alguns comandos básicos e simples pra te ajudar no dia a dia.
 
-Se você é novo na área, acabou de entrar e etc, eu sugiro você escutar [esse](http://quebradev.com.br/) podcast pra te ajudar. Você vai entender melhor depois de escutar os primeiro e segundo episódios =]
+Se você é novo na área, acabou de entrar e etc, eu sugiro você escutar [o podcast QuebraDev](http://quebradev.com.br/) pra te ajudar. Você vai entender melhor depois de escutar os primeiros episódios =]
 
 ## Introdução
 
