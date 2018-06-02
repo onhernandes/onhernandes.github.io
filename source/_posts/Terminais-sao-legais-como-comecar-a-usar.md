@@ -1,7 +1,9 @@
 ---
 title: 'Terminais são legais: como começar a usar'
+date: 2018-06-02 16:47:14
 tags:
 ---
+
 
 # Terminal, o que é?
 
@@ -11,9 +13,11 @@ Basicamente, uma janela onde você escreve `comandos` para o computador executar
 
 Bom, se você já programa, trabalha com PHP, NodeJS, Python, etc, talvez já tenha usado o terminal algumas vezes, copiando e colando comandos da documentação e/ou do StackOverflow. Mas hoje vou mostrar alguns comandos básicos e simples pra te ajudar no dia a dia.
 
+Se você é novo na área, acabou de entrar e etc, eu sugiro você escutar [esse](http://quebradev.com.br/) podcast pra te ajudar. Você vai entender melhor depois de escutar os primeiro e segundo episódios =]
+
 ## Introdução
 
-Para começar, abra o terminal. Vou considerar que está no linux ou mac.
+Para começar, abra o terminal. Vou considerar que está no Linux ou MAC.
 
 Assim que você abrir o terminal, estará em uma pasta, normalmente vai aparecer logo depois do nome do seu usuário e do seu grupo atual, como na imagem:
 
@@ -24,6 +28,18 @@ Aqui é tudo muito simples: você sabe seu usuário atual, grupo, pasta e tem um
 Você só precisa abrir a janela, digitar seu comando e apertar `Enter` para executar.
 
 Não é difícil, certo? Você só precisa ser cuidadoso com o que vai executar.
+
+## Pastas, caminhos e etc
+
+Essa é a parte crucial de se usar um terminal: você precisa entender como as coisas são ordenadas. Aqui você tem pastas, arquivos e _symlinks_(que são como atalhos comuns).
+
+Vou citar aqui alguns atalhos:
+
+- Quando você ver `.` significa que está se referindo à pasta atual, independente de onde estiver. Por exemplo: `./arquivo.txt` significa que estou me referindo ao arquivo `arquivo.txt` na pasta atual.
+- Quando ver `..`, significa que está se referindo à pasta *superior*. Como em `../`.
+- Quando você ver qualquer *caminho* começando com `/`, é porque aquele caminho *começa* da pasta raiz do sistema.
+- Sempre quando você precisar definir caminhos, isto é, dizer onde está cada coisa, vai usar a `/` como separador. No Windows você usa `\`, no Linux e OSX, usa `/`. Como `./uma/pasta/aqui`.
+
 
 ## Variáveis e _piping_
 
@@ -53,7 +69,7 @@ Para executar um comando seguido do outro, consecutivamente, use `&&`. Exemplo: 
 
 Para enviar a saída de um comando diretamente para um arquivo(sobreescrevendo ou criando), use `>`. Exemplo: `echo 123 > test.txt`. Para colocar a saída no fim do arquivo, sem reescrevê-lo, use `>>`.
 
-Caso você veja isso por aí, já sabe o que significam.
+Acredito que você não vai usar isso agora, mas é necessáro entender o que cada coisa significa.
 
 ## Aprendendo alguns comandos úteis
 
@@ -65,13 +81,13 @@ Vamos brincar com os seguintes comandos:
 - `touch` cria um novo arquivo
 - `rm` deleta um arquivo/pasta
 
-Ok, parece muita coisa, mas não é, vamos aos poucos. Agora que tal ir para a sua pasta pessoal? A mesma que vimos ali em cima.
+Ok, parece muita coisa, mas não é, vamos aos poucos. Agora que tal ir para a sua pasta pessoal?
 
 Para chegar lá, temos várias formas de navegar usando `cd`:
 
-- Use `cd ~`, o `~` serve como atalho
-- Use `cd $HOME`, sendo que `$HOME` é contém o caminho completo
-- Use `cd /home/NOME_DO_SEU_USUARIO`
+- Use `cd ~`, o `~` serve como atalho pessoal
+- Use `cd $HOME`, sendo que `$HOME` é uma variável que contém o caminho completo
+- Use `cd /home/NOME_DO_SEU_USUARIO`, indicando um caminho direto da raiz do sistema
 
 Todas as alternativas levam para o mesmo lugar: sua pasta pessoal.
 
@@ -89,24 +105,24 @@ Quase todo comando aceita _parâmetros_, ou seja, são configurações especiais
 
 Escolha uma pasta, arquivo, qualquer coisa que tenha aparecido na lista. Só o primeiro nome ou parte dele serve.
 
-Agora execute `ls -l | grep NOME`, com o nome que você escolheu. Percebeu que só apareceu o que você *filtrou*?
+Agora execute `ls -l | grep NOME`, com o nome que você escolheu - atente-se ao `|`. Percebeu que só apareceu o que você *filtrou*?
 
-`grep` serve basicamente para filtrar coisas. O `|` que você colocou, indica que `grep` será executado após `ls -l` e usará o resultado de `ls` como entrada.
+`grep` serve basicamente para filtrar coisas. O `|` que você colocou, indica que `grep` será executado após `ls -l` e usará o resultado de `ls -l` como entrada.
 
 Parece legal, não?
 
-Digamos que você precise criar um arquivo agora, como faria? Iria abrir seu editor? Não precisa! Vá até a pasta que queira criar o arquivo e execute `touch ARQUIVO`, onde você pode colocar o nome do arquivo e extensão, ex: `touch index.js`, `touch .gitignore`.
+Digamos que você precise criar um arquivo agora, como faria? Iria abrir algum editor? Não precisa! Vá até a pasta que queira criar o arquivo e execute `touch ARQUIVO`, onde você pode colocar o nome do arquivo e extensão, ex: `touch texto.txt`, `touch index.js`.
 
 Depois de criar o arquivo, é melhor verificar: na mesma pasta, execute `ls -l | grep ARQUIVO`, e veja se ele aparece.
 
 Bom, mas e se você criar um arquivo, e depois decidir que não precisa mais dele? Você pode apagar usando `rm`: execute `rm ARQUIVO`.
 
 {% blockquote %}
-`rm` também pode ser usado para apagar vários arquivos do mesmo formato, com `rm *.js`, pastas com `rm -rf PASTA`, ou apenas o conteúdo de uma pasta, como `rm PASTA/*`. Há várias formas de usar o `rm` e você vai se acostumar mais logo logo. Só não use `rm -rf /` ou qualquer pasta na raiz, porque isso irá prejudicar seu sistema.
+`rm` também pode ser usado para apagar vários arquivos do mesmo formato, com `rm *.js`, pastas com `rm -rf PASTA`, ou apenas o conteúdo de uma pasta, como `rm PASTA/*`. Há várias formas de usar o `rm` e você vai se acostumar mais logo logo. Só não use `rm -rf /` ou qualquer pasta na raiz, porque isso irá prejudicar seu sistema(é sério).
 {% endblockquote %}
 
 # Até a próxima
 
-Bom, o artigo ficou um pouco extenso e vou deixar mais para outro. Por agora você já aprendeu alguns comandos bacanas, logo falo mais sobre permissões e outras coisas interessantes. Se tiver dúvidas, coloque nos comentários =D
+Bom, o artigo ficou um pouco extenso e vou deixar mais para outro. Por agora você já aprendeu alguns comandos bacanas, logo falo mais sobre permissões e outras coisas interessantes, inclusive mais a fundo sobre comandos básicos. Se tiver dúvidas, coloque nos comentários =D
 
 

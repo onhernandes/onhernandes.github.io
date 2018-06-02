@@ -28,7 +28,7 @@ p, span { font-size: $base; }
 
 h1, h2, h3,
 h4, h5, h6,
-p, span { line-height: 1.5rem; margin-bottom: 1rem; }
+p, span, ul { line-height: 1.5rem; margin-bottom: 1rem; }
 
 section {
 	@if variable-exists('custom') {

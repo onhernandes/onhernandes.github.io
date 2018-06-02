@@ -3,13 +3,20 @@ section.article > article {
         margin-top: 4rem;
         margin-bottom: 2rem;
     }
+
+    ul {
+      list-style-type: initial;
+      margin-left: 1.2rem;
+    }
     
     p > img { width: 100%; }
 
-    p > code {
-        background-color: rgba(#000, 0.3);
-        padding: 1.5px 4px;
-        font-size: 0.9rem;
+    p, ul {
+      code {
+          background-color: rgba(#000, 0.3);
+          padding: 1.5px 4px;
+          font-size: 0.9rem;
+      }
     }
 
     blockquote {
