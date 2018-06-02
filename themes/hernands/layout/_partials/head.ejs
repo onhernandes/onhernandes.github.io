@@ -23,6 +23,15 @@
         thumbnail = url.replace('index.html', '') + thumbnail;
     %>
     <title><%- title %></title>
+
+    <!-- markup for twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="<%- title %>"/>
+    <meta name="twitter:url" content="<%- url %>"/>
+    <meta name="twitter:description" content="<%- description %>"/>
+    <meta name="twitter:creator" content="@<%- config.twitter %>"/>
+    <meta name="twitter:image" content="<%- thumbnail %>"/>
+
     <meta name="description" content="<%- description %>"/>
     <meta name="author" content="<%- config.author %>"/>
     <link rel="base" href="<%- config.url %>"/>
@@ -35,22 +44,12 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="<%- config.color %>"/>
     <% } %>
 
-
-<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@nytimesbits" />
-		<meta name="twitter:creator" content="@nickbilton" />
-		<meta property="og:url" content="http://quebradev.com.br/podcast-0-comunidade-desenvolvimento-periferia.html">
-		<meta property="og:title" content="QuebraDev">
-		<meta property="og:description" content="Episódio piloto, apresentaremos aqui a ideia da criação do podcast, além de um pouco da nossa vivência.">
-		<meta property="og:image" content="https://quebradev.github.io/images/podcast-capa-comunidade-e-periferia.png">
-
-    <!-- markup for facebook -->
-    <!-- markup for twitter -->
     <!-- Schema.org markup for Google+ -->
-    <!--
     <meta itemprop="name" content="<%- title %>"/>
     <meta itemprop="description" content="<%- description %>"/>
     <meta rel="canonical" itemprop="image" content="<%- thumbnail %>"/>
+
+    <!-- markup for facebook -->
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="<%- title %>"/>
     <meta property="og:url" content="<%- url %>"/>
@@ -58,14 +57,6 @@
     <meta property="og:image" content="<%- thumbnail %>"/>
     <meta property="og:description" content="<%- description %>"/>
     <meta property="og:locale" content="pt_BR"/>
-
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="<%- title %>"/>
-    <meta name="twitter:url" content="<%- url %>"/>
-    <meta name="twitter:description" content="<%- description %>"/>
-    <meta name="twitter:creator" content="@<%- config.twitter %>"/>
-    <meta name="twitter:image" content="<%- thumbnail %>"/>
-    -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
     <%- css('css/main') %>
