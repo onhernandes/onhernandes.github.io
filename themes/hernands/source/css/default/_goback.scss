@@ -1,0 +1,14 @@
+.go--back {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  color: #fff;
+  z-index: 99999;
+
+  svg {
+    width: 5rem;
+    height: 4rem;
+    fill: #fff;
+  }
+}
