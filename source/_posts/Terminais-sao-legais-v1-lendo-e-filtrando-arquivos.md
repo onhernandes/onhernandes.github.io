@@ -1,5 +1,5 @@
 ---
-title: 'Terminais são legais v2: lendo e filtrando arquivos'
+title: 'Terminais são legais v1: lendo e filtrando arquivos'
 date: 2018-06-05 16:13:50
 description:
 thumbnail:
