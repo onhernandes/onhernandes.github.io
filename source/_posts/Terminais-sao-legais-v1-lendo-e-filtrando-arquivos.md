@@ -1,15 +1,15 @@
 ---
 title: 'Terminais são legais v2: lendo e filtrando arquivos'
-description: 'Ler e filtrar arquivos e pastas no terminal é fácil e divertido!'
-thumbnail: filters-espresso-machine-filter-coffee.jpg
-tags: ler filtrar grep egrep terminal linux
+date: 2018-06-05 16:13:50
+description:
+thumbnail:
+tags:
 ---
 
-![](filters-espresso-machine-filter-coffee.jpg)
 
 # Lendo e filtrando arquivos
 
-[No artigo anterior](https://hernands.com/terminais-sao-legais-como-comecar-a-usar/), falei um pouco sobre começar a usar o terminal, e hoje vamos brincar um pouco com leitura e filtragem de arquivos.
+[No artigo anterior](), falei um pouco sobre começar a usar o terminal, e hoje vamos brincar um pouco com leitura e filtragem de arquivos.
 
 Os comandos que veremos hoje são:
 
@@ -87,7 +87,7 @@ O `grep` e seus similares ignoram arquivos binários por padrão, caso queria re
 
 E por último, e se eu quiser realizar vários filtros? Digo, filtrar várias palavras diferentes, por exemplo? É só concatenar tudo usando _piping_! Se liga: `cat teste.txt | grep mussum | grep -o mussum`. Assim você pode aplicar quantos `grep`s você quiser, sem problemas!
 
-## Bônus: `history`
+## Bônus: `history`.
 
 Ele simplesmente te dá o histórico do seu terminal. Veja por si mesmo: `history`. Legal, não? É muito útil quando você precisa pesquisar uma série de comandos, ou está executando várias coisas e gostaria de se lembrar depois.
 
