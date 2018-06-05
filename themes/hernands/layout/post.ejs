@@ -1,8 +1,10 @@
+<a href="javascript:void(0);" onclick="window.history.go(-1)" class="go--back" title="Voltar"><svg><use xlink:href="#arrow"></use></svg></a>
+
 <section class="section article">
     <div class="spacer"></div>
 
     <article>
-        <header>
+        <header title="<%- page.title %>">
             <h1><%- page.title %></h1>
             <span>hernandes</span> <time><%= date(page.date, config.date_format) %></time>
         </header>
