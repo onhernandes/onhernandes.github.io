@@ -1,7 +1,7 @@
 ---
 title: 'Terminais são legais v1: lendo e filtrando arquivos'
 date: 2018-06-05 16:13:50
-description:
+description: 'Ler e filtrar as coisas no terminal é bem simples e divertido com cat, less, tail, grep e mais!'
 thumbnail: 'filters-espresso-machine-filter-coffee.jpg'
 tags:
 ---
