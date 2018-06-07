@@ -6,6 +6,7 @@ thumbnail: 'filters-espresso-machine-filter-coffee.jpg'
 tags:
 ---
 
+![](filters-espresso-machine-filter-coffee.jpg)
 
 # Lendo e filtrando arquivos
 
