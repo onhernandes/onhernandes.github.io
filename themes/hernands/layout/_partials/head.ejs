@@ -6,7 +6,7 @@
     <%
         var title = config.title, 
             description = config.description, 
-            thumbnail = 'assets/' + config.thumbnail;
+            thumbnail = url + '/assets/' + config.thumbnail;
 
         if (page.title) {
             title = page.title;
@@ -17,10 +17,8 @@
         }
 
         if (page.thumbnail) {
-            thumbnail = page.thumbnail;
+            thumbnail = url.replace('index.html', '') + page.thumbnail;
         }
-
-        thumbnail = url.replace('index.html', '') + thumbnail;
     %>
     <title><%- title %></title>
 

@@ -2,14 +2,14 @@
 title: 'Terminais são legais v1: lendo e filtrando arquivos'
 date: 2018-06-05 16:13:50
 description:
-thumbnail:
+thumbnail: 'filters-espresso-machine-filter-coffee.jpg'
 tags:
 ---
 
 
 # Lendo e filtrando arquivos
 
-[No artigo anterior](), falei um pouco sobre começar a usar o terminal, e hoje vamos brincar um pouco com leitura e filtragem de arquivos.
+[No artigo anterior](https://hernands.com/terminais-sao-legais-como-comecar-a-usar/), falei um pouco sobre começar a usar o terminal, e hoje vamos brincar um pouco com leitura e filtragem de arquivos.
 
 Os comandos que veremos hoje são:
 
