@@ -27,4 +27,5 @@ Vamos trabalhar com os seguintes comandos:
 
 - `useradd` para adicionar um novo usuário
 - `passwd` para definir uma senha ao novo usuário
-- 
+- `userdel` para apagar um usuário
+- `usermod` para alterar um usuário
