@@ -1,11 +1,11 @@
 ---
 title: 'Terminais são legais v3.1: grupos de usuários'
 description: 'Grupos de usuários são úteis e simples de se usar, podem te ajudar muito, principalmente com a segurança do seu sistema'
-thumbnail:
+thumbnail: groups.jpg
 tags:
 ---
 
-![]()
+![](groups.jpg)
 
 Nos artigos anteriores, vimos um pouco sobre:
 
