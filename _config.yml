@@ -87,9 +87,7 @@ theme: hernands
 robotstxt:
   useragent: "*"
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: netlify
-  token: <token>
-  site_id: <site_id>
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
