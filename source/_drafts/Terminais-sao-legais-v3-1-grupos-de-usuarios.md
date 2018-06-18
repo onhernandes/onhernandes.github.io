@@ -1,6 +1,6 @@
 ---
 title: 'Terminais são legais v3.1: grupos de usuários'
-description:
+description: 'Grupos de usuários são úteis e simples de se usar, podem te ajudar muito, principalmente com a segurança do seu sistema'
 thumbnail:
 tags:
 ---
@@ -56,4 +56,15 @@ Você pode alterar o nome do grupo com `sudo groupmod -n <novo-nome> <nome-do-gr
 
 Também pode alterar a senha de um grupo usando o parâmetro `-p` ou `--password` seguido da nova senha.
 
-Para apagar um grupo de usuário, pode usar o comando `groupdel`.
+Para apagar um grupo de usuário, pode usar o comando `groupdel`. Se o grupo que está sendo apagado é o grupo primário de um usuário, ele não será apagado, a menos que você passe o parâmetro `-f` ou `--force`. Ficaria algo como `sudo groupdel <nome-do-grupo`.
+
+### Grupos primários?
+
+Aqui nós temos dois "tipos" de grupos, os primários e secundários. Um usuário tem um grupo primário, o principal do qual faz parte, e há grupos secundários.
+
+Não há grande diferença além do que, quando conectar via login, ou SSH/TTY/etc, o grupo primário é o que aparecerá.
+
+# Até a próxima!
+
+Logo veremos sobre permissões, uma das partes cruciais de sistemas operacionais.
+
