@@ -1,9 +1,13 @@
 ---
 title: 'Terminais são legais v3.1: grupos de usuários'
-description: 'Grupos de usuários são úteis e simples de se usar, podem te ajudar muito, principalmente com a segurança do seu sistema'
+description: >-
+  Grupos de usuários são úteis e simples de se usar, podem te ajudar muito,
+  principalmente com a segurança do seu sistema
 thumbnail: groups.jpg
+date: 2018-06-25 14:01:36
 tags:
 ---
+
 
 ![](groups.jpg)
 
