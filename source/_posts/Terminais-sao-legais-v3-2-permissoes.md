@@ -1,9 +1,11 @@
 ---
 title: 'Terminais são legais v3.2: permissões'
+date: 2018-07-05 15:54:20
 description:
 thumbnail:
 tags:
 ---
+
 
 ## Anteriormente...
 
@@ -45,4 +47,26 @@ Mas se são 3 grupos, isso quer dizer que...sim! Cada grupo representa respectiv
 
 Como em `rwxr-xr-x`, estamos dizendo que o usuário atual pode fazer tudo, o grupo dele pode apenas ler e executar, e o restante apenas pode executar.
 
+Como comentei antes, você pode também representar com números, equivalendo:
 
+- *r* = 4
+- *w* = 2
+- *x* = 1
+
+Vamos ver como fica, comparando duas representações? Se liga:
+
+`rwxr-xr-x` é o mesmo que `755`.
+`rwxrwxrwx` é o mesmo que `777`.
+
+E por aí vai.
+
+Normalmente, você vai encontrar mais a representação numérica, por ser mais fácil de decorar e escrever.
+
+Com o comando `ls`, você pode ver também as permissões das pastas usando o parâmetro `-l`. 
+
+![](ls-l.png)
+
+Há algumas coisas a mais sobre permissões, mas vou deixar para outro artigo, você precisa decorar bem para não ter problemas depois. 
+
+
+Até a próxima!
