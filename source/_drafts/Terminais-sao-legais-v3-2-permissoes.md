@@ -27,6 +27,22 @@ Todas são *representações* das permissões de determinada pasta/arquivo. Norm
 
 Para começar, precisamos entender primeiro os *níveis de permissão* existentes no Linux.
 
-Nós temos três: *ler*, *escrever/editar*, *executar*. 
+Esses níveis são divididos em três: usuário, grupo do usuário e outros usuários.
 
-Esses níveis são divididos em três grupamentos: usuário, grupo do usuário e outros grupos.
+Nós temos três possíveis ações: *ler*, *escrever/editar*, *executar*. 
+
+Você pode entender cada uma com sua sigla assim:
+
+- ler = *r* de _read_
+- escrever/editar = *w* de _write_
+- executar = *x* de _eXecute_
+
+Sendo assim, veja a seguinte combinação: `rwxrwxrwx`
+
+Olhando bem, da pra perceber que temos 3 grupos com as mesmas permissões, sendo elas, na ordem: *leitura, escrita e execução*.
+
+Mas se são 3 grupos, isso quer dizer que...sim! Cada grupo representa respectivamente o usuário atual, seu grupo, e os outros usuários.
+
+Como em `rwxr-xr-x`, estamos dizendo que o usuário atual pode fazer tudo, o grupo dele pode apenas ler e executar, e o restante apenas pode executar.
+
+
