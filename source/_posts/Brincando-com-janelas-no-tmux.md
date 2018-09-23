@@ -6,7 +6,7 @@ tags:
 
 # Janelas, painéis e terminais
 
-Eu escrevi [outro artigo](https://hernands.com/o-incrivel-mundo-do-tmux/) introduzindo ao tmux, aconselho você a ler antes de continuar caso não conheça o tmux.
+Eu escrevi [outro artigo](/o-incrivel-mundo-do-tmux/) introduzindo ao tmux, aconselho você a ler antes de continuar caso não conheça o tmux.
 
 Painéis no tmux são apenas divisões na mesma tela. Você consegue navegar entre elas. É algo bem útil para, por exemplo, editar um arquivo enquanto executa testes em outro painel e acompanha a saída de um log.
 
