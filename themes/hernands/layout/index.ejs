@@ -49,6 +49,24 @@
 
 <hr class="spacer" />
 
+<section class="articles section">
+    <article>
+        <h2>Talks</h2>
+
+        <ul class="articles__list">
+            <% config.talks.forEach(function(talk) { %>
+                <li>
+                    <a href="<%= talk.link %>">
+                        <%= talk.title %> - <%= talk.date %>
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </article>
+</section> 
+
+<hr class="spacer" />
+
 <section class="projects section">
     <article>
         <h2>Projetos</h2>

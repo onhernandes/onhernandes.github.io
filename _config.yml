@@ -91,3 +91,9 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+
+talks:
+  -
+    title: "Paralelismo, Concorrência & Memes - ABC-Dev"
+    date: "2018-09-23"
+    link: "https://onhernandes.github.io/paralelismo-concorrencia-memes/"
