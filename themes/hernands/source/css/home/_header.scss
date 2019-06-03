@@ -13,7 +13,7 @@
         z-index: 3; 
         position: relative; 
         display: block; 
-        @include fxb(10rem);
+        @include fxb(100%);
     }
 
     &__image {

@@ -94,6 +94,14 @@ feed:
 
 talks:
   -
+    title: "Fazendo as pazes com projetos legados - TDC Florianópolis"
+    date: "2019-04-27"
+    link: "https://docs.google.com/presentation/d/156-t0GG-h-tXqKbYMX7e2tWwiPeuS2IeygzuDiWV9Jg/edit?usp=sharing"
+  -
+    title: "Criando sua carreira sem recursos e sem apoio - HTML SP"
+    date: "2019-03-28"
+    link: "https://docs.google.com/presentation/d/1tV70HkJAzWQSLvHMn5w6d2BVHncxnwVPFkJbo0FmO9w/edit?usp=sharing"
+  -
     title: "Paralelismo, Concorrência & Memes - ABC-Dev"
     date: "2018-09-23"
     link: "https://onhernandes.github.io/paralelismo-concorrencia-memes/"
