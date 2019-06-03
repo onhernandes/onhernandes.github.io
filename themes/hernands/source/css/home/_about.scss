@@ -5,6 +5,10 @@ $sep: 3px;
     &__wrapper {
         @include fc(wrap row);
 
+        &_p {
+          flex-basis: 100%;
+        }
+
         &_social {
             margin-left: 4%;
             margin-top: -0.3rem;
