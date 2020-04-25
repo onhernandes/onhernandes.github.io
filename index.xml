@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hernandes</title>
+    <link>https://onhernandes.github.io/</link>
+    <description>Recent content on Hernandes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://onhernandes.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Começando</title>
+      <link>https://onhernandes.github.io/artigos/come%C3%A7ando/</link>
+      <pubDate>Sat, 25 Apr 2020 19:00:05 -0300</pubDate>
+      
+      <guid>https://onhernandes.github.io/artigos/come%C3%A7ando/</guid>
+      <description>Oi.
+Pela milésima vez eu to abrindo outro blog.
+Vamos ver no que dá, eu tenho uns artigos antigos sobre terminal e outras coisas, que vou tentar ir postando aos poucos, só pra aquecer, enquanto vou escrevendo mais alguns.
+Não gostaria de manter esse blog apenas sobre tecnologia e desenvolvimento, até porque minha vida não é feita apenas disso - ambos são parte da minha vida, de fato, é meu trabalho, meu ganha pão, e também um dos meus hobbies, mas creio eu que posso falar mais sobre minha vida além disso.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://onhernandes.github.io/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://onhernandes.github.io/about/</guid>
+      <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
+It makes use of a variety of open source projects including:
+ https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
+    </item>
+    
+  </channel>
+</rss>
