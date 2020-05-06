@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>O incrível mundo do tmux</title>
+      <link>https://onhernandes.github.io/artigos/o-incrivel-mundo-do-tmux/</link>
+      <pubDate>Tue, 05 May 2020 18:14:41 -0300</pubDate>
+      
+      <guid>https://onhernandes.github.io/artigos/o-incrivel-mundo-do-tmux/</guid>
+      <description>tmux - o que é Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom e velho xterm e configurar como quiser. Segundo o Wiki deles:
+ tmux is a &amp;ldquo;terminal multiplexer&amp;rdquo;, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen</description>
+    </item>
+    
+    <item>
       <title>Começando</title>
       <link>https://onhernandes.github.io/artigos/come%C3%A7ando/</link>
       <pubDate>Sat, 25 Apr 2020 19:00:05 -0300</pubDate>
