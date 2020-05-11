@@ -2,7 +2,6 @@
 title: "O incrível mundo do tmux"
 linktitle: "O incrível mundo do tmux"
 date: 2020-05-05T18:14:41-03:00
-draft: true
 ---
 
 ## tmux - o que é
