@@ -43,10 +43,9 @@
 
 
 <meta itemprop="name" content="O incrível mundo do tmux">
-<meta itemprop="description" content="tmux - o que é Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom e velho xterm e configurar como quiser. Segundo o Wiki deles:
- tmux is a &ldquo;terminal multiplexer&rdquo;, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen">
-<meta itemprop="datePublished" content="2020-05-05T18:14:41-03:00" />
-<meta itemprop="dateModified" content="2020-05-05T18:14:41-03:00" />
+<meta itemprop="description" content="Você tem um momento para falar de tmux? Venha para o lado negro da força e aumente sua produtividade!">
+<meta itemprop="datePublished" content="2018-04-19T15:52:16&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-19T15:52:16&#43;00:00" />
 <meta itemprop="wordCount" content="410">
 <meta itemprop="image" content="https://onhernandes.github.io"/>
 
@@ -57,8 +56,7 @@
 <meta name="twitter:image" content="https://onhernandes.github.io"/>
 
 <meta name="twitter:title" content="O incrível mundo do tmux"/>
-<meta name="twitter:description" content="tmux - o que é Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom e velho xterm e configurar como quiser. Segundo o Wiki deles:
- tmux is a &ldquo;terminal multiplexer&rdquo;, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen"/>
+<meta name="twitter:description" content="Você tem um momento para falar de tmux? Venha para o lado negro da força e aumente sua produtividade!"/>
 
 
 
@@ -66,7 +64,7 @@
 
 
 
-    <meta property="article:published_time" content="2020-05-05 18:14:41 -0300 -03" />
+    <meta property="article:published_time" content="2018-04-19 15:52:16 &#43;0000 UTC" />
 
 
 
@@ -137,19 +135,16 @@
             
 
             <div class="post-content">
-                <h2 id="tmux---o-que-é">tmux - o que é</h2>
+                <h1 id="tmux---o-que-é">tmux - o que é</h1>
 <p>Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom e velho <code>xterm</code> e configurar como quiser. Segundo o Wiki deles:</p>
 <blockquote>
 <p>tmux is a &ldquo;terminal multiplexer&rdquo;, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen</p>
 </blockquote>
-
-    <img src="https://onhernandes.github.io/images/o-incrive-mundo-do-tmux-tmux.gif"  alt="Hello Friend"  class="center"  style="border-radius: 8px;"  />
-
-
+<p><img src="https://onhernandes.github.io/images/O-incrivel-mundo-do-tmux/tmux.gif" alt=""></p>
 <h2 id="instalando">Instalando</h2>
 <p>Provavelmente o tmux é suportado pelo seu gerenciador de pacotes - não sei como estão as coisas pra Windows.</p>
-<p>Usando o Pacman: <code>sudo pacman -S tmux</code></p>
-<p>Usando o apt-get: <code>sudo apt-get install tmux</code></p>
+<p>Usando o Pacman: <code>sudo pacman -S tmux</code>
+Usando o apt-get: <code>sudo apt-get install tmux</code></p>
 <h2 id="básico">Básico</h2>
 <p>Para começar o tmux, você precisa criar uma sessão. Você tem duas formas, apenas digitando <code>tmux</code> no terminal(criando uma sessão chamada 0), ou <code>tmux new -s &lt;nome-da-sessao&gt;</code></p>
 <p>Assim que você entrar no tmux, estará dentro de uma sessão, no primeiro painel e na primeira janela.</p>
@@ -157,12 +152,12 @@
 <blockquote>
 <p>Vou usar o acento <code>^</code> para indicar o <code>CTRL</code>. Por exemplo, <code>^b</code> é o mesmo que <code>CTRL + b</code>. Lembre-se que todos os comandos do tmux <em>são</em> sensivos a caixa alta e baixa. Então, <code>^b</code> não é o mesmo que <code>^B</code>. Todo conteúdo sobre tmux que você pesquisar, vai usar essa notação.</p>
 </blockquote>
-<h3 id="alguns-pontos-sobre-o-tmux">Alguns pontos sobre o tmux:</h3>
+<h2 id="alguns-pontos-sobre-o-tmux">Alguns pontos sobre o tmux:</h2>
 <ul>
 <li>Você vai notar uma barra inferior assim que entrar em uma sessão do tmux, nela você vai ver o nome da sua sessão, suas janelas, seu usuário@grupo, horário e data atual</li>
 <li>Se você quiser sair do tmux, basta digitar <code>exit</code> no terminal</li>
 </ul>
-<h3 id="painéis">Painéis</h3>
+<h2 id="painéis">Painéis</h2>
 <p>Vamos começar a brincar. Aperte <code>prefix + %</code> - coloque seu prefixo no lugar de <code>prefix</code> e você pode apertar <code>Shift + 5</code> pra produzir o <code>%</code>.
 Você vai dividir sua tela em duas partes. Quer ir para o outro painel? <code>prefix + o</code> é a solução.</p>
 <ul>

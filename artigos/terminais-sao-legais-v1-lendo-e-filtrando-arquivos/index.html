@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Matheus Hernandes ">
+<meta name="description" content="Lendo e filtrando arquivos No artigo anterior, falei um pouco sobre começar a usar o terminal, e hoje vamos brincar um pouco com leitura e filtragem de arquivos.
+Os comandos que veremos hoje são:
+ cat less tail grep, egrep, fgrep history  Lendo arquivos com cat, less, tail cat Não, você não exibe um gato na tela(poderia..). Com cat você basicamente lê todo o conteúdo de um arquivo(ou mais) na tela." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://onhernandes.github.io/artigos/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/" />
+
+
+    <title>
+        
+            Terminais são legais v1: lendo e filtrando arquivos :: Hernandes  — Hello Friend NG Theme
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://onhernandes.github.io/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://onhernandes.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://onhernandes.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://onhernandes.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://onhernandes.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://onhernandes.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://onhernandes.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Terminais são legais v1: lendo e filtrando arquivos">
+<meta itemprop="description" content="Ler e filtrar as coisas no terminal é bem simples e divertido com cat, less, tail, grep e mais!">
+<meta itemprop="datePublished" content="2018-06-05T16:13:50&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-05T16:13:50&#43;00:00" />
+<meta itemprop="wordCount" content="1028">
+<meta itemprop="image" content="https://onhernandes.github.io"/>
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://onhernandes.github.io"/>
+
+<meta name="twitter:title" content="Terminais são legais v1: lendo e filtrando arquivos"/>
+<meta name="twitter:description" content="Ler e filtrar as coisas no terminal é bem simples e divertido com cat, less, tail, grep e mais!"/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-06-05 16:13:50 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://onhernandes.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://onhernandes.github.io/artigos/">Artigos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://onhernandes.github.io/artigos/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/">Terminais são legais v1: lendo e filtrando arquivos</a></h2>
+
+            
+
+            <div class="post-content">
+                <p><img src="https://onhernandes.github.io/images/Terminais-sao-legais-v1-lendo-e-filtrando-arquivos/filters-espresso-machine-filter-coffee.jpg" alt=""></p>
+<h1 id="lendo-e-filtrando-arquivos">Lendo e filtrando arquivos</h1>
+<p><a href="https://hernands.com/terminais-sao-legais-como-comecar-a-usar/">No artigo anterior</a>, falei um pouco sobre começar a usar o terminal, e hoje vamos brincar um pouco com leitura e filtragem de arquivos.</p>
+<p>Os comandos que veremos hoje são:</p>
+<ul>
+<li><code>cat</code></li>
+<li><code>less</code></li>
+<li><code>tail</code></li>
+<li><code>grep</code>, <code>egrep</code>, <code>fgrep</code></li>
+<li><code>history</code></li>
+</ul>
+<h2 id="lendo-arquivos-com-cat-less-tail">Lendo arquivos com <code>cat</code>, <code>less</code>, <code>tail</code></h2>
+<h3 id="cat"><code>cat</code></h3>
+<p>Não, você não exibe um gato na tela(poderia..). Com <code>cat</code> você basicamente lê <em>todo</em> o conteúdo de um arquivo(ou mais) na tela.</p>
+<p>Vamos começar criando um arquivo, preenchê-lo com um texto qualquer e ler seu conteúdo. Execute: <code>echo &quot;SEU NOME&quot; &gt; teste.txt</code>. Depois, use o <code>cat</code> para ler o conteúdo do arquivo: <code>cat teste.txt</code>.</p>
+<p>Como disse, o <code>cat</code> simplesmente lê <em>todo</em> o conteúdo do arquivo, lembre-se que é <em>todo o conteúdo</em>, você irá entender melhor depois.</p>
+<p><code>cat</code> aceita o nome de um arquivo, ou mais, ele irá concatená-los, ou seja, juntá-los na exibição.</p>
+<h3 id="less"><code>less</code></h3>
+<p>Como você já tem o arquivo <code>teste.txt</code> criado, vamos direto para a prática: execute <code>less teste.txt</code>. Percebeu que apareceu o conteúdo do arquivo, porém algo parecido com <code>(END)</code> no final? É porque o arquivo contém pouco conteúdo, para sair pressione <code>q</code>.</p>
+<p>Vamos testar com algo maior. Abra <a href="http://mussumipsum.com/">http://mussumipsum.com/</a> e gere um texto com 150 parágrafos, abra o arquivo <code>teste.txt</code> no seu editor e insira o texto lá, salve e feche.</p>
+<blockquote>
+<p>Você pode &ldquo;limpar&rdquo; seu terminal, removendo tudo que já fez: pode executar o comando <code>clear</code>, ou usar o atalho <code>CTRL + l</code></p>
+</blockquote>
+<p>Bom, se o texto for grande o suficiente, você verá que o <code>less</code> está de fato exibindo o conteúdo do arquivo, porém não é tudo. Aqui você pode navegar usando as setas para cima/baixo, e se precisar sair, pressione <code>q</code>.</p>
+<p>Se quiser pesquisar dentro do <code>less</code>, você pode apenas pressionar <code>/</code> e em seguida digitar a palavra(a pesquisa será para frente), ou fazer o mesmo com <code>?</code> para trás. Se usar o <code>&amp;</code>, irá apenas exibir as linhas que combinaram</p>
+<p><code>less</code> é um comando bem complexo com várias coisas legais e logo irei escrever um artigo apenas sobre ele, mas por agora acredito que você aprendeu bastante hehe.</p>
+<h3 id="tail"><code>tail</code></h3>
+<p>Esse comando é parecido com o <code>cat</code>, com a exceção de que ele fica <em>escutando</em> o arquivo, então caso outro programa altere seu conteúdo, você saberá. Ele tenta ler o arquivo novamente a cada 1 segundo. Para brincar um pouco melhor com isso, eu sugiro abrir dois terminais lado a lado.</p>
+<p>Execute <code>tail -F teste.txt</code> e no outro terminal - navegue até a mesma pasta, caso não esteja - execute <code>echo TESTE &gt;&gt; teste.txt</code>. Verá que no primeiro terminal, o que você executou, apareceu, isto porque <code>tail</code> tem a capacidade de acompanhar o conteúdo de um arquivo.</p>
+<p>Esse comando é ótimo para ficar assistindo arquivos de log de um servidor, por exemplo.</p>
+<p>Com o <code>tail</code>, você pode passar o parâmetro <code>-f</code>, que ele irá &ldquo;seguir&rdquo; o arquivo(tradução literal da documentação), e se usar <code>-F</code>, ele irá fazer o mesmo, porém caso falhe na leitura, tentará novamente. Para sair, pressione <code>CTRL + c</code>.</p>
+<p>E bom, se você não passar nenhum parâmetro, ele funcionará como o <code>cat</code>.</p>
+<p>Você também pode passar mais de um arquivo, no caso ele irá exibir o nome do arquivo seguido pelo resultado.</p>
+<p>Por padrão, ele lê apenas 10 linhas, mas você pode alterar isso usando o parâmetro <code>-n</code> seguido pela quantidade, ou <code>--line=10</code>.</p>
+<p>Dependendo de quem está alterando o arquivo, pode ocorrer um erro na leitura, então o <code>tail</code> não irá funcionar. Você pode passar o paràmetro <code>--retry</code> para tentar novamente em caso de erro.</p>
+<h2 id="filtrando-com-grep-egrep-e-fgrep">Filtrando com <code>grep</code>, <code>egrep</code> e <code>fgrep</code></h2>
+<p>Só para esclarecer, <code>egrep</code> é só um atalho para <code>grep -E</code>, assim como <code>fgrep</code> para <code>grep -F</code>.</p>
+<p>Como dito no artigo anterior, <code>grep</code> serve para basicamente filtrar resultados&hellip;só que não, você pode também pesquisar dentro de arquivos. =]</p>
+<p>Por exemplo: <code>grep mussum teste.txt</code> vai te dar todas as linhas que contém &ldquo;mussum&rdquo; dentro de <code>teste.txt</code>.</p>
+<p>Quer executar alguma <code>RegEx</code>? Use <code>-E</code>. Como em <code>grep -e ^mussum teste.txt</code>. Mas você também pode passar uma frase, como em <code>grep -E &quot;mussum lorem&quot; teste.txt</code>.</p>
+<p>Mas e se você está pesquisando dentro de algum arquivo de programação e realmente quer encontrar uma <code>RegEx</code> em si, ao invés de executá-la? Use <code>-F</code> ao invés de <code>-E</code>.</p>
+<p>Percebeu que com <code>grep</code> você decide <em>o que quer que apareça</em>, mas e se eu quiser o contrário, que por exemplo, linhas que contenham <em>mussum</em> não apareçam? É só passar o parâmetro <code>-v</code> no começo, ele vai <code>reverter</code> o processo.</p>
+<p>Ok, mas eu quero pesquisar em <em>todos</em> os arquivos na pasta atual, dentro de um projeto por exemplo, você só precisa colocar o parâmetro <code>-r</code> e não passar o nome do arquivo.</p>
+<p>Mais outro caso, e se eu quiser pegar <em>apenas o trecho que combina com a minha busca</em>, ao invés da linha inteira? Use o parâmetro <code>-o</code>.</p>
+<p>O <code>grep</code> e seus similares ignoram arquivos binários por padrão, caso queria realmente ver um binário com <code>grep</code>, use o parâmetro <code>-a</code></p>
+<p>E por último, e se eu quiser realizar vários filtros? Digo, filtrar várias palavras diferentes, por exemplo? É só concatenar tudo usando <em>piping</em>! Se liga: <code>cat teste.txt | grep mussum | grep -o mussum</code>. Assim você pode aplicar quantos <code>grep</code>s você quiser, sem problemas!</p>
+<h2 id="bônus-history">Bônus: <code>history</code>.</h2>
+<p>Ele simplesmente te dá o histórico do seu terminal. Veja por si mesmo: <code>history</code>. Legal, não? É muito útil quando você precisa pesquisar uma série de comandos, ou está executando várias coisas e gostaria de se lembrar depois.</p>
+<p>Caso queira pesquisar por algum comando e se lembra apenas de parte dele, pode pressionar <code>CTRL + r</code> e digitar um trecho do comando, o terminal vai pesquisar pra você dentro do histório e mostrar o que mais se encaixa, se você ver que está próximo do que tinha executado, pode parar de escrever e navegar com as setas =]</p>
+<p>Se você ficou interessado por algum comando ou quer saber mais sobre ele, pode sempre passar o parâmetro <code>--help</code>, quase todos os comandos aceitam isso e exibem uma documentação sobre o comando, indicando como você pode usá-lo. Exemplos: <code>cat --help</code>, <code>less --help</code>, <code>grep --help</code></p>
+<h2 id="até-a-próxima">Até a próxima!</h2>
+<p>Por agora é isso, logo farei outros artigos sobre mais comandos do Linux, sistema de arquivos, permissões e etc.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://onhernandes.github.io">Matheus Hernandes</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://onhernandes.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://onhernandes.github.io/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+
+
+
+    </body>
+</html>
