@@ -3,10 +3,9 @@ title: 'Terminais são legais v1: lendo e filtrando arquivos'
 date: 2018-06-05 16:13:50
 description: 'Ler e filtrar as coisas no terminal é bem simples e divertido com cat, less, tail, grep e mais!'
 thumbnail: 'filters-espresso-machine-filter-coffee.jpg'
-tags:
 ---
 
-![](filters-espresso-machine-filter-coffee.jpg)
+![](/images/Terminais-sao-legais-v1-lendo-e-filtrando-arquivos/filters-espresso-machine-filter-coffee.jpg)
 
 # Lendo e filtrando arquivos
 
@@ -38,9 +37,7 @@ Como você já tem o arquivo `teste.txt` criado, vamos direto para a prática: e
 
 Vamos testar com algo maior. Abra [http://mussumipsum.com/](http://mussumipsum.com/) e gere um texto com 150 parágrafos, abra o arquivo `teste.txt` no seu editor e insira o texto lá, salve e feche.
 
-{% blockquote %}
-Você pode "limpar" seu terminal, removendo tudo que já fez: pode executar o comando `clear`, ou usar o atalho `CTRL + l`
-{% endblockquote %}
+> Você pode "limpar" seu terminal, removendo tudo que já fez: pode executar o comando `clear`, ou usar o atalho `CTRL + l`
 
 Bom, se o texto for grande o suficiente, você verá que o `less` está de fato exibindo o conteúdo do arquivo, porém não é tudo. Aqui você pode navegar usando as setas para cima/baixo, e se precisar sair, pressione `q`.
 
@@ -96,6 +93,6 @@ Caso queira pesquisar por algum comando e se lembra apenas de parte dele, pode p
 
 Se você ficou interessado por algum comando ou quer saber mais sobre ele, pode sempre passar o parâmetro `--help`, quase todos os comandos aceitam isso e exibem uma documentação sobre o comando, indicando como você pode usá-lo. Exemplos: `cat --help`, `less --help`, `grep --help`
 
-# Até a próxima!
+## Até a próxima!
 
 Por agora é isso, logo farei outros artigos sobre mais comandos do Linux, sistema de arquivos, permissões e etc.

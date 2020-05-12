@@ -6,17 +6,16 @@ description: >-
   simples!
 thumbnail: people.jpg
 date: 2018-06-18 09:41:47
-tags:
 ---
 
 
-![](people.jpg)
+![](/images/Terminais-sao-legais-v3-usuarios/people.jpg)
 
 Só para te contextualizar, esse artigo é uma continuação de uma série sobre terminal/shell, se quiser ver outros artigos, aqui estão:
 
-- [Terminais são legais: como começar a usar ](/terminais-sao-legais-como-comecar-a-usar)
-- [Terminais são legais v1: lendo e filtrando arquivos](/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/)
-- [Terminais são legais v2: trabalhando com arquivos e pastas](/terminais-sao-legais-v2-pastas/)
+- [Terminais são legais: como começar a usar ](/artigos/terminais-sao-legais-como-comecar-a-usar)
+- [Terminais são legais v1: lendo e filtrando arquivos](/artigos/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/)
+- [Terminais são legais v2: trabalhando com arquivos e pastas](/artigos/terminais-sao-legais-v2-pastas/)
 
 # Como usuários funcionam?
 

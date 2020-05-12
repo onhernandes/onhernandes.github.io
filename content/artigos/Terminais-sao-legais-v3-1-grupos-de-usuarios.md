@@ -5,18 +5,17 @@ description: >-
   principalmente com a segurança do seu sistema
 thumbnail: groups.jpg
 date: 2018-06-25 14:01:36
-tags:
 ---
 
 
-![](groups.jpg)
+![](/images/Terminais-sao-legais-v3-1-grupos-de-usuarios/groups.jpg)
 
 Nos artigos anteriores, vimos um pouco sobre:
 
-- [Terminais são legais: como começar a usar ](/terminais-sao-legais-como-comecar-a-usar)
-- [Terminais são legais v1: lendo e filtrando arquivos](/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/)
-- [Terminais são legais v2: trabalhando com arquivos e pastas](/terminais-sao-legais-v2-pastas/)
-- [Terminais são legais v3.0: usuários](/terminais-sao-legais-v3-usuarios/)
+- [Terminais são legais: como começar a usar ](/artigos/terminais-sao-legais-como-comecar-a-usar)
+- [Terminais são legais v1: lendo e filtrando arquivos](/artigos/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/)
+- [Terminais são legais v2: trabalhando com arquivos e pastas](/artigos/terminais-sao-legais-v2-pastas/)
+- [Terminais são legais v3.0: usuários](/artigos/terminais-sao-legais-v3-usuarios/)
 
 # Grupos de Usuários
 
@@ -68,7 +67,7 @@ Aqui nós temos dois "tipos" de grupos, os primários e secundários. Um usuári
 
 Não há grande diferença além do que, quando conectar via login, ou SSH/TTY/etc, o grupo primário é o que aparecerá.
 
-# Até a próxima!
+## Até a próxima!
 
 Logo veremos sobre permissões, uma das partes cruciais de sistemas operacionais.
 

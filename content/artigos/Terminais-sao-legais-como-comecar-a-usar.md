@@ -3,16 +3,15 @@ title: 'Terminais são legais: como começar a usar'
 description: 'Todo mundo talvez precise usar o terminal uma hora ou outra, e não é tão difícil quanto parece!'
 thumbnail: 'learning.jpg'
 date: 2018-06-02 16:47:14
-tags:
 ---
 
-![](learning.jpg)
+![](/images/Terminais-sao-legais-como-comecar-a-usar/learning.jpg)
 
 # Terminal, o que é?
 
 Basicamente, uma janela onde você escreve `comandos` para o computador executar. Esses comandos podem ler um arquivo, criar pastas, executar scripts, fazer café e muito mais. (é sério, da pra fazer café)
 
-# Por onde começar?
+## Por onde começar?
 
 Bom, se você já programa, trabalha com PHP, NodeJS, Python, etc, talvez já tenha usado o terminal algumas vezes, copiando e colando comandos da documentação e/ou do StackOverflow. Mas hoje vou mostrar alguns comandos básicos e simples pra te ajudar no dia a dia.
 
@@ -24,7 +23,7 @@ Para começar, abra o terminal. Vou considerar que está no Linux ou MAC.
 
 Assim que você abrir o terminal, estará em uma pasta, normalmente vai aparecer logo depois do nome do seu usuário e do seu grupo atual, como na imagem:
 
-![](user-terminal.png)
+![](/images/Terminais-sao-legais-como-comecar-a-usar/user-terminal.png)
 
 Aqui é tudo muito simples: você sabe seu usuário atual, grupo, pasta e tem um espaço pra digitar os comandos, mais nada.
 
@@ -50,9 +49,7 @@ Dentro do terminal - você pode ver alguém falar do terminal como `shell`, `bas
 
 Vamos ver qual o caminho completo da sua pasta pessoal? Execute `echo $HOME`.
 
-{% blockquote %}
-O comando `echo` serve para exibir na tela algum texto, variável, etc. Você pode usar com qualquer outra coisa, como `echo 123`.
-{% endblockquote %}
+> O comando `echo` serve para exibir na tela algum texto, variável, etc. Você pode usar com qualquer outra coisa, como `echo 123`.
 
 Viu que saiu algo como `/home/NOME_DO_SEU_USUARIO`? É o caminho da sua pasta pessoal.
 
@@ -102,9 +99,7 @@ Execute `ls -l` e veja tudo numa lista/tabela bonita. Ok, tem algumas coisas est
 
 O `-l` faz a listagem ficar mais fácil pra leitura.
 
-{% blockquote %}
-Quase todo comando aceita _parâmetros_, ou seja, são configurações especiais para dizer o que fazer exatamente e como fazer. No caso de `-l`, indica que queremos em forma de lista. 
-{% endblockquote %}
+> Quase todo comando aceita _parâmetros_, ou seja, são configurações especiais para dizer o que fazer exatamente e como fazer. No caso de `-l`, indica que queremos em forma de lista. 
 
 Escolha uma pasta, arquivo, qualquer coisa que tenha aparecido na lista. Só o primeiro nome ou parte dele serve.
 
@@ -120,11 +115,9 @@ Depois de criar o arquivo, é melhor verificar: na mesma pasta, execute `ls -l |
 
 Bom, mas e se você criar um arquivo, e depois decidir que não precisa mais dele? Você pode apagar usando `rm`: execute `rm ARQUIVO`.
 
-{% blockquote %}
-`rm` também pode ser usado para apagar vários arquivos do mesmo formato, com `rm *.js`, pastas com `rm -rf PASTA`, ou apenas o conteúdo de uma pasta, como `rm PASTA/*`. Há várias formas de usar o `rm` e você vai se acostumar mais logo logo. Só não use `rm -rf /` ou qualquer pasta na raiz, porque isso irá prejudicar seu sistema(é sério).
-{% endblockquote %}
+> `rm` também pode ser usado para apagar vários arquivos do mesmo formato, com `rm *.js`, pastas com `rm -rf PASTA`, ou apenas o conteúdo de uma pasta, como `rm PASTA/*`. Há várias formas de usar o `rm` e você vai se acostumar mais logo logo. Só não use `rm -rf /` ou qualquer pasta na raiz, porque isso irá prejudicar seu sistema(é sério).
 
-# Até a próxima
+## Até a próxima
 
 Bom, o artigo ficou um pouco extenso e vou deixar mais para outro. Por agora você já aprendeu alguns comandos bacanas, logo falo mais sobre permissões e outras coisas interessantes, inclusive mais a fundo sobre comandos básicos. Se tiver dúvidas, coloque nos comentários =D
 

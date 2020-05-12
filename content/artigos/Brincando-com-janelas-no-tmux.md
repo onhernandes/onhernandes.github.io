@@ -1,12 +1,11 @@
 ---
 title: Brincando com janelas no tmux
 date: 2018-05-22 14:13:16
-tags:
 ---
 
 # Janelas, painéis e terminais
 
-Eu escrevi [outro artigo](/o-incrivel-mundo-do-tmux/) introduzindo ao tmux, aconselho você a ler antes de continuar caso não conheça o tmux.
+Eu escrevi [outro artigo](/artigos/o-incrivel-mundo-do-tmux/) introduzindo ao tmux, aconselho você a ler antes de continuar caso não conheça o tmux.
 
 Painéis no tmux são apenas divisões na mesma tela. Você consegue navegar entre elas. É algo bem útil para, por exemplo, editar um arquivo enquanto executa testes em outro painel e acompanha a saída de um log.
 
@@ -20,7 +19,7 @@ Bom, assim que você abre o tmux, você já está numa janela. Todas as janelas 
 
 Se você se atentar a barra inferior do tmux, vai perceber que tem o nome da sua sessão e logo em seguida, o `número-da-janela:título`, como aqui tenho o `0:bash`, `1:tt`, `2:app`, `3:laradock`, `4:wr`. São, respectivamente, coisas do trabalho(vim, API rodando e outro painel com git e etc), [client do Twitter](https://github.com/orakaro/rainbowstream), front-end da empresa, essa do laradock eu uso pra controlar o docker e executar algumas coisas com sudo(talvez seja uma má prática, mas já fica logado como root) e por último, outro vim aberto com algo do [BackEndBrasil](https://github.com/backend-br/) ou um artigo que esteja escrevendo.
 
-![](current-tmux-windows.jpg)
+![](/images/Brincando-com-janelas-no-tmux/current-tmux-windows.jpg)
 
 Para começar, abra o tmux, abra dois ou mais painéis. Depois, pressione `prefix + c`, perceba que agora seus painéis sumiram, é como se você tivesse aberto o tmux agora, certo?
 
@@ -34,11 +33,9 @@ Sua janela tem um novo nome =D
 
 E se você quiser fechar essa janela, use o bom e velho `exit`.
 
-{% blockquote %}
-Se você apertar `prefix + :` e digitar `kill-window`, ele fecha sua janela atual. Cuidado que você pode perder algo se não salvar antes.
-{% endblockquote %}
+> Se você apertar `prefix + :` e digitar `kill-window`, ele fecha sua janela atual. Cuidado que você pode perder algo se não salvar antes.
 
-# Pronto!
+## Pronto!
 
 Agora você já sabe como instalar o tmux, brincar com painéis, criar, renomear, fechar e mover entre janelas.
 

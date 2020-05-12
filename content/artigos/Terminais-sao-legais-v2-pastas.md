@@ -3,12 +3,11 @@ title: 'Terminais são legais v2: trabalhando com arquivos e pastas'
 date: 2018-06-10 20:14:57
 description: 'Aprendendo a mexer com pastas e arquivos'
 thumbnail: files.jpg
-tags:
 ---
 
-![](files.jpg)
+![](/images/Terminais-sao-legais-v2-pastas/files.jpg)
 
-Anteriormente dei [uma breve introdução sobre o terminal](https://hernands.com/terminais-sao-legais-como-comecar-a-usar/) e falei também sobre [como ler e filtrar coisas](https://hernands.com/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/). Hoje vou abordar um pouco mais sobre arquivos e pastas.
+Anteriormente dei [uma breve introdução sobre o terminal](/artigos/terminais-sao-legais-como-comecar-a-usar/) e falei também sobre [como ler e filtrar coisas](/artigos/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/). Hoje vou abordar um pouco mais sobre arquivos e pastas.
 
 Antes de tudo, recomendo você executar o seguinte comando: `cd $HOME`. Isso irá te levar até sua pasta pessoal, então criaremos tudo a partir dela.
 
@@ -83,7 +82,7 @@ Execute `mv teste.txt textos/` e veja que o arquivo não existe mais, apenas den
 
 Outra grande utilidade para o comando `mv`, é a capacidade de *renomear* as coisas. Você simplesmente move o arquivo para o mesmo lugar, com um nome diferente. Execute `cd textos/`, para entrar na pasta e depois faça `mv teste.txt starwars.txt` e use `ls` para ver o conteúdo da pasta, veja que não há mais `teste.txt`, apenas `starwars.txt`. O mesmo pode ser feito com pastas =]
 
-# Até mais!
+## Até mais!
 
 Bom, até aqui, você aprendeu como copiar, mover, renomear, remover e criar pastas e arquivos, também a navegar entre eles. Logo falarei mais sobre permissões de arquivos e outras coisas bem legais.
 
