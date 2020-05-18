@@ -6,10 +6,20 @@
     <description>Recent content in Artigos on Hernandes</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 25 Apr 2020 19:00:05 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 15:11:23 -0300</lastBuildDate>
     
 	<atom:link href="https://onhernandes.github.io/artigos/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kernel e bombas</title>
+      <link>https://onhernandes.github.io/artigos/kernel-e-bombas/</link>
+      <pubDate>Fri, 15 May 2020 15:11:23 -0300</pubDate>
+      
+      <guid>https://onhernandes.github.io/artigos/kernel-e-bombas/</guid>
+      <description>Como de costume em boa parte da população jovem neste país, acordei e já abri o Twitter pra ver se tinha alguma novidade no meio dessa coisa toda que a gente tá vivendo.
+Aí eu vi este tweet do Gabs compartilhando essa notícia sobre a Huawei ter tentado implementar o HKSP (Huawei Kernel Self Protection) no kernel, que possuía um backdoor. Pelo que diz no artigo, a empresa já é infame por problemas relacionados a segurança.</description>
+    </item>
     
     <item>
       <title>Começando</title>

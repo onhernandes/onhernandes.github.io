@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Matheus Hernandes ">
+<meta name="description" content="Como de costume em boa parte da população jovem neste país, acordei e já abri o Twitter pra ver se tinha alguma novidade no meio dessa coisa toda que a gente tá vivendo.
+Aí eu vi este tweet do Gabs compartilhando essa notícia sobre a Huawei ter tentado implementar o HKSP (Huawei Kernel Self Protection) no kernel, que possuía um backdoor. Pelo que diz no artigo, a empresa já é infame por problemas relacionados a segurança." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://onhernandes.github.io/artigos/kernel-e-bombas/" />
+
+
+    <title>
+        
+            Kernel e bombas :: Hernandes  — Hello Friend NG Theme
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://onhernandes.github.io/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://onhernandes.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://onhernandes.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://onhernandes.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://onhernandes.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://onhernandes.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://onhernandes.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Kernel e bombas">
+<meta itemprop="description" content="Como de costume em boa parte da população jovem neste país, acordei e já abri o Twitter pra ver se tinha alguma novidade no meio dessa coisa toda que a gente tá vivendo.
+Aí eu vi este tweet do Gabs compartilhando essa notícia sobre a Huawei ter tentado implementar o HKSP (Huawei Kernel Self Protection) no kernel, que possuía um backdoor. Pelo que diz no artigo, a empresa já é infame por problemas relacionados a segurança.">
+<meta itemprop="datePublished" content="2020-05-15T15:11:23-03:00" />
+<meta itemprop="dateModified" content="2020-05-15T15:11:23-03:00" />
+<meta itemprop="wordCount" content="814">
+<meta itemprop="image" content="https://onhernandes.github.io"/>
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://onhernandes.github.io"/>
+
+<meta name="twitter:title" content="Kernel e bombas"/>
+<meta name="twitter:description" content="Como de costume em boa parte da população jovem neste país, acordei e já abri o Twitter pra ver se tinha alguma novidade no meio dessa coisa toda que a gente tá vivendo.
+Aí eu vi este tweet do Gabs compartilhando essa notícia sobre a Huawei ter tentado implementar o HKSP (Huawei Kernel Self Protection) no kernel, que possuía um backdoor. Pelo que diz no artigo, a empresa já é infame por problemas relacionados a segurança."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-05-15 15:11:23 -0300 -03" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://onhernandes.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://onhernandes.github.io/artigos/">Artigos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post" id="okkk">
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://onhernandes.github.io/artigos/kernel-e-bombas/">Kernel e bombas</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p>Como de costume em boa parte da população jovem neste país, acordei e já abri o Twitter pra ver se tinha alguma novidade no meio dessa coisa toda que a gente tá vivendo.</p>
+<p>Aí eu vi <a href="https://twitter.com/o_gabsferreira/status/1261273502432350209">este tweet</a> do Gabs compartilhando <a href="https://androidrookies.com/huawei-dev-team-sends-a-buggy-hksp-patch-with-backdoor-to-linux-foundation/">essa notícia</a> sobre a Huawei ter tentado implementar o HKSP (Huawei Kernel Self Protection) no kernel, que possuía um backdoor. Pelo que diz no artigo, a empresa já é infame por problemas relacionados a segurança.</p>
+<p>Bom, a empresa negou o envolvimento e disse que foi trabalho de um indivíduo e não reproduz nada da empresa. Coincidentemente, a conta responsável pelo patch pertence a um funcionário da empresa, que também é funcionário principal de segurança nível 20 na Huawei.</p>
+<p>Ah, só pra completar, no README.md do <a href="https://github.com/cloudsec/aksp">repositório</a> há um disclaimer que distancia a empresa do projeto e dá a responsabilidade ao dono do repositório. Porém, o commit que adicionou esse disclaimer estava datado para o dia da criação do repositório, mas segundo a <a href="https://grsecurity.net/huawei_hksp_introduces_trivially_exploitable_vulnerability">Grsecurity</a>, conseguiram detectar que o commit foi feito na segunda de manhã, mas datado para o dia da criação, talvez numa tentativa de dizer que a acusação não levou em conta todos os detalhes.</p>
+<p>Mas como isso é possível? Bom, é simples: alterando a data do commit. Por exemplo, eu escrevi esse artigo na sexta-feira dia, mas só criei o arquivo no repositório e o publiquei na segunda-feira, dia 18 de março. Se você olhar no arquivo e na data que especifiquei, estou apontando pra sexta-feira. Você consegue perceber que fiz isso olhando a data do commit que contém esse arquivo.</p>
+<p>E como descobrir que alteraram a data do commit? Dá pra usar a API do Github, que guarda a data original de cada evento.</p>
+<p>O bug? Bom, dentre várias críticas e problemas no código, <code>this introduces a trivially exploitable kernel stack buffer overflow able to be performed by any unprivileged user</code>, resumindo no português: a vulnerabilidade permitia que qualquer um pudesse dar uma sobrecarga em um arquivo, até usuários sem privilégios extras.</p>
+<p>Uma bomba dessas nunca fará algo de bom, né?</p>
+<h3 id="bombas">Bombas</h3>
+<p>Ao criar novas aplicações, sabemos que precisamos de segurança. Assim como o kernel precisa, e como alguém tentou ajudar (talvez não da melhor forma e nem na melhor intenção), nossas aplicações também precisam de ferramentas pra ajudar na segurança.</p>
+<p>Aqui entram várias regras, dicas, programas e utilitários pra auxiliar e melhorar a segurança da nossa aplicação.</p>
+<p>Mas algum dia, em algum momento, alguém pensou: e se o ataque for realmente a melhor defesa?</p>
+<p>É, talvez não. Mas pode funcionar. Aí, invetaram o zip-bomb, que é basicamente um arquivo comprimido que possui 42kb, mas quando extraídos, esses 42kb se tornam lindos e belos 4,5 petabytes.</p>
+<p>4,5 petabytes? Absurdo! Impossível. Mas o que é um petabyte? Aliás, quanto é um petabyte?</p>
+<p>Um petabyte equivale a mil terabytes. E um terabyte, dá mil gigabytes. Ou seja, 4500000 gigabytes (4,5 milhões de gigabytes, se eu não estiver tão ruim assim de cálculo). Isso funciona por basicamente comprimir milhões de 0s.</p>
+<p>Essa é a magia da <a href="https://en.wikipedia.org/wiki/Data_compression">compressão</a></p>
+<h3 id="beleza-mas-pra-que">Beleza. Mas pra que?</h3>
+<p>Na era onde a gente tem que lidar com scraping e alguns serviços de scan, como o <a href="https://wpscan.org/">wpscan</a>, sabemos que temos algumas rotas &ldquo;padrões&rdquo; que são bastante acessadas por esses serviços de lookup, né?</p>
+<p>Como <code>/admin</code>, <code>/wp-admin</code>, <code>/login</code>, e por aí vai (todos com extensões de PHP, HTML, ASP, etc). E melhor ainda, dependendo da implementação, o programa que está tentando fazer requisição, vai processar a resposta. E por isso entende-se descomprimir qualquer coisa que vier.</p>
+<p>Imagine acessar o site do Google e ao invés de aparecer a barra de pesquisa, sua tela fica branca e seu navegador começa a baixar 4,5 milhões de GB na sua máquina. Acredito que ninguém tem nem RAM nem HD pra isso, né? Seu PC trava. A memória explode, aí tu tem que reiniciar, não tem jeito.</p>
+<p>Além do zip-bomb, tem outras bombas por aí, como o <a href="https://www.cyberciti.biz/faq/understanding-bash-fork-bomb/">fork-bomb</a> e etc.</p>
+<h3 id="o-mundo-sem-bombas">O mundo sem bombas</h3>
+<p>Ok, usar algo como o zip-bomb pode ser arriscado, dependendo do seu site/API. Ou até chato de implementar, já que tu precisa ter o arquivo, ler armazenamento, etc.</p>
+<p>Além do zip-bomb ou qualquer coisa do tipo, tem gente que gosta de simplesmente redirecionar as URLs pra outro lugar, como <a href="https://twitter.com/LiamHammett/status/1260984553570570240">esse cara aqui</a></p>
+<h3 id="brincando-com-a-sorte">Brincando com a sorte</h3>
+<p>Todo mundo sabe que algumas pessoas gostam de&hellip; levar as coisas mais ao extremo e de brincar com a sorte. Daí inventaram a roleta russa em bash. Não é nada complexo, e funciona em uma linha:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#f92672">[</span> $<span style="color:#f92672">[</span> $RANDOM % <span style="color:#ae81ff">6</span> <span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> rm -rf / <span style="color:#f92672">||</span> echo *Click*<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Isso utiliza a variável de ambiente <code>$RANDOM</code> para gerar um número randômico, e dependendo do resultado, apaga tudo que está na raiz do seu sistema. É, uma bomba, numa roleta russa.</p>
+<h3 id="alguns-links">Alguns links</h3>
+<ul>
+<li><a href="https://www.bamsoftware.com/hacks/zipbomb/">https://www.bamsoftware.com/hacks/zipbomb/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zip_bomb">Zip bomb na Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tar_(computing)#Tarbomb">Tar bomb!</a></li>
+<li><a href="https://stackoverflow.com/questions/1459673/how-does-one-make-a-zip-bomb">Como criar uma zip-bomb? CUIDADO</a></li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>814 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-05-15 15:11 -0300</p>
+        </div>
+
+        
+
+        <div id="comments" class="thin">
+          <div id="disqus_thread"></div>
+
+          <script>
+          
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/onhernandes.github.io\/artigos\/kernel-e-bombas\/';  
+            this.page.identifier = 'https:\/\/onhernandes.github.io\/artigos\/kernel-e-bombas\/'; 
+          };
+          (function() { 
+          var d = document, s = d.createElement('script');
+          s.src = 'https://matheus-hernandes.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://onhernandes.github.io">Matheus Hernandes</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://onhernandes.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://onhernandes.github.io/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+
+
+
+    </body>
+</html>
