@@ -1,7 +1,7 @@
 const isRunningLocal = href => href.match(/localhost:1313/g) !== null
 const isRunningElsewhere = href => href.match(/onhernandes\.github\.io/) === null
 
-document.onload = () => {
+const onLoad = () => {
   console.log('onload working')
   window.mylinks = []
   document
@@ -21,3 +21,5 @@ document.onload = () => {
     })
   console.log('done')
 }
+
+document.addEventListener('load', onLoad)
