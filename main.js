@@ -22,4 +22,4 @@ const onLoad = () => {
   console.log('done')
 }
 
-document.addEventListener('load', onLoad)
+document.addEventListener('DOMContentLoaded', onLoad)
