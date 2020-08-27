@@ -1,9 +1,7 @@
-const isRunningLocal = href => href.match(/localhost:1313/g) !== null
+const isRunningLocal = href => href.match(/localhost/g) !== null
 const isRunningElsewhere = href => href.match(/onhernandes\.github\.io/) === null
 
 const onLoad = () => {
-  console.log('onload working')
-  window.mylinks = []
   document
     .querySelectorAll('a')
     .forEach(link => {
@@ -16,7 +14,6 @@ const onLoad = () => {
 
       if (!isLocalhost && isElsewhere && !hasTarget) {
         link.setAttribute('target', '_blank')
-        window.mylinks.push(link)
       }
     })
   console.log('done')

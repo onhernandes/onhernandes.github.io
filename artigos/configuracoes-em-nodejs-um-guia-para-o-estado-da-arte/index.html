@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Matheus Hernandes ">
+<meta name="description" content="Acredito que em algum momento da sua vida, toda pessoa desenvolvedora já teve que lidar com configurações sensíveis e secretas, bem como dados de acesso a serviços e bancos de dados, tokens de autenticação e etc. E já deve ter visto várias maneiras diferentes, únicas, revolucionárias ou só desleixadas de fazer isso. Se até hoje você não teve essa experiência, tudo bem, um dia chegará. Vai ser melhor ainda você continuar lendo isso aqui pra saber mais." />
+<meta name="keywords" content=", nodejs, infra" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/" />
+
+
+    <title>
+        
+            Configuracoes em NodeJS: Um guia para o estado da arte :: Hernandes  — Hello Friend NG Theme
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://onhernandes.github.io/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://onhernandes.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://onhernandes.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://onhernandes.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://onhernandes.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://onhernandes.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://onhernandes.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Configuracoes em NodeJS: Um guia para o estado da arte">
+<meta itemprop="description" content="Já pensou em configurar váriaveis de ambiente em projetos com NodeJS? Se liga nas melhores formas de se organizar.">
+<meta itemprop="datePublished" content="2020-08-27T11:12:04-03:00" />
+<meta itemprop="dateModified" content="2020-08-27T11:12:04-03:00" />
+<meta itemprop="wordCount" content="1144">
+<meta itemprop="image" content="https://onhernandes.github.io"/>
+
+
+
+<meta itemprop="keywords" content="nodejs,infra," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://onhernandes.github.io"/>
+
+<meta name="twitter:title" content="Configuracoes em NodeJS: Um guia para o estado da arte"/>
+<meta name="twitter:description" content="Já pensou em configurar váriaveis de ambiente em projetos com NodeJS? Se liga nas melhores formas de se organizar."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-08-27 11:12:04 -0300 -03" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://onhernandes.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://onhernandes.github.io/artigos/">Artigos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post" id="okkk">
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>6 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/">Configuracoes em NodeJS: Um guia para o estado da arte</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p>Acredito que em algum momento da sua vida, toda pessoa desenvolvedora já teve que lidar com configurações sensíveis e secretas, bem como dados de acesso a serviços e bancos de dados, tokens de autenticação e etc. E já deve ter visto várias maneiras diferentes, únicas, revolucionárias ou só desleixadas de fazer isso. Se até hoje você não teve essa experiência, tudo bem, um dia chegará. Vai ser melhor ainda você continuar lendo isso aqui pra saber mais.</p>
+<h2 id="problema">Problema</h2>
+<p>Bom, precisamos começar de algum lugar, né? Nunca devemos implementar uma tecnologia nova a menos que a mesma esteja solucionando algum problema, ou pelo menos, facilitando a convivência com esse problema.</p>
+<p>Vamos seguir: temos uma API que basicamente, recebe URLs de vídeos de música no YouTube, salva essas músicas em uma tabela e posteriormente tenta processar essas músicas, ou seja, tenta baixá-las e alterar seus metadados. Esse não é um projeto fictício, na verdade eu o escrevi há muito tempo, se chama <a href="https://github.com/onhernandes/sounder/">Sounder</a>. E enquanto estou escrevendo esse artigo, também estou tentando reescrever essa API completamente - pelo mesmo motivo que a criei, para estudo e prática.</p>
+<p>Com essa API, temos os dados de acesso para o banco de dados (pode ser uma URI, ou os dados bem separados), que são dados sigilosos, não podemos permitir que qualquer pessoa os consiga. Esses dados mudam quando estamos com a API em produção, quando estamos testando a API em qualquer servidor e também quando estamos trabalhando no nosso computador.</p>
+<p>A partir desse cenário, como podemos configurar a API para acessar o banco? Como gerenciar e organizar as informações sigilosas? Adiante vou mostrar algumas formas que eu já trabalhei, o que eu gostei ou não, e outras mais.</p>
+<h3 id="variáveis-de-ambiente-diretamente-no-código">Variáveis de ambiente diretamente no código</h3>
+<p>Bom, parece uma boa ideia, certo? É só usar a variável ~ mágica ~ <code>process.env</code> e pegar os dados a partir de variáveis de ambiente e pronto!</p>
+<p>Dados são passados entre qualquer ambiente e nossa API. Conseguimos usar isso com Docker, Kubernetes, um servidor comum sem gerenciamento, no nosso computador, em um servidor de testes ou de homologação.</p>
+<p>Mas qual o problema?</p>
+<p>Bom, inicialmente parece ser tranquilo, temos apenas uma variável de ambiente necessária contendo apenas a URI de acesso. Ao mesmo tempo, é um impedimento, já que temos que fornecer uma URI e não os dados separados como host, usuário, senha, porta, etc. Sem contar que, conforme nossa aplicação cresce, mais e mais vamos ter que usar e memorizar os nomes das variáveis. Ou documentar isso em algum lugar. Tudo se resume usando aquela palavrinha mágica: a aplicação não <em>escala</em>. Vamos usar variáveis de ambiente com condicionais (muitas vezes, ternárias) para usar valores do ambiente com alguma definição padrão.</p>
+<h3 id="configjs">config.js</h3>
+<p>Esse aqui foi o clássico, e o mais comum que já trabalhei. Consiste basicamente de um arquivo em JavaScript exportando um objeto com chave e valor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">mysql</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+  }
+}
+</code></pre></div><p>E se você quiser trabalhar com vários ambientes&hellip;</p>
+<p>Pode exportar um objeto pra cada ambiente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">defaultConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">mysql</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prodConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">mysql</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+  }
+}
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">prodConfig</span>, <span style="color:#a6e22e">defaultConfig</span> }
+</code></pre></div><p>Mas aí fica ruim ter que acessar objeto por objeto né? Não seja por isso:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentEnv</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;DEV&#39;</span>).<span style="color:#a6e22e">toLowerCase</span>()
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">defaultConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">mysql</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prodConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">mysql</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">envs</span> <span style="color:#f92672">=</span> {
+ <span style="color:#a6e22e">production</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">prodConfig</span>,
+ <span style="color:#a6e22e">dev</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">defaultConfig</span>
+}
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">envs</span>[<span style="color:#a6e22e">currentEnv</span>]
+</code></pre></div><p>Ah, quer usar variáveis de ambiente também? Só fazer alguma mágina com <code>database: process.env.MYSQL_DATABASE || '&lt;banco padrão&gt;'</code> e pronto! Mas aí fica meio chato que tu precisa repetir as configurações em todo ambiente, né? Pode aproveitar e criar um objeto padrão e usar o <code>Object.assign()</code> pra ajudar a resolver isso. Ainda assim, eu&hellip; tenho certa preguiça de desenvolver esse tipo de coisa, porque acredito ser um trabalho facilmente adaptado e padronizado de outra forma. E vamos de&hellip;</p>
+<h3 id="a-biblioteca-config">A biblioteca config</h3>
+<p>Essa é uma das minhas favoritas porque é bem fácil de mexer. Dá uma olhadinha na <a href="https://www.npmjs.com/package/config">página do NPM</a>. Você precisa instalar no seu projeto, e para usar, basta criar uma pasta <code>config/</code> na raiz do seu projeto. Crie um arquivo <code>default.json</code>, sim, é literalmente as configurações padrões do projeto. Então, ele ficaria:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">{
+  <span style="color:#e6db74">&#34;mysql&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;host&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;database&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>
+  }
+}
+</code></pre></div><p>Quer criar um arquivo de produção? Só criar <code>config/production.json</code>, e colocar as configurações que acha necessário. Não precisa colocar tudo, porque a biblioteca usa o <code>default.json</code> como padrão e pega as informações de lá. O controle de qual arquivo usar é feito pelo <code>NODE_ENV</code> mesmo. E como você usa no código? É mais simples:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;config&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Sequelize</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;sequelize&#39;</span>)
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Sequelize</span>(
+  <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;mysql.database&#39;</span>),
+  <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;mysql.username&#39;</span>),
+  <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;mysql.password&#39;</span>),
+  { <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;mysql.host&#39;</span>), <span style="color:#a6e22e">dialect</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mysql&#39;</span> }
+)
+</code></pre></div><p>Acho bem tranquilo de trabalhar. Ah, quer usar variáveis de ambiente? Você pode criar um arquivo chamado <code>config/custom-environment-variables.json</code> seguindo suas configurações, e no valor você usa o nome da variável de ambiente que quer usar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">{
+  <span style="color:#e6db74">&#34;mysql&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;host&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;MYSQL_HOST&#34;</span>
+  }
+}
+</code></pre></div><p>Eu particularmente gosto de ter essa separação porque nem tudo que está nas configurações deveria ser alterado por variáveis de ambientes. Pra mim, isso deixa as configurações mais expressivas e fáceis de entender, é mais tranquilo pra compreender o que está mudando por fatores externos.</p>
+<p>Outra forma de alterar os valores é fornecendo em formato JSON através da variável <code>NODE_CONFIG='{&quot;mysql&quot;:{&quot;host&quot;:&quot;127.0.0.1&quot;}}</code></p>
+<h3 id="e-por-último-o-dotenv">E por último, o dotenv</h3>
+<p>Esse eu já usei bastante, mas com Python, em outro pacote. Com Node, é bem parecido, basta criar um arquivo chamado <code>env-example</code> na raiz do seu projeto para servir como exemplo (não é necessário mas é o que mais vejo ao usarem esses arquivos env), quando precisar usá-lo, copie para <code>.env</code>. Seguindo o que vi sendo utilizado em outros projetos, o arquivo <code>.env</code> deve ser ignorado pelo Git.</p>
+<p>Nesse arquivo, você coloca as variáveis de ambiente, linha por linha, seguindo o padrão <code>CHAVE=VALOR</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">MYSQL_HOST</span><span style="color:#f92672">=</span><span style="color:#ae81ff">127.0.0.1</span>
+<span style="color:#a6e22e">MYSQL_DATABASE</span><span style="color:#f92672">=</span><span style="color:#a6e22e">database</span>
+<span style="color:#a6e22e">MYSQL_USERNAME</span><span style="color:#f92672">=</span><span style="color:#a6e22e">root</span>
+<span style="color:#a6e22e">MYSQL_PASSWORD</span><span style="color:#f92672">=</span><span style="color:#ae81ff">123456</span>
+</code></pre></div><p>Para acessar essas informações, você tem que primeiro iniciar o pacote dotenv no seu projeto, isso pode ser feito de duas formas. A primeira é chamando a biblioteca no ponto de entrada da sua aplicação (<code>index.js</code> por exemplo):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;dotenv&#39;</span>).<span style="color:#a6e22e">config</span>()
+</code></pre></div><p>A outra opção é usar um parâmetro na hora de executar seu projeto pelo terminal com Node:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">node</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">r</span> <span style="color:#a6e22e">dotenv</span><span style="color:#f92672">/</span><span style="color:#a6e22e">config</span> <span style="color:#a6e22e">your_script</span>.<span style="color:#a6e22e">js</span>
+</code></pre></div><p>Depois de iniciar o dotenv, você consegue acessar as informações pelo <code>process.env</code> tranquilamente.</p>
+<p>E com isso termino minhas indicações e comentários sobre as formas de gerenciar segredos e configurações de aplicações com NodeJS. Vou deixar abaixo uma lista de referências e outros conteúdos para você dar uma olhada também.</p>
+<h3 id="referências">Referências</h3>
+<ul>
+<li><a href="https://github.com/etcd-io/etcd">https://github.com/etcd-io/etcd</a></li>
+<li><a href="https://12factor.net/">https://12factor.net/</a></li>
+<li><a href="https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html">https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html</a></li>
+<li><a href="https://stackoverflow.com/questions/8332333/node-js-setting-up-environment-specific-configs-to-be-used-with-everyauth#8355493">https://stackoverflow.com/questions/8332333/node-js-setting-up-environment-specific-configs-to-be-used-with-everyauth#8355493</a></li>
+<li><a href="https://codeburst.io/node-js-best-practices-smarter-ways-to-manage-config-files-and-variables-893eef56cbef">https://codeburst.io/node-js-best-practices-smarter-ways-to-manage-config-files-and-variables-893eef56cbef</a></li>
+<li><a href="https://stackoverflow.com/questions/33557425/where-should-i-store-secret-strings-on-node-server">https://stackoverflow.com/questions/33557425/where-should-i-store-secret-strings-on-node-server</a></li>
+<li><a href="https://medium.com/dubizzletechblog/managing-environment-variables-in-nodejs-and-modern-js-apps-608003f4686c">https://medium.com/dubizzletechblog/managing-environment-variables-in-nodejs-and-modern-js-apps-608003f4686c</a></li>
+<li><a href="https://secrethub.io/docs/guides/nodejs/#write-secrets">https://secrethub.io/docs/guides/nodejs/#write-secrets</a></li>
+<li><a href="https://itnext.io/node-js-configuration-and-secrets-management-acd84375ca7">https://itnext.io/node-js-configuration-and-secrets-management-acd84375ca7</a></li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://onhernandes.github.io/tags/nodejs">nodejs</a></span><span class="tag"><a href="https://onhernandes.github.io/tags/infra">infra</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1144 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-08-27 11:12 -0300</p>
+        </div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://onhernandes.github.io">Matheus Hernandes</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://onhernandes.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://onhernandes.github.io/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+
+
+    
+        <script src="https://onhernandes.github.io/main.js"></script>
+    
+
+
+    </body>
+</html>

@@ -4,12 +4,32 @@
   
   <url>
     <loc>https://onhernandes.github.io/artigos/</loc>
-    <lastmod>2020-05-15T15:11:23-03:00</lastmod>
+    <lastmod>2020-08-27T11:12:04-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/</loc>
+    <lastmod>2020-08-27T11:12:04-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://onhernandes.github.io/</loc>
-    <lastmod>2020-05-15T15:11:23-03:00</lastmod>
+    <lastmod>2020-08-27T11:12:04-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://onhernandes.github.io/tags/infra/</loc>
+    <lastmod>2020-08-27T11:12:04-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://onhernandes.github.io/tags/nodejs/</loc>
+    <lastmod>2020-08-27T11:12:04-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://onhernandes.github.io/tags/</loc>
+    <lastmod>2020-08-27T11:12:04-03:00</lastmod>
   </url>
   
   <url>
@@ -69,10 +89,6 @@
   
   <url>
     <loc>https://onhernandes.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://onhernandes.github.io/tags/</loc>
   </url>
   
 </urlset>

@@ -6,10 +6,19 @@
     <description>Recent content on Hernandes</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 15 May 2020 15:11:23 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 11:12:04 -0300</lastBuildDate>
     
 	<atom:link href="https://onhernandes.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Configuracoes em NodeJS: Um guia para o estado da arte</title>
+      <link>https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/</link>
+      <pubDate>Thu, 27 Aug 2020 11:12:04 -0300</pubDate>
+      
+      <guid>https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/</guid>
+      <description>Acredito que em algum momento da sua vida, toda pessoa desenvolvedora já teve que lidar com configurações sensíveis e secretas, bem como dados de acesso a serviços e bancos de dados, tokens de autenticação e etc. E já deve ter visto várias maneiras diferentes, únicas, revolucionárias ou só desleixadas de fazer isso. Se até hoje você não teve essa experiência, tudo bem, um dia chegará. Vai ser melhor ainda você continuar lendo isso aqui pra saber mais.</description>
+    </item>
     
     <item>
       <title>Kernel e bombas</title>
@@ -109,16 +118,6 @@ Por onde começar? Bom, se você já programa, trabalha com PHP, NodeJS, Python,
       <description>Janelas, painéis e terminais Eu escrevi outro artigo introduzindo ao tmux, aconselho você a ler antes de continuar caso não conheça o tmux.
 Painéis no tmux são apenas divisões na mesma tela. Você consegue navegar entre elas. É algo bem útil para, por exemplo, editar um arquivo enquanto executa testes em outro painel e acompanha a saída de um log.
 Janelas são uma abstração superior: você tem várias janelas dentro do tmux, cada uma com seu próprio layout de painéis, scripts e ambiente.</description>
-    </item>
-    
-    <item>
-      <title>O incrível mundo do tmux</title>
-      <link>https://onhernandes.github.io/artigos/o-incrivel-mundo-do-tmux/</link>
-      <pubDate>Thu, 19 Apr 2018 15:52:16 +0000</pubDate>
-      
-      <guid>https://onhernandes.github.io/artigos/o-incrivel-mundo-do-tmux/</guid>
-      <description>tmux - o que é Tmux é uma ferramenta que basicamente te dá o controle de sessões, janelas e painéis dentro de um único terminal. Sim, você pode voltar pro bom e velho xterm e configurar como quiser. Segundo o Wiki deles:
- tmux is a &amp;ldquo;terminal multiplexer&amp;rdquo;, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen</description>
     </item>
     
   </channel>
