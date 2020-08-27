@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Hernandes</title>
+    <link>https://onhernandes.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on Hernandes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 27 Aug 2020 11:12:04 -0300</lastBuildDate>
+    
+	<atom:link href="https://onhernandes.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuracoes em NodeJS: Um guia para o estado da arte</title>
+      <link>https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/</link>
+      <pubDate>Thu, 27 Aug 2020 11:12:04 -0300</pubDate>
+      
+      <guid>https://onhernandes.github.io/artigos/configuracoes-em-nodejs-um-guia-para-o-estado-da-arte/</guid>
+      <description>Acredito que em algum momento da sua vida, toda pessoa desenvolvedora já teve que lidar com configurações sensíveis e secretas, bem como dados de acesso a serviços e bancos de dados, tokens de autenticação e etc. E já deve ter visto várias maneiras diferentes, únicas, revolucionárias ou só desleixadas de fazer isso. Se até hoje você não teve essa experiência, tudo bem, um dia chegará. Vai ser melhor ainda você continuar lendo isso aqui pra saber mais.</description>
+    </item>
+    
+  </channel>
+</rss>
