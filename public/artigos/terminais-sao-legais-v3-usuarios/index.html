@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Matheus Hernandes ">
+<meta name="description" content="Só para te contextualizar, esse artigo é uma continuação de uma série sobre terminal/shell, se quiser ver outros artigos, aqui estão:
+ Terminais são legais: como começar a usar  Terminais são legais v1: lendo e filtrando arquivos Terminais são legais v2: trabalhando com arquivos e pastas  Como usuários funcionam? E agora vamos abordar sobre usuários(criar, alterar, apagar, etc), no próximo, sobre grupos e por fim permissões.
+Como você já deve ter visto, no Linux nós temos usuários e grupos de usuários." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://onhernandes.github.io/artigos/terminais-sao-legais-v3-usuarios/" />
+
+
+    <title>
+        
+            Terminais são legais v3.0: usuários :: Hernandes  — Hello Friend NG Theme
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://onhernandes.github.io/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://onhernandes.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://onhernandes.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://onhernandes.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://onhernandes.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://onhernandes.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://onhernandes.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Terminais são legais v3.0: usuários">
+<meta itemprop="description" content="Já pensou em criar e gerenciar usuários pelo terminal? É muito fácil e simples!">
+<meta itemprop="datePublished" content="2018-06-18T09:41:47+00:00" />
+<meta itemprop="dateModified" content="2018-06-18T09:41:47+00:00" />
+<meta itemprop="wordCount" content="775">
+<meta itemprop="image" content="https://onhernandes.github.io"/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://onhernandes.github.io"/>
+
+<meta name="twitter:title" content="Terminais são legais v3.0: usuários"/>
+<meta name="twitter:description" content="Já pensou em criar e gerenciar usuários pelo terminal? É muito fácil e simples!"/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2018-06-18 09:41:47 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://onhernandes.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://onhernandes.github.io/artigos/">Artigos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post" id="okkk">
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://onhernandes.github.io/artigos/terminais-sao-legais-v3-usuarios/">Terminais são legais v3.0: usuários</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p><img src="https://onhernandes.github.io/images/Terminais-sao-legais-v3-usuarios/people.jpg" alt=""></p>
+<p>Só para te contextualizar, esse artigo é uma continuação de uma série sobre terminal/shell, se quiser ver outros artigos, aqui estão:</p>
+<ul>
+<li><a href="https://onhernandes.github.io/artigos/terminais-sao-legais-como-comecar-a-usar">Terminais são legais: como começar a usar </a></li>
+<li><a href="https://onhernandes.github.io/artigos/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/">Terminais são legais v1: lendo e filtrando arquivos</a></li>
+<li><a href="https://onhernandes.github.io/artigos/terminais-sao-legais-v2-pastas/">Terminais são legais v2: trabalhando com arquivos e pastas</a></li>
+</ul>
+<h1 id="como-usuários-funcionam">Como usuários funcionam?</h1>
+<p>E agora vamos abordar sobre usuários(criar, alterar, apagar, etc), no próximo, sobre grupos e por fim permissões.</p>
+<p>Como você já deve ter visto, no Linux nós temos <em>usuários</em> e <em>grupos de usuários</em>. Quando você instalou sua distribuição, você precisou definir o nome de um usuário, que é o mesmo usado no login, também o mesmo que aparece no seu terminal.</p>
+<p>Por padrão, quando instalamos o Linux, temos além do nosso usuário, o <em>root</em>, que nada mais é que o usuário administrador do sistema, com permissão para fazer tudo o que quiser, mexer onde quiser sem restrições.</p>
+<p>A senha do usuário <em>root</em> é definida na instalação do sistema e eu sempre costumo colocar a mesma senha do meu usuário. Isso é uma má prática e deve ser evitada, mas sou preguiçoso para isso =|</p>
+<p>Vamos trabalhar com os seguintes comandos:</p>
+<ul>
+<li><code>useradd</code> para adicionar um novo usuário</li>
+<li><code>usermod</code> para alterar um usuário</li>
+<li><code>passwd</code> para definir uma senha ao novo usuário</li>
+<li><code>userdel</code> para apagar um usuário</li>
+</ul>
+<h2 id="criando-um-usuário">Criando um usuário</h2>
+<p>Esse comando altera usuários, então não é qualquer um que pode executar, senão poderia deixar o sistema vulnerável. Para ações mais restritas, o Linux tem uma conta de administrador por padrão, chamada <em>root</em>. É uma conta com acesso total à qualquer lugar do sistema, pode alterar o que quiser e como quiser.</p>
+<p>Normalmente, quando você instala o Linux, a senha do usuário <em>root</em> é a mesma que você colocou para o seu usuário, a menos que tenha alterado isso propositalmente. Para executar comandos como <em>root</em>, você precisa colocar <code>sudo</code> no começo do comando. Quando usar, o terminal irá pedir a senha do usuário <em>root</em>, para confirmação, em seguida prosseguirá com o fluxo.</p>
+<p>Para criar um novo usuário, você pode usar o comando <code>useradd</code> da seguinte forma: <code>sudo useradd -m &lt;nome-do-usuario&gt;</code>, o terminal irá pedir a senha do usuário <em>root</em>, em seguida você vai precisar inserir a senha do usuário que está sendo criado.</p>
+<p>O parâmetro <code>-m</code> é o mesmo que <code>--create-home</code>, ele cria a pasta do usuário.</p>
+<h2 id="testando-o-novo-usuário">Testando o novo usuário</h2>
+<p>Para saber se o usuário foi criado corretamente, temos duas formas: verificando o arquivo <code>/etc/passwd</code> ou fazendo log in como o novo usuário.</p>
+<p>O arquivo <code>/etc/passwd</code> possui uma listagem dos usuários do sistema basicamente. Ele é um arquivo de texto, então <a href="https://onhernandes.github.io/terminais-sao-legais-v1-lendo-e-filtrando-arquivos/">você pode ler seu conteúdo como faria com qualquer outro arquivo</a>, como por exemplo, usando <code>cat /etc/passwd</code>. Se ficou muita coisa, pode combinar com o <code>grep</code>: <code>cat /etc/passwd | grep &lt;nome-do-usuario&gt;</code>.</p>
+<p>Para fazer o log in como o novo usuário, você nem precisa sair da sua conta, basta execuar <code>su - &lt;nome-do-usuario&gt;</code>, o terminal irá pedir a senha para aquele usuário e em seguida você estará conectado como seu novo usuário.</p>
+<p>Saia usando o comando <code>exit</code>, ele irá fazer o log off do usuário e retornará para onde estava.</p>
+<h2 id="modificando-um-usuário">Modificando um usuário</h2>
+<p>Como vamos modificar os dados de usuário, precisamos sempre usar o <code>sudo</code> no começo de cada comando.</p>
+<p>Digamos que agora você quer alterar algumas coisas do usuário que criou, como a pasta, nome de login, ou mudar sua senha. Você pode usar o <code>usermod</code> para alterar os dados e <code>passwd</code> para alterar a senha.</p>
+<p>Usuários podem ser bloqueados no Linux, para isso existe o parâmetro <code>-L</code>, ou <code>--lock</code>: <code>sudo -L &lt;nome-do-usuario&gt;</code>. Se quiser desbloquear, pode fazer usando <code>-U</code> ou <code>--unlock</code>.</p>
+<p>Quer mudar o nome de login? Existe o parâmetro <code>-l</code> ou <code>--login</code> seguido pelo novo nome de login.</p>
+<p>Se você quiser mudar a pasta pessoal do usuário, use <code>-d</code> ou <code>--home</code> seguido pelo caminho completo da nova pasta. Só isso irá criar uma nova pasta, caso não exista, e usá-la como padrão, mas <em>não irá mover o conteúdo da pasta antiga para lá</em>, para fazer isso, use também <code>-m</code> ou <code>--move-home</code>.</p>
+<p>Caso precise alterar a senha, pode usar o <code>sudo passwd &lt;nome-do-usuario&gt;</code></p>
+<h2 id="apagando-um-usuário">Apagando um usuário</h2>
+<p>Ok, até agora criamos um usuário, verificamos se ele existe mesmo, fizemos login, alteramos a conta e a senha. Mas e se eu quiser deletar?</p>
+<p>Use o comando <code>userdel &lt;nome-do-usuario&gt;</code>. Ele irá apagar <em>apenas o usuário</em>, caso você queira apagar sua pasta pessoal também, use <code>-r</code> ou <code>--remove</code> antes do nome do usuário.</p>
+<p>Isso irá apagar sua pasta pessoal e seu conteúdo. Caso haja algum arquivo ou pasta que não seja do usuário que está sendo apagado, o mesmo não será apagado. Se quiser forçar, pode passar o parâmetro <code>-f</code> ou <code>--force</code></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>775 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-06-18 06:41 -0300</p>
+        </div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://onhernandes.github.io">Matheus Hernandes</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://onhernandes.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://onhernandes.github.io/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+
+
+    
+        <script src="https://onhernandes.github.io/main.js"></script>
+    
+
+
+    </body>
+</html>
