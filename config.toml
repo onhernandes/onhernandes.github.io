@@ -11,7 +11,7 @@ PygmentsStyle = "monokai"
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-# googleAnalytics = ""
+googleAnalytics = "UA-79551653-2"
 # disqusShortname = "matheus-hernandes"
 
 archetypeDir = "archetypes"
@@ -69,13 +69,13 @@ disableHugoGeneratorInject = false
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   customCSS = []
-  customJS  = ["https://www.googletagmanager.com/gtag/js?id=UA-79551653-2", "/main.js"]
+  customJS  = ["/main.js"]
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   justifyContent = false  # Set "text-align: justify" to .content.
 
   # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+  contentTypeName = "artigos"
 
   # Default theme "light" or "dark"
   defaultTheme = "dark"
