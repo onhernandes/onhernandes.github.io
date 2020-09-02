@@ -76,3 +76,5 @@ Não é uma bala de prata e para verificações mais complexas, vale tentar usar
 Outra alternativa aos objetos, são [Maps](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map) que funcionam de uma forma semelhante à objetos, mas garantem a ordem das chaves, e também que cada chave sempre será única - o melhor, é que cada chave pode ser uma string, número, array, objeto, função, qualquer coisa pode ser uma chave!
 
 Parece bem simples mas já me ajudou muito, principalmente a simplificar algumas porções de código
+
+Agradecimento especial ao [Gustavo](https://github.com/gucastiliao) por ter me presenteado com essa sabedoria magnífica uns tempos atrás.
