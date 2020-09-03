@@ -1,5 +1,5 @@
 const isRunningLocal = href => href.match(/localhost/g) !== null
-const isRunningElsewhere = href => href.match(/onhernandes\.github\.io/) === null
+const isRunningElsewhere = href => href.match(/onhernandes\.dev/) === null
 
 const onLoad = () => {
   document
