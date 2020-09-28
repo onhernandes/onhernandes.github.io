@@ -4,7 +4,7 @@ date: 2020-09-28T17:21:55-03:00
 draft: false
 toc: false
 images:
-  - "word-soup.jpg"
+  - "/images/word-soup.jpg"
 description: "Aquela famosa sopa de letrinhas que sempre esbarramos ao trabalhar com aplicações e bancos de dados. Vamos conhecer melhor sobre, como funcionam, seus padrões e arquiteturas."
 tags:
   - orm-gambiarra-relacionados
