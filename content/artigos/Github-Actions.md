@@ -60,6 +60,14 @@ Na parte de `steps`, declaramos as etapas e passos que nosso trabalho vai execut
 
 Temos uma ação bem interessante que usamos sempre: `actions/checkout@v2`. Ela faz um checkout do seu projeto na máquina atual.
 
+Além disso, você pode criar sua própria ação de 3 formas:
+
+1. Usando código em JS dentro de um repositório público no Github (é executado diretamente na máquina, sem pré requisitos)
+2. Através de uma imagem publicada no [hub.docker.com](hub.docker.com)
+3. Juntando vários comandos shell em uma única ação (veja a documentação no final)
+
+A grande limitação é que por hora, se você estiver usando uma imagem publicada no Docker Hub, só poderá usar em máquinas Linux (definido no `runs-on`).
+
 Depois de definir tudo, você pode usar o botão no canto superior direito chamado "Start commit", através dele você consegue adicionar um novo commit na hora, ou abrir um Pull Request.
 
 O caminho do arquivo que irá ser criado está definido no topo, o Github detecta seus fluxos dentro de `.github/workflows` no seu repositório.
@@ -103,3 +111,4 @@ Se você quiser ler mais sobre Github Actions, recomendo seguir diretamente para
 
 - [https://docs.github.com/en/free-pro-team@latest/actions](https://docs.github.com/en/free-pro-team@latest/actions)
 - [https://docs.github.com/en/free-pro-team@latest/actions/quickstart](https://docs.github.com/en/free-pro-team@latest/actions/quickstart)
+- [https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/about-actions#types-of-actions](https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/about-actions#types-of-actions)
