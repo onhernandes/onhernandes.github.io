@@ -1,6 +1,6 @@
 ---
 title: "Dicas de organização: aplicativos e metodologias"
-date: 2020-09-29T10:06:45-03:00
+date: 2020-10-20T10:06:45-03:00
 draft: false
 toc: false
 images:
