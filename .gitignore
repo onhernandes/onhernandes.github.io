@@ -11,3 +11,5 @@ vendor/
 *lock*
 db.json
 public
+docs
+resources
