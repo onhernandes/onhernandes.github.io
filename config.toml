@@ -75,7 +75,7 @@ disableHugoGeneratorInject = false
   justifyContent = false  # Set "text-align: justify" to .content.
 
   # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "artigos"
+  # contentTypeName = "artigos"
 
   # Default theme "light" or "dark"
   defaultTheme = "dark"
@@ -121,3 +121,8 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name       = "Artigos"
     url        = "artigos/"
+
+  [[menu.main]]
+    identifier = "zines"
+    name       = "Zines"
+    url        = "zines/"
