@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-cover: "/images/default-zine-cover.jpg"
+thumbnail: "For the list page"
+thumbnailAlt: "For the list page"
+description: "For the ads and UI"
 draft: true
 ---
