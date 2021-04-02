@@ -3,31 +3,17 @@
     {{ $style := resources.Get "scss/zines.scss" | resources.ToCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-    {{ $actual_permalink := .Permalink }}
-    {{ with .Site.GetPage "zines/_index.md" }}
-      {{ if eq .Permalink $actual_permalink }}
-        <main class="zines">
-            <h1 class="zines__title">{{ .Title }}</h1>
+    <main class="zines">
+        <h1 class="zines__title">{{ .Title }}</h1>
 
-            {{ if .Content }}
-                <div class="zines__content">{{ .Content }}</div>
+        <ul class="zines__list">
+            {{ range .Pages }}
+                <li class="zines__item">
+                    <a href="{{.Permalink}}">
+                      <img src="{{.Params.thumbnail}}" alt="{{.Params.thumbnailAlt}}"/>
+                    </a>
+                </li>
             {{ end }}
-
-            <div class="zines__gallery">
-                <ul class="zines__list">
-                    {{ range where .Pages "Section" "zines" }}
-                        <li class="zines__item">
-                            <a href="{{.Permalink}}">
-                              <img src="{{.Params.thumbnail}}" alt="{{.Params.thumbnailAlt}}"/>
-                            </a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-        </main>
-      {{ else }}
-        arrays page
-      {{ end }}
-    {{end}}
-
+        </ul>
+    </main>
 {{ end }}
