@@ -9,8 +9,12 @@
         <ul class="zines__list">
             {{ range .Pages }}
                 <li class="zines__item">
-                    <a href="{{.Permalink}}">
-                      <img src="{{.Params.thumbnail}}" alt="{{.Params.thumbnailAlt}}"/>
+                    <a class="zines__link" href="{{.Permalink}}">
+                      <img class="zines__image" src="{{.Params.thumbnail}}" alt="{{.Params.thumbnailAlt}}"/>
+                      <span class="zines__content">
+                        <h4>{{ .Title }}</h4>
+                        <p>{{ .Description }}</p>
+                      </span>
                     </a>
                 </li>
             {{ end }}
