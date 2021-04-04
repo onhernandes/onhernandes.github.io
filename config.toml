@@ -124,5 +124,5 @@ disableHugoGeneratorInject = false
 
   [[menu.main]]
     identifier = "zines"
-    name       = "Zines"
+    name       = "Artes & Zines"
     url        = "zines/"
