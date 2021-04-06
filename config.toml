@@ -1,7 +1,7 @@
 baseURL = "https://onhernandes.dev"
 title   = "Hernandes"
 
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "pt_br"
 
 theme = "hello-friend-local"
 
@@ -110,12 +110,6 @@ disableHugoGeneratorInject = false
     name = "linkedin"
     url  = "https://www.linkedin.com/in/onhernandes"
 
-[languages]
-  [languages.en]
-    subtitle  = "Hello Friend NG Theme"
-    weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -126,3 +120,26 @@ disableHugoGeneratorInject = false
     identifier = "zines"
     name       = "Artes"
     url        = "zines/"
+
+[languages]
+  [languages.pt_br]
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  [languages.en]
+    subtitle  = "Hello Friend NG Theme"
+    weight    = 2
+    description = "developer, speaker, adept of FOSS, I like tech, beer, games and I'm a carpenter in my spare time"
+    homeSubtitle = "developer, speaker, adept of FOSS, I like tech, beer, games and I'm a carpenter in my spare time"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    posts = "/posts/:title/"
+
+    [[menu.main]]
+      identifier = "posts"
+      name       = "Posts"
+      url        = "artigos/"
+
+    [[menu.main]]
+      identifier = "zines"
+      name       = "Arts"
+      url        = "zines/"
