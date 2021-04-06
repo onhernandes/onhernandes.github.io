@@ -1,20 +1,21 @@
 {{ define "main" }}
-    <main aria-role="main">
-        <div>
-            {{ if .Site.Params.Portrait.Path }}
-               <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
-            {{ end }}
+    {{ $options := (dict "targetPath" "home.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "scss/home.scss" | resources.ToCSS $options | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <main class="home" aria-role="main">
+        {{ if .Site.Params.Portrait.Path }}
+           <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
+        {{ end }}
 
-            <h1>{{ .Site.Title }}</h1>
-            {{- with .Site.Params.homeSubtitle }}
-                <p>{{.}}</p>
-            {{- end }}
+        <h1>{{ .Site.Title }}</h1>
+        {{- with .Site.Params.homeSubtitle }}
+            <p>{{.}}</p>
+        {{- end }}
 
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
-            {{- end }}
-        </div>
+        {{- with .Site.Params.social }}
+            <div>
+                {{ partial "social-icons.html" . }}
+            </div>
+        {{- end }}
     </main>
 {{ end }}

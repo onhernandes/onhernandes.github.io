@@ -54,11 +54,11 @@ disableHugoGeneratorInject = false
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "desenvolvedor, palestrante, open-source, linux, cerveja e marceneiro nas horas vagas"
+  description = "desenvolvedor, palestrante, adepto ao FOSS, gosto de tecnologia, cerveja, jogos e sou marceneiro nas horas vagas"
   keywords = ""
   images = [""]
 
-  homeSubtitle = "desenvolvedor, palestrante, open-source, linux, cerveja e marceneiro nas horas vagas"
+  homeSubtitle = "desenvolvedor, palestrante, adepto ao FOSS, gosto de tecnologia, cerveja, jogos e sou marceneiro nas horas vagas"
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = ""
@@ -124,5 +124,5 @@ disableHugoGeneratorInject = false
 
   [[menu.main]]
     identifier = "zines"
-    name       = "Artes & Zines"
+    name       = "Artes"
     url        = "zines/"
