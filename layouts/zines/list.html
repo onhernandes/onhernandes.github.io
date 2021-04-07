@@ -3,21 +3,24 @@
     {{ $style := resources.Get "scss/zines.scss" | resources.ToCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-    <main class="zines">
+    <main class="zines {{ with .Params.comingsoon }}zines--comingsoon{{end}}">
         <h1 class="zines__title">{{ .Title }}</h1>
-
-        <ul class="zines__list">
-            {{ range .Pages }}
-                <li class="zines__item">
-                    <a class="zines__link" href="{{.Permalink}}">
-                      <img class="zines__image" src="{{.Params.thumbnail}}" alt="{{.Params.thumbnailAlt}}"/>
-                      <span class="zines__content">
-                        <h4>{{ .Title }}</h4>
-                        <p>{{ .Description }}</p>
-                      </span>
-                    </a>
-                </li>
-            {{ end }}
-        </ul>
+        {{ with .Params.comingsoon }}
+          <span class="zines__comingsoon">Coming soon!</span>
+        {{ else }}
+          <ul class="zines__list">
+              {{ range .Pages }}
+                  <li class="zines__item">
+                      <a class="zines__link" href="{{.Permalink}}">
+                        <img class="zines__image" src="/images/zines/{{.Params.zine}}/{{.Params.thumbnail}}" alt="{{.Params.thumbnailAlt}}"/>
+                        <span class="zines__content">
+                          <h4>{{ .Title }}</h4>
+                          <p>{{ .Description }}</p>
+                        </span>
+                      </a>
+                  </li>
+              {{ end }}
+          </ul>
+        {{end}}
     </main>
 {{ end }}
