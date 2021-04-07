@@ -1,23 +1,14 @@
-# [hernandes.io](hernandes.io)
+# [onhernandes.dev](https://onhernandes.dev)
 
-Bem-vindo ao meu blog/site \o/
+Welcome to my blog an personal page on the internet.
 
-Aqui você vai encontrar um pouco sobre mim, alguns projetos que fiz e inclusive artigos!
+Here you'll find info about myself, some projects and blogposts I wrote. 
+Mostly in Portuguese, but I think Googla Translate hands well for you.
 
-Se você quiser saber mais sobre o que eu sei de desenvolvimento, [dá uma olhada nesse repositório aqui](https://github.com/onhernandes/resume)
+If you wanna know more about what I've learned since I got into IT, [read this one here](https://github.com/onhernandes/resume)
 
-## Como executar no seu local
+## Running locally
 
-Após clonar o repositório, instale todas as dependências pelo NPM:
+First of all, you must have [hugo](gohugo.io) installed. After cloning this repo, just run `hugo server -D`.
 
-```
-npm install
-```
-
-Depois, execute
-
-```
-npm start
-```
-
-Isso irá processar os arquivos do hexo e irá disponibilizar para acesso em [http://localhost:3000](http://localhost:3000).
+Then, go ahead to [localhost:1313](localhost:1313)
