@@ -7,7 +7,6 @@ description: "O array é uma estrutura de dados onde guardamos e agrupamos infor
 tag:
 - arrays-em-js
 zine: "arrays-em-js"
-draft: true
 ---
 
 # Conheçendo um Array!

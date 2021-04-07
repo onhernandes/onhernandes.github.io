@@ -4,6 +4,7 @@ title   = "Hernandes"
 DefaultContentLanguage = "pt_br"
 
 theme = "hello-friend-local"
+assetDir = "assets/"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
