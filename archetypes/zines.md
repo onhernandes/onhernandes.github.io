@@ -6,5 +6,6 @@ thumbnail: "For the list page"
 description: "For the ads and UI"
 tag:
 - content-slug
+zine: "content-zine-name"
 draft: true
 ---
