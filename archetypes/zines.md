@@ -1,9 +1,11 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-thumbnailAlt: "For the list page"
-thumbnail: "For the list page"
-description: "For the ads and UI"
+thumbnail: ""
+thumbnailAlt: ""
+# for metatag :image, must be full path
+images: "/images/yourzine/yourimage"
+description: "For the meta tags and UI"
 tag:
 - content-slug
 zine: "content-zine-name"

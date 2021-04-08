@@ -4,12 +4,12 @@ date: 2021-04-02T03:17:11-03:00
 thumbnail: "intro.jpg"
 thumbnailAlt: "Arte sobre a estrutura de dados chamada array, em JavaScript, expliacndo o que é e como funciona essa estrutura aparentemente simplista, mas versátil"
 description: "O array é uma estrutura de dados onde guardamos e agrupamos informações, como uma lista de compras onde podemos gerenciar quantidade, posição, e muito mais!"
+images:
+ - "/images/zines/arrays-em-js/intro.jpg"
 tag:
 - arrays-em-js
 zine: "arrays-em-js"
 ---
-
-# Conheçendo um Array!
 
 ## arrays, listas, coleções, etc
 
