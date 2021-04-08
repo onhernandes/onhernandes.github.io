@@ -7,6 +7,7 @@ description: "Além dos métodos tradicionais como o new Array(), temos outras d
 tag:
 - arrays-em-js
 zine: "arrays-em-js"
+draft: true
 ---
 
 Além dos métodos tradicionais, temos outras duas funções nativas do Array que nos auxiliam na hora de criar um array!
