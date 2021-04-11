@@ -22,17 +22,15 @@
               {{ end }}
           </ul>
 
-          <ul class="faq">
-            <li class="faq__item">
-              <h4 class="faq__question">Titulo</h4>
-              <p class="faq__response">
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          <h2 class="faq__title">Detalhes</h2>
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-</p>
-            </li>
+          <ul class="faq">
+            {{ range $faq := $.Site.Data.faq }}
+              <li class="faq__item">
+                <h3 class="faq__question">{{ $faq.question }}</h3>
+                <p class="faq__response">{{ $faq.response | markdownify }}</p>
+              </li>
+            {{ end }}
           </ul>
         {{end}}
     </main>

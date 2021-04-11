@@ -68,5 +68,28 @@
 }
 
 .faq {
-  display: none;
+  list-style-type: none;
+  margin-left: 0;
+
+  &__title {
+    margin-top: 4rem;
+  }
+
+  &__item {
+    padding: 1rem;
+    background-color: #6161613d;
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__question {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 960px) {
+    &__response {
+      margin-bottom: 0;
+    }
+  }
 }
