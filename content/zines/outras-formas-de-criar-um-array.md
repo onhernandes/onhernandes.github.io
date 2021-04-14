@@ -1,9 +1,11 @@
 ---
 title: "Outras formas de criar um array!"
-date: 2021-04-15T03:17:11-03:00
+date: 2021-04-14T03:17:11-03:00
 thumbnail: "Outras_formas_de_criar_um_array.jpg"
 thumbnailAlt: "Arte do zine sobre arrays em JavaScript, explicando os métodos Array.from() e Array.of() para criar novos arrays"
 description: "Além dos métodos tradicionais como o new Array(), temos outras duas funções nativas do Array que nos auxiliam na hora de criar um array!"
+images:
+ - "/images/zines/arrays-em-js/Outras_formas_de_criar_um_array.jpg"
 tag:
 - arrays-em-js
 zine: "arrays-em-js"
