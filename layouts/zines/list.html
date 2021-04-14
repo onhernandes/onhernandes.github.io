@@ -22,16 +22,22 @@
               {{ end }}
           </ul>
 
-          <h2 class="faq__title">Detalhes</h2>
+          <h2 class="faq__title">Perguntas frequentes</h2>
 
-          <ul class="faq">
-            {{ range $faq := $.Site.Data.faq }}
-              <li class="faq__item">
-                <h3 class="faq__question">{{ $faq.question }}</h3>
-                <p class="faq__response">{{ $faq.response | markdownify }}</p>
-              </li>
-            {{ end }}
-          </ul>
+          <details>
+            <summary>
+              <b>Expandir</b>
+            </summary>
+
+            <ul class="faq">
+              {{ range $faq := $.Site.Data.faq }}
+                <li class="faq__item">
+                  <h3 class="faq__question">{{ $faq.question }}</h3>
+                  <p class="faq__response">{{ $faq.response | markdownify }}</p>
+                </li>
+              {{ end }}
+            </ul>
+          </details>
         {{end}}
     </main>
 {{ end }}
