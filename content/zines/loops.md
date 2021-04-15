@@ -19,7 +19,7 @@ Usando loops (ou laços), podemos executar uma ou várias funções para cada it
 
 ## forEach(fn)
 
-Aeita uma função como parâmetro, que por sua vez é executada em todo o array, item por item. Ao ser exxecutada, a função recebe o valor atual da iteração, seu índice e o array original.
+Aceita uma função como parâmetro, que por sua vez é executada em todo o array, item por item. Ao ser executada, a função recebe o valor atual da iteração, seu índice e o array original - como muitas funções em JS, esses parâmetros são opcionais, ou seja, você pode tranquilamente só usar o primeiro parâmetro.
 
 ```jsx
 const numeros = [1, 2, 3, 4, 5]
