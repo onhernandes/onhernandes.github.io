@@ -1,6 +1,8 @@
 baseURL = "https://onhernandes.dev"
 title   = "Hernandes"
 
+#disqusShortname = "blog-n0up7zqzuz"
+disqusShortname = "onhernandes"
 DefaultContentLanguage = "pt_br"
 
 theme = "hello-friend-local"
