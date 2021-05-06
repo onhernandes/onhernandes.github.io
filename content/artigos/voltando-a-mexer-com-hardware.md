@@ -1,7 +1,6 @@
 ---
 title: "Voltando a mexer com hardware"
 date: 2021-05-06T00:48:44-03:00
-draft: true
 description: "Depois de anos sem mexer com hardware, resolvi tentar botar a mão na massa e ver se sai algo."
 # for metatag :image, must be full path
 images:
